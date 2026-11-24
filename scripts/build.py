@@ -726,7 +726,7 @@ def render(path, title, description, body, active=None, image_key=None, schema=N
 <nav aria-label="{h(f_nav1)}">{link(nav_text("butterflies/", lang), local(lang_prefix, "butterflies/"))}{link(nav_text("sightings/", lang), local(lang_prefix, "sightings/"))}{link(nav_text("identify/", lang), local(lang_prefix, "identify/"))}{link(nav_text("quiz/", lang), local(lang_prefix, "quiz/"))}</nav>
 <nav aria-label="{h(f_nav2)}">{link(nav_text("about/", lang), local(lang_prefix, "about/"))}{link(nav_text("activities/", lang), local(lang_prefix, "activities/"))}{link(nav_text("magazine/", lang), local(lang_prefix, "magazine/"))}{link(sources_lbl, local(lang_prefix, "sources/"))}</nav>
 <nav aria-label="{h(f_nav3)}">{link(nav_text("news/", lang), local(lang_prefix, "news/"))}{link(get_inv_lbl, local(lang_prefix, "about/") + "#get-involved")}{link(inat_footer_lbl, INAT_PROJECT_URL)}{link(CONTACT, "mailto:" + CONTACT)}</nav></div>
-<div class="footer-bottom"><small>© <span data-year>{date.today().year}</span> {h(brand_title)} · {h(reg_footer)} · {link(lang_label, mirror_href)}</small></div></div></footer>
+<div class="footer-bottom"><small>© <span data-footer-year>{date.today().year}</span> {h(brand_title)} · {h(reg_footer)} · {link(lang_label, mirror_href)}</small></div></div></footer>
 <a class="back-top" href="#top" data-back-top hidden aria-label="{h(top_aria)}">{h(top_lbl)}</a>
 {lightbox_dialog(lang)}
 </body></html>"""
@@ -844,11 +844,14 @@ def press_card(story, idx=0, lang_prefix="", lang="en"):
     title_txt = t_story.get("title") or story["title"]
     summary_txt = t_story.get("summary") or story["summary"]
     sp_badge = ""
+    sp_terms = []
     if story.get("species") and story["species"] in BY_SCI:
         sp = BY_SCI[story["species"]]
-        sp_lbl = (tamil_name(sp["scientific"]) or sp["name"]) if is_ta else sp["name"]
+        ta_sp_name = tamil_name(sp["scientific"])
+        sp_terms.extend(x for x in [sp["name"], ta_sp_name] if x)
+        sp_lbl = (ta_sp_name or sp["name"]) if is_ta else sp["name"]
         sp_badge = f' · {link(sp_lbl, local(lang_prefix, route(sp)), "press-species")}'
-    terms = " ".join([story["title"], title_txt, story["summary"], summary_txt, story["source"], src_disp, story["category"], cat_disp, story.get("species", "")])
+    terms = " ".join([story["title"], title_txt, story["summary"], summary_txt, story["source"], src_disp, story["category"], cat_disp, day, day[:4], when, story.get("species", ""), *sp_terms])
     read_lbl = "முழுக் கட்டுரையைப் படி ↗" if is_ta else "Read full article ↗"
     return (
         f'<li class="news-card reveal" data-record data-kind="Press" data-category="{h(cat_disp)}" '
@@ -1945,8 +1948,9 @@ def news(lang="en"):
         u_title = tu.get("title") or title
         u_sum = tu.get("summary") or summary
         open_lbl = "விவரம் காண்க →" if is_ta else "Open update →"
+        u_terms = " ".join([title, u_title, summary, u_sum, year, cat, u_cat, src, u_src])
         update_rows_parts.append(
-            f'<li class="news-card reveal" data-record data-kind="Society" data-category="{h(u_cat)}" data-source="{h(u_src)}" data-year="{year}" data-terms="{h(title + " " + u_title + " " + summary + " " + u_sum)}">'
+            f'<li class="news-card reveal" data-record data-kind="Society" data-category="{h(u_cat)}" data-source="{h(u_src)}" data-year="{year}" data-terms="{h(u_terms)}">'
             f'<div class="news-card-meta"><span class="tag tag-highlight">{h(u_cat)}</span><span class="card-meta">{h(u_src)} · {year}</span></div>'
             f'<h3>{link(u_title, url)}</h3><p>{h(u_sum)}</p>'
             f'<p class="news-card-foot">{link(open_lbl, url)}</p></li>'

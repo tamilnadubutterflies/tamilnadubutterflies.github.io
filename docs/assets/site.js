@@ -124,7 +124,7 @@ if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
         }
     });
 })();
-const yearSpan = document.querySelector("[data-year]");
+const yearSpan = document.querySelector("footer [data-footer-year], footer [data-year]");
 if (yearSpan) yearSpan.textContent = String(new Date().getFullYear());
 
 /* Floating Back-to-Top button */
@@ -576,6 +576,10 @@ if (guide) {
         hasBv: Boolean((element.dataset.bv || "").trim()),
         terms: normalize(element.dataset.terms)
     }));
+    const subfamilyToFamily = new Map();
+    for (const card of cards) {
+        if (card.subfamily && card.family) subfamilyToFamily.set(card.subfamily, card.family);
+    }
     const viewButtons = [...guide.querySelectorAll("[data-view]")];
     const status = guide.querySelector("[data-results]");
     const empty = guide.querySelector("[data-empty]");
@@ -681,6 +685,9 @@ if (guide) {
     for (const pill of familyPills) {
         pill.addEventListener("click", () => {
             family.value = pill.dataset.familyPill;
+            if (family.value && subfamily.value && subfamilyToFamily.get(subfamily.value) !== family.value) {
+                subfamily.value = "";
+            }
             filterChanged();
         });
     }
@@ -726,7 +733,17 @@ if (guide) {
 
     form.addEventListener("submit", (event) => event.preventDefault());
     form.addEventListener("input", filterChanged);
-    form.addEventListener("change", filterChanged);
+    form.addEventListener("change", (event) => {
+        if (event.target === family && family.value && subfamily.value && subfamilyToFamily.get(subfamily.value) !== family.value) {
+            subfamily.value = "";
+        } else if (event.target === subfamily && subfamily.value) {
+            const parentFamily = subfamilyToFamily.get(subfamily.value);
+            if (family.value && parentFamily && family.value !== parentFamily) {
+                family.value = parentFamily;
+            }
+        }
+        filterChanged();
+    });
     form.addEventListener("reset", () => queueMicrotask(filterChanged));
     more.addEventListener("click", () => {
         const before = limit;
@@ -1310,6 +1327,14 @@ if (quiz) {
             : quizData.facts;
 
         const out = [];
+        function topUpPhotos(usedSlugs) {
+            for (const extra of shuffle(photoPool)) {
+                if (out.length >= count) break;
+                if (usedSlugs.has(extra.slug)) continue;
+                usedSlugs.add(extra.slug);
+                out.push(makePhotoQuestion(extra, photoPoolAll, difficulty));
+            }
+        }
         if (mode === "photo") {
             for (const item of shuffle(photoPool).slice(0, count)) {
                 out.push(makePhotoQuestion(item, photoPoolAll, difficulty));
@@ -1325,6 +1350,7 @@ if (quiz) {
             const chosenFacts = shuffle(factPool.filter((f) => !usedSlugs.has(f[3]))).slice(0, count - chosenPhotos.length);
             for (const p of chosenPhotos) out.push(makePhotoQuestion(p, photoPoolAll, difficulty));
             for (const f of chosenFacts) out.push(makeFactQuestion(f));
+            topUpPhotos(usedSlugs);
         } else {
             const pCount = Math.min(Math.ceil(count / 2), photoPool.length);
             const chosenPhotos = shuffle(photoPool).slice(0, pCount);
@@ -1332,12 +1358,7 @@ if (quiz) {
             const chosenFacts = shuffle(factPool.filter((f) => !usedSlugs.has(f[3]))).slice(0, count - pCount);
             for (const p of chosenPhotos) out.push(makePhotoQuestion(p, photoPoolAll, difficulty));
             for (const f of chosenFacts) out.push(makeFactQuestion(f));
-            while (out.length < count && photoPool.length > out.length) {
-                const extra = photoPool.find((p) => !usedSlugs.has(p.slug));
-                if (!extra) break;
-                usedSlugs.add(extra.slug);
-                out.push(makePhotoQuestion(extra, photoPoolAll, difficulty));
-            }
+            topUpPhotos(usedSlugs);
         }
         return shuffle(out).slice(0, count);
     }
@@ -1642,6 +1663,14 @@ if (quiz) {
                     a.textContent = IS_TA ? "கள வழிகாட்டிப் பக்கம் →" : "Field guide page →";
                     li.append(a);
                 }
+                reviewList.append(li);
+            }
+            if (filterMode === "missed" && !reviewList.children.length) {
+                const li = document.createElement("li");
+                li.className = "review-item";
+                li.textContent = IS_TA
+                    ? "தவறிய கேள்விகள் எதுவும் இல்லை. முழுமையான வெற்றி!"
+                    : "No missed questions. Perfect round!";
                 reviewList.append(li);
             }
         }
