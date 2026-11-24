@@ -368,8 +368,19 @@ input[type=search], select { border: 1px solid #aeb9a8; border-radius: 4px; min-
 .profile-card { background: var(--white); border: 1px solid var(--line); border-radius: 7px; padding: 1.25rem; }
 .profile-card h3 { font-size: 1.3rem; margin-bottom: .7rem; color: var(--green); }
 .profile-card p:last-child { margin-bottom: 0; }
-.host-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
+.host-pills { display: flex; flex-wrap: wrap; flex-wrap: balance; gap: .4rem; }
 .host-pill { display: inline-block; padding: .28rem .65rem; border-radius: 4px; background: var(--moss); border: 1px solid #c3cdb9; font-size: .88rem; font-weight: 600; }
+.host-gallery-block { margin-block: 1rem .85rem; }
+.host-gallery-head { font-size: .86rem; font-weight: 700; color: var(--muted); margin-bottom: .45rem; }
+.host-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .7rem; margin-block-start: .5rem; }
+.host-card { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; overflow: clip; display: grid; grid-template-rows: auto 1fr; }
+.host-photo-btn { display: block; inline-size: 100%; aspect-ratio: 4 / 3; padding: 0; border: 0; background: var(--moss); overflow: clip; cursor: pointer; }
+.host-photo-btn img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; transition: scale .25s ease; }
+.host-photo-btn:hover img { scale: 1.04; }
+.host-card figcaption { padding: .5rem .6rem .55rem; display: grid; gap: .18rem; align-content: start; font-size: .8rem; line-height: 1.3; }
+.host-name { font-size: .86rem; color: var(--ink); font-weight: 700; }
+.host-meta { color: var(--muted); }
+.host-credit { font-size: .75rem; color: var(--muted); overflow-wrap: anywhere; }
 
 .taxonomy-disclosure { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: .85rem 1rem; margin: 1.1rem 0 1.4rem; }
 .taxonomy-disclosure summary { font-weight: 750; cursor: pointer; color: var(--green); }
@@ -562,6 +573,7 @@ dialog::backdrop {
   .issue-row { align-items: start; flex-direction: column; gap: .35rem; }
   .issue-cover { min-height: 245px; }
   .keyboard-tip { display: none; }
+  .host-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
 }
 
 @media (pointer: coarse) {

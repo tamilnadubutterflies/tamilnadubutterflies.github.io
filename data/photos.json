@@ -11,23 +11,25 @@
   },
   "Graphium doson": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46138435/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46138435/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/29559227",
-    "alt": "Common Jay (Graphium doson) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/274192582/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/274192582/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158681011",
+    "alt": "Common Jay (Graphium doson) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Graphium agamemnon": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46399798/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46399798/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/29722169",
-    "alt": "Tailed Jay (Graphium agamemnon) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/493311676/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/493311676/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/274406057",
+    "alt": "Tailed Jay (Graphium agamemnon) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Graphium antiphates": [
     "Close wing position of Graphium antiphates, Cramer, 1775 – Five-bar Swordtail WLB.jpg",
@@ -48,13 +50,14 @@
   },
   "Pachliopta aristolochiae": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/427745310/medium.jpeg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/427745310/large.jpeg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/240118640",
-    "alt": "Common Rose (Pachliopta aristolochiae) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/628501192/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/628501192/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/344918036",
+    "alt": "Common Rose (Pachliopta aristolochiae) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Pachliopta pandiyana": {
     "source": "inaturalist",
@@ -68,13 +71,14 @@
   },
   "Pachliopta hector": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134059/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134059/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/179303017",
-    "alt": "Crimson Rose (Pachliopta hector) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273238014/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273238014/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090213",
+    "alt": "Crimson Rose (Pachliopta hector) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Troides minos": {
     "source": "inaturalist",
@@ -98,13 +102,14 @@
   },
   "Papilio polytes": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/49893459/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/49893459/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/31851044",
-    "alt": "Common Mormon (Papilio polytes) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/491216102/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/491216102/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/273089034",
+    "alt": "Common Mormon (Papilio polytes) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Papilio dravidarum": {
     "source": "inaturalist",
@@ -145,13 +150,14 @@
   },
   "Papilio demoleus": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438333/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438333/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/238421685",
-    "alt": "Lime Butterfly (Papilio demoleus) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273237980/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273237980/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090210",
+    "alt": "Lime Butterfly (Papilio demoleus) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Papilio paris": {
     "source": "inaturalist",
@@ -208,13 +214,14 @@
   ],
   "Eurema hecabe": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438366/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438366/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/238421691",
-    "alt": "Common Grass Yellow (Eurema hecabe) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273235004/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273235004/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158089982",
+    "alt": "Common Grass Yellow (Eurema hecabe) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Eurema laeta": {
     "source": "inaturalist",
@@ -238,13 +245,14 @@
   },
   "Catopsilia pomona": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/51103632/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/51103632/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/32574235",
-    "alt": "Common Emigrant (Catopsilia pomona) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/274192891/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/274192891/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158681014",
+    "alt": "Common Emigrant (Catopsilia pomona) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Catopsilia pyranthe": {
     "source": "inaturalist",
@@ -463,13 +471,14 @@
   },
   "Leptosia nina": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/353038949/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/353038949/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/200134956",
-    "alt": "Psyche (Leptosia nina) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273236303/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273236303/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090071",
+    "alt": "Psyche (Leptosia nina) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Belenois aurota": {
     "source": "inaturalist",
@@ -520,13 +529,14 @@
   },
   "Tirumala limniace": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134077/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134077/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/179303021",
-    "alt": "Blue Tiger (Tirumala limniace) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273239321/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273239321/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090281",
+    "alt": "Blue Tiger (Tirumala limniace) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Tirumala septentrionis": {
     "source": "inaturalist",
@@ -580,13 +590,14 @@
   },
   "Euploea core": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/49893440/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/49893440/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/31851039",
-    "alt": "Common Crow (Euploea core) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/493312634/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/493312634/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/274406194",
+    "alt": "Common Crow (Euploea core) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Idea malabarica": {
     "source": "inaturalist",
@@ -656,13 +667,17 @@
     "Palmking photographed in the field",
     960
   ],
-  "Elymnias hypermnestra": [
-    "Common Palmfly Im IMG 6967.jpg",
-    "J.M.Garg",
-    "by/2.5",
-    "Common Palmfly photographed in the field",
-    500
-  ],
+  "Elymnias hypermnestra": {
+    "source": "inaturalist",
+    "thumb": "https://static.inaturalist.org/photos/608944188/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/608944188/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/335225851",
+    "alt": "Common Palmfly (Elymnias hypermnestra) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
+  },
   "Elymnias caudata": {
     "source": "inaturalist",
     "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/461906775/medium.jpeg",
@@ -774,13 +789,17 @@
     "Long-brand Bushbrown photographed in the field",
     960
   ],
-  "Mycalesis subdita": [
-    "Mycalesis visala subdita 65.jpg",
-    "Frederic Moore (text); F. C. Moore (art)",
-    "pdm/1.0",
-    "Tamil Bushbrown photographed in the field",
-    960
-  ],
+  "Mycalesis subdita": {
+    "source": "inaturalist",
+    "thumb": "https://static.inaturalist.org/photos/767197170/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/767197170/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/416568422",
+    "alt": "Tamil Bushbrown (Mycalesis subdita) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
+  },
   "Mycalesis junonia": {
     "source": "inaturalist",
     "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46401853/medium.jpg",
@@ -863,13 +882,14 @@
   },
   "Ypthima ceylonica": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438351/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438351/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/238421688",
-    "alt": "White Four-ring (Ypthima ceylonica) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/375235214/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/375235214/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/212335805",
+    "alt": "White Four-ring (Ypthima ceylonica) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Ypthima ypthimoides": {
     "source": "inaturalist",
@@ -1213,23 +1233,25 @@
   },
   "Ariadne ariadne": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/423802795/medium.jpeg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/423802795/large.jpeg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/238079360",
-    "alt": "Angled Castor (Ariadne ariadne) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/493312725/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/493312725/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/274406208",
+    "alt": "Angled Castor (Ariadne ariadne) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Ariadne merione": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/353134161/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/353134161/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/200182757",
-    "alt": "Common Castor (Ariadne merione) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273234725/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273234725/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158089960",
+    "alt": "Common Castor (Ariadne merione) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Rohana parisatis": {
     "source": "inaturalist",
@@ -1333,13 +1355,14 @@
   },
   "Junonia lemonias": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/353038850/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/353038850/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/200134944",
-    "alt": "Lemon Pansy (Junonia lemonias) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/272302869/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/272302869/large.jpeg",
+    "author": "Nishanth CV (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/157489350",
+    "alt": "Lemon Pansy (Junonia lemonias) photographed in the field by Nishanth CV",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Hypolimnas bolina": {
     "source": "inaturalist",
@@ -1377,13 +1400,14 @@
   ],
   "Curetis thetis": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/418258629/medium.jpeg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/418258629/large.jpeg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/235206157",
-    "alt": "Indian Sunbeam (Curetis thetis) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/692148224/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/692148224/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/378455241",
+    "alt": "Indian Sunbeam (Curetis thetis) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Curetis acuta": {
     "source": "inaturalist",
@@ -1485,13 +1509,14 @@
   ],
   "Anthene lycaenina": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/353038944/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/353038944/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/200134955",
-    "alt": "Pointed Ciliate Blue (Anthene lycaenina) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/628500935/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/628500935/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/344918002",
+    "alt": "Pointed Ciliate Blue (Anthene lycaenina) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Petrelaea dana": {
     "source": "inaturalist",
@@ -1563,23 +1588,25 @@
   ],
   "Prosotas nora": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438382/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/424438382/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/238421696",
-    "alt": "Common Lineblue (Prosotas nora) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/628500523/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/628500523/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/344917965",
+    "alt": "Common Lineblue (Prosotas nora) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Prosotas dubiosa": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/502981620/medium.jpeg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/502981620/large.jpeg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/280074666",
-    "alt": "Tailless Lineblue (Prosotas dubiosa) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273239185/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273239185/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090262",
+    "alt": "Tailless Lineblue (Prosotas dubiosa) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Prosotas noreia": {
     "source": "inaturalist",
@@ -1630,13 +1657,14 @@
   },
   "Jamides celeno": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/146641417/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/146641417/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/88845767",
-    "alt": "Common Cerulean (Jamides celeno) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/493312663/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/493312663/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/274406203",
+    "alt": "Common Cerulean (Jamides celeno) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Jamides alecto": {
     "source": "inaturalist",
@@ -1658,13 +1686,17 @@
     "alt": "Forget-me-not (Catochrysops strabo) photographed in the field by Ramanasaran Hari",
     "member": true
   },
-  "Catochrysops panormus": [
-    "Silver forget-me-not (Catochrysops panormus exiguus) mating I.jpg",
-    "Charles J. Sharp",
-    "by-sa/4.0",
-    "Silver Forget-me-not photographed in the field",
-    960
-  ],
+  "Catochrysops panormus": {
+    "source": "inaturalist",
+    "thumb": "https://static.inaturalist.org/photos/628500961/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/628500961/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/344918012",
+    "alt": "Silver Forget-me-not (Catochrysops panormus) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
+  },
   "Lampides boeticus": {
     "source": "inaturalist",
     "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/51103664/medium.jpg",
@@ -1677,23 +1709,25 @@
   },
   "Leptotes plinius": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/418574247/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/418574247/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/235368070",
-    "alt": "Zebra Blue (Leptotes plinius) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/372780892/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/372780892/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/210797698",
+    "alt": "Zebra Blue (Leptotes plinius) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Castalius rosimon": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/418574365/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/418574365/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/235368087",
-    "alt": "Common Pierrot (Castalius rosimon) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/493390892/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/493390892/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/274446416",
+    "alt": "Common Pierrot (Castalius rosimon) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Tarucus balkanicus": [
     "Balkan kaplanı - Tarucus balkanicus.jpg",
@@ -1704,13 +1738,14 @@
   ],
   "Tarucus nara": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46400874/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46400874/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/29724199",
-    "alt": "Rounded Pierrot (Tarucus nara) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/272529667/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/272529667/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/157646963",
+    "alt": "Rounded Pierrot (Tarucus nara) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Tarucus callinara": [
     "Spotted Pierrot Tarucus callinara at Delhi by Dr. Raju Kasambe (1).jpg",
@@ -1745,33 +1780,36 @@
   },
   "Zizina otis": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/353034887/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/353034887/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/200131382",
-    "alt": "Lesser Grass Blue (Zizina otis) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/628501106/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/628501106/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/344918022",
+    "alt": "Lesser Grass Blue (Zizina otis) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Pseudozizeeria maha": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/146641763/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/146641763/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/88845788",
-    "alt": "Pale Grass Blue (Pseudozizeeria maha) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/272530922/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/272530922/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/157647009",
+    "alt": "Pale Grass Blue (Pseudozizeeria maha) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Zizula hylax": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/146642019/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/146642019/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/88845801",
-    "alt": "Tiny Grass Blue (Zizula hylax) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/628501189/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/628501189/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/344918032",
+    "alt": "Tiny Grass Blue (Zizula hylax) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Everes lacturnus": [
     "Indian cupid (Cupido lacturnus lacturnus) underside.jpg",
@@ -1870,23 +1908,25 @@
   ],
   "Euchrysops cnejus": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/424453546/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/424453546/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/238421730",
-    "alt": "Gram Blue (Euchrysops cnejus) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/611158756/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/611158756/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/336328407",
+    "alt": "Gram Blue (Euchrysops cnejus) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Freyeria putli": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46137882/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46137882/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/29558957",
-    "alt": "Small Grass Jewel (Freyeria putli) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/646076423/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/646076423/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/354142625",
+    "alt": "Small Grass Jewel (Freyeria putli) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Freyeria trochylus": [
     "Chilades trochylus - Grass Jewel butterfly 02.jpg",
@@ -1917,13 +1957,14 @@
   },
   "Chilades lajus": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/47451984/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/47451984/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/30374276",
-    "alt": "Lime Blue (Chilades lajus) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/274174631/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/274174631/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158680365",
+    "alt": "Lime Blue (Chilades lajus) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Arhopala centaurus": [
     "VB 052 Centaur Oakblue.jpg",
@@ -2286,13 +2327,14 @@
   ],
   "Hasora chromus": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46402090/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46402090/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/29724298",
-    "alt": "Common Banded Awl (Hasora chromus) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273237880/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273237880/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090192",
+    "alt": "Common Banded Awl (Hasora chromus) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Hasora taminatus": {
     "source": "inaturalist",
@@ -2464,13 +2506,14 @@
   ],
   "Gomalia elma": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46398216/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46398216/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/29721342",
-    "alt": "African Marbled Skipper (Gomalia elma) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/646076345/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/646076345/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/354142599",
+    "alt": "African Marbled Skipper (Gomalia elma) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Spialia galba": {
     "source": "inaturalist",
@@ -2638,13 +2681,14 @@
   },
   "Suastus gremius": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/49896220/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/49896220/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/31852330",
-    "alt": "Indian Palm Bob (Suastus gremius) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/493464402/medium.jpeg",
+    "full": "https://static.inaturalist.org/photos/493464402/large.jpeg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/274491725",
+    "alt": "Indian Palm Bob (Suastus gremius) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Suastus minutus": [
     "Suastus minutus by vk.chandrasekharan.jpg 02.jpg",
@@ -2741,13 +2785,14 @@
   ],
   "Borbo cinnara": {
     "source": "inaturalist",
-    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/418532650/medium.jpg",
-    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/418532650/large.jpg",
-    "author": "Theivaprakasham Hari (TNBS)",
-    "license": "by/4.0",
-    "url": "https://www.inaturalist.org/observations/235347760",
-    "alt": "Rice Swift (Borbo cinnara) photographed in the field by Theivaprakasham Hari",
-    "member": true
+    "thumb": "https://static.inaturalist.org/photos/273238067/medium.jpg",
+    "full": "https://static.inaturalist.org/photos/273238067/large.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "",
+    "url": "https://www.inaturalist.org/observations/158090215",
+    "alt": "Rice Swift (Borbo cinnara) photographed in the field by Sadheeskumar K",
+    "member": true,
+    "licenseName": "TNBS Member Archive"
   },
   "Borbo bevani": [
     "CaltorisBevani 831 2 Fitch.png",

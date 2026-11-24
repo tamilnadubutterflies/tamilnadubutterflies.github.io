@@ -35,6 +35,11 @@ def load(name):
 SPECIES = load("species")
 PHOTOS = load("photos")
 PROFILES = load("profiles")
+HOST_PLANTS = (
+    load("host_plants")
+    if (ROOT / "data" / "host_plants.json").exists()
+    else {"plants": {}, "bySpecies": {}}
+)
 TAXONOMY = load("taxonomy")
 SITE = load("site")
 MAGAZINE_INDEX = {item["issue"]: item for item in load("magazine_index")}
@@ -121,6 +126,12 @@ def license_info(license_id):
     )
 
 
+def resolve_license(license_id, default_name="TNBS Member Archive"):
+    if license_id:
+        return license_info(license_id)
+    return ("", default_name)
+
+
 def photo_meta(scientific, prefix, thumb=False):
     rec = PHOTOS[scientific]
     if isinstance(rec, dict):
@@ -135,7 +146,7 @@ def photo_meta(scientific, prefix, thumb=False):
                 "sourceLabel": "",
                 "member": bool(rec.get("member", True)),
             }
-        lic_url, lic_name = license_info(rec["license"])
+        lic_url, lic_name = resolve_license(rec.get("license") or "", rec.get("licenseName") or "TNBS Member Archive")
         if rec.get("source") == "inaturalist":
             return {
                 "src": rec["thumb"] if thumb else rec["full"],
@@ -223,6 +234,74 @@ def photo(scientific, prefix, mode="card"):
     return (
         f'<figure class="photo-large">{zoom_btn}'
         f'<figcaption class="credit">{credit_html(meta, include_source=True)}</figcaption></figure>'
+    )
+
+
+def host_plant_gallery(scientific):
+    entries = HOST_PLANTS.get("bySpecies", {}).get(scientific, [])
+    plants = HOST_PLANTS.get("plants", {})
+    if not entries:
+        return ""
+    species_name = BY_SCI[scientific]["name"]
+    cards = []
+    for item in entries:
+        plant = plants.get(item.get("plantKey", ""))
+        if not plant:
+            continue
+        taxon = plant["taxon"]
+        is_genus = plant.get("rank") == "genus"
+        plain_taxon = f"{taxon} sp." if is_genus else taxon
+        taxon_html = f"<i>{h(taxon)}</i> sp." if is_genus else f"<i>{h(taxon)}</i>"
+        common = plant.get("commonName") or ""
+        host_base = re.split(r"\s*\(", item.get("hostLabel", ""))[0].strip()
+        match_kind = item.get("matchKind", "exact")
+        if match_kind == "synonym" and host_base and host_base.lower() != taxon.lower():
+            prefix_txt = f"{h(common)} · " if common else ""
+            meta_html = f'<span class="host-meta">{prefix_txt}syn. <i>{h(host_base)}</i></span>'
+        elif match_kind == "genus" and not re.search(r"\b(species|spp|sp\.?)\b", host_base, re.I):
+            prefix_txt = f"{h(common)} · " if common else ""
+            meta_html = f'<span class="host-meta">{prefix_txt}Related genus host</span>'
+        elif common:
+            meta_html = f'<span class="host-meta">{h(common)}</span>'
+        else:
+            meta_html = ""
+        lic_url, lic_name = resolve_license(plant.get("license") or "", plant.get("licenseName") or "TNBS Member Archive")
+        author_short = plant["author"].replace(" (TNBS)", "")
+        common_paren = f" ({common})" if common else ""
+        alt = f"{plain_taxon}{common_paren}, larval host plant of {species_name}, photographed by {author_short}"
+        credit = credit_html(
+            {
+                "author": plant["author"],
+                "url": plant["url"],
+                "license": lic_url,
+                "licenseName": lic_name,
+            }
+        )
+        btn = (
+            f'<button type="button" class="photo-zoom host-photo-btn" '
+            f'data-lightbox-src="{h(plant["full"])}" '
+            f'data-lightbox-title="{h(plain_taxon)}{h(common_paren)}" '
+            f'data-lightbox-alt="{h(alt)}" '
+            f'data-lightbox-author="{h(plant["author"])}" '
+            f'data-lightbox-url="{h(plant["url"])}" '
+            f'data-lightbox-license="{h(lic_url)}" '
+            f'data-lightbox-licensename="{h(lic_name)}" '
+            f'aria-label="Enlarge host plant photograph: {h(plain_taxon)}">'
+            f'<img class="hide-on-error" src="{h(plant["thumb"])}" alt="{h(alt)}" loading="lazy" decoding="async">'
+            f'</button>'
+        )
+        cards.append(
+            f'<figure class="host-card">{btn}'
+            f'<figcaption><strong class="host-name">{taxon_html}</strong>{meta_html}'
+            f'<span class="host-credit">{credit}</span></figcaption></figure>'
+        )
+    if not cards:
+        return ""
+    return (
+        '<div class="host-gallery-block">'
+        '<p class="host-gallery-head">Host plant field photos (click to enlarge)</p>'
+        f'<div class="host-gallery">{"".join(cards)}</div>'
+        '</div>'
     )
 
 
@@ -775,6 +854,7 @@ def detail(entry):
 {f'<p><strong>Field note:</strong> {h(prof["notes"])}</p>' if prof.get("notes") else ""}</div>
 <div class="profile-card"><h3>Caterpillar host plants</h3>
 {f'<div class="host-pills">{hosts}</div>' if hosts else '<p>Host plants recorded under family associations.</p>'}
+{host_plant_gallery(scientific)}
 {f'<h4>Field references</h4><ul class="compact-list">{refs}</ul>' if refs else ""}</div>
 </div></section>"""
 
@@ -1171,6 +1251,27 @@ def sources():
             author = PHOTOS[s]["author"]
             member_counts[author] = member_counts.get(author, 0) + 1
     member_summary = ", ".join(f"{h(k)}: {v} species" for k, v in sorted(member_counts.items()))
+    plants_dict = HOST_PLANTS.get("plants", {})
+    host_species_count = len(HOST_PLANTS.get("bySpecies", {}))
+    host_author_counts = {}
+    host_photos_list_parts = []
+    for pkey in sorted(plants_dict):
+        plant = plants_dict[pkey]
+        author = plant["author"]
+        host_author_counts[author] = host_author_counts.get(author, 0) + 1
+        lic_url, lic_name = resolve_license(plant.get("license") or "", plant.get("licenseName") or "TNBS Member Archive")
+        c_html = credit_html({"author": author, "url": plant["url"], "license": lic_url, "licenseName": lic_name})
+        common_txt = f' ({h(plant["commonName"])})' if plant.get("commonName") else ""
+        sp_suffix = " sp." if plant.get("rank") == "genus" else ""
+        host_photos_list_parts.append(f'<li><i>{h(plant["taxon"])}</i>{sp_suffix}{common_txt} · {c_html}</li>')
+    host_author_summary = ", ".join(f"{h(k)}: {v} plant taxa" for k, v in sorted(host_author_counts.items()))
+    host_photos_section = ""
+    if plants_dict:
+        host_photos_section = f"""<h3>Larval host plant photographs ({len(plants_dict)} plant taxa across {host_species_count} species pages)</h3>
+<p>Larval host plant photographs are contributed from verified iNaturalist observations by TNBS members ({host_author_summary}) and appear inside the Caterpillar host plants card on matching butterfly species pages.</p>
+<details class="taxonomy-disclosure"><summary>Show all {len(plants_dict)} host plant photo attributions</summary>
+<div class="disclosure-body"><ul class="credit-list">{"".join(host_photos_list_parts)}</ul></div></details>"""
+
     research_items = "".join(
         f'<li>{link(p["title"], p["url"])} ({h(p["authors"])}, {h(p["venue"])})</li>'
         for p in SITE.get("researchPapers", [])
@@ -1196,9 +1297,10 @@ def sources():
 <li>{link("Butterfly Vision AI species registry", BUTTERFLY_VISION)}</li></ul>
 
 <h2>Photographs &amp; open licenses ({len(PHOTOS)} species illustrated)</h2>
-<p>Field guide photographs combine Creative Commons licensed field observations contributed by TNBS members ({member_summary}) with verified open-licensed Wikimedia Commons images, paired with photographer credits and license links. Activities and About Us photographs come from TNBS fieldwork and outreach archives.</p>
+<p>Field guide photographs combine Creative Commons and TNBS Member Archive field observations contributed by TNBS members ({member_summary}) with verified open-licensed Wikimedia Commons images, paired with photographer credits and license or observation links. Activities and About Us photographs come from TNBS fieldwork and outreach archives.</p>
 <details class="taxonomy-disclosure"><summary>Show all {len(PHOTOS)} species photo attributions</summary>
 <div class="disclosure-body"><ul class="credit-list">{photos_list}</ul></div></details>
+{host_photos_section}
 </section>"""
     render(
         "sources/",

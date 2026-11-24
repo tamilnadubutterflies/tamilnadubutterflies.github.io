@@ -34,6 +34,10 @@ for (const image of document.querySelectorAll(".hide-on-error")) {
     watchImage(image, () => {
         const panel = image.closest("figure, .card");
         if (!panel) return;
+        if (panel.matches(".host-card")) {
+            panel.hidden = true;
+            return;
+        }
         const credit = panel.querySelector(".credit") || panel.nextElementSibling;
         if (credit?.matches(".credit, .hero-credit")) credit.hidden = true;
     });

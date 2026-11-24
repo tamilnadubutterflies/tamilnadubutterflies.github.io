@@ -1,4 +1,4 @@
-"""Sync CC-licensed TNBS members' butterfly photos (Commons + iNaturalist) into data/photos.json."""
+"""Sync authorized TNBS members' butterfly photos (Commons + iNaturalist) into data/photos.json."""
 import json
 import sys
 import time
@@ -25,8 +25,10 @@ LICENSE_MAP = {
 }
 
 MEMBERS = [
+    ("nishanth2", "Nishanth CV (TNBS)"),
     ("pavendhan", "Pavendhan Appavu (TNBS)"),
     ("ramanasaranhari", "Ramanasaran Hari (TNBS)"),
+    ("sadheeskumar_k_tnbs", "Sadheeskumar K (TNBS)"),
     ("theivaprakashamhari", "Theivaprakasham Hari (TNBS)"),
 ]
 
@@ -78,10 +80,18 @@ def match_species(obs, lookup):
     return None
 
 
-def score_inat_photo(photo):
-    lic = LICENSE_MAP.get((photo.get("license_code") or "").lower())
+def score_inat_photo(photo, allow_member_archive=True):
+    raw_lic = (photo.get("license_code") or "").lower()
+    if raw_lic:
+        lic = LICENSE_MAP.get(raw_lic)
+        if not lic:
+            return -1, None
+    elif allow_member_archive:
+        lic = ""
+    else:
+        return -1, None
     url = photo.get("url") or ""
-    if not lic or "/square." not in url:
+    if "/square." not in url:
         return -1, None
     dims = photo.get("original_dimensions") or {}
     w = int(dims.get("width") or 0)
@@ -101,6 +111,8 @@ def score_inat_photo(photo):
             score += 5
     if lic in {"by/4.0", "by-sa/4.0", "cc0/1.0"}:
         score += 3
+    elif lic:
+        score += 1
     return score, lic
 
 
@@ -112,7 +124,6 @@ def fetch_member_inat(login, author_label, lookup):
             "user_login": login,
             "taxon_id": 47224,
             "quality_grade": "research",
-            "photo_license": "cc-by,cc-by-sa,cc0,cc-by-nc,cc-by-nc-sa",
             "per_page": 200,
             "page": page,
         }
@@ -128,7 +139,7 @@ def fetch_member_inat(login, author_label, lookup):
             if not obs_id:
                 continue
             for p_idx, ph in enumerate(obs.get("photos") or []):
-                sc, lic = score_inat_photo(ph)
+                sc, lic = score_inat_photo(ph, allow_member_archive=True)
                 if sc < 0:
                     continue
                 if p_idx == 0:
@@ -197,8 +208,10 @@ def main():
     lookup = build_name_lookup(species_list)
     photos = json.loads(PHOTOS_PATH.read_text(encoding="utf-8-sig"))
 
-    # Preserve Papilio crino paired with existing local assets/photos/papilio-crino.jpg unless explicitly updated
-    reserved = {"Papilio crino"}
+    # Preserve Papilio crino and any local photo files unless explicitly updated
+    reserved = {"Papilio crino"} | {
+        k for k, v in photos.items() if isinstance(v, dict) and v.get("source") == "local"
+    }
 
     member_assigned = {}
 
@@ -208,7 +221,7 @@ def main():
         nish["alt"] = f"{by_sci['Mycalesis anaxias']['name']} ({'Mycalesis anaxias'}) photographed in the field by Nishanth CV"
         member_assigned["Mycalesis anaxias"] = nish
 
-    # 2-4. Priority order: Pavendhan Appavu -> Ramanasaran Hari -> Theivaprakasham Hari
+    # Priority order: Nishanth CV -> Pavendhan Appavu -> Ramanasaran Hari -> Sadheeskumar K -> Theivaprakasham Hari
     member_results = {}
     for login, label in MEMBERS:
         res = fetch_member_inat(login, label, lookup)
@@ -235,6 +248,8 @@ def main():
                 "alt": f"{sp['name']} ({sci}) photographed in the field by {label.replace(' (TNBS)', '')}",
                 "member": True,
             }
+            if not rec["license"]:
+                clean["licenseName"] = "TNBS Member Archive"
             member_assigned[sci] = clean
             added += 1
         print(f"Assigned {added} species to {label}")

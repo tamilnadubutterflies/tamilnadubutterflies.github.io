@@ -1,0 +1,1678 @@
+{
+  "plants": {
+    "abutilon indicum": {
+      "taxon": "Abutilon indicum",
+      "rank": "species",
+      "commonName": "Indian Mallow",
+      "thumb": "https://static.inaturalist.org/photos/272956873/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272956873/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157901098",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "acalypha indica": {
+      "taxon": "Acalypha indica",
+      "rank": "species",
+      "commonName": "Indian Acalypha",
+      "thumb": "https://static.inaturalist.org/photos/493490675/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493490675/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274508805",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "adenanthera pavonina": {
+      "taxon": "Adenanthera pavonina",
+      "rank": "species",
+      "commonName": "Saga Tree",
+      "thumb": "https://static.inaturalist.org/photos/372780685/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372780685/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797652",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "alysicarpus ovalifolius": {
+      "taxon": "Alysicarpus ovalifolius",
+      "rank": "species",
+      "commonName": "Alyce Clover",
+      "thumb": "https://static.inaturalist.org/photos/493457026/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493457026/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274487135",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "amaranthus viridis": {
+      "taxon": "Amaranthus viridis",
+      "rank": "species",
+      "commonName": "Green amaranth",
+      "thumb": "https://static.inaturalist.org/photos/493488678/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493488678/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274507505",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "bambusa balcooa": {
+      "taxon": "Bambusa balcooa",
+      "rank": "species",
+      "commonName": "Female Bamboo",
+      "thumb": "https://static.inaturalist.org/photos/272958923/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272958923/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157902134",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "bergera koenigii": {
+      "taxon": "Bergera koenigii",
+      "rank": "species",
+      "commonName": "Curry Leaf",
+      "thumb": "https://static.inaturalist.org/photos/493478646/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493478646/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274501226",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "borassus flabellifer": {
+      "taxon": "Borassus flabellifer",
+      "rank": "species",
+      "commonName": "Asian Palmyra Palm",
+      "thumb": "https://static.inaturalist.org/photos/272965325/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272965325/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157906060",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "calotropis gigantea": {
+      "taxon": "Calotropis gigantea",
+      "rank": "species",
+      "commonName": "Crown flower",
+      "thumb": "https://static.inaturalist.org/photos/272956210/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272956210/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157900660",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "caryota urens": {
+      "taxon": "Caryota urens",
+      "rank": "species",
+      "commonName": "Jaggery palm",
+      "thumb": "https://static.inaturalist.org/photos/372781185/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372781185/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797705",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "cassia fistula": {
+      "taxon": "Cassia fistula",
+      "rank": "species",
+      "commonName": "Golden Shower Tree",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/357775394/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/357775394/large.jpeg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "url": "https://www.inaturalist.org/observations/202577536",
+      "license": "by/4.0",
+      "licenseName": "",
+      "quality": "research"
+    },
+    "citrus maxima": {
+      "taxon": "Citrus maxima",
+      "rank": "species",
+      "commonName": "Pomelo",
+      "thumb": "https://static.inaturalist.org/photos/493478865/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493478865/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274501344",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "cleome viscosa": {
+      "taxon": "Cleome viscosa",
+      "rank": "species",
+      "commonName": "Asian Spiderflower",
+      "thumb": "https://static.inaturalist.org/photos/493484301/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493484301/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274504987",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "cocos nucifera": {
+      "taxon": "Cocos nucifera",
+      "rank": "species",
+      "commonName": "Coconut palm",
+      "thumb": "https://static.inaturalist.org/photos/272961753/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272961753/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157903934",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "cynodon dactylon": {
+      "taxon": "Cynodon dactylon",
+      "rank": "species",
+      "commonName": "Bermuda grass",
+      "thumb": "https://static.inaturalist.org/photos/491215927/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/491215927/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/273088996",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "diospyros": {
+      "taxon": "Diospyros",
+      "rank": "genus",
+      "commonName": "Persimmons",
+      "thumb": "https://static.inaturalist.org/photos/272966250/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272966250/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157906595",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "erythrina": {
+      "taxon": "Erythrina",
+      "rank": "genus",
+      "commonName": "Coral trees",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/312128039/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/312128039/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "url": "https://www.inaturalist.org/observations/179299446",
+      "license": "by/4.0",
+      "licenseName": "",
+      "quality": "casual"
+    },
+    "heliotropium indicum": {
+      "taxon": "Heliotropium indicum",
+      "rank": "species",
+      "commonName": "Indian Heliotrope",
+      "thumb": "https://static.inaturalist.org/photos/372779400/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372779400/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797576",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "hibiscus × archeri": {
+      "taxon": "Hibiscus × archeri",
+      "rank": "hybrid",
+      "commonName": "Red Hibiscus",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134585/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134585/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "url": "https://www.inaturalist.org/observations/179303029",
+      "license": "by/4.0",
+      "licenseName": "",
+      "quality": "needs_id"
+    },
+    "justicia": {
+      "taxon": "Justicia",
+      "rank": "genus",
+      "commonName": "",
+      "thumb": "https://static.inaturalist.org/photos/272964247/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272964247/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157905073",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "lagerstroemia indica": {
+      "taxon": "Lagerstroemia indica",
+      "rank": "species",
+      "commonName": "Crape-myrtle",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/357774373/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/357774373/large.jpeg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "url": "https://www.inaturalist.org/observations/202577523",
+      "license": "by/4.0",
+      "licenseName": "",
+      "quality": "research"
+    },
+    "lantana camara": {
+      "taxon": "Lantana camara",
+      "rank": "species",
+      "commonName": "Common lantana",
+      "thumb": "https://static.inaturalist.org/photos/493345826/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493345826/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274416248",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "mangifera indica": {
+      "taxon": "Mangifera indica",
+      "rank": "species",
+      "commonName": "Indian mango",
+      "thumb": "https://static.inaturalist.org/photos/493490264/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493490264/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274508526",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "millettia": {
+      "taxon": "Millettia",
+      "rank": "genus",
+      "commonName": "",
+      "thumb": "https://static.inaturalist.org/photos/272299911/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272299911/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157487414",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "musa": {
+      "taxon": "Musa",
+      "rank": "genus",
+      "commonName": "Bananas",
+      "thumb": "https://static.inaturalist.org/photos/493489066/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493489066/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274507731",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "neolamarckia": {
+      "taxon": "Neolamarckia",
+      "rank": "genus",
+      "commonName": "",
+      "thumb": "https://static.inaturalist.org/photos/272965659/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272965659/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157906262",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "nerium oleander": {
+      "taxon": "Nerium oleander",
+      "rank": "species",
+      "commonName": "Oleander",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/357774341/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/357774341/large.jpeg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "url": "https://www.inaturalist.org/observations/202577520",
+      "license": "by/4.0",
+      "licenseName": "",
+      "quality": "research"
+    },
+    "passiflora vesicaria": {
+      "taxon": "Passiflora vesicaria",
+      "rank": "species",
+      "commonName": "Orangefruit Passionflower",
+      "thumb": "https://static.inaturalist.org/photos/372780730/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372780730/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797677",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "pigea enneasperma": {
+      "taxon": "Pigea enneasperma",
+      "rank": "species",
+      "commonName": "Spade Flower",
+      "thumb": "https://static.inaturalist.org/photos/274165103/medium.jpg",
+      "full": "https://static.inaturalist.org/photos/274165103/large.jpg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/158680094",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "pithecellobium dulce": {
+      "taxon": "Pithecellobium dulce",
+      "rank": "species",
+      "commonName": "Madras Thorn",
+      "thumb": "https://static.inaturalist.org/photos/372779843/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372779843/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797596",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "pongamia pinnata": {
+      "taxon": "Pongamia pinnata",
+      "rank": "species",
+      "commonName": "Indian beech tree",
+      "thumb": "https://static.inaturalist.org/photos/372780560/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372780560/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797637",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "portulaca oleracea": {
+      "taxon": "Portulaca oleracea",
+      "rank": "species",
+      "commonName": "Common Purslane",
+      "thumb": "https://static.inaturalist.org/photos/498179081/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/498179081/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/277446727",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "psidium guajava": {
+      "taxon": "Psidium guajava",
+      "rank": "species",
+      "commonName": "Common guava",
+      "thumb": "https://static.inaturalist.org/photos/493488388/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493488388/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274505250",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "ricinus communis": {
+      "taxon": "Ricinus communis",
+      "rank": "species",
+      "commonName": "Castor bean",
+      "thumb": "https://static.inaturalist.org/photos/272955718/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272955718/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157900422",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "ruellia tuberosa": {
+      "taxon": "Ruellia tuberosa",
+      "rank": "species",
+      "commonName": "Popping Pod",
+      "thumb": "https://static.inaturalist.org/photos/375234111/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/375234111/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/212335745",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "research"
+    },
+    "senna auriculata": {
+      "taxon": "Senna auriculata",
+      "rank": "species",
+      "commonName": "Matura tea tree",
+      "thumb": "https://static.inaturalist.org/photos/272965881/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/272965881/large.jpeg",
+      "author": "Nishanth CV (TNBS)",
+      "url": "https://www.inaturalist.org/observations/157906388",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "sida acuta": {
+      "taxon": "Sida acuta",
+      "rank": "species",
+      "commonName": "Spinyhead Sida",
+      "thumb": "https://static.inaturalist.org/photos/493493124/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493493124/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274510465",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "sorghum bicolor": {
+      "taxon": "Sorghum bicolor",
+      "rank": "species",
+      "commonName": "Sorghum",
+      "thumb": "https://static.inaturalist.org/photos/493481403/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493481403/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274503079",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "synedrella nodiflora": {
+      "taxon": "Synedrella nodiflora",
+      "rank": "species",
+      "commonName": "Nodeweed",
+      "thumb": "https://static.inaturalist.org/photos/493480957/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493480957/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274502787",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "syzygium cumini": {
+      "taxon": "Syzygium cumini",
+      "rank": "species",
+      "commonName": "Java plum",
+      "thumb": "https://static.inaturalist.org/photos/372780362/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372780362/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797638",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "casual"
+    },
+    "tamarindus indica": {
+      "taxon": "Tamarindus indica",
+      "rank": "species",
+      "commonName": "Tamarind",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134599/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/312134599/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "url": "https://www.inaturalist.org/observations/179303031",
+      "license": "by/4.0",
+      "licenseName": "",
+      "quality": "research"
+    },
+    "tephrosia purpurea": {
+      "taxon": "Tephrosia purpurea",
+      "rank": "species",
+      "commonName": "Purple Hoarypea",
+      "thumb": "https://static.inaturalist.org/photos/493484054/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/493484054/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/274504837",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "vachellia": {
+      "taxon": "Vachellia",
+      "rank": "genus",
+      "commonName": "Thorn trees",
+      "thumb": "https://static.inaturalist.org/photos/372780304/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372780304/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797619",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    },
+    "ziziphus mauritiana": {
+      "taxon": "Ziziphus mauritiana",
+      "rank": "species",
+      "commonName": "Chinese Apple",
+      "thumb": "https://static.inaturalist.org/photos/372781689/medium.jpeg",
+      "full": "https://static.inaturalist.org/photos/372781689/large.jpeg",
+      "author": "Sadheeskumar K (TNBS)",
+      "url": "https://www.inaturalist.org/observations/210797755",
+      "license": "",
+      "licenseName": "TNBS Member Archive",
+      "quality": "needs_id"
+    }
+  },
+  "bySpecies": {
+    "Papilio polytes": [
+      {
+        "plantKey": "bergera koenigii",
+        "hostLabel": "Murraya koenigii (Curry leaf)",
+        "matchKind": "synonym"
+      },
+      {
+        "plantKey": "citrus maxima",
+        "hostLabel": "Citrus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Papilio daksha": [
+      {
+        "plantKey": "citrus maxima",
+        "hostLabel": "Citrus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Papilio polymnestor": [
+      {
+        "plantKey": "citrus maxima",
+        "hostLabel": "Citrus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Papilio demoleus": [
+      {
+        "plantKey": "bergera koenigii",
+        "hostLabel": "Murraya koenigii",
+        "matchKind": "synonym"
+      },
+      {
+        "plantKey": "citrus maxima",
+        "hostLabel": "Citrus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Eurema blanda": [
+      {
+        "plantKey": "senna auriculata",
+        "hostLabel": "Senna siamea",
+        "matchKind": "genus"
+      },
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia species",
+        "matchKind": "genus"
+      }
+    ],
+    "Eurema brigitta": [
+      {
+        "plantKey": "senna auriculata",
+        "hostLabel": "Senna species",
+        "matchKind": "genus"
+      }
+    ],
+    "Eurema hecabe": [
+      {
+        "plantKey": "senna auriculata",
+        "hostLabel": "Senna tora",
+        "matchKind": "genus"
+      }
+    ],
+    "Eurema nilgiriensis": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia pennata",
+        "matchKind": "genus"
+      }
+    ],
+    "Catopsilia pomona": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia fistula (Golden Shower)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "senna auriculata",
+        "hostLabel": "Senna siamea",
+        "matchKind": "genus"
+      }
+    ],
+    "Catopsilia pyranthe": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia fistula",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "senna auriculata",
+        "hostLabel": "Senna auriculata",
+        "matchKind": "exact"
+      }
+    ],
+    "Appias libythea": [
+      {
+        "plantKey": "cleome viscosa",
+        "hostLabel": "Cleome viscosa",
+        "matchKind": "exact"
+      }
+    ],
+    "Leptosia nina": [
+      {
+        "plantKey": "cleome viscosa",
+        "hostLabel": "Cleome viscosa",
+        "matchKind": "exact"
+      }
+    ],
+    "Parantica aglea": [
+      {
+        "plantKey": "calotropis gigantea",
+        "hostLabel": "Calotropis gigantea",
+        "matchKind": "exact"
+      }
+    ],
+    "Tirumala limniace": [
+      {
+        "plantKey": "calotropis gigantea",
+        "hostLabel": "Calotropis gigantea",
+        "matchKind": "exact"
+      }
+    ],
+    "Danaus chrysippus": [
+      {
+        "plantKey": "calotropis gigantea",
+        "hostLabel": "Calotropis gigantea (Crown flower)",
+        "matchKind": "exact"
+      }
+    ],
+    "Euploea core": [
+      {
+        "plantKey": "nerium oleander",
+        "hostLabel": "Nerium oleander",
+        "matchKind": "exact"
+      }
+    ],
+    "Charaxes bharata": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      }
+    ],
+    "Charaxes agrarius": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      }
+    ],
+    "Charaxes schreiber": [
+      {
+        "plantKey": "adenanthera pavonina",
+        "hostLabel": "Adenanthera pavonina (Red bead tree)",
+        "matchKind": "exact"
+      }
+    ],
+    "Charaxes psaphon": [
+      {
+        "plantKey": "pithecellobium dulce",
+        "hostLabel": "Pithecellobium dulce",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "adenanthera pavonina",
+        "hostLabel": "Adenanthera pavonina",
+        "matchKind": "exact"
+      }
+    ],
+    "Charaxes solon": [
+      {
+        "plantKey": "tamarindus indica",
+        "hostLabel": "Tamarindus indica (Tamarind)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "pithecellobium dulce",
+        "hostLabel": "Pithecellobium dulce",
+        "matchKind": "exact"
+      }
+    ],
+    "Discophora lepida": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos (Thorny bamboo)",
+        "matchKind": "genus"
+      }
+    ],
+    "Amathusia phidippus": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera (Coconut palm)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "borassus flabellifer",
+        "hostLabel": "Borassus flabellifer (Palmyra palm)",
+        "matchKind": "exact"
+      }
+    ],
+    "Elymnias hypermnestra": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera (Coconut palm)",
+        "matchKind": "exact"
+      }
+    ],
+    "Elymnias caudata": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera (Coconut palm)",
+        "matchKind": "exact"
+      }
+    ],
+    "Melanitis leda": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Melanitis phedima": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Melanitis zitenius": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Parantirrhoea marshalli": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Lethe europa": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Lethe drypetis": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Mycalesis visala": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Ypthima asterope": [
+      {
+        "plantKey": "cynodon dactylon",
+        "hostLabel": "Cynodon dactylon (Bermuda grass)",
+        "matchKind": "exact"
+      }
+    ],
+    "Ypthima ceylonica": [
+      {
+        "plantKey": "cynodon dactylon",
+        "hostLabel": "Cynodon dactylon (Bermuda grass / Arugampul)",
+        "matchKind": "exact"
+      }
+    ],
+    "Ypthima huebneri": [
+      {
+        "plantKey": "cynodon dactylon",
+        "hostLabel": "Cynodon dactylon",
+        "matchKind": "exact"
+      }
+    ],
+    "Acraea terpsicore": [
+      {
+        "plantKey": "passiflora vesicaria",
+        "hostLabel": "Passiflora foetida (Stinking passionflower)",
+        "matchKind": "synonym"
+      },
+      {
+        "plantKey": "pigea enneasperma",
+        "hostLabel": "Hybanthus enneaspermus",
+        "matchKind": "synonym"
+      }
+    ],
+    "Cethosia mahratta": [
+      {
+        "plantKey": "passiflora vesicaria",
+        "hostLabel": "Passiflora species",
+        "matchKind": "genus"
+      }
+    ],
+    "Vindula erota": [
+      {
+        "plantKey": "passiflora vesicaria",
+        "hostLabel": "Passiflora species",
+        "matchKind": "genus"
+      }
+    ],
+    "Moduza procris": [
+      {
+        "plantKey": "neolamarckia",
+        "hostLabel": "Neolamarckia cadamba (Kadamba)",
+        "matchKind": "genus"
+      }
+    ],
+    "Pantoporia hordonia": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia sinuata",
+        "matchKind": "genus"
+      }
+    ],
+    "Pantoporia sandaka": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      }
+    ],
+    "Neptis jumbah": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia fistula",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "erythrina",
+        "hostLabel": "Erythrina stricta",
+        "matchKind": "genus"
+      }
+    ],
+    "Euthalia aconthea": [
+      {
+        "plantKey": "mangifera indica",
+        "hostLabel": "Mangifera indica (Mango)",
+        "matchKind": "exact"
+      }
+    ],
+    "Symphaedra nais": [
+      {
+        "plantKey": "mangifera indica",
+        "hostLabel": "Mangifera indica",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "diospyros",
+        "hostLabel": "Diospyros melanoxylon",
+        "matchKind": "genus"
+      }
+    ],
+    "Dophla evelina": [
+      {
+        "plantKey": "diospyros",
+        "hostLabel": "Diospyros candolleana",
+        "matchKind": "genus"
+      }
+    ],
+    "Ariadne ariadne": [
+      {
+        "plantKey": "ricinus communis",
+        "hostLabel": "Ricinus communis",
+        "matchKind": "exact"
+      }
+    ],
+    "Ariadne merione": [
+      {
+        "plantKey": "ricinus communis",
+        "hostLabel": "Ricinus communis",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "acalypha indica",
+        "hostLabel": "Acalypha species",
+        "matchKind": "genus"
+      }
+    ],
+    "Junonia orithya": [
+      {
+        "plantKey": "justicia",
+        "hostLabel": "Justicia procumbens",
+        "matchKind": "genus"
+      }
+    ],
+    "Junonia hierta": [
+      {
+        "plantKey": "justicia",
+        "hostLabel": "Justicia betonica",
+        "matchKind": "genus"
+      }
+    ],
+    "Junonia iphita": [
+      {
+        "plantKey": "justicia",
+        "hostLabel": "Justicia micrantha",
+        "matchKind": "genus"
+      }
+    ],
+    "Junonia almana": [
+      {
+        "plantKey": "ruellia tuberosa",
+        "hostLabel": "Ruellia species",
+        "matchKind": "genus"
+      }
+    ],
+    "Junonia lemonias": [
+      {
+        "plantKey": "sida acuta",
+        "hostLabel": "Sida rhombifolia",
+        "matchKind": "genus"
+      }
+    ],
+    "Hypolimnas bolina": [
+      {
+        "plantKey": "portulaca oleracea",
+        "hostLabel": "Portulaca oleracea",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "synedrella nodiflora",
+        "hostLabel": "Synedrella nodiflora",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "sida acuta",
+        "hostLabel": "Sida rhombifolia",
+        "matchKind": "genus"
+      }
+    ],
+    "Hypolimnas misippus": [
+      {
+        "plantKey": "portulaca oleracea",
+        "hostLabel": "Portulaca oleracea",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "sida acuta",
+        "hostLabel": "Sida rhombifolia",
+        "matchKind": "genus"
+      }
+    ],
+    "Curetis thetis": [
+      {
+        "plantKey": "pongamia pinnata",
+        "hostLabel": "Pongamia pinnata (Pongam / Indian beech)",
+        "matchKind": "exact"
+      }
+    ],
+    "Curetis acuta": [
+      {
+        "plantKey": "pongamia pinnata",
+        "hostLabel": "Pongamia pinnata (Indian Beech)",
+        "matchKind": "exact"
+      }
+    ],
+    "Cigaritis lohita": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia catechu",
+        "matchKind": "genus"
+      }
+    ],
+    "Cigaritis vulcanus": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia fistula",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana",
+        "matchKind": "exact"
+      }
+    ],
+    "Cigaritis schistacea": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Cigaritis ictis": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia species",
+        "matchKind": "genus"
+      },
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia species",
+        "matchKind": "genus"
+      }
+    ],
+    "Cigaritis abnormis": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia fistula",
+        "matchKind": "exact"
+      }
+    ],
+    "Cigaritis elima": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia eburnea",
+        "matchKind": "genus"
+      },
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Anthene emolus": [
+      {
+        "plantKey": "cassia fistula",
+        "hostLabel": "Cassia fistula",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "mangifera indica",
+        "hostLabel": "Mangifera indica (Mango)",
+        "matchKind": "exact"
+      }
+    ],
+    "Anthene lycaenina": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia nilotica",
+        "matchKind": "genus"
+      }
+    ],
+    "Prosotas nora": [
+      {
+        "plantKey": "pithecellobium dulce",
+        "hostLabel": "Pithecellobium dulce",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      }
+    ],
+    "Prosotas dubiosa": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      }
+    ],
+    "Caleta decidia": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus oenoplia (Jackal Jujube)",
+        "matchKind": "genus"
+      }
+    ],
+    "Discolampa ethion": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana",
+        "matchKind": "exact"
+      }
+    ],
+    "Jamides bochus": [
+      {
+        "plantKey": "pongamia pinnata",
+        "hostLabel": "Pongamia pinnata",
+        "matchKind": "exact"
+      }
+    ],
+    "Jamides celeno": [
+      {
+        "plantKey": "pongamia pinnata",
+        "hostLabel": "Pongamia pinnata",
+        "matchKind": "exact"
+      }
+    ],
+    "Castalius rosimon": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana (Jujube)",
+        "matchKind": "exact"
+      }
+    ],
+    "Tarucus balkanicus": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana",
+        "matchKind": "exact"
+      }
+    ],
+    "Tarucus nara": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana (Indian Jujube)",
+        "matchKind": "exact"
+      }
+    ],
+    "Tarucus callinara": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana",
+        "matchKind": "exact"
+      }
+    ],
+    "Tarucus indica": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus mauritiana",
+        "matchKind": "exact"
+      }
+    ],
+    "Tarucus ananda": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus xylopyrus",
+        "matchKind": "genus"
+      }
+    ],
+    "Zizeeria karsandra": [
+      {
+        "plantKey": "amaranthus viridis",
+        "hostLabel": "Amaranthus viridis",
+        "matchKind": "exact"
+      }
+    ],
+    "Zizina otis": [
+      {
+        "plantKey": "alysicarpus ovalifolius",
+        "hostLabel": "Alysicarpus vaginalis",
+        "matchKind": "genus"
+      }
+    ],
+    "Pseudozizeeria maha": [
+      {
+        "plantKey": "tephrosia purpurea",
+        "hostLabel": "Tephrosia species",
+        "matchKind": "genus"
+      }
+    ],
+    "Zizula hylax": [
+      {
+        "plantKey": "ruellia tuberosa",
+        "hostLabel": "Ruellia tuberosa",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "lantana camara",
+        "hostLabel": "Lantana camara (flowers)",
+        "matchKind": "exact"
+      }
+    ],
+    "Azanus ubaldus": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Vachellia nilotica (syn. Acacia nilotica / Babul)",
+        "matchKind": "genus"
+      }
+    ],
+    "Azanus jesous": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Vachellia farnesiana (syn. Acacia farnesiana)",
+        "matchKind": "genus"
+      }
+    ],
+    "Freyeria putli": [
+      {
+        "plantKey": "heliotropium indicum",
+        "hostLabel": "Heliotropium strigosum",
+        "matchKind": "genus"
+      }
+    ],
+    "Freyeria trochylus": [
+      {
+        "plantKey": "heliotropium indicum",
+        "hostLabel": "Heliotropium species",
+        "matchKind": "genus"
+      }
+    ],
+    "Chilades parrhassius": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Vachellia nilotica (syn. Acacia nilotica)",
+        "matchKind": "genus"
+      }
+    ],
+    "Chilades lajus": [
+      {
+        "plantKey": "citrus maxima",
+        "hostLabel": "Citrus limon (Lemon)",
+        "matchKind": "genus"
+      }
+    ],
+    "Arhopala centaurus": [
+      {
+        "plantKey": "syzygium cumini",
+        "hostLabel": "Syzygium cumini",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "lagerstroemia indica",
+        "hostLabel": "Lagerstroemia speciosa",
+        "matchKind": "genus"
+      }
+    ],
+    "Arhopala amantes": [
+      {
+        "plantKey": "syzygium cumini",
+        "hostLabel": "Syzygium species",
+        "matchKind": "genus"
+      }
+    ],
+    "Arhopala alea": [
+      {
+        "plantKey": "syzygium cumini",
+        "hostLabel": "Syzygium species",
+        "matchKind": "genus"
+      }
+    ],
+    "Surendra quercetorum": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      }
+    ],
+    "Zinaspa todara": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia torta",
+        "matchKind": "genus"
+      }
+    ],
+    "Zesius chrysomallus": [
+      {
+        "plantKey": "psidium guajava",
+        "hostLabel": "Psidium guajava",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "diospyros",
+        "hostLabel": "Diospyros melanoxylon",
+        "matchKind": "genus"
+      }
+    ],
+    "Horaga onyx": [
+      {
+        "plantKey": "mangifera indica",
+        "hostLabel": "Mangifera indica",
+        "matchKind": "exact"
+      }
+    ],
+    "Rathinda amor": [
+      {
+        "plantKey": "mangifera indica",
+        "hostLabel": "Mangifera indica",
+        "matchKind": "exact"
+      }
+    ],
+    "Virachola isocrates": [
+      {
+        "plantKey": "psidium guajava",
+        "hostLabel": "Psidium guajava (Guava)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "tamarindus indica",
+        "hostLabel": "Tamarindus indica",
+        "matchKind": "exact"
+      }
+    ],
+    "Rapala iarbus": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia species",
+        "matchKind": "genus"
+      }
+    ],
+    "Rapala manea": [
+      {
+        "plantKey": "lantana camara",
+        "hostLabel": "Lantana camara",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      },
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Rapala varuna": [
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus rugosa",
+        "matchKind": "genus"
+      }
+    ],
+    "Rapala lankana": [
+      {
+        "plantKey": "vachellia",
+        "hostLabel": "Acacia caesia",
+        "matchKind": "genus"
+      },
+      {
+        "plantKey": "ziziphus mauritiana",
+        "hostLabel": "Ziziphus rugosa",
+        "matchKind": "genus"
+      }
+    ],
+    "Hasora chromus": [
+      {
+        "plantKey": "pongamia pinnata",
+        "hostLabel": "Pongamia pinnata (Pongam)",
+        "matchKind": "exact"
+      }
+    ],
+    "Hasora taminatus": [
+      {
+        "plantKey": "pongamia pinnata",
+        "hostLabel": "Pongamia pinnata",
+        "matchKind": "exact"
+      }
+    ],
+    "Hasora badra": [
+      {
+        "plantKey": "millettia",
+        "hostLabel": "Millettia species",
+        "matchKind": "genus"
+      }
+    ],
+    "Hasora vitta": [
+      {
+        "plantKey": "millettia",
+        "hostLabel": "Millettia extensa",
+        "matchKind": "genus"
+      }
+    ],
+    "Odontoptilum angulatum": [
+      {
+        "plantKey": "hibiscus × archeri",
+        "hostLabel": "Hibiscus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Gomalia elma": [
+      {
+        "plantKey": "abutilon indicum",
+        "hostLabel": "Abutilon indicum",
+        "matchKind": "exact"
+      }
+    ],
+    "Spialia galba": [
+      {
+        "plantKey": "sida acuta",
+        "hostLabel": "Sida rhombifolia",
+        "matchKind": "genus"
+      },
+      {
+        "plantKey": "hibiscus × archeri",
+        "hostLabel": "Hibiscus species",
+        "matchKind": "genus"
+      }
+    ],
+    "Thoressa honorei": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Thoressa sitala": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Halpe porus": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa vulgaris",
+        "matchKind": "genus"
+      }
+    ],
+    "Halpe hindu": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Iambrix salsala": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Notocrypta curvifascia": [
+      {
+        "plantKey": "musa",
+        "hostLabel": "Musa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Suastus gremius": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "borassus flabellifer",
+        "hostLabel": "Borassus flabellifer",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "caryota urens",
+        "hostLabel": "Caryota urens",
+        "matchKind": "exact"
+      }
+    ],
+    "Suastus minutus": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "caryota urens",
+        "hostLabel": "Caryota urens",
+        "matchKind": "exact"
+      }
+    ],
+    "Hyarotis adrastus": [
+      {
+        "plantKey": "caryota urens",
+        "hostLabel": "Caryota urens (Fishtail palm)",
+        "matchKind": "exact"
+      }
+    ],
+    "Gangara thyrsis": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "caryota urens",
+        "hostLabel": "Caryota urens (Fishtail palm)",
+        "matchKind": "exact"
+      }
+    ],
+    "Erionota torus": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "musa",
+        "hostLabel": "Musa paradisiaca (Banana)",
+        "matchKind": "genus"
+      }
+    ],
+    "Matapa aria": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Parnara bada": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Parnara ganga": [
+      {
+        "plantKey": "cynodon dactylon",
+        "hostLabel": "Cynodon dactylon",
+        "matchKind": "exact"
+      }
+    ],
+    "Pelopidas agna": [
+      {
+        "plantKey": "sorghum bicolor",
+        "hostLabel": "Sorghum bicolor",
+        "matchKind": "exact"
+      }
+    ],
+    "Pelopidas subochracea": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Pelopidas mathias": [
+      {
+        "plantKey": "sorghum bicolor",
+        "hostLabel": "Sorghum bicolor",
+        "matchKind": "exact"
+      }
+    ],
+    "Pelopidas conjuncta": [
+      {
+        "plantKey": "sorghum bicolor",
+        "hostLabel": "Sorghum bicolor",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa vulgaris",
+        "matchKind": "genus"
+      }
+    ],
+    "Polytremis lubricans": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Baoris farri": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Caltoris canaraica": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Caltoris kumara": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa vulgaris",
+        "matchKind": "genus"
+      }
+    ],
+    "Caltoris philippina": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa vulgaris",
+        "matchKind": "genus"
+      }
+    ],
+    "Taractrocera maevius": [
+      {
+        "plantKey": "cynodon dactylon",
+        "hostLabel": "Cynodon dactylon",
+        "matchKind": "exact"
+      }
+    ],
+    "Potanthus pseudomaesa": [
+      {
+        "plantKey": "cynodon dactylon",
+        "hostLabel": "Cynodon dactylon",
+        "matchKind": "exact"
+      }
+    ],
+    "Potanthus confucius": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Potanthus palnia": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Potanthus pava": [
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa species",
+        "matchKind": "genus"
+      }
+    ],
+    "Telicota colon": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera (Coconut)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa striata",
+        "matchKind": "genus"
+      }
+    ],
+    "Telicota bambusae": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera (Coconut)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "bambusa balcooa",
+        "hostLabel": "Bambusa bambos",
+        "matchKind": "genus"
+      }
+    ],
+    "Cephrenes acalle": [
+      {
+        "plantKey": "cocos nucifera",
+        "hostLabel": "Cocos nucifera (Coconut)",
+        "matchKind": "exact"
+      },
+      {
+        "plantKey": "caryota urens",
+        "hostLabel": "Caryota urens (Fishtail palm)",
+        "matchKind": "exact"
+      }
+    ]
+  }
+}
