@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Nature and Butterfly Society
 
 A static website for The Nature and Butterfly Society (TNBS), built for GitHub Pages and custom domains. It features the 329-species Tamil Nadu butterfly field guide (**Pattampoochi Issue 27 final adopted checklist**), 328 verified Wikimedia Commons butterfly photographs, structured taxonomic & ecology profiles, a personal **Tamil Nadu Life List** tracker, **Butterfly Vision** AI identification (`https://butterflyvision.in/`), an interactive multi-mode quiz, 27 verified press reports & community portals, an About Us gallery, and all 27 issues of *Pattampoochi* with a searchable 127-article index.
@@ -34,3 +35,6 @@ From the project directory, run `python -m http.server 8765 --directory docs` an
 | `scripts/build.py`, `scripts/sync_photos.py` | Static site generator (`docs/`) and Wikimedia Commons license-verifying photo sync script |
 
 Run `python scripts/build.py` after any data or asset edits. To enable inline direct browser predictions inside `identify/index.html` from your custom domain in addition to the built-in `butterflyvision.in` handoff, allowlist your GitHub Pages / custom domain origin in `butterflyvision.in`'s FastAPI `CORSMiddleware`.
+=======
+# tamilnadubutterflies.github.io
+>>>>>>> 4ad6e83ea29563474746a8a6af7b9bc8ba4a6107
