@@ -153,17 +153,29 @@ if (spotlightBox) {
         zoomEl.dataset.lightboxLicensename = entry.licenseName;
 
         creditEl.replaceChildren();
-        const a1 = document.createElement("a");
-        a1.href = entry.authorUrl;
-        a1.target = "_blank";
-        a1.rel = "noopener noreferrer";
-        a1.textContent = entry.author;
-        const a2 = document.createElement("a");
-        a2.href = entry.licenseUrl;
-        a2.target = "_blank";
-        a2.rel = "noopener noreferrer";
-        a2.textContent = entry.licenseName;
-        creditEl.append(a1, " · ", a2);
+        if (entry.authorUrl) {
+            const a1 = document.createElement("a");
+            a1.href = entry.authorUrl;
+            a1.target = "_blank";
+            a1.rel = "noopener noreferrer";
+            a1.textContent = entry.author;
+            creditEl.append(a1);
+        } else {
+            creditEl.append(entry.author);
+        }
+        if (entry.licenseName) {
+            creditEl.append(" · ");
+            if (entry.licenseUrl) {
+                const a2 = document.createElement("a");
+                a2.href = entry.licenseUrl;
+                a2.target = "_blank";
+                a2.rel = "noopener noreferrer";
+                a2.textContent = entry.licenseName;
+                creditEl.append(a2);
+            } else {
+                creditEl.append(entry.licenseName);
+            }
+        }
 
         famEl.textContent = entry.family;
         nameEl.textContent = entry.name;
@@ -1077,7 +1089,7 @@ if (quiz) {
             feedbackEl.append(spLink);
         }
 
-        if (q.media && !photoPreview.hidden) {
+        if (q.media && !photoPreview.hidden && q.media.url) {
             const cap = photoPreview.querySelector("figcaption");
             if (cap && !cap.dataset.linked) {
                 cap.dataset.linked = "1";
@@ -1135,12 +1147,20 @@ if (quiz) {
 
             const cap = document.createElement("figcaption");
             cap.className = "credit";
-            const lic = document.createElement("a");
-            lic.href = q.media.license;
-            lic.target = "_blank";
-            lic.rel = "noopener noreferrer";
-            lic.textContent = q.media.licenseName;
-            cap.append(q.media.author, " · ", lic);
+            cap.append(q.media.author);
+            if (q.media.licenseName) {
+                cap.append(" · ");
+                if (q.media.license) {
+                    const lic = document.createElement("a");
+                    lic.href = q.media.license;
+                    lic.target = "_blank";
+                    lic.rel = "noopener noreferrer";
+                    lic.textContent = q.media.licenseName;
+                    cap.append(lic);
+                } else {
+                    cap.append(q.media.licenseName);
+                }
+            }
 
             figure.append(zoomBtn, cap);
             photoPreview.append(figure);

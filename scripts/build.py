@@ -124,6 +124,17 @@ def license_info(license_id):
 def photo_meta(scientific, prefix, thumb=False):
     rec = PHOTOS[scientific]
     if isinstance(rec, dict):
+        if rec.get("source") == "local":
+            return {
+                "src": prefix + rec["file"],
+                "alt": rec["alt"],
+                "author": rec["author"],
+                "url": rec.get("url", ""),
+                "license": "",
+                "licenseName": rec.get("licenseName", "TNBS Member Archive"),
+                "sourceLabel": "",
+                "member": bool(rec.get("member", True)),
+            }
         lic_url, lic_name = license_info(rec["license"])
         if rec.get("source") == "inaturalist":
             return {
@@ -168,19 +179,28 @@ def photo_meta(scientific, prefix, thumb=False):
     }
 
 
+def credit_html(meta, include_source=False):
+    parts = [link(meta["author"], meta["url"]) if meta["url"] else h(meta["author"])]
+    if meta["licenseName"]:
+        parts.append(link(meta["licenseName"], meta["license"]) if meta["license"] else h(meta["licenseName"]))
+    if include_source and meta["url"] and meta["sourceLabel"]:
+        parts.append(link(meta["sourceLabel"], meta["url"]))
+    return " · ".join(parts)
+
+
 def photo(scientific, prefix, mode="card"):
     if scientific not in PHOTOS:
         return ""
     meta = photo_meta(scientific, prefix, thumb=(mode == "card"))
     species_name = BY_SCI[scientific]["name"]
     if mode == "hero":
-        dims = ' width="1280" height="853"' if scientific == "Papilio crino" else ""
+        dims = ' width="1024" height="682"' if scientific == "Papilio crino" else ""
         return (
             f'<figure class="hero-media"><img class="hide-on-error" src="{h(meta["src"])}" '
             f'alt="{h(meta["alt"])}" fetchpriority="high" decoding="async"{dims}></figure>'
-            f'<span class="hero-credit">{h(species_name)} · {link(meta["author"], meta["url"])} · {link(meta["licenseName"], meta["license"])}</span>'
+            f'<span class="hero-credit">{h(species_name)} · {credit_html(meta)}</span>'
         )
-    credit = link(meta["author"], meta["url"]) + " · " + link(meta["licenseName"], meta["license"])
+    credit = credit_html(meta)
     if mode == "card":
         return (
             f'<div class="media bare"><img class="hide-on-error" src="{h(meta["src"])}" '
@@ -202,7 +222,7 @@ def photo(scientific, prefix, mode="card"):
     )
     return (
         f'<figure class="photo-large">{zoom_btn}'
-        f'<figcaption class="credit">{credit} · {link(meta["sourceLabel"], meta["url"])}</figcaption></figure>'
+        f'<figcaption class="credit">{credit_html(meta, include_source=True)}</figcaption></figure>'
     )
 
 
@@ -429,7 +449,7 @@ def home_spotlight_section():
 <button type="button" class="photo-zoom" data-spot-zoom data-lightbox-src="{h(first["src"])}" data-lightbox-title="{h(first["name"])} ({h(first["scientific"])})" data-lightbox-alt="{h(first["alt"])}" data-lightbox-author="{h(first["author"])}" data-lightbox-url="{h(first["authorUrl"])}" data-lightbox-license="{h(first["licenseUrl"])}" data-lightbox-licensename="{h(first["licenseName"])}" aria-label="Enlarge spotlight photograph">
 <img data-spot-img src="{h(first["src"])}" alt="{h(first["alt"])}" loading="lazy" decoding="async">
 <span class="zoom-hint" aria-hidden="true">Zoom</span></button>
-<p class="credit" data-spot-credit>{link(first["author"], first["authorUrl"])} · {link(first["licenseName"], first["licenseUrl"])}</p></div>
+<p class="credit" data-spot-credit>{credit_html({"author": first["author"], "url": first["authorUrl"], "licenseName": first["licenseName"], "license": first["licenseUrl"]})}</p></div>
 <div class="spotlight-copy">
 <p class="card-meta" data-spot-family>{h(first["family"])}</p>
 <h3 data-spot-name>{h(first["name"])}</h3>
@@ -486,7 +506,13 @@ def home_hotspots_tabs():
 
 def home():
     validated_count = sum(1 for s in SPECIES if s.get("validated", True))
-    hero = f"""<section class="hero"><div class="wrap hero-inner">{photo("Papilio crino", "", "hero")}
+    hero_media = (
+        '<figure class="hero-media"><img class="hide-on-error" src="assets/photos/home-hero-crino.jpg" '
+        'alt="Common Banded Peacock (Papilio crino) basking with open emerald-green and turquoise-banded wings on green foliage, photographed by Pavendhan A" '
+        'fetchpriority="high" decoding="async" width="1024" height="682"></figure>'
+        '<span class="hero-credit">Common Banded Peacock (<i>Papilio crino</i>) · Photo: Pavendhan A (TNBS)</span>'
+    )
+    hero = f"""<section class="hero"><div class="wrap hero-inner">{hero_media}
 <div class="hero-copy"><p class="kicker">The Nature and Butterfly Society · Tamil Nadu</p><h1>Butterflies of<br><em>Tamil Nadu</em></h1>
 <p>Explore Tamil Nadu's {len(SPECIES)}-species butterfly field guide with detailed profiles and verified photos, identify sightings with Butterfly Vision AI, and follow conservation fieldwork across the state.</p>
 <search class="hero-search"><form action="butterflies/index.html" method="get" class="hero-search-form">
@@ -1127,7 +1153,7 @@ def about():
 
 def sources():
     photos_list = "".join(
-        f'<li><i>{h(s)}</i> · {link(meta["author"], meta["url"])} · {link(meta["licenseName"], meta["license"])}</li>'
+        f'<li><i>{h(s)}</i> · {credit_html(meta)}</li>'
         for s in sorted(PHOTOS)
         for meta in [photo_meta(s, "../")]
     )

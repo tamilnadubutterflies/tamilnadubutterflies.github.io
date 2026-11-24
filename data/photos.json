@@ -163,13 +163,15 @@
     "alt": "Paris Peacock (Papilio paris) photographed in the field by Theivaprakasham Hari",
     "member": true
   },
-  "Papilio crino": [
-    "Open wing basking position of Papilio crino (Fabricius, 1793) - Common Banded Peacock (2) WLB.jpg",
-    "Anitava Roy",
-    "by-sa/4.0",
-    "Common Banded Peacock basking with open emerald-green and turquoise-banded wings on a leaf",
-    1280
-  ],
+  "Papilio crino": {
+    "source": "local",
+    "file": "assets/photos/papilio-crino.jpg",
+    "author": "Sadheeskumar K (TNBS)",
+    "license": "tnbs",
+    "licenseName": "TNBS Member Archive",
+    "alt": "Common Banded Peacock (Papilio crino) basking with open emerald-green and turquoise-banded wings on green leaves, photographed by Sadheeskumar K",
+    "member": true
+  },
   "Papilio buddha": [
     "Papilio buddha Westwood, 1872 – Malabar Banded Peacock at Peravoor (1).jpg",
     "Vinayaraj",
