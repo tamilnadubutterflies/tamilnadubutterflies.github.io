@@ -1,0 +1,613 @@
+{
+  "issues": [
+    "0B4lgk0uw1UZObVVJYTNNSGFqMTg?resourcekey=0-nu94MUQysYzeEzvJwdOp6w",
+    "0B4lgk0uw1UZOR2NXS0lxemtpV2M?resourcekey=0-OzFx_kanCMVjAf-iIrmzvQ",
+    "0B4lgk0uw1UZOcGQ3b2MwTzM3dkU?resourcekey=0-dILriXQM7cnq_cidIy-x3Q",
+    "1LC4gPEP6zDc_I82g4JJRLNO-mm7ED95Z",
+    "1VeW0I5_FSGrwEG_Zl_XVmAJhzMOWJCEV",
+    "1pblRjt1EWWD9XPJBwzBvMSdQnL69HLtQ",
+    "1a4L2JJzpdhecfspyLXubPZHg8Mt4UD5e",
+    "1gqaR4Bjb1R7EXogsBfWSmUmmXkYV5QFR",
+    "1PWr3V7HJq5uDxdt886uMD0cIr149KJH8",
+    "1bHKMKOoo1tZcXa31nIX2rARer-TajYIi",
+    "1hp9zUiOsB7k3A-sg9xJKSSrmY0_Pp32S",
+    "1Q9BxHIm3_x94XYyzvfmTzg_WFDAb1JzJ",
+    "1660kZ1voUIA2VGnmUXEQCzqcWdAjilNd",
+    "10Urw94MD9ZOc7ilUNJfN2k9SM41H59aN",
+    "1FinLmgM1cqd5QnIYazBY2zZFX2MUsgko",
+    "1xEYk1rZtL7rBAcUH4PP9fC4CBzamed4i",
+    "1wPG54p6KuvdfzBNCZpmc3MT-tI_3tp3M",
+    "1W178a8cFoiuRZ6o42Qcb99qND0pOrDRw",
+    "1_91sgkbMpmHPi7aYAOyQmBZ_MLaFZ-c_",
+    "1UCNZX47R2oFNey1JcePzAYFvOpb-JdE1",
+    "1YExR6XK7YUkFT-IwWD0vft1tTVQtazCn",
+    "15WQccvlyDWo2OZ5bNNeOoFCIo-g69OnI",
+    "1DRlN6Mpk2NqJdSg9rr44db9RwgXTNKai",
+    "1mRGzDibm91JXnlrfA9vCT8AF-ZXBemJR",
+    "18RJwYn4y7h3q2ttMrsjrdnWQpSm4wxQR",
+    "1ChKn83qSsJpSVVZGl_UXM-83GkVxmTwz",
+    "1y6BONn__qHMgbtQVQd273Won1Kl3iqaK"
+  ],
+  "press": [
+    {
+      "date": "2026-10-19",
+      "source": "The New Indian Express",
+      "category": "Migration",
+      "title": "A second wave of migration in western Tamil Nadu",
+      "summary": "TNBS members reported seasonal post-monsoon movements of Blue Tigers, Dark Blue Tigers, and two crow butterfly species across five western districts including Salem, Namakkal, Erode, Tiruppur, and Coimbatore.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/Oct/19/monsoon-rains-spark-second-wave-of-butterfly-migration-in-western-tn",
+      "species": "Tirumala limniace"
+    },
+    {
+      "date": "2026-06-16",
+      "source": "The Times of India",
+      "category": "Rare Sightings",
+      "title": "A Painted Lady sighting in Sivaganga",
+      "summary": "A local naturalist documented a Painted Lady near Sivaganga, and TNBS member Ramanasaran Hari discussed seasonal migratory dispersal factors behind the interior plains record.",
+      "url": "https://timesofindia.indiatimes.com/city/madurai/rare-butterfly-spotted-in-sivaganga-indicates-migratory-pattern/amp_articleshow/131779167.cms",
+      "species": "Vanessa cardui"
+    },
+    {
+      "date": "2025-06-16",
+      "source": "The New Indian Express",
+      "category": "Surveys",
+      "title": "Coimbatore records 1,820 taxa in City Nature Challenge",
+      "summary": "TNBS joined local conservation organizations and citizen scientists across Coimbatore to document plants, butterflies, birds, and insects during the global urban biodiversity challenge.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2025/Jun/16/nature-challenge-identifies-1820-taxa-in-coimbatore",
+      "species": ""
+    },
+    {
+      "date": "2025-03-26",
+      "source": "The Times of India",
+      "category": "Rare Sightings",
+      "title": "A Sinhalese Five-ring recorded near Madurai",
+      "summary": "Madurai Nature and Cultural Forum recorded the butterfly along the Sathuragiri trail, with a TNBS member sharing diagnostic sighting details.",
+      "url": "https://timesofindia.indiatimes.com/city/madurai/sinhalese-five-ring-butterfly-spotted-in-madurai-dist/articleshow/119495267.cms",
+      "species": "Ypthima singala"
+    },
+    {
+      "date": "2025-03-22",
+      "source": "The New Indian Express",
+      "category": "Surveys",
+      "title": "Coimbatore Forest Division biodiversity survey",
+      "summary": "An annual collaborative field census uniting the Coimbatore Forest Division, Coimbatore Nature Society, TNBS, and WWF-India.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2025/Mar/22/terrestrial-bird-census-records-232-species-in-coimbatore-forest-division",
+      "species": ""
+    },
+    {
+      "date": "2024-12-22",
+      "source": "The Hindu",
+      "category": "Surveys",
+      "title": "Higher count of butterfly species recorded in Pachamalai during Forest Department study",
+      "summary": "A two-day December survey by Tiruchirappalli Forest Division and TNBS documented 126 butterfly species across all six families, including the Schedule II Banded Royal, bringing Pachamalai's combined checklist to 149.",
+      "url": "https://www.thehindu.com/news/cities/Tiruchirapalli/higher-count-of-butterfly-species-recorded-in-pachamalai-during-forest-department-study/article69015201.ece",
+      "species": "Rachana jalindra"
+    },
+    {
+      "date": "2024-12-20",
+      "source": "The Times of India",
+      "category": "Surveys",
+      "title": "Survey finds 126 butterfly species on Pachamalai hills",
+      "summary": "Joint assessment across seven reserve forests in Thuraiyur range revealed thriving populations of Common Albatross, Small Grass Yellow, Double-banded Judy, Rustic, and the rare Banded Royal.",
+      "url": "https://timesofindia.indiatimes.com/city/trichy/survey-finds-126-butterfly-species-on-pachamalai-hills/articleshow/116481446.cms",
+      "species": "Rachana jalindra"
+    },
+    {
+      "date": "2024-10-06",
+      "source": "The Times of India",
+      "category": "Migration",
+      "title": "Spectacular butterfly migration thrives in Coimbatore after rainfall boost",
+      "summary": "Strong August rainfall over the Eastern Ghats triggered a full-scale southwest flight across Salem, Tiruppur, and Coimbatore toward the Nilgiris and Anamalais.",
+      "url": "https://timesofindia.indiatimes.com/city/coimbatore/spectacular-butterfly-migration-thrives-in-coimbatore-after-rainfall-boost/articleshow/113972658.cms",
+      "species": "Tirumala septentrionis"
+    },
+    {
+      "date": "2024-10-05",
+      "source": "The New Indian Express",
+      "category": "Migration",
+      "title": "Seasonal butterfly migration to the Western Ghats observed",
+      "summary": "TNBS documented dense directional flights of Dark Blue Tigers, Blue Tigers, Common Crows, and Double-branded Crows moving at up to 200 individuals per minute over Coimbatore skies.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2024/Oct/05/seasonal-butterfly-migration-to-the-western-ghats-observed",
+      "species": "Tirumala limniace"
+    },
+    {
+      "date": "2024-08-09",
+      "source": "The New Indian Express",
+      "category": "Hotspots & Parks",
+      "title": "Butterfly park opened near Vellalore in Coimbatore",
+      "summary": "Built near the Vellalore lake and Miyawaki forest by KKPA following a year-long TNBS butterfly assessment that documented 101 local butterfly species.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2024/Aug/09/butterfly-park-opened-near-vellalore-in-coimbatore",
+      "species": ""
+    },
+    {
+      "date": "2024-07-04",
+      "source": "The New Indian Express",
+      "category": "Migration",
+      "title": "Common Grass Yellows on the move in Mudumalai",
+      "summary": "Forest staff, naturalists, and TNBS volunteers observed a rare mass migration of thousands of Common Grass Yellows during the three-day June monsoon survey in Mudumalai Tiger Reserve.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2024/Jul/04/large-migration-of-common-grass-yellow-butterfly-seen-in-mudumalai-tiger-reserve",
+      "species": "Eurema hecabe"
+    },
+    {
+      "date": "2024-07-02",
+      "source": "The Hindu",
+      "category": "Surveys",
+      "title": "Monsoon butterfly survey in Mudumalai Tiger Reserve records 185 species",
+      "summary": "Sixteen teams across all eight ranges of Mudumalai Tiger Reserve documented 185 species across six families, lifting the reserve's cumulative checklist to 217 species.",
+      "url": "https://www.thehindu.com/news/cities/Coimbatore/monsoon-butterfly-survey-in-mudumalai-tiger-reserve-records-185-species/article68358582.ece",
+      "species": "Papilio buddha"
+    },
+    {
+      "date": "2024-05-24",
+      "source": "The New Indian Express",
+      "category": "Migration",
+      "title": "Tracking the pre-monsoon migration across western Tamil Nadu",
+      "summary": "TNBS reported active April and May butterfly flights moving southwest-to-northeast from Pollachi and Coimbatore toward Tiruppur, Erode, and Sathyamangalam.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2024/May/24/migration-of-butterflies-spotted-in-west-tn-ahead-of-monsoon",
+      "species": "Euploea core"
+    },
+    {
+      "date": "2024-05-23",
+      "source": "The Hindu",
+      "category": "Migration",
+      "title": "Butterfly observers from Tamil Nadu correlate healthy migration with good rain",
+      "summary": "TNBS president A. Pavendhan and observers connected healthier 2024 pre-monsoon tiger and crow numbers to timely regional rainfall and breeding habitat recovery.",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/butterfly-observers-from-tamil-nadu-correlate-healthy-butterfly-migration-with-good-rain/article68208542.ece",
+      "species": "Tirumala septentrionis"
+    },
+    {
+      "date": "2024-02-22",
+      "source": "The New Indian Express",
+      "category": "Outreach & Books",
+      "title": "Butterfly Park a haven for winged visitors and nature lovers in Coimbatore",
+      "summary": "A dedicated book authored by TNBS president A. Pavendhan catalogued 101 butterfly species recorded across a year-long study around Vellalore Tank.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2024/Feb/22/butterfly-park-a-haven-for-winged-visitors-nature-lovers-in-coimbatore",
+      "species": ""
+    },
+    {
+      "date": "2023-12-23",
+      "source": "The Hindu",
+      "category": "Hotspots & Parks",
+      "title": "Coimbatore city's first butterfly park getting ready at Vellalore tank",
+      "summary": "Nectar and larval host-plant gardens shaped by TNBS surveys turned reclaimed wetland edges at Vellalore into an educational butterfly sanctuary.",
+      "url": "https://www.thehindu.com/sci-tech/energy-and-environment/coimbatore-citys-first-butterfly-park-getting-ready-at-vellalore-tank/article67668633.ece",
+      "species": ""
+    },
+    {
+      "date": "2023-11-27",
+      "source": "The Hindu",
+      "category": "Migration",
+      "title": "Tamil Nadu witnesses below-par butterfly movement during rainfall deficit",
+      "summary": "TNBS migration monitors documented a sharp drop in 2023 post-monsoon butterfly flights after severe rainfall deficits in Eastern Ghats breeding districts.",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-witnesses-below-par-movement-of-butterflies-towards-western-ghats-this-northeast-monsoon/article67580190.ece",
+      "species": "Tirumala limniace"
+    },
+    {
+      "date": "2022-12-27",
+      "source": "The New Indian Express",
+      "category": "Surveys",
+      "title": "Two-day survey finds 175 butterfly species in Mudumalai Tiger Reserve",
+      "summary": "Joint winter baseline survey by the Tamil Nadu Forest Department, TNBS, and WWF-India documented 175 species across core and buffer forest zones.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2022/Dec/27/two-day-survey-finds-175-butterfly-species-in-mtr-in-tamil-nadu-2532002.html",
+      "species": ""
+    },
+    {
+      "date": "2022-12-26",
+      "source": "The Hindu",
+      "category": "Surveys",
+      "title": "First-ever butterfly survey in Mudumalai Tiger Reserve records 175 species",
+      "summary": "Inaugural structured butterfly census at MTR recorded highlights such as the Yellow Jack Sailer and Tamil Nadu's state butterfly, Tamil Yeoman.",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/first-ever-butterfly-survey-in-mudumalai-tiger-reserve-records-175-species/article66307648.ece",
+      "species": "Cirrochroa thais"
+    },
+    {
+      "date": "2022-11-01",
+      "source": "The Hindu",
+      "category": "Surveys",
+      "title": "129 butterfly species recorded during two-day survey in Sirumalai Hills",
+      "summary": "Dindigul Forest Division and TNBS volunteers recorded 129 species amid rain, including endemic and range-significant Eastern Ghats sightings.",
+      "url": "https://www.thehindu.com/news/cities/Madurai/129-butterfly-species-recorded-during-two-day-survey-in-sirumalai-hills/article66077504.ece",
+      "species": "Telinga davisoni"
+    },
+    {
+      "date": "2022-11-01",
+      "source": "The New Indian Express",
+      "category": "Surveys",
+      "title": "129 butterfly species traced at Sirumalai Hills in Tamil Nadu",
+      "summary": "Documented the first Eastern Ghats record of the Plane butterfly alongside Palni Bushbrown, Large Guava Blue, Silver Royal, and Tamil Spotted Flat.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2022/Nov/01/129-butterfly-species-traced-at-sirumalai-hills-in-tamil-nadu-2513582.html",
+      "species": "Bindahara moorei"
+    },
+    {
+      "date": "2022-07-14",
+      "source": "The Hindu",
+      "category": "Hotspots & Parks",
+      "title": "Sathyamangalam and Tamil Nadu: a home to rich and diverse butterfly populations",
+      "summary": "Feature on Tamil Nadu's diverse Western and Eastern Ghats habitats and collaborative forest reserve surveys involving TNBS naturalists.",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/a-home-to-rich-and-diverse-butterfly-population/article65638977.ece",
+      "species": ""
+    },
+    {
+      "date": "2021-11-25",
+      "source": "The New Indian Express",
+      "category": "Hotspots & Parks",
+      "title": "Coimbatore's Singanallur Lake is a cosy nesting ground for 104 butterfly species",
+      "summary": "Multi-year wetland monitoring documented 104 butterfly species across five families thriving around Singanallur urban biodiversity zone.",
+      "url": "https://www.newindianexpress.com/states/tamil-nadu/2021/Nov/25/coimbatores-singanallur-lake-is-a-cosy-nesting-ground-for-butterflies-2387748.html",
+      "species": ""
+    },
+    {
+      "date": "2021-02-23",
+      "source": "The Hindu",
+      "category": "Outreach & Books",
+      "title": "Butterflies of Tamil Nadu booklet introduces 90 common species",
+      "summary": "TNBS released a 24-page beginner booklet covering 90 Tamil Nadu butterflies, life cycles, migration, host gardening, and nine species named after Tamil Nadu.",
+      "url": "https://www.thehindu.com/sci-tech/energy-and-environment/the-butterflies-of-tamil-nadu-introduces-you-to-90-commonly-found-butterflies-in-the-state/article33914754.ece",
+      "species": "Cirrochroa thais"
+    },
+    {
+      "date": "2021-01-10",
+      "source": "The Hindu",
+      "category": "Hotspots & Parks",
+      "title": "Siruvani Hills identified as a butterfly super-hotspot",
+      "summary": "Years of systematic field documentation by TNBS members established Siruvani Hills and Kovai Kutralam as a premier butterfly diversity hotspot.",
+      "url": "https://www.thehindu.com/news/national/tamil-nadu/siruvani-hills-identified-as-butterfly-super-hotspot/article33541803.ece",
+      "species": ""
+    },
+    {
+      "date": "2019-11-22",
+      "source": "The Hindu",
+      "category": "AI & Tech",
+      "title": "The Butterfly Vision app allows instant identification of Western Ghats butterflies",
+      "summary": "Profile of TNBS member Theivaprakasham Hari's AI identification platform launched for 300+ Western Ghats butterflies and later expanded to 923+ Indian taxa.",
+      "url": "https://www.thehindu.com/sci-tech/technology/the-butterfly-vision-app-allows-you-to-identify-over-300-varieties-from-the-western-ghats/article30049267.ece",
+      "species": ""
+    },
+    {
+      "date": "2019-11-16",
+      "source": "The Hindu",
+      "category": "Hotspots & Parks",
+      "title": "Kallar recognised as a butterfly hotspot with 200 species recorded",
+      "summary": "Long-term TNBS study in the Mettupalayam forest range documented 200 species in Kallar, nearly two-thirds of Tamil Nadu's known butterfly richness.",
+      "url": "https://www.thehindu.com/news/cities/Coimbatore/kallar-a-butterfly-hotspot-with-200-species-recorded/article29986906.ece",
+      "species": ""
+    }
+  ],
+  "activities": [
+    {
+      "kind": "Surveys",
+      "when": "December 2024",
+      "title": "Pachamalai Hills Butterfly Survey",
+      "summary": "Conducted with Tiruchirappalli Forest Division across 7 reserve forests and eco-tourism zones, documenting 126 butterfly species across all 6 families, including the Schedule II Banded Royal, bringing Pachamalai's combined checklist to 149.",
+      "ref": "issue:27",
+      "photo": "assets/about/pachamalai-survey-2024.jpg",
+      "photoAlt": "TNBS survey team and Forest Department officials holding the Pachamalai Butterfly Survey banner in December 2024"
+    },
+    {
+      "kind": "Surveys",
+      "when": "June 2024",
+      "title": "Mudumalai Tiger Reserve Monsoon Survey",
+      "summary": "Coordinated with Tamil Nadu Forest Department and WWF-India across 16 teams in Udhagai and Masinagudi divisions, recording 185+ butterfly species and observing thousands of migrating Common Grass Yellows.",
+      "ref": "press:10",
+      "photo": "assets/about/mudumalai-survey-2024.jpg",
+      "photoAlt": "Participants, naturalists and Tamil Nadu Forest Department staff gathered at Theppakadu for the Mudumalai Monsoon Butterfly Survey in June 2024"
+    },
+    {
+      "kind": "Outreach",
+      "when": "November 2024",
+      "title": "TNBS Government School Tamil Poster Project",
+      "summary": "Free Tamil butterfly awareness posters and educational booklets distributed across government schools in 13+ Tamil Nadu districts including Chennai, Salem, Krishnagiri, Tiruppur, Dharmapuri, Cuddalore, and The Nilgiris.",
+      "ref": "issue:27",
+      "photo": "assets/about/school-outreach-2024.jpg",
+      "photoAlt": "Tamil butterfly awareness posters and booklets prepared on classroom desks for distribution to government school teachers"
+    },
+    {
+      "kind": "Butterfly walks",
+      "when": "November 2024",
+      "title": "Coimbatore Vizha Walk at Kovai Kutralam",
+      "summary": "Joint walk by TNBS and Coimbatore Nature Society introducing 20 newcomers to butterfly watching, recording 71+ butterfly species including Clipper, Indian Tawny Rajah, Tamil Yeoman, and Short-banded Sailer.",
+      "ref": "issue:27"
+    },
+    {
+      "kind": "Citizen science",
+      "when": "April 2024 & 2025",
+      "title": "City Nature Challenge, Coimbatore & Singanallur",
+      "summary": "TNBS led butterfly walks at Singanallur and joined Coimbatore conservation groups to help document 1,820+ taxa across urban wetlands and parks.",
+      "ref": "press:2",
+      "photo": "assets/about/singanallur-walk-2024.jpg",
+      "photoAlt": "TNBS core volunteers wearing official society field shirts during a Coimbatore biodiversity walk"
+    },
+    {
+      "kind": "Surveys",
+      "when": "January & March 2024",
+      "title": "Coimbatore Forest Division Synchronised Survey",
+      "summary": "TNBS teamed up with the Tamil Nadu Forest Department, Coimbatore Nature Society, and WWF-India across wetland and terrestrial survey phases.",
+      "ref": "press:4",
+      "photo": "assets/about/coimbatore-survey-2024.jpg",
+      "photoAlt": "Volunteers and Forest Department officials assembled outside TNFA Coimbatore for the synchronised biodiversity survey"
+    },
+    {
+      "kind": "Outreach",
+      "when": "January 2024",
+      "title": "School Awareness Sessions & Kallar Walk",
+      "summary": "Led a Kovai Vizha butterfly walk at Kallar (56 species recorded) and addressed students and educators from Coimbatore and Pollachi districts on butterflies and host plants.",
+      "ref": "issue:27",
+      "photo": "assets/about/school-awareness-talk.jpg",
+      "photoAlt": "TNBS President A. Pavendhan speaking to school children about blooms and butterflies during an educational session"
+    },
+    {
+      "kind": "Monitoring",
+      "when": "2013 to Present",
+      "title": "Tamil Nadu Danainae Migration Monitoring",
+      "summary": "Over a decade tracking pre-monsoon (April-May) and post-monsoon (September-November) flights of Blue Tigers, Dark Blue Tigers, and Crows between the Eastern and Western Ghats.",
+      "ref": "press:0"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "western-ghats",
+      "label": "Western Ghats Hotspots",
+      "headline": "High-diversity forests & biosphere corridors",
+      "intro": "Where moist evergreen valleys, bamboo slopes, and foothill streams shelter over 200 butterfly species including Western Ghats endemics.",
+      "cards": [
+        {
+          "place": "Kallar, Mettupalayam Range",
+          "stat": "200 species",
+          "summary": "Multi-year TNBS documentation established Kallar as a flagship hotspot holding nearly two-thirds of Tamil Nadu's butterfly checklist.",
+          "species": "Papilio crino",
+          "pressUrl": "https://www.thehindu.com/news/cities/Coimbatore/kallar-a-butterfly-hotspot-with-200-species-recorded/article29986906.ece"
+        },
+        {
+          "place": "Mudumalai Tiger Reserve",
+          "stat": "217 cumulative (185 in June 2024)",
+          "summary": "Two reserve-wide surveys across all 8 ranges with TNFD and WWF-India recorded 175 (Dec 2022) and 185 (June 2024) species.",
+          "species": "Papilio buddha",
+          "pressUrl": "https://www.thehindu.com/news/cities/Coimbatore/monsoon-butterfly-survey-in-mudumalai-tiger-reserve-records-185-species/article68358582.ece"
+        },
+        {
+          "place": "Siruvani Hills & Kovai Kutralam",
+          "stat": "Super-Hotspot (71+ in single walks)",
+          "summary": "Wet riparian forests near Coimbatore harbouring Tamil Yeoman, Clipper, Indian Tawny Rajah, and Malabar Rose.",
+          "species": "Cirrochroa thais",
+          "pressUrl": "https://www.thehindu.com/news/national/tamil-nadu/siruvani-hills-identified-as-butterfly-super-hotspot/article33541803.ece"
+        }
+      ]
+    },
+    {
+      "id": "eastern-ghats",
+      "label": "Eastern Ghats Surveys",
+      "headline": "Under-studied hills revealing key range records",
+      "intro": "Discontinuous hills like Pachamalai, Sirumalai, and Yercaud connect interior plains with monsoon breeding habitats.",
+      "cards": [
+        {
+          "place": "Pachamalai Hills, Trichy Division",
+          "stat": "149 cumulative (126 in Dec 2024)",
+          "summary": "Recorded all 6 butterfly families in Dec 2024, highlighted by healthy numbers of the Schedule II Banded Royal.",
+          "species": "Rachana jalindra",
+          "pressUrl": "https://www.thehindu.com/news/cities/Tiruchirapalli/higher-count-of-butterfly-species-recorded-in-pachamalai-during-forest-department-study/article69015201.ece"
+        },
+        {
+          "place": "Sirumalai Hills, Dindigul Division",
+          "stat": "129 species recorded",
+          "summary": "Joint Oct 2022 census added the first Eastern Ghats record of the Plane butterfly alongside Palni Bushbrown.",
+          "species": "Bindahara moorei",
+          "pressUrl": "https://www.newindianexpress.com/states/tamil-nadu/2022/Nov/01/129-butterfly-species-traced-at-sirumalai-hills-in-tamil-nadu-2513582.html"
+        },
+        {
+          "place": "Yercaud & Shevaroy Hills",
+          "stat": "Key breeding & migration origin",
+          "summary": "Heavy southwest monsoon rains over Yercaud and Salem hills trigger late-September butterfly swarms heading southwest.",
+          "species": "Tirumala septentrionis",
+          "pressUrl": "https://timesofindia.indiatimes.com/city/coimbatore/spectacular-butterfly-migration-thrives-in-coimbatore-after-rainfall-boost/articleshow/113972658.cms"
+        }
+      ]
+    },
+    {
+      "id": "urban-wetlands",
+      "label": "Urban Wetlands & Parks",
+      "headline": "Thriving urban biodiversity sanctuaries in Coimbatore",
+      "intro": "Systematic wetland checklists show how restoring native host plants and lake margins sustains over 100 resident species inside cities.",
+      "cards": [
+        {
+          "place": "Singanallur Lake Conservation Zone",
+          "stat": "104 species documented",
+          "summary": "A 5-year TNBS study mapped over a hundred butterfly species along lake bunds, grasslands, and annual City Nature Challenge walks.",
+          "species": "Junonia almana",
+          "pressUrl": "https://www.newindianexpress.com/states/tamil-nadu/2021/Nov/25/coimbatores-singanallur-lake-is-a-cosy-nesting-ground-for-butterflies-2387748.html"
+        },
+        {
+          "place": "Vellalore Tank Butterfly Park",
+          "stat": "101 species + field book",
+          "summary": "A year-long TNBS survey guided native host planting with KKPA, culminating in Coimbatore's first dedicated butterfly park in 2024.",
+          "species": "Talicada nyseus",
+          "pressUrl": "https://www.newindianexpress.com/states/tamil-nadu/2024/Aug/09/butterfly-park-opened-near-vellalore-in-coimbatore"
+        },
+        {
+          "place": "Government School Outreach",
+          "stat": "13+ Tamil Nadu districts",
+          "summary": "Free Tamil educational posters and booklets help students spot urban garden butterflies and plant caterpillar hosts.",
+          "species": "Papilio polytes",
+          "pressUrl": "https://www.thehindu.com/sci-tech/energy-and-environment/the-butterflies-of-tamil-nadu-introduces-you-to-90-commonly-found-butterflies-in-the-state/article33914754.ece"
+        }
+      ]
+    },
+    {
+      "id": "migrations",
+      "label": "Migration Corridors",
+      "headline": "Biannual butterfly flights tracked since 2013",
+      "intro": "TNBS monitors two seasonal directions driven by southwest and northeast monsoon winds between Tamil Nadu's hill ranges.",
+      "cards": [
+        {
+          "place": "Pre-Monsoon Return (April to May)",
+          "stat": "SW to NE (25-30/min rates)",
+          "summary": "Tigers and Crows leave Pollachi and Coimbatore hills toward Tiruppur, Erode, and Sathyamangalam ahead of southwest rains.",
+          "species": "Euploea core",
+          "pressUrl": "https://www.newindianexpress.com/states/tamil-nadu/2024/May/24/migration-of-butterflies-spotted-in-west-tn-ahead-of-monsoon"
+        },
+        {
+          "place": "Post-Monsoon Wave (Sep to Nov)",
+          "stat": "NE to SW (up to 200/min)",
+          "summary": "Millions of Dark Blue Tigers (95% share with Blue Tigers) and Crows stream from Yercaud/Salem over Coimbatore toward Nilgiris and Anamalais.",
+          "species": "Tirumala limniace",
+          "pressUrl": "https://www.newindianexpress.com/states/tamil-nadu/2024/Oct/05/seasonal-butterfly-migration-to-the-western-ghats-observed"
+        },
+        {
+          "place": "Mudumalai Grass Yellow Mass Flight",
+          "stat": "Thousands observed (June 2024)",
+          "summary": "A rare large-scale movement of Common Grass Yellows recorded alongside tiger and crow migrants during the MTR monsoon count.",
+          "species": "Eurema hecabe",
+          "pressUrl": "https://www.newindianexpress.com/states/tamil-nadu/2024/Jul/04/large-migration-of-common-grass-yellow-butterfly-seen-in-mudumalai-tiger-reserve"
+        }
+      ]
+    }
+  ],
+  "community": [
+    {
+      "title": "Tamil Nadu Butterflies Facebook Group",
+      "badge": "2,340+ Members · Est. Oct 2014",
+      "summary": "Active citizen-science forum spanning all 38 Tamil Nadu districts and Puducherry where naturalists share sightings, request species ID, and log migration counts.",
+      "url": "https://www.facebook.com/groups/373700319460990/",
+      "cta": "Join the Facebook group"
+    },
+    {
+      "title": "Butterfly Vision AI Platform",
+      "badge": "923+ Species · ~90% Accuracy",
+      "summary": "Instant deep-learning butterfly recognition tool built by TNBS member Theivaprakasham Hari for Western Ghats and All-India species.",
+      "url": "https://butterflyvision.in/",
+      "cta": "Visit butterflyvision.in"
+    },
+    {
+      "title": "Video Talk: Documenting Tamil Nadu Butterflies",
+      "badge": "YouTube Talk · A. Pavendhan",
+      "summary": "TNBS President A. Pavendhan discusses Tamil Nadu checklist validation, Forest Department surveys, migration studies, and Pattampoochi.",
+      "url": "https://www.youtube.com/watch?v=w1px4oDF6ro",
+      "cta": "Watch talk on YouTube"
+    },
+    {
+      "title": "TNBS State Checklist DOI Record",
+      "badge": "ResearchGate Archive",
+      "summary": "Published Tamil Nadu Butterfly Checklist citation maintained by TNBS for researchers, forest managers, and academic citations.",
+      "url": "https://doi.org/10.13140/RG.2.2.15428.81287",
+      "cta": "View ResearchGate DOI"
+    },
+    {
+      "title": "Original TNBS Google Sites Archive",
+      "badge": "Legacy Portal",
+      "summary": "Original TNBS repository hosting early checklist versions and Google Drive links to Pattampoochi back issues.",
+      "url": "https://sites.google.com/view/tamilnadubutterflies",
+      "cta": "Open legacy site"
+    },
+    {
+      "title": "Free Government School Tamil Posters",
+      "badge": "Outreach Form",
+      "summary": "Educators and volunteers can request free printed Tamil butterfly awareness posters and starter booklets for government schools.",
+      "url": "https://forms.gle/9mGjVFPQSXBBMwmXA",
+      "cta": "Request school posters"
+    }
+  ],
+  "about": {
+    "registration": "Reg. No. 259/2018 (Tamil Nadu Societies Registration Act, 1975)",
+    "address": "8, AKG Nagar, 3rd Street, Uppilipalayam, Coimbatore - 641015, Tamil Nadu, India",
+    "facebookGroup": "Tamilnadu Butterflies Facebook group (founded 02 Oct 2014; 2,340+ members across all 38 districts of Tamil Nadu & Puducherry)",
+    "facebookUrl": "https://www.facebook.com/groups/373700319460990/",
+    "youtubeUrl": "https://www.youtube.com/watch?v=w1px4oDF6ro",
+    "posterFormUrl": "https://forms.gle/9mGjVFPQSXBBMwmXA",
+    "leadership": [
+      "A. Pavendhan: President & Chief Editor, Pattampoochi",
+      "Core & Editorial Team: Bala Krishnan, Gopal Krishnan, C.V. Nishanth, K. Sadheeskumar, K. Sravan Kumar, H. Theivaprakasham, Vishwa Nathan, H. Ramanasaran, Dr. M. Elavarasan, and regional volunteers across Tamil Nadu"
+    ],
+    "milestones": [
+      ["2012 - 2014", "Base checklist compilation begins; Tamilnadu Butterflies Facebook group launched (02 Oct 2014) to gather verified sightings across districts."],
+      ["Jan 2015 - 2017", "Tamil Nadu Butterfly Checklist v1 prepared (323 species; 271 validated initially) and quarterly e-magazine Pattampoochi launched in Q1 2017."],
+      ["2018 - 2019", "Registered as The Nature and Butterfly Society (259/2018); state butterfly discussions and steady expansion of verified checklist records to 325 species."],
+      ["2021 - 2023", "Siruvani Hills documented as a butterfly super-hotspot; joint Tamil Nadu Forest Department surveys across Mudumalai, Sathyamangalam, Coimbatore, Erode, Salem, and Sirumalai."],
+      ["Jan 2025 (Issue 27)", "Final adopted state checklist reaches 329 species across 6 families (325 validated in TN), government school Tamil posters reach 13+ districts, and Butterfly Vision AI tops 923+ species."]
+    ],
+    "photos": [
+      {
+        "src": "assets/about/pachamalai-survey-2024.jpg",
+        "width": 1200,
+        "height": 898,
+        "title": "Pachamalai Hills Butterfly Survey",
+        "when": "December 2024",
+        "caption": "TNBS naturalists and Tiruchirappalli Forest Division staff after documenting 126 butterfly species across seven reserve forests in Pachamalai Hills."
+      },
+      {
+        "src": "assets/about/mudumalai-survey-2024.jpg",
+        "width": 1200,
+        "height": 903,
+        "title": "Mudumalai Tiger Reserve Monsoon Survey",
+        "when": "June 2024",
+        "caption": "Sixteen survey teams from TNBS, WWF-India, and Tamil Nadu Forest Department gathered at Theppakadu after recording 185+ butterfly species."
+      },
+      {
+        "src": "assets/about/school-outreach-2024.jpg",
+        "width": 1200,
+        "height": 675,
+        "title": "Free Tamil Butterfly Posters for Schools",
+        "when": "November 2024",
+        "caption": "Tamil awareness posters and educational booklets distributed free to government school teachers across 13+ districts of Tamil Nadu."
+      },
+      {
+        "src": "assets/about/school-awareness-talk.jpg",
+        "width": 1200,
+        "height": 800,
+        "title": "Youth & School Nature Education",
+        "when": "January 2024",
+        "caption": "TNBS President A. Pavendhan introducing school students to butterflies, blooms, and caterpillar host plants in Coimbatore."
+      },
+      {
+        "src": "assets/about/coimbatore-survey-2024.jpg",
+        "width": 1200,
+        "height": 657,
+        "title": "Coimbatore Forest Division Biodiversity Survey",
+        "when": "January 2024",
+        "caption": "Collaborative wetland and terrestrial biodiversity census uniting TNBS, Coimbatore Nature Society, WWF-India, and TNFD."
+      },
+      {
+        "src": "assets/about/singanallur-walk-2024.jpg",
+        "width": 1200,
+        "height": 900,
+        "title": "Field Walks & Citizen Science",
+        "when": "2024",
+        "caption": "TNBS volunteers conducting field walks and biodiversity documentation across Coimbatore's wetlands and foothill habitats."
+      }
+    ]
+  },
+  "butterflyVision": {
+    "url": "https://butterflyvision.in/",
+    "developer": "Theivaprakasham Hari (TNBS)",
+    "accuracy": "~90%",
+    "supportedTotal": "923+",
+    "wgCount": "300+",
+    "indiaCount": "800+",
+    "contributeEmail": "butterflyvision1@gmail.com",
+    "publications": [
+      [
+        "Identification of Indian butterflies using Deep Convolutional Neural Network",
+        "Journal of Asia-Pacific Entomology, Vol. 24, Issue 1 (April 2021), pp. 329-340",
+        "https://doi.org/10.1016/j.aspen.2020.11.015"
+      ],
+      [
+        "Odonata identification using Customized Convolutional Neural Networks",
+        "Hari Theivaprakasham et al., Expert Systems with Applications, Vol. 206 (2022), 117688",
+        "https://doi.org/10.1016/j.eswa.2022.117688"
+      ],
+      [
+        "SiamFly: A novel pre-trained architecture for large-scale fine-grained butterfly classification",
+        "Theivaprakasham, H., CVPR 2022 CV4Animals Workshop (June 2022)",
+        "https://github.com/Theivaprakasham/siamfly/tree/main"
+      ],
+      [
+        "Inspired By Butterflies: A curated collection of butterfly-inspired innovations",
+        "Theivaprakasham Hari (2026), GitHub Repository",
+        "https://github.com/Theivaprakasham/InspiredByButterflies"
+      ],
+      [
+        "Butterflies from Greece - Recognition",
+        "Pamperis, Lazaros N., and Theivaprakasham Hari, pamperis.gr (2026)",
+        "https://pamperis.gr/recognition/"
+      ]
+    ]
+  }
+}

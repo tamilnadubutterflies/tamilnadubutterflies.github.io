@@ -1,0 +1,5279 @@
+[
+  {
+    "id": 1,
+    "family": "Papilionidae",
+    "name": "Southern Bluebottle",
+    "scientific": "Graphium teredon",
+    "aliases": [
+      "Narrow-banded Bluebottle"
+    ],
+    "genus": "Graphium",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 2,
+    "family": "Papilionidae",
+    "name": "Common Jay",
+    "scientific": "Graphium doson",
+    "aliases": [],
+    "genus": "Graphium",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 3,
+    "family": "Papilionidae",
+    "name": "Tailed Jay",
+    "scientific": "Graphium agamemnon",
+    "aliases": [],
+    "genus": "Graphium",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 4,
+    "family": "Papilionidae",
+    "name": "Five-bar Swordtail",
+    "scientific": "Graphium antiphates",
+    "aliases": [],
+    "genus": "Graphium",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 5,
+    "family": "Papilionidae",
+    "name": "Spot Swordtail",
+    "scientific": "Graphium nomius",
+    "aliases": [],
+    "genus": "Graphium",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 6,
+    "family": "Papilionidae",
+    "name": "Common Rose",
+    "scientific": "Pachliopta aristolochiae",
+    "aliases": [],
+    "genus": "Pachliopta",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 7,
+    "family": "Papilionidae",
+    "name": "Malabar Rose",
+    "scientific": "Pachliopta pandiyana",
+    "aliases": [],
+    "genus": "Pachliopta",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 8,
+    "family": "Papilionidae",
+    "name": "Crimson Rose",
+    "scientific": "Pachliopta hector",
+    "aliases": [],
+    "genus": "Pachliopta",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 9,
+    "family": "Papilionidae",
+    "name": "Southern Birdwing",
+    "scientific": "Troides minos",
+    "aliases": [
+      "Sahyadri Birdwing"
+    ],
+    "genus": "Troides",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 10,
+    "family": "Papilionidae",
+    "name": "Common Mime",
+    "scientific": "Papilio clytia",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 11,
+    "family": "Papilionidae",
+    "name": "Common Mormon",
+    "scientific": "Papilio polytes",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 12,
+    "family": "Papilionidae",
+    "name": "Malabar Raven",
+    "scientific": "Papilio dravidarum",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 13,
+    "family": "Papilionidae",
+    "name": "Red Helen",
+    "scientific": "Papilio daksha",
+    "aliases": [
+      "Papilio helenus",
+      "Large-spotted Helen"
+    ],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 14,
+    "family": "Papilionidae",
+    "name": "Blue Mormon",
+    "scientific": "Papilio polymnestor",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 15,
+    "family": "Papilionidae",
+    "name": "Malabar Banded Swallowtail",
+    "scientific": "Papilio liomedon",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 16,
+    "family": "Papilionidae",
+    "name": "Lime Butterfly",
+    "scientific": "Papilio demoleus",
+    "aliases": [
+      "Lime Swallowtail"
+    ],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 17,
+    "family": "Papilionidae",
+    "name": "Paris Peacock",
+    "scientific": "Papilio paris",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 18,
+    "family": "Papilionidae",
+    "name": "Common Banded Peacock",
+    "scientific": "Papilio crino",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 19,
+    "family": "Papilionidae",
+    "name": "Malabar Banded Peacock",
+    "scientific": "Papilio buddha",
+    "aliases": [],
+    "genus": "Papilio",
+    "subfamily": "Papilioninae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 20,
+    "family": "Pieridae",
+    "name": "One-spot Grass Yellow",
+    "scientific": "Eurema andersoni",
+    "aliases": [],
+    "genus": "Eurema",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 21,
+    "family": "Pieridae",
+    "name": "Three-spot Grass Yellow",
+    "scientific": "Eurema blanda",
+    "aliases": [],
+    "genus": "Eurema",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 22,
+    "family": "Pieridae",
+    "name": "Small Grass Yellow",
+    "scientific": "Eurema brigitta",
+    "aliases": [],
+    "genus": "Eurema",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 23,
+    "family": "Pieridae",
+    "name": "Common Grass Yellow",
+    "scientific": "Eurema hecabe",
+    "aliases": [],
+    "genus": "Eurema",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 24,
+    "family": "Pieridae",
+    "name": "Spotless Grass Yellow",
+    "scientific": "Eurema laeta",
+    "aliases": [],
+    "genus": "Eurema",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 25,
+    "family": "Pieridae",
+    "name": "Nilgiri Grass Yellow",
+    "scientific": "Eurema nilgiriensis",
+    "aliases": [],
+    "genus": "Eurema",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 26,
+    "family": "Pieridae",
+    "name": "Common Emigrant",
+    "scientific": "Catopsilia pomona",
+    "aliases": [
+      "Lemon Emigrant"
+    ],
+    "genus": "Catopsilia",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 27,
+    "family": "Pieridae",
+    "name": "Mottled Emigrant",
+    "scientific": "Catopsilia pyranthe",
+    "aliases": [],
+    "genus": "Catopsilia",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 28,
+    "family": "Pieridae",
+    "name": "Nilgiri Clouded Yellow",
+    "scientific": "Colias nilagiriensis",
+    "aliases": [],
+    "genus": "Colias",
+    "subfamily": "Coliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 29,
+    "family": "Pieridae",
+    "name": "Small Salmon Arab",
+    "scientific": "Colotis amata",
+    "aliases": [],
+    "genus": "Colotis",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 30,
+    "family": "Pieridae",
+    "name": "Crimson-tip",
+    "scientific": "Colotis danae",
+    "aliases": [],
+    "genus": "Colotis",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 31,
+    "family": "Pieridae",
+    "name": "Small Orange-tip",
+    "scientific": "Colotis etrida",
+    "aliases": [
+      "Little Orange-tip"
+    ],
+    "genus": "Colotis",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 32,
+    "family": "Pieridae",
+    "name": "Plain Orange-tip",
+    "scientific": "Colotis aurora",
+    "aliases": [],
+    "genus": "Colotis",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 33,
+    "family": "Pieridae",
+    "name": "Large Salmon Arab",
+    "scientific": "Colotis fausta",
+    "aliases": [],
+    "genus": "Colotis",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 34,
+    "family": "Pieridae",
+    "name": "White Orange-tip",
+    "scientific": "Ixias marianne",
+    "aliases": [],
+    "genus": "Ixias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 35,
+    "family": "Pieridae",
+    "name": "Yellow Orange-tip",
+    "scientific": "Ixias pyrene",
+    "aliases": [],
+    "genus": "Ixias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 36,
+    "family": "Pieridae",
+    "name": "Great Orange-tip",
+    "scientific": "Hebomoia glaucippe",
+    "aliases": [],
+    "genus": "Hebomoia",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 37,
+    "family": "Pieridae",
+    "name": "Dark Wanderer",
+    "scientific": "Pareronia ceylanica",
+    "aliases": [],
+    "genus": "Pareronia",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 38,
+    "family": "Pieridae",
+    "name": "Common Wanderer",
+    "scientific": "Pareronia hippia",
+    "aliases": [
+      "Indian Wanderer"
+    ],
+    "genus": "Pareronia",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 39,
+    "family": "Pieridae",
+    "name": "Striped Albatross",
+    "scientific": "Appias libythea",
+    "aliases": [
+      "Western Striped Albatross"
+    ],
+    "genus": "Appias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 40,
+    "family": "Pieridae",
+    "name": "Chocolate Albatross",
+    "scientific": "Appias lyncida",
+    "aliases": [],
+    "genus": "Appias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 41,
+    "family": "Pieridae",
+    "name": "Common Albatross",
+    "scientific": "Appias albina",
+    "aliases": [],
+    "genus": "Appias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 42,
+    "family": "Pieridae",
+    "name": "Indian/ Ward’s Albatross",
+    "scientific": "Appias wardii",
+    "aliases": [
+      "Sahyadri Albatross"
+    ],
+    "genus": "Appias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 43,
+    "family": "Pieridae",
+    "name": "Plain Puffin",
+    "scientific": "Appias indra",
+    "aliases": [],
+    "genus": "Appias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 44,
+    "family": "Pieridae",
+    "name": "Spot Puffin",
+    "scientific": "Appias lalage",
+    "aliases": [],
+    "genus": "Appias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 45,
+    "family": "Pieridae",
+    "name": "Indian Cabbage White",
+    "scientific": "Pieris canidia",
+    "aliases": [
+      "Asian Cabbage White"
+    ],
+    "genus": "Pieris",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 46,
+    "family": "Pieridae",
+    "name": "Common Gull",
+    "scientific": "Cepora nerissa",
+    "aliases": [],
+    "genus": "Cepora",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 47,
+    "family": "Pieridae",
+    "name": "Lesser Gull",
+    "scientific": "Cepora nadina",
+    "aliases": [],
+    "genus": "Cepora",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 48,
+    "family": "Pieridae",
+    "name": "Painted Sawtooth",
+    "scientific": "Prioneris sita",
+    "aliases": [],
+    "genus": "Prioneris",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 49,
+    "family": "Pieridae",
+    "name": "Common Jezebel",
+    "scientific": "Delias eucharis",
+    "aliases": [
+      "Indian Jezebel"
+    ],
+    "genus": "Delias",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 50,
+    "family": "Pieridae",
+    "name": "Psyche",
+    "scientific": "Leptosia nina",
+    "aliases": [],
+    "genus": "Leptosia",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 51,
+    "family": "Pieridae",
+    "name": "Pioneer",
+    "scientific": "Belenois aurota",
+    "aliases": [],
+    "genus": "Belenois",
+    "subfamily": "Pierinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 52,
+    "family": "Nymphalidae",
+    "name": "Club Beak",
+    "scientific": "Libythea myrrha",
+    "aliases": [],
+    "genus": "Libythea",
+    "subfamily": "Libytheinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 53,
+    "family": "Nymphalidae",
+    "name": "Southern Beak",
+    "scientific": "Libythea laius",
+    "aliases": [
+      "Lobed Beak"
+    ],
+    "genus": "Libythea",
+    "subfamily": "Libytheinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 54,
+    "family": "Nymphalidae",
+    "name": "Glassy Tiger",
+    "scientific": "Parantica aglea",
+    "aliases": [],
+    "genus": "Parantica",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 55,
+    "family": "Nymphalidae",
+    "name": "Nilgiri Tiger",
+    "scientific": "Parantica nilgiriensis",
+    "aliases": [],
+    "genus": "Parantica",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 56,
+    "family": "Nymphalidae",
+    "name": "Blue Tiger",
+    "scientific": "Tirumala limniace",
+    "aliases": [],
+    "genus": "Tirumala",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 57,
+    "family": "Nymphalidae",
+    "name": "Dark Blue Tiger",
+    "scientific": "Tirumala septentrionis",
+    "aliases": [],
+    "genus": "Tirumala",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 58,
+    "family": "Nymphalidae",
+    "name": "Striped Tiger",
+    "scientific": "Danaus genutia",
+    "aliases": [],
+    "genus": "Danaus",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 59,
+    "family": "Nymphalidae",
+    "name": "Plain Tiger",
+    "scientific": "Danaus chrysippus",
+    "aliases": [],
+    "genus": "Danaus",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 60,
+    "family": "Nymphalidae",
+    "name": "Double-branded Crow",
+    "scientific": "Euploea sylvester",
+    "aliases": [],
+    "genus": "Euploea",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 61,
+    "family": "Nymphalidae",
+    "name": "Brown King Crow",
+    "scientific": "Euploea klugii",
+    "aliases": [
+      "King Crow"
+    ],
+    "genus": "Euploea",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 62,
+    "family": "Nymphalidae",
+    "name": "Common Crow",
+    "scientific": "Euploea core",
+    "aliases": [],
+    "genus": "Euploea",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 63,
+    "family": "Nymphalidae",
+    "name": "Malabar Tree Nymph",
+    "scientific": "Idea malabarica",
+    "aliases": [],
+    "genus": "Idea",
+    "subfamily": "Danainae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 64,
+    "family": "Nymphalidae",
+    "name": "Common Nawab",
+    "scientific": "Charaxes bharata",
+    "aliases": [
+      "Polyura athamas",
+      "Indian Nawab"
+    ],
+    "genus": "Charaxes",
+    "subfamily": "Charaxinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 65,
+    "family": "Nymphalidae",
+    "name": "Anomalous Nawab",
+    "scientific": "Charaxes agrarius",
+    "aliases": [
+      "Polyura agraria"
+    ],
+    "genus": "Charaxes",
+    "subfamily": "Charaxinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 66,
+    "family": "Nymphalidae",
+    "name": "Blue Nawab",
+    "scientific": "Charaxes schreiber",
+    "aliases": [
+      "Polyura schreiber"
+    ],
+    "genus": "Charaxes",
+    "subfamily": "Charaxinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 67,
+    "family": "Nymphalidae",
+    "name": "Indian Tawny Rajah",
+    "scientific": "Charaxes psaphon",
+    "aliases": [
+      "Plain Tawny Rajah"
+    ],
+    "genus": "Charaxes",
+    "subfamily": "Charaxinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 68,
+    "family": "Nymphalidae",
+    "name": "Black Rajah",
+    "scientific": "Charaxes solon",
+    "aliases": [],
+    "genus": "Charaxes",
+    "subfamily": "Charaxinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 69,
+    "family": "Nymphalidae",
+    "name": "Southern Duffer",
+    "scientific": "Discophora lepida",
+    "aliases": [],
+    "genus": "Discophora",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 70,
+    "family": "Nymphalidae",
+    "name": "Palmking",
+    "scientific": "Amathusia phidippus",
+    "aliases": [],
+    "genus": "Amathusia",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg"
+    ],
+    "tags": []
+  },
+  {
+    "id": 71,
+    "family": "Nymphalidae",
+    "name": "Common Palmfly",
+    "scientific": "Elymnias hypermnestra",
+    "aliases": [],
+    "genus": "Elymnias",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "issue27Addition": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": [
+      "issue-27-addition"
+    ]
+  },
+  {
+    "id": 72,
+    "family": "Nymphalidae",
+    "name": "Southern Palmfly",
+    "scientific": "Elymnias caudata",
+    "aliases": [
+      "Tailed Palmfly"
+    ],
+    "genus": "Elymnias",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 73,
+    "family": "Nymphalidae",
+    "name": "Common Evening Brown",
+    "scientific": "Melanitis leda",
+    "aliases": [],
+    "genus": "Melanitis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 74,
+    "family": "Nymphalidae",
+    "name": "Dark Evening Brown",
+    "scientific": "Melanitis phedima",
+    "aliases": [],
+    "genus": "Melanitis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 75,
+    "family": "Nymphalidae",
+    "name": "Great Evening Brown",
+    "scientific": "Melanitis zitenius",
+    "aliases": [],
+    "genus": "Melanitis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 76,
+    "family": "Nymphalidae",
+    "name": "Travancore Evening Brown",
+    "scientific": "Parantirrhoea marshalli",
+    "aliases": [],
+    "genus": "Parantirrhoea",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 77,
+    "family": "Nymphalidae",
+    "name": "Bamboo Treebrown",
+    "scientific": "Lethe europa",
+    "aliases": [],
+    "genus": "Lethe",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 78,
+    "family": "Nymphalidae",
+    "name": "Common Treebrown",
+    "scientific": "Lethe rohria",
+    "aliases": [],
+    "genus": "Lethe",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 79,
+    "family": "Nymphalidae",
+    "name": "Tamil Treebrown",
+    "scientific": "Lethe drypetis",
+    "aliases": [
+      "Two-eyed Treebrown"
+    ],
+    "genus": "Lethe",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 80,
+    "family": "Nymphalidae",
+    "name": "White-bar Bushbrown",
+    "scientific": "Mycalesis anaxias",
+    "aliases": [],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 81,
+    "family": "Nymphalidae",
+    "name": "Common Bushbrown",
+    "scientific": "Mycalesis perseus",
+    "aliases": [],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 82,
+    "family": "Nymphalidae",
+    "name": "Dark-brand Bushbrown",
+    "scientific": "Mycalesis mineus",
+    "aliases": [
+      "Dark-branded Bushbrown"
+    ],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 83,
+    "family": "Nymphalidae",
+    "name": "Small Long-brand Bushbrown",
+    "scientific": "Mycalesis igilia",
+    "aliases": [
+      "Sahyadri Long-branded Bushbrown"
+    ],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 84,
+    "family": "Nymphalidae",
+    "name": "Long-brand Bushbrown",
+    "scientific": "Mycalesis visala",
+    "aliases": [
+      "Long-branded Bushbrown"
+    ],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 85,
+    "family": "Nymphalidae",
+    "name": "Tamil Bushbrown",
+    "scientific": "Mycalesis subdita",
+    "aliases": [],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 86,
+    "family": "Nymphalidae",
+    "name": "Glad-eye Bushbrown",
+    "scientific": "Mycalesis junonia",
+    "aliases": [
+      "Mycalesis patina",
+      "Malabar Glad-eye Bushbrown"
+    ],
+    "genus": "Mycalesis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 87,
+    "family": "Nymphalidae",
+    "name": "Red-eye Bushbrown",
+    "scientific": "Telinga adolphei",
+    "aliases": [],
+    "genus": "Telinga",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 88,
+    "family": "Nymphalidae",
+    "name": "Red-disc Bushbrown",
+    "scientific": "Telinga oculus",
+    "aliases": [
+      "Mycalesis oculus"
+    ],
+    "genus": "Telinga",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 89,
+    "family": "Nymphalidae",
+    "name": "Palni Bushbrown",
+    "scientific": "Telinga davisoni",
+    "aliases": [
+      "Heteropsis davisoni"
+    ],
+    "genus": "Telinga",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 90,
+    "family": "Nymphalidae",
+    "name": "Tamil Catseye",
+    "scientific": "Zipaetis saitis",
+    "aliases": [
+      "Banded Catseye"
+    ],
+    "genus": "Zipaetis",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 91,
+    "family": "Nymphalidae",
+    "name": "Nigger",
+    "scientific": "Orsotrioena medus",
+    "aliases": [
+      "Medus Brown"
+    ],
+    "genus": "Orsotrioena",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 92,
+    "family": "Nymphalidae",
+    "name": "Common Three-ring",
+    "scientific": "Ypthima asterope",
+    "aliases": [],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 93,
+    "family": "Nymphalidae",
+    "name": "Common Five-ring",
+    "scientific": "Ypthima baldus",
+    "aliases": [],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 94,
+    "family": "Nymphalidae",
+    "name": "White Four-ring",
+    "scientific": "Ypthima ceylonica",
+    "aliases": [],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 95,
+    "family": "Nymphalidae",
+    "name": "Palni Four-ring",
+    "scientific": "Ypthima ypthimoides",
+    "aliases": [],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 96,
+    "family": "Nymphalidae",
+    "name": "Nilgiri Four-ring",
+    "scientific": "Ypthima chenu",
+    "aliases": [],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 97,
+    "family": "Nymphalidae",
+    "name": "Common Four-ring",
+    "scientific": "Ypthima huebneri",
+    "aliases": [],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 98,
+    "family": "Nymphalidae",
+    "name": "Small Jewel Four-ring",
+    "scientific": "Ypthima singala",
+    "aliases": [
+      "Sinhalese Five-ring"
+    ],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 99,
+    "family": "Nymphalidae",
+    "name": "Nilgiri Jewel Four-ring",
+    "scientific": "Ypthima striata",
+    "aliases": [
+      "Striated Five-ring"
+    ],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 100,
+    "family": "Nymphalidae",
+    "name": "Southern Baby Five-ring",
+    "scientific": "Ypthima tabella",
+    "aliases": [
+      "Sahyadri Baby Five-ring"
+    ],
+    "genus": "Ypthima",
+    "subfamily": "Satyrinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 101,
+    "family": "Nymphalidae",
+    "name": "Tawny Coster",
+    "scientific": "Acraea terpsicore",
+    "aliases": [
+      "Acraea violae"
+    ],
+    "genus": "Acraea",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 102,
+    "family": "Nymphalidae",
+    "name": "Tamil Lacewing",
+    "scientific": "Cethosia mahratta",
+    "aliases": [
+      "Sahyadri Lacewing"
+    ],
+    "genus": "Cethosia",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 103,
+    "family": "Nymphalidae",
+    "name": "Indian Fritillary",
+    "scientific": "Argynnis hybrida",
+    "aliases": [
+      "Argynnis hyperbius",
+      "Nilgiri Fritillary"
+    ],
+    "genus": "Argynnis",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 104,
+    "family": "Nymphalidae",
+    "name": "Palni Fritillary",
+    "scientific": "Argynnis castetsi",
+    "aliases": [
+      "Argynnis hyperbius"
+    ],
+    "genus": "Argynnis",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 105,
+    "family": "Nymphalidae",
+    "name": "Small Leopard",
+    "scientific": "Phalanta alcippe",
+    "aliases": [],
+    "genus": "Phalanta",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 106,
+    "family": "Nymphalidae",
+    "name": "Common Leopard",
+    "scientific": "Phalanta phalantha",
+    "aliases": [],
+    "genus": "Phalanta",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 107,
+    "family": "Nymphalidae",
+    "name": "Cruiser",
+    "scientific": "Vindula erota",
+    "aliases": [],
+    "genus": "Vindula",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 108,
+    "family": "Nymphalidae",
+    "name": "Tamil Yeoman",
+    "scientific": "Cirrochroa thais",
+    "aliases": [],
+    "genus": "Cirrochroa",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "state-butterfly"
+    ]
+  },
+  {
+    "id": 109,
+    "family": "Nymphalidae",
+    "name": "Rustic",
+    "scientific": "Cupha erymanthis",
+    "aliases": [],
+    "genus": "Cupha",
+    "subfamily": "Heliconiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 110,
+    "family": "Nymphalidae",
+    "name": "Commander",
+    "scientific": "Moduza procris",
+    "aliases": [],
+    "genus": "Moduza",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 111,
+    "family": "Nymphalidae",
+    "name": "Common Sergeant",
+    "scientific": "Athyma perius",
+    "aliases": [],
+    "genus": "Athyma",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 112,
+    "family": "Nymphalidae",
+    "name": "Black-vein Sergeant",
+    "scientific": "Athyma ranga",
+    "aliases": [],
+    "genus": "Athyma",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 113,
+    "family": "Nymphalidae",
+    "name": "Staff Sergeant",
+    "scientific": "Athyma selenophora",
+    "aliases": [],
+    "genus": "Athyma",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 114,
+    "family": "Nymphalidae",
+    "name": "Colour Sergeant",
+    "scientific": "Athyma inara",
+    "aliases": [
+      "Athyma nefte inara"
+    ],
+    "genus": "Athyma",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 115,
+    "family": "Nymphalidae",
+    "name": "Common Lascar",
+    "scientific": "Pantoporia hordonia",
+    "aliases": [],
+    "genus": "Pantoporia",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 116,
+    "family": "Nymphalidae",
+    "name": "Extra Lascar",
+    "scientific": "Pantoporia sandaka",
+    "aliases": [
+      "Pantoporia sandaca"
+    ],
+    "genus": "Pantoporia",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 117,
+    "family": "Nymphalidae",
+    "name": "Yellow Jack Sailer",
+    "scientific": "Lasippa viraja",
+    "aliases": [],
+    "genus": "Lasippa",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 118,
+    "family": "Nymphalidae",
+    "name": "Common Sailer",
+    "scientific": "Neptis hylas",
+    "aliases": [],
+    "genus": "Neptis",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 119,
+    "family": "Nymphalidae",
+    "name": "Chestnut-streaked Sailer",
+    "scientific": "Neptis jumbah",
+    "aliases": [],
+    "genus": "Neptis",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 120,
+    "family": "Nymphalidae",
+    "name": "Sullied Sailer",
+    "scientific": "Neptis clinia",
+    "aliases": [],
+    "genus": "Neptis",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 121,
+    "family": "Nymphalidae",
+    "name": "Clear Sailer",
+    "scientific": "Neptis nata hampsoni",
+    "aliases": [
+      "Sullied Sailer"
+    ],
+    "genus": "Neptis",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 122,
+    "family": "Nymphalidae",
+    "name": "Creamy Sailer",
+    "scientific": "Neptis palnica",
+    "aliases": [
+      "Neptis soma palnica",
+      "Palni Sailer"
+    ],
+    "genus": "Neptis",
+    "subfamily": "Limenitidinae",
+    "validated": false,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 123,
+    "family": "Nymphalidae",
+    "name": "Short-banded Sailer",
+    "scientific": "Phaedyma columella",
+    "aliases": [],
+    "genus": "Phaedyma",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 124,
+    "family": "Nymphalidae",
+    "name": "Clipper",
+    "scientific": "Parthenos sylvia",
+    "aliases": [],
+    "genus": "Parthenos",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 125,
+    "family": "Nymphalidae",
+    "name": "Common Baron",
+    "scientific": "Euthalia aconthea",
+    "aliases": [],
+    "genus": "Euthalia",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 126,
+    "family": "Nymphalidae",
+    "name": "Gaudy Baron",
+    "scientific": "Euthalia lubentina",
+    "aliases": [],
+    "genus": "Euthalia",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 127,
+    "family": "Nymphalidae",
+    "name": "Baronet",
+    "scientific": "Symphaedra nais",
+    "aliases": [],
+    "genus": "Symphaedra",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 128,
+    "family": "Nymphalidae",
+    "name": "Grey Count",
+    "scientific": "Tanaecia lepidea",
+    "aliases": [
+      "Cynitia lepidea"
+    ],
+    "genus": "Tanaecia",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 129,
+    "family": "Nymphalidae",
+    "name": "Redspot Duke",
+    "scientific": "Dophla evelina",
+    "aliases": [],
+    "genus": "Dophla",
+    "subfamily": "Limenitidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 130,
+    "family": "Nymphalidae",
+    "name": "Common Map",
+    "scientific": "Cyrestis thyodamas",
+    "aliases": [
+      "Map Butterfly"
+    ],
+    "genus": "Cyrestis",
+    "subfamily": "Cyrestinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 131,
+    "family": "Nymphalidae",
+    "name": "Joker",
+    "scientific": "Byblia ilithyia",
+    "aliases": [],
+    "genus": "Byblia",
+    "subfamily": "Biblidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 132,
+    "family": "Nymphalidae",
+    "name": "Angled Castor",
+    "scientific": "Ariadne ariadne",
+    "aliases": [],
+    "genus": "Ariadne",
+    "subfamily": "Biblidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 133,
+    "family": "Nymphalidae",
+    "name": "Common Castor",
+    "scientific": "Ariadne merione",
+    "aliases": [],
+    "genus": "Ariadne",
+    "subfamily": "Biblidinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 134,
+    "family": "Nymphalidae",
+    "name": "Black Prince",
+    "scientific": "Rohana parisatis",
+    "aliases": [],
+    "genus": "Rohana",
+    "subfamily": "Apaturinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 135,
+    "family": "Nymphalidae",
+    "name": "Painted Courtesan",
+    "scientific": "Euripus consimilis",
+    "aliases": [],
+    "genus": "Euripus",
+    "subfamily": "Apaturinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 136,
+    "family": "Nymphalidae",
+    "name": "Indian Red Admiral",
+    "scientific": "Vanessa indica",
+    "aliases": [],
+    "genus": "Vanessa",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 137,
+    "family": "Nymphalidae",
+    "name": "Painted Lady",
+    "scientific": "Vanessa cardui",
+    "aliases": [],
+    "genus": "Vanessa",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 138,
+    "family": "Nymphalidae",
+    "name": "Blue Admiral",
+    "scientific": "Kaniska canace",
+    "aliases": [],
+    "genus": "Kaniska",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 139,
+    "family": "Nymphalidae",
+    "name": "Blue Pansy",
+    "scientific": "Junonia orithya",
+    "aliases": [],
+    "genus": "Junonia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 140,
+    "family": "Nymphalidae",
+    "name": "Yellow Pansy",
+    "scientific": "Junonia hierta",
+    "aliases": [],
+    "genus": "Junonia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 141,
+    "family": "Nymphalidae",
+    "name": "Chocolate Pansy",
+    "scientific": "Junonia iphita",
+    "aliases": [],
+    "genus": "Junonia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 142,
+    "family": "Nymphalidae",
+    "name": "Grey Pansy",
+    "scientific": "Junonia atlites",
+    "aliases": [],
+    "genus": "Junonia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 143,
+    "family": "Nymphalidae",
+    "name": "Peacock Pansy",
+    "scientific": "Junonia almana",
+    "aliases": [],
+    "genus": "Junonia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 144,
+    "family": "Nymphalidae",
+    "name": "Lemon Pansy",
+    "scientific": "Junonia lemonias",
+    "aliases": [],
+    "genus": "Junonia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 145,
+    "family": "Nymphalidae",
+    "name": "Great Eggfly",
+    "scientific": "Hypolimnas bolina",
+    "aliases": [],
+    "genus": "Hypolimnas",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 146,
+    "family": "Nymphalidae",
+    "name": "Danaid Eggfly",
+    "scientific": "Hypolimnas misippus",
+    "aliases": [],
+    "genus": "Hypolimnas",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 147,
+    "family": "Nymphalidae",
+    "name": "Blue Oakleaf",
+    "scientific": "Kallima horsfieldi",
+    "aliases": [
+      "Sahyadri Blue Oakleaf"
+    ],
+    "genus": "Kallima",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 148,
+    "family": "Nymphalidae",
+    "name": "Autumn Leaf",
+    "scientific": "Doleschallia bisaltide",
+    "aliases": [],
+    "genus": "Doleschallia",
+    "subfamily": "Nymphalinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 149,
+    "family": "Lycaenidae",
+    "name": "Indian Sunbeam",
+    "scientific": "Curetis thetis",
+    "aliases": [],
+    "genus": "Curetis",
+    "subfamily": "Curetinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 150,
+    "family": "Lycaenidae",
+    "name": "Angled Sunbeam",
+    "scientific": "Curetis acuta",
+    "aliases": [
+      "Acute Sunbeam"
+    ],
+    "genus": "Curetis",
+    "subfamily": "Curetinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 151,
+    "family": "Lycaenidae",
+    "name": "Siva Sunbeam",
+    "scientific": "Curetis siva",
+    "aliases": [
+      "Shiva Sunbeam"
+    ],
+    "genus": "Curetis",
+    "subfamily": "Curetinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 152,
+    "family": "Lycaenidae",
+    "name": "Apefly",
+    "scientific": "Spalgis epius",
+    "aliases": [],
+    "genus": "Spalgis",
+    "subfamily": "Miletinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 153,
+    "family": "Lycaenidae",
+    "name": "Long-banded Silverline",
+    "scientific": "Cigaritis lohita",
+    "aliases": [
+      "Spindasis lohita"
+    ],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 154,
+    "family": "Lycaenidae",
+    "name": "Common Silverline",
+    "scientific": "Cigaritis vulcanus",
+    "aliases": [
+      "Spindasis vulcanus"
+    ],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 155,
+    "family": "Lycaenidae",
+    "name": "Plumbeous Silverline",
+    "scientific": "Cigaritis schistacea",
+    "aliases": [
+      "Spindasis schistacea"
+    ],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 156,
+    "family": "Lycaenidae",
+    "name": "Common Shot Silverline",
+    "scientific": "Cigaritis ictis",
+    "aliases": [
+      "Spindasis ictis"
+    ],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 157,
+    "family": "Lycaenidae",
+    "name": "Abnormal Silverline",
+    "scientific": "Cigaritis abnormis",
+    "aliases": [
+      "Spindasis abnormis"
+    ],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 158,
+    "family": "Lycaenidae",
+    "name": "Scarce Shot Silverline",
+    "scientific": "Cigaritis elima",
+    "aliases": [
+      "Spindasis elima"
+    ],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 159,
+    "family": "Lycaenidae",
+    "name": "Cloud Forest Silverline",
+    "scientific": "Cigaritis meghamalaiensis",
+    "aliases": [],
+    "genus": "Cigaritis",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "issue27Addition": true,
+    "butterflyVision": [],
+    "tags": [
+      "wg-endemic",
+      "issue-27-addition"
+    ]
+  },
+  {
+    "id": 160,
+    "family": "Lycaenidae",
+    "name": "Common Ciliate Blue",
+    "scientific": "Anthene emolus",
+    "aliases": [],
+    "genus": "Anthene",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 161,
+    "family": "Lycaenidae",
+    "name": "Pointed Ciliate Blue",
+    "scientific": "Anthene lycaenina",
+    "aliases": [],
+    "genus": "Anthene",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 162,
+    "family": "Lycaenidae",
+    "name": "Dingy Lineblue",
+    "scientific": "Petrelaea dana",
+    "aliases": [],
+    "genus": "Petrelaea",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 163,
+    "family": "Lycaenidae",
+    "name": "Large 4-lineblue",
+    "scientific": "Nacaduba pactolus",
+    "aliases": [],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 164,
+    "family": "Lycaenidae",
+    "name": "Pale 4-lineblue",
+    "scientific": "Nacaduba hermus",
+    "aliases": [],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 165,
+    "family": "Lycaenidae",
+    "name": "Transparent 6-lineblue",
+    "scientific": "Nacaduba kurava",
+    "aliases": [],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 166,
+    "family": "Lycaenidae",
+    "name": "Opaque 6-lineblue",
+    "scientific": "Nacaduba beroe",
+    "aliases": [],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 167,
+    "family": "Lycaenidae",
+    "name": "Rounded 6-lineblue",
+    "scientific": "Nacaduba berenice",
+    "aliases": [],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg"
+    ],
+    "tags": []
+  },
+  {
+    "id": 168,
+    "family": "Lycaenidae",
+    "name": "Dark Ceylon 6-lineblue",
+    "scientific": "Nacaduba calauria",
+    "aliases": [
+      "Dark Six-lineblue"
+    ],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 169,
+    "family": "Lycaenidae",
+    "name": "Pale Ceylon 6-lineblue",
+    "scientific": "Nacaduba sinhala",
+    "aliases": [
+      "Nacaduba sinhala ramaswamii"
+    ],
+    "genus": "Nacaduba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 170,
+    "family": "Lycaenidae",
+    "name": "Common Lineblue",
+    "scientific": "Prosotas nora",
+    "aliases": [],
+    "genus": "Prosotas",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 171,
+    "family": "Lycaenidae",
+    "name": "Tailless Lineblue",
+    "scientific": "Prosotas dubiosa",
+    "aliases": [],
+    "genus": "Prosotas",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 172,
+    "family": "Lycaenidae",
+    "name": "White-tipped Lineblue",
+    "scientific": "Prosotas noreia",
+    "aliases": [],
+    "genus": "Prosotas",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 173,
+    "family": "Lycaenidae",
+    "name": "Pointed Lineblue",
+    "scientific": "Ionolyce helicon",
+    "aliases": [],
+    "genus": "Ionolyce",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 174,
+    "family": "Lycaenidae",
+    "name": "Angled Pierrot",
+    "scientific": "Caleta decidia",
+    "aliases": [],
+    "genus": "Caleta",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 175,
+    "family": "Lycaenidae",
+    "name": "Banded Blue Pierrot",
+    "scientific": "Discolampa ethion",
+    "aliases": [],
+    "genus": "Discolampa",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 176,
+    "family": "Lycaenidae",
+    "name": "Dark Cerulean",
+    "scientific": "Jamides bochus",
+    "aliases": [],
+    "genus": "Jamides",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 177,
+    "family": "Lycaenidae",
+    "name": "Common Cerulean",
+    "scientific": "Jamides celeno",
+    "aliases": [],
+    "genus": "Jamides",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 178,
+    "family": "Lycaenidae",
+    "name": "Metallic Cerulean",
+    "scientific": "Jamides alecto",
+    "aliases": [],
+    "genus": "Jamides",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 179,
+    "family": "Lycaenidae",
+    "name": "Forget-me-not",
+    "scientific": "Catochrysops strabo",
+    "aliases": [],
+    "genus": "Catochrysops",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 180,
+    "family": "Lycaenidae",
+    "name": "Silver Forget-me-not",
+    "scientific": "Catochrysops panormus",
+    "aliases": [],
+    "genus": "Catochrysops",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 181,
+    "family": "Lycaenidae",
+    "name": "Pea Blue",
+    "scientific": "Lampides boeticus",
+    "aliases": [],
+    "genus": "Lampides",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 182,
+    "family": "Lycaenidae",
+    "name": "Zebra Blue",
+    "scientific": "Leptotes plinius",
+    "aliases": [],
+    "genus": "Leptotes",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 183,
+    "family": "Lycaenidae",
+    "name": "Common Pierrot",
+    "scientific": "Castalius rosimon",
+    "aliases": [],
+    "genus": "Castalius",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 184,
+    "family": "Lycaenidae",
+    "name": "Black-spotted Pierrot",
+    "scientific": "Tarucus balkanicus",
+    "aliases": [
+      "Little Tiger Pierrot"
+    ],
+    "genus": "Tarucus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 185,
+    "family": "Lycaenidae",
+    "name": "Rounded Pierrot",
+    "scientific": "Tarucus nara",
+    "aliases": [
+      "Striped Pierrot"
+    ],
+    "genus": "Tarucus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 186,
+    "family": "Lycaenidae",
+    "name": "Spotted Pierrot",
+    "scientific": "Tarucus callinara",
+    "aliases": [],
+    "genus": "Tarucus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 187,
+    "family": "Lycaenidae",
+    "name": "Pointed Pierrot",
+    "scientific": "Tarucus indica",
+    "aliases": [
+      "Transparent Pierrot"
+    ],
+    "genus": "Tarucus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 188,
+    "family": "Lycaenidae",
+    "name": "Dark Pierrot",
+    "scientific": "Tarucus ananda",
+    "aliases": [],
+    "genus": "Tarucus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 189,
+    "family": "Lycaenidae",
+    "name": "Dark Grass Blue",
+    "scientific": "Zizeeria karsandra",
+    "aliases": [],
+    "genus": "Zizeeria",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 190,
+    "family": "Lycaenidae",
+    "name": "Lesser Grass Blue",
+    "scientific": "Zizina otis",
+    "aliases": [],
+    "genus": "Zizina",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 191,
+    "family": "Lycaenidae",
+    "name": "Pale Grass Blue",
+    "scientific": "Pseudozizeeria maha",
+    "aliases": [],
+    "genus": "Pseudozizeeria",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 192,
+    "family": "Lycaenidae",
+    "name": "Tiny Grass Blue",
+    "scientific": "Zizula hylax",
+    "aliases": [],
+    "genus": "Zizula",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 193,
+    "family": "Lycaenidae",
+    "name": "Indian Cupid",
+    "scientific": "Everes lacturnus",
+    "aliases": [
+      "Orange-crowned Cupid"
+    ],
+    "genus": "Everes",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 194,
+    "family": "Lycaenidae",
+    "name": "Red Pierrot",
+    "scientific": "Talicada nyseus",
+    "aliases": [],
+    "genus": "Talicada",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 195,
+    "family": "Lycaenidae",
+    "name": "Bright Babul Blue",
+    "scientific": "Azanus ubaldus",
+    "aliases": [],
+    "genus": "Azanus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 196,
+    "family": "Lycaenidae",
+    "name": "African Babul Blue",
+    "scientific": "Azanus jesous",
+    "aliases": [],
+    "genus": "Azanus",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 197,
+    "family": "Lycaenidae",
+    "name": "Quaker",
+    "scientific": "Neopithecops zalmora",
+    "aliases": [
+      "Common Quaker"
+    ],
+    "genus": "Neopithecops",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 198,
+    "family": "Lycaenidae",
+    "name": "Malayan",
+    "scientific": "Megisba malaya",
+    "aliases": [],
+    "genus": "Megisba",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 199,
+    "family": "Lycaenidae",
+    "name": "Common Hedge Blue",
+    "scientific": "Acytolepis puspa",
+    "aliases": [],
+    "genus": "Acytolepis",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 200,
+    "family": "Lycaenidae",
+    "name": "Hampson's Hedge Blue",
+    "scientific": "Acytolepis lilacea",
+    "aliases": [
+      "Lilac Hedge Blue"
+    ],
+    "genus": "Acytolepis",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 201,
+    "family": "Lycaenidae",
+    "name": "Plain Hedge Blue",
+    "scientific": "Celastrina lavendularis",
+    "aliases": [],
+    "genus": "Celastrina",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 202,
+    "family": "Lycaenidae",
+    "name": "White Hedge Blue",
+    "scientific": "Udara akasa",
+    "aliases": [],
+    "genus": "Udara",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 203,
+    "family": "Lycaenidae",
+    "name": "White-disc Hedge Blue",
+    "scientific": "Celatoxia albidisca",
+    "aliases": [],
+    "genus": "Celatoxia",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 204,
+    "family": "Lycaenidae",
+    "name": "Gram Blue",
+    "scientific": "Euchrysops cnejus",
+    "aliases": [],
+    "genus": "Euchrysops",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 205,
+    "family": "Lycaenidae",
+    "name": "Small Grass Jewel",
+    "scientific": "Freyeria putli",
+    "aliases": [
+      "Black-spotted Grass Jewel"
+    ],
+    "genus": "Freyeria",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 206,
+    "family": "Lycaenidae",
+    "name": "Grass Jewel",
+    "scientific": "Freyeria trochylus",
+    "aliases": [
+      "Orange-spotted Grass Jewel"
+    ],
+    "genus": "Freyeria",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 207,
+    "family": "Lycaenidae",
+    "name": "Plains Cupid",
+    "scientific": "Chilades pandava",
+    "aliases": [],
+    "genus": "Chilades",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 208,
+    "family": "Lycaenidae",
+    "name": "Small Cupid",
+    "scientific": "Chilades parrhassius",
+    "aliases": [],
+    "genus": "Chilades",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 209,
+    "family": "Lycaenidae",
+    "name": "Lime Blue",
+    "scientific": "Chilades lajus",
+    "aliases": [],
+    "genus": "Chilades",
+    "subfamily": "Polyommatinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 210,
+    "family": "Lycaenidae",
+    "name": "Centaur Oakblue",
+    "scientific": "Arhopala centaurus",
+    "aliases": [],
+    "genus": "Arhopala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 211,
+    "family": "Lycaenidae",
+    "name": "Large Oakblue",
+    "scientific": "Arhopala amantes",
+    "aliases": [],
+    "genus": "Arhopala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 212,
+    "family": "Lycaenidae",
+    "name": "Tamil Oakblue",
+    "scientific": "Arhopala bazaloides",
+    "aliases": [
+      "Dusted Oakblue"
+    ],
+    "genus": "Arhopala",
+    "subfamily": "Theclinae",
+    "validated": false,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 213,
+    "family": "Lycaenidae",
+    "name": "Kanara Oakblue",
+    "scientific": "Arhopala alea",
+    "aliases": [
+      "Sahyadri Rosy Oakblue"
+    ],
+    "genus": "Arhopala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 214,
+    "family": "Lycaenidae",
+    "name": "Aberrant Bushblue",
+    "scientific": "Arhopala abseus",
+    "aliases": [
+      "Aberrant Oakblue"
+    ],
+    "genus": "Arhopala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 215,
+    "family": "Lycaenidae",
+    "name": "Many-tailed Oakblue",
+    "scientific": "Thaduka multicaudata",
+    "aliases": [],
+    "genus": "Thaduka",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 216,
+    "family": "Lycaenidae",
+    "name": "Common Acacia Blue",
+    "scientific": "Surendra quercetorum",
+    "aliases": [],
+    "genus": "Surendra",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 217,
+    "family": "Lycaenidae",
+    "name": "Silver-streaked Acacia Blue",
+    "scientific": "Zinaspa todara",
+    "aliases": [],
+    "genus": "Zinaspa",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 218,
+    "family": "Lycaenidae",
+    "name": "Redspot",
+    "scientific": "Zesius chrysomallus",
+    "aliases": [],
+    "genus": "Zesius",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 219,
+    "family": "Lycaenidae",
+    "name": "Leaf Blue",
+    "scientific": "Amblypodia anita",
+    "aliases": [
+      "Purple Leaf Blue"
+    ],
+    "genus": "Amblypodia",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 220,
+    "family": "Lycaenidae",
+    "name": "Silverstreak Blue",
+    "scientific": "Iraota timoleon",
+    "aliases": [],
+    "genus": "Iraota",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 221,
+    "family": "Lycaenidae",
+    "name": "Tufted White Royal",
+    "scientific": "Pratapa deva",
+    "aliases": [],
+    "genus": "Pratapa",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 222,
+    "family": "Lycaenidae",
+    "name": "Plains Blue Royal",
+    "scientific": "Tajuria jehana",
+    "aliases": [],
+    "genus": "Tajuria",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 223,
+    "family": "Lycaenidae",
+    "name": "Peacock Royal",
+    "scientific": "Tajuria cippus",
+    "aliases": [],
+    "genus": "Tajuria",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 224,
+    "family": "Lycaenidae",
+    "name": "Spotted Royal",
+    "scientific": "Tajuria maculata",
+    "aliases": [],
+    "genus": "Tajuria",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 225,
+    "family": "Lycaenidae",
+    "name": "Branded Royal",
+    "scientific": "Tajuria melastigma",
+    "aliases": [],
+    "genus": "Tajuria",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 226,
+    "family": "Lycaenidae",
+    "name": "Broadtail Royal",
+    "scientific": "Creon cleobis",
+    "aliases": [],
+    "genus": "Creon",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 227,
+    "family": "Lycaenidae",
+    "name": "Banded Royal",
+    "scientific": "Rachana jalindra",
+    "aliases": [],
+    "genus": "Rachana",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 228,
+    "family": "Lycaenidae",
+    "name": "Nilgiri Tit",
+    "scientific": "Hypolycaena nilgirica",
+    "aliases": [],
+    "genus": "Hypolycaena",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic",
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 229,
+    "family": "Lycaenidae",
+    "name": "Orchid Tit",
+    "scientific": "Hypolycaena othona",
+    "aliases": [
+      "Chliaria othona"
+    ],
+    "genus": "Hypolycaena",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 230,
+    "family": "Lycaenidae",
+    "name": "Fluffy Tit",
+    "scientific": "Zeltus amasa",
+    "aliases": [],
+    "genus": "Zeltus",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 231,
+    "family": "Lycaenidae",
+    "name": "Silver Royal",
+    "scientific": "Ancema blanka",
+    "aliases": [],
+    "genus": "Ancema",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 232,
+    "family": "Lycaenidae",
+    "name": "Yamfly",
+    "scientific": "Loxura atymnus",
+    "aliases": [],
+    "genus": "Loxura",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 233,
+    "family": "Lycaenidae",
+    "name": "Common Onyx",
+    "scientific": "Horaga onyx",
+    "aliases": [],
+    "genus": "Horaga",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 234,
+    "family": "Lycaenidae",
+    "name": "Monkey Puzzle",
+    "scientific": "Rathinda amor",
+    "aliases": [],
+    "genus": "Rathinda",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 235,
+    "family": "Lycaenidae",
+    "name": "Common Imperial",
+    "scientific": "Cheritra freja",
+    "aliases": [],
+    "genus": "Cheritra",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 236,
+    "family": "Lycaenidae",
+    "name": "Common Tinsel",
+    "scientific": "Catapaecilma major",
+    "aliases": [],
+    "genus": "Catapaecilma",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 237,
+    "family": "Lycaenidae",
+    "name": "Guava Blue",
+    "scientific": "Virachola isocrates",
+    "aliases": [
+      "Common Guava Blue"
+    ],
+    "genus": "Virachola",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 238,
+    "family": "Lycaenidae",
+    "name": "Large Guava Blue",
+    "scientific": "Virachola perse",
+    "aliases": [],
+    "genus": "Virachola",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 239,
+    "family": "Lycaenidae",
+    "name": "Cornelian",
+    "scientific": "Deudorix epijarbas",
+    "aliases": [],
+    "genus": "Deudorix",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 240,
+    "family": "Lycaenidae",
+    "name": "Blue-edged Plane",
+    "scientific": "Bindahara moorei",
+    "aliases": [
+      "Blue-bordered Plane"
+    ],
+    "genus": "Bindahara",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 241,
+    "family": "Lycaenidae",
+    "name": "Indian Red Flash",
+    "scientific": "Rapala iarbus",
+    "aliases": [
+      "Common Red Flash"
+    ],
+    "genus": "Rapala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 242,
+    "family": "Lycaenidae",
+    "name": "Slate Flash",
+    "scientific": "Rapala manea",
+    "aliases": [],
+    "genus": "Rapala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 243,
+    "family": "Lycaenidae",
+    "name": "Indigo Flash",
+    "scientific": "Rapala varuna",
+    "aliases": [],
+    "genus": "Rapala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 244,
+    "family": "Lycaenidae",
+    "name": "Malabar Flash",
+    "scientific": "Rapala lankana",
+    "aliases": [],
+    "genus": "Rapala",
+    "subfamily": "Theclinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 245,
+    "family": "Riodinidae",
+    "name": "Straight Plum Judy",
+    "scientific": "Abisara echerius",
+    "aliases": [
+      "Plum Judy"
+    ],
+    "genus": "Abisara",
+    "subfamily": "Nemeobiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 246,
+    "family": "Riodinidae",
+    "name": "Plum Judy",
+    "scientific": "Abisara bifasciata",
+    "aliases": [
+      "Double-banded Judy"
+    ],
+    "genus": "Abisara",
+    "subfamily": "Nemeobiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 247,
+    "family": "Hesperiidae",
+    "name": "Brown Awl",
+    "scientific": "Badamia exclamationis",
+    "aliases": [],
+    "genus": "Badamia",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "migratory"
+    ]
+  },
+  {
+    "id": 248,
+    "family": "Hesperiidae",
+    "name": "Orange-tail Awl",
+    "scientific": "Bibasis sena",
+    "aliases": [],
+    "genus": "Bibasis",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 249,
+    "family": "Hesperiidae",
+    "name": "Orange Striped Awlet",
+    "scientific": "Burara jaina",
+    "aliases": [
+      "Common Orange Awlet"
+    ],
+    "genus": "Burara",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 250,
+    "family": "Hesperiidae",
+    "name": "Pale Green Awlet",
+    "scientific": "Burara gomata",
+    "aliases": [],
+    "genus": "Burara",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 251,
+    "family": "Hesperiidae",
+    "name": "Common Banded Awl",
+    "scientific": "Hasora chromus",
+    "aliases": [],
+    "genus": "Hasora",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 252,
+    "family": "Hesperiidae",
+    "name": "White Banded Awl",
+    "scientific": "Hasora taminatus",
+    "aliases": [],
+    "genus": "Hasora",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 253,
+    "family": "Hesperiidae",
+    "name": "Common Awl",
+    "scientific": "Hasora badra",
+    "aliases": [],
+    "genus": "Hasora",
+    "subfamily": "Coeliadinae",
+    "validated": false,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 254,
+    "family": "Hesperiidae",
+    "name": "Plain Banded Awl",
+    "scientific": "Hasora vitta",
+    "aliases": [],
+    "genus": "Hasora",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 255,
+    "family": "Hesperiidae",
+    "name": "Indian Awlking",
+    "scientific": "Choaspes benjaminii",
+    "aliases": [
+      "Common Awlking"
+    ],
+    "genus": "Choaspes",
+    "subfamily": "Coeliadinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 256,
+    "family": "Hesperiidae",
+    "name": "Angled Flat",
+    "scientific": "Tapena thwaitesi",
+    "aliases": [
+      "Black Angle"
+    ],
+    "genus": "Tapena",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 257,
+    "family": "Hesperiidae",
+    "name": "Tricoloured Pied Flat",
+    "scientific": "Coladenia indrani",
+    "aliases": [
+      "Tricolour Pied Flat"
+    ],
+    "genus": "Coladenia",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 258,
+    "family": "Hesperiidae",
+    "name": "Common Yellow-breasted Flat",
+    "scientific": "Gerosis bhagava",
+    "aliases": [],
+    "genus": "Gerosis",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 259,
+    "family": "Hesperiidae",
+    "name": "Common Snow Flat",
+    "scientific": "Tagiades japetus",
+    "aliases": [],
+    "genus": "Tagiades",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 260,
+    "family": "Hesperiidae",
+    "name": "Suffused Snow Flat",
+    "scientific": "Tagiades gana",
+    "aliases": [],
+    "genus": "Tagiades",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 261,
+    "family": "Hesperiidae",
+    "name": "Water Snow Flat",
+    "scientific": "Tagiades litigiosa",
+    "aliases": [],
+    "genus": "Tagiades",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 262,
+    "family": "Hesperiidae",
+    "name": "Chestnut Angle",
+    "scientific": "Odontoptilum angulatum",
+    "aliases": [],
+    "genus": "Odontoptilum",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 263,
+    "family": "Hesperiidae",
+    "name": "Golden Angle",
+    "scientific": "Caprona ransonnetti",
+    "aliases": [],
+    "genus": "Caprona",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 264,
+    "family": "Hesperiidae",
+    "name": "Spotted Angle",
+    "scientific": "Caprona agama",
+    "aliases": [],
+    "genus": "Caprona",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 265,
+    "family": "Hesperiidae",
+    "name": "Pale Spotted Angle",
+    "scientific": "Caprona alida",
+    "aliases": [
+      "Alida Angle"
+    ],
+    "genus": "Caprona",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 266,
+    "family": "Hesperiidae",
+    "name": "Malabar Spotted Flat",
+    "scientific": "Celaenorrhinus ambareesa",
+    "aliases": [
+      "Dakhan Spotted Flat"
+    ],
+    "genus": "Celaenorrhinus",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 267,
+    "family": "Hesperiidae",
+    "name": "Common Spotted Flat",
+    "scientific": "Celaenorrhinus leucocera",
+    "aliases": [],
+    "genus": "Celaenorrhinus",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 268,
+    "family": "Hesperiidae",
+    "name": "Bengal Spotted Flat",
+    "scientific": "Celaenorrhinus putra",
+    "aliases": [
+      "Restricted Spotted Flat"
+    ],
+    "genus": "Celaenorrhinus",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 269,
+    "family": "Hesperiidae",
+    "name": "Tamil Spotted Flat",
+    "scientific": "Celaenorrhinus fusca",
+    "aliases": [
+      "Celaenorrhinus ruficornis",
+      "Dusky Spotted Flat"
+    ],
+    "genus": "Celaenorrhinus",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 270,
+    "family": "Hesperiidae",
+    "name": "Fulvous Pied Flat",
+    "scientific": "Pseudocoladenia dan",
+    "aliases": [],
+    "genus": "Pseudocoladenia",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 271,
+    "family": "Hesperiidae",
+    "name": "Spotted Small Flat",
+    "scientific": "Sarangesa purendra",
+    "aliases": [],
+    "genus": "Sarangesa",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 272,
+    "family": "Hesperiidae",
+    "name": "Common Small Flat",
+    "scientific": "Sarangesa dasahara",
+    "aliases": [],
+    "genus": "Sarangesa",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 273,
+    "family": "Hesperiidae",
+    "name": "African Marbled Skipper",
+    "scientific": "Gomalia elma",
+    "aliases": [],
+    "genus": "Gomalia",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 274,
+    "family": "Hesperiidae",
+    "name": "Indian Skipper",
+    "scientific": "Spialia galba",
+    "aliases": [
+      "Asian Grizzled Skipper"
+    ],
+    "genus": "Spialia",
+    "subfamily": "Pyrginae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 275,
+    "family": "Hesperiidae",
+    "name": "Hedge Hopper",
+    "scientific": "Baracus subditus",
+    "aliases": [
+      "Stripped Hedge Hopper"
+    ],
+    "genus": "Baracus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 276,
+    "family": "Hesperiidae",
+    "name": "Hampson's Hedge Hopper",
+    "scientific": "Baracus hampsoni",
+    "aliases": [
+      "Spotted Hedge Hopper"
+    ],
+    "genus": "Baracus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 277,
+    "family": "Hesperiidae",
+    "name": "Bush Hopper",
+    "scientific": "Ampittia dioscorides",
+    "aliases": [],
+    "genus": "Ampittia",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 278,
+    "family": "Hesperiidae",
+    "name": "Dingy Scrub Hopper",
+    "scientific": "Aeromachus dubius",
+    "aliases": [],
+    "genus": "Aeromachus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 279,
+    "family": "Hesperiidae",
+    "name": "Pygmy Scrub Hopper",
+    "scientific": "Aeromachus pygmaeus",
+    "aliases": [],
+    "genus": "Aeromachus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 280,
+    "family": "Hesperiidae",
+    "name": "Bicolour Ace",
+    "scientific": "Halpemorpha hyrtacus",
+    "aliases": [
+      "White-branded Ace"
+    ],
+    "genus": "Halpemorpha",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 281,
+    "family": "Hesperiidae",
+    "name": "Madras Ace",
+    "scientific": "Thoressa honorei",
+    "aliases": [
+      "Sahyadri Orange Ace"
+    ],
+    "genus": "Thoressa",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 282,
+    "family": "Hesperiidae",
+    "name": "Southern Spotted Ace",
+    "scientific": "Thoressa astigmata",
+    "aliases": [
+      "Unbranded Ace"
+    ],
+    "genus": "Thoressa",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 283,
+    "family": "Hesperiidae",
+    "name": "Sitala Ace",
+    "scientific": "Thoressa sitala",
+    "aliases": [
+      "Nilgiri Plain Ace"
+    ],
+    "genus": "Thoressa",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 284,
+    "family": "Hesperiidae",
+    "name": "Evershed's Ace",
+    "scientific": "Thoressa evershedi",
+    "aliases": [
+      "Travancore Tawny Ace"
+    ],
+    "genus": "Thoressa",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 285,
+    "family": "Hesperiidae",
+    "name": "Moore's Ace",
+    "scientific": "Halpe porus",
+    "aliases": [
+      "Bispot Banded Ace"
+    ],
+    "genus": "Halpe",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 286,
+    "family": "Hesperiidae",
+    "name": "South Indian Ace",
+    "scientific": "Halpe hindu",
+    "aliases": [
+      "Sahyadri Banded Ace"
+    ],
+    "genus": "Halpe",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 287,
+    "family": "Hesperiidae",
+    "name": "Coorg Forest Hopper",
+    "scientific": "Arnetta mercara",
+    "aliases": [
+      "Kodagu Forest Hopper"
+    ],
+    "genus": "Arnetta",
+    "subfamily": "Hesperiinae",
+    "validated": false,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 288,
+    "family": "Hesperiidae",
+    "name": "Vindhyan Bob",
+    "scientific": "Arnetta vindhiana",
+    "aliases": [],
+    "genus": "Arnetta",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 289,
+    "family": "Hesperiidae",
+    "name": "Chestnut Bob",
+    "scientific": "Iambrix salsala",
+    "aliases": [],
+    "genus": "Iambrix",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 290,
+    "family": "Hesperiidae",
+    "name": "Coon",
+    "scientific": "Psolos fuligo",
+    "aliases": [
+      "Dusky Partwing"
+    ],
+    "genus": "Psolos",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 291,
+    "family": "Hesperiidae",
+    "name": "Common Banded Demon",
+    "scientific": "Notocrypta paralysos",
+    "aliases": [],
+    "genus": "Notocrypta",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 292,
+    "family": "Hesperiidae",
+    "name": "Restricted Demon",
+    "scientific": "Notocrypta curvifascia",
+    "aliases": [],
+    "genus": "Notocrypta",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 293,
+    "family": "Hesperiidae",
+    "name": "Grass Demon",
+    "scientific": "Udaspes folus",
+    "aliases": [],
+    "genus": "Udaspes",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 294,
+    "family": "Hesperiidae",
+    "name": "Indian Palm Bob",
+    "scientific": "Suastus gremius",
+    "aliases": [
+      "Oriental Palm Bob"
+    ],
+    "genus": "Suastus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 295,
+    "family": "Hesperiidae",
+    "name": "Small Palm Bob",
+    "scientific": "Suastus minutus",
+    "aliases": [],
+    "genus": "Suastus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 296,
+    "family": "Hesperiidae",
+    "name": "Wax Dart",
+    "scientific": "Cupitha purreea",
+    "aliases": [],
+    "genus": "Cupitha",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 297,
+    "family": "Hesperiidae",
+    "name": "Purple Spotted Flitter",
+    "scientific": "Zographetus ogygia",
+    "aliases": [],
+    "genus": "Zographetus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 298,
+    "family": "Hesperiidae",
+    "name": "Tree Flitter",
+    "scientific": "Hyarotis adrastus",
+    "aliases": [],
+    "genus": "Hyarotis",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 299,
+    "family": "Hesperiidae",
+    "name": "Brush Flitter",
+    "scientific": "Hyarotis coorga",
+    "aliases": [
+      "Hyarotis microstictum",
+      "Kodagu Brush Flitter"
+    ],
+    "genus": "Hyarotis",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 300,
+    "family": "Hesperiidae",
+    "name": "Golden Flitter",
+    "scientific": "Quedara basiflava",
+    "aliases": [
+      "Yellow-base Flitter"
+    ],
+    "genus": "Quedara",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 301,
+    "family": "Hesperiidae",
+    "name": "Maculate Lancer",
+    "scientific": "Salanoemia sala",
+    "aliases": [],
+    "genus": "Salanoemia",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 302,
+    "family": "Hesperiidae",
+    "name": "Giant Redeye",
+    "scientific": "Gangara thyrsis",
+    "aliases": [],
+    "genus": "Gangara",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 303,
+    "family": "Hesperiidae",
+    "name": "Rounded Palm-redeye",
+    "scientific": "Erionota torus",
+    "aliases": [],
+    "genus": "Erionota",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 304,
+    "family": "Hesperiidae",
+    "name": "Common Redeye",
+    "scientific": "Matapa aria",
+    "aliases": [
+      "Common Branded Redeye"
+    ],
+    "genus": "Matapa",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 305,
+    "family": "Hesperiidae",
+    "name": "Oriental Straight Swift",
+    "scientific": "Parnara bada",
+    "aliases": [
+      "Oriental Grey Swift"
+    ],
+    "genus": "Parnara",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 306,
+    "family": "Hesperiidae",
+    "name": "Continental Swift",
+    "scientific": "Parnara ganga",
+    "aliases": [],
+    "genus": "Parnara",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 307,
+    "family": "Hesperiidae",
+    "name": "Rice Swift",
+    "scientific": "Borbo cinnara",
+    "aliases": [],
+    "genus": "Borbo",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 308,
+    "family": "Hesperiidae",
+    "name": "Bevan's Swift",
+    "scientific": "Borbo bevani",
+    "aliases": [
+      "Lesser Rice Swift"
+    ],
+    "genus": "Borbo",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 309,
+    "family": "Hesperiidae",
+    "name": "Little Branded Swift",
+    "scientific": "Pelopidas agna",
+    "aliases": [
+      "Obscure Branded Swift"
+    ],
+    "genus": "Pelopidas",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 310,
+    "family": "Hesperiidae",
+    "name": "Large Branded Swift",
+    "scientific": "Pelopidas subochracea",
+    "aliases": [],
+    "genus": "Pelopidas",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 311,
+    "family": "Hesperiidae",
+    "name": "Small Branded Swift",
+    "scientific": "Pelopidas mathias",
+    "aliases": [],
+    "genus": "Pelopidas",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 312,
+    "family": "Hesperiidae",
+    "name": "Conjoined Swift",
+    "scientific": "Pelopidas conjuncta",
+    "aliases": [],
+    "genus": "Pelopidas",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 313,
+    "family": "Hesperiidae",
+    "name": "Contiguous Swift",
+    "scientific": "Polytremis lubricans",
+    "aliases": [],
+    "genus": "Polytremis",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 314,
+    "family": "Hesperiidae",
+    "name": "Paintbrush Swift",
+    "scientific": "Baoris farri",
+    "aliases": [
+      "Complete Paint-brush Swift"
+    ],
+    "genus": "Baoris",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wpa-protected"
+    ]
+  },
+  {
+    "id": 315,
+    "family": "Hesperiidae",
+    "name": "Kanara Swift",
+    "scientific": "Caltoris canaraica",
+    "aliases": [
+      "Karwar Swift"
+    ],
+    "genus": "Caltoris",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 316,
+    "family": "Hesperiidae",
+    "name": "Blank Swift",
+    "scientific": "Caltoris kumara",
+    "aliases": [],
+    "genus": "Caltoris",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 317,
+    "family": "Hesperiidae",
+    "name": "Philippine Swift",
+    "scientific": "Caltoris philippina",
+    "aliases": [],
+    "genus": "Caltoris",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 318,
+    "family": "Hesperiidae",
+    "name": "Common Grass Dart",
+    "scientific": "Taractrocera maevius",
+    "aliases": [
+      "Grey-veined Grass Dart"
+    ],
+    "genus": "Taractrocera",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 319,
+    "family": "Hesperiidae",
+    "name": "Tamil Grass Dart",
+    "scientific": "Taractrocera ceramas",
+    "aliases": [
+      "Tawny-spotted Grass Dart"
+    ],
+    "genus": "Taractrocera",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 320,
+    "family": "Hesperiidae",
+    "name": "Tamil Dartlet",
+    "scientific": "Oriens concinna",
+    "aliases": [
+      "Sahyadri Dartlet"
+    ],
+    "genus": "Oriens",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": [
+      "wg-endemic"
+    ]
+  },
+  {
+    "id": 321,
+    "family": "Hesperiidae",
+    "name": "Indian Dartlet",
+    "scientific": "Oriens goloides",
+    "aliases": [
+      "Smaller Dartlet"
+    ],
+    "genus": "Oriens",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 322,
+    "family": "Hesperiidae",
+    "name": "Indian Dart",
+    "scientific": "Potanthus pseudomaesa",
+    "aliases": [],
+    "genus": "Potanthus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 323,
+    "family": "Hesperiidae",
+    "name": "Chinese Dart",
+    "scientific": "Potanthus confucius",
+    "aliases": [],
+    "genus": "Potanthus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 324,
+    "family": "Hesperiidae",
+    "name": "Palni Dart",
+    "scientific": "Potanthus palnia",
+    "aliases": [],
+    "genus": "Potanthus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 325,
+    "family": "Hesperiidae",
+    "name": "Pallid Dart",
+    "scientific": "Potanthus pallidus",
+    "aliases": [],
+    "genus": "Potanthus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 326,
+    "family": "Hesperiidae",
+    "name": "Pava Dart",
+    "scientific": "Potanthus pava",
+    "aliases": [],
+    "genus": "Potanthus",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [],
+    "tags": []
+  },
+  {
+    "id": 327,
+    "family": "Hesperiidae",
+    "name": "Pale Palm-Dart",
+    "scientific": "Telicota colon",
+    "aliases": [],
+    "genus": "Telicota",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 328,
+    "family": "Hesperiidae",
+    "name": "Dark Palm-Dart",
+    "scientific": "Telicota bambusae",
+    "aliases": [
+      "Telicota (ancilla) bambusae"
+    ],
+    "genus": "Telicota",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  },
+  {
+    "id": 329,
+    "family": "Hesperiidae",
+    "name": "Plain Palm-dart",
+    "scientific": "Cephrenes acalle",
+    "aliases": [],
+    "genus": "Cephrenes",
+    "subfamily": "Hesperiinae",
+    "validated": true,
+    "butterflyVision": [
+      "wg",
+      "india"
+    ],
+    "tags": []
+  }
+]

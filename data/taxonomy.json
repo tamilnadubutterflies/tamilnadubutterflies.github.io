@@ -1,0 +1,168 @@
+{
+  "families": {
+    "Papilionidae": {
+      "common": "Swallowtails",
+      "description": "Large to very large, strong-flying butterflies including birdwings, roses, mimes, Mormons, jays, swordtails, and banded peacocks. Many species carry prominent hindwing tails and feed actively while fluttering their wings at flowers.",
+      "traits": "Three pairs of fully functional walking legs; large rounded or tailed hindwings; caterpillars carry an eversible forked osmeterium behind the head.",
+      "photoTip": "Both upperwing (dorsal) and underwing (ventral) photographs help separate mimics, mimes, and closely related dark Papilio species."
+    },
+    "Pieridae": {
+      "common": "Whites and yellows",
+      "description": "Medium-to-small butterflies dominated by white, yellow, orange, and black pigments, ranging from garden grass yellows and emigrants to hill-dwelling clouded yellows and forest albatrosses.",
+      "traits": "Six functional walking legs; most species rest with wings closed vertically over the back and frequently mud-puddle in moist riverbeds.",
+      "photoTip": "Capture the closed-wing underside when possible, spot counts in Eurema and wingbar markings in Appias and Ixias are key underside clues."
+    },
+    "Nymphalidae": {
+      "common": "Brush-footed butterflies",
+      "description": "Tamil Nadu’s largest butterfly family (97 checklist species), encompassing tigers, crows, pansies, eggflies, sailers, barons, rajahs, browns, and Tamil Nadu’s state butterfly, the Tamil Yeoman.",
+      "traits": "Forelegs are reduced into short brush-like structures, so adults perch using only four walking legs; wings vary from cryptic bark-like undersides to bold iridescent uppersides.",
+      "photoTip": "Record both basking upperside and resting underside views, especially for bushbrowns, treebrowns, sailers, and oakleaf butterflies."
+    },
+    "Riodinidae": {
+      "common": "Metalmarks",
+      "description": "Small, forest-edge shade-loving butterflies represented in Tamil Nadu by two Plum Judy species (Abisara echerius and Abisara bifasciata).",
+      "traits": "Quick, jerky flights among shaded bamboo and undergrowth, typically settling with wings half-open and turning abruptly after landing.",
+      "photoTip": "Approach slowly along shaded forest paths and photograph the forewing white bands and hindwing twin spots."
+    },
+    "Lycaenidae": {
+      "common": "Blues and hairstreaks",
+      "description": "Small, jewel-like butterflies (96 checklist species) including grass blues, pierrots, lineblues, ceruleans, silverlines, oakblues, royals, flashes, and sunbeams.",
+      "traits": "Often bright metallic blue, copper, or orange above with intricate spotted or banded undersides; many carry delicate hair-like hindwing tails and false-head eyespots.",
+      "photoTip": "Sharp macro shots of the hindwing underside bands and spot alignments are usually far more diagnostic than upperside blue."
+    },
+    "Hesperiidae": {
+      "common": "Skippers",
+      "description": "Compact, fast-darting butterflies (83 checklist species) such as awls, flats, angles, aces, bobs, demons, swifts, and grass darts.",
+      "traits": "Stout moth-like thorax, widely separated antennae with hooked tips (apiculus), and rapid darting flight; many rest with wings tilted at two angles (jet-plane posture).",
+      "photoTip": "Photograph both the upperwing hyaline spots and the underside hindwing spot arcs, essential for distinguishing swifts and aces."
+    }
+  },
+  "subfamilies": {
+    "Papilioninae": {
+      "group": "True Swallowtails & Birdwings",
+      "traits": "Includes Graphium jays and swordtails, Pachliopta roses, Papilio swallowtails, and the Southern Birdwing (Troides minos).",
+      "habitat": "Forest edges, hill streams, gardens, scrub, and evergreen shola margins across Tamil Nadu.",
+      "photoTip": "Note hindwing tail shape, body colour (red vs black), and submarginal spot patterns."
+    },
+    "Pierinae": {
+      "group": "Whites, Orange-tips & Jezebels",
+      "traits": "Includes Delias jezebels, Cepora gulls, Appias albatrosses/puffins, Colotis/Ixias orange-tips, Hebomoia, and Prioneris.",
+      "habitat": "Spans dry scrub plains (Colotis), urban avenues (Delias), and wet evergreen hills (Appias, Prioneris).",
+      "photoTip": "Capture forewing tip markings and underside hindwing vein patterns."
+    },
+    "Coliadinae": {
+      "group": "Yellows, Emigrants & Clouded Yellows",
+      "traits": "Yellow, pale green, or orange butterflies with rapid sustained flight and strong migratory behaviour in several species.",
+      "habitat": "Open grasslands, agricultural margins, scrub, riverbeds, and Nilgiri/Palani high-altitude meadows (Colias).",
+      "photoTip": "For Eurema grass yellows, zoom into the underside forewing cell to count the small dark cell spots."
+    },
+    "Nemeobiinae": {
+      "group": "Judies (Old World Metalmarks)",
+      "traits": "Purplish-brown butterflies with pale forewing bands and twin black submarginal eyespots near the hindwing angle.",
+      "habitat": "Damp shaded forests, foothills, bamboo thickets, and wooded gardens.",
+      "photoTip": "Compare the angle and breadth of the pale median band across the forewing."
+    },
+    "Libytheinae": {
+      "group": "Snout Butterflies / Beaks",
+      "traits": "Unmistakable elongated labial palpi projecting forward like a beak; dark brown wings with orange-tawny patches.",
+      "habitat": "Hill streams, wet roadsides, forest clearings, and mud-puddling patches.",
+      "photoTip": "Inspect forewing orange band breaks and hindwing underside mottling."
+    },
+    "Danainae": {
+      "group": "Tigers, Crows & Tree Nymphs",
+      "traits": "Tough, unpalatable butterflies whose caterpillars feed on milkweeds and dogbanes; central to Tamil Nadu’s seasonal Eastern–Western Ghats migrations.",
+      "habitat": "Hills, plains, urban parks, and forest corridors throughout Tamil Nadu.",
+      "photoTip": "Count subapical spots and pale streaks in the forewing cell to separate Blue Tiger vs Dark Blue Tiger and the Crow species."
+    },
+    "Charaxinae": {
+      "group": "Rajahs & Nawabs",
+      "traits": "Stout-bodied, exceptionally fast-flying canopy butterflies often attracted to tree sap, rotting fruit, and damp sand.",
+      "habitat": "Deciduous and evergreen hill forests, foothills, and wooded estates.",
+      "photoTip": "Underside pale bands and tail length separate Common, Anomalous, and Blue Nawabs."
+    },
+    "Satyrinae": {
+      "group": "Browns, Bushbrowns, Treebrowns & Rings",
+      "traits": "Shade-loving brown butterflies marked with concentric underside eyespots (ocelli) that frequently exhibit wet- and dry-season forms.",
+      "habitat": "Grasslands, forest understorey, bamboo groves, palm groves, and shaded gardens.",
+      "photoTip": "Underside ocelli sizes, brand marks, and discal line shape (straight vs curved) are crucial for species ID."
+    },
+    "Heliconiinae": {
+      "group": "Fritillaries, Lacewings, Leopards, Coster & Yeoman",
+      "traits": "Bright orange-tawny butterflies with dark spots, serrated margins, or pearlescent underside bands, including Tamil Nadu’s state butterfly, Tamil Yeoman.",
+      "habitat": "Sunny clearings, grasslands, montane sholas, and forest paths.",
+      "photoTip": "Compare hindwing underside bands and marginal scalloping to separate similar orange species."
+    },
+    "Limenitidinae": {
+      "group": "Sailers, Sergeants, Lascars, Barons & Clipper",
+      "traits": "Gliding butterflies with characteristic black-and-white banded wings (Neptis, Athyma) or emerald-olive camouflaged upperwings (Euthalia, Dophla).",
+      "habitat": "Forest trails, stream banks, orchards, and wooded gardens.",
+      "photoTip": "Check whether the forewing cell streak is broken into spots or continuous, and compare underside ground colour."
+    },
+    "Cyrestinae": {
+      "group": "Map Butterflies",
+      "traits": "Delicate white wings patterned with fine dark contour-like lines and rusty-orange hindwing margins, represented by Common Map.",
+      "habitat": "Hill streams, moist boulders, and wet evergreen forest paths.",
+      "photoTip": "Capture open-wing dorsal views showing the fine dark map-like venation lines."
+    },
+    "Biblidinae": {
+      "group": "Castors & Joker",
+      "traits": "Warm brown or orange-black butterflies with wavy transverse bands and slightly scalloped wing margins.",
+      "habitat": "Open scrub, gardens, castor stands, and dry deciduous foothills.",
+      "photoTip": "Check wing margin contour (angled vs rounded) and hindwing sub-basal wavy lines."
+    },
+    "Apaturinae": {
+      "group": "Emperors, Princes & Courtesans",
+      "traits": "Rapid-flying forest species with sexual dimorphism and mimicry (such as Painted Courtesan mimicking tigers).",
+      "habitat": "Mid- to high-elevation evergreen and moist deciduous hill forests.",
+      "photoTip": "Watch wet forest trails and mud patches where males descend briefly to puddle."
+    },
+    "Nymphalinae": {
+      "group": "Pansies, Eggflies, Admirals & Oakleaf",
+      "traits": "Familiar, colourful butterflies featuring conspicuous eyespots, seasonal morphs, and dramatic dead-leaf underside camouflage.",
+      "habitat": "Gardens, wetlands, agricultural bunds, scrublands, and hill forests.",
+      "photoTip": "In Junonia pansies and Hypolimnas eggflies, both dorsal colour patches and ventral patterns aid rapid ID."
+    },
+    "Curetinae": {
+      "group": "Sunbeams",
+      "traits": "Robust blues with brilliant silvery-white undersides contrasting against bright coppery-orange (males) or white (females) upperwings.",
+      "habitat": "Moist forests, riverbanks, and shaded forest edges where males bask high on foliage.",
+      "photoTip": "Look at the direction of the dark underside discal line to separate Indian, Angled, and Siva Sunbeams."
+    },
+    "Miletinae": {
+      "group": "Apefly (Carnivorous Lycaenids)",
+      "traits": "Represented in Tamil Nadu by the Apefly (Spalgis epius), whose caterpillars feed on mealybugs rather than plants.",
+      "habitat": "Gardens, orchards, scrub, and forest edges near scale-insect colonies.",
+      "photoTip": "Underside pale grey wings crossed by numerous fine wavy brown striations distinguish the Apefly."
+    },
+    "Polyommatinae": {
+      "group": "Grass Blues, Pierrots, Lineblues & Ceruleans",
+      "traits": "Delicate small blues with distinctive underside spot chains, zebra stripes, or white-and-black pied markings.",
+      "habitat": "Lawns, grasslands, damp sand, woodland edges, and hill paths across all elevations.",
+      "photoTip": "Macro underside views showing hindwing sub-basal spots and tornal orange eyespots are essential."
+    },
+    "Theclinae": {
+      "group": "Silverlines, Oakblues, Royals, Flashes & Yamfly",
+      "traits": "Often tailed hairstreaks with metallic silver bars (Cigaritis), deep violet-blue upperwings (Arhopala), or swift red-and-slate flashes (Rapala).",
+      "habitat": "Scrub jungles, forest canopies, mistletoe-bearing trees, and rocky hilltops.",
+      "photoTip": "Capture the hindwing tornal lobes, tail count, and arrangement of underside bands."
+    },
+    "Coeliadinae": {
+      "group": "Awls, Awlets & Awlkings",
+      "traits": "Large, swift skippers active particularly at dawn, dusk, and shaded forest interiors; several possess metallic-green or bright orange markings.",
+      "habitat": "Dense hill forests, bamboo patches, shaded ravines, and coastal scrub.",
+      "photoTip": "Focus on the underside hindwing white/blue bands and dark tornal spots."
+    },
+    "Pyrginae": {
+      "group": "Flats, Angles & Grizzled Skippers",
+      "traits": "Skippers that commonly settle with wings spread flat against leaves or tucked underneath foliage.",
+      "habitat": "Forest trails, rocky streams, dry open grasslands, and hill clearings.",
+      "photoTip": "Dorsal open-wing photos clearly reveal white hyaline forewing and hindwing spots."
+    },
+    "Hesperiinae": {
+      "group": "Grass Skippers, Swifts, Aces & Darts",
+      "traits": "Fast-flying tawny, brown, or black-and-yellow skippers that typically hold forewings and hindwings at different angles when basking.",
+      "habitat": "Grasslands, paddy margins, palms, bamboo thickets, and forest undergrowth.",
+      "photoTip": "Zoom into the underside hindwing spot pattern and forewing cell spots to distinguish swifts and darts."
+    }
+  }
+}
