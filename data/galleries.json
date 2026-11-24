@@ -645,6 +645,55 @@
       "member": false
     }
   ],
+  "Papilio polymnestor": [
+    {
+      "source": "commons",
+      "file": "Blue Mormon - Papilio polymnestor.JPG",
+      "width": 960,
+      "author": "Anton Croos",
+      "license": "by-sa/3.0",
+      "licenseName": "",
+      "alt": "Blue Mormon showing its pale blue hindwing patches",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/723962253/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/723962253/large.jpg",
+      "author": "rajesh rocky (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/394861493",
+      "alt": "Blue Mormon (Papilio polymnestor) photographed by rajesh rocky (Coimbatore · Aug 2026)",
+      "note": "Coimbatore · Aug 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738697556/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738697556/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402405874",
+      "alt": "Blue Mormon (Papilio polymnestor) photographed by Sharan V (Valaikulam · May 2015)",
+      "note": "Valaikulam · May 2015",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/735346527/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/735346527/large.jpg",
+      "author": "Elavarasan M (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/400694361",
+      "alt": "Blue Mormon (Papilio polymnestor) photographed by Elavarasan M (MPVH+5M · Sep 2026)",
+      "note": "MPVH+5M · Sep 2026",
+      "member": false
+    }
+  ],
   "Papilio liomedon": [
     {
       "source": "inaturalist",
@@ -928,6 +977,56 @@
       "licenseName": "",
       "alt": "Malabar Banded Peacock (Papilio buddha) field variation photo",
       "note": "Field variation photo",
+      "member": false
+    }
+  ],
+  "Eurema andersoni": [
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46480281/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46480281/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/29771212",
+      "alt": "One-spot Grass Yellow (Eurema andersoni) photographed in the field by Theivaprakasham Hari",
+      "note": "Primary field guide photo",
+      "member": true
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/177408185/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/177408185/large.jpeg",
+      "author": "Firos AK (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/105701116",
+      "alt": "One-spot Grass Yellow (Eurema andersoni) photographed by Firos AK (Molayanur · Dec 2021)",
+      "note": "Molayanur · Dec 2021",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/588045265/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/588045265/large.jpg",
+      "author": "Elavarasan M (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/324842783",
+      "alt": "One-spot Grass Yellow (Eurema andersoni) photographed by Elavarasan M (Kurumbapatty Zoological · Jul 2024)",
+      "note": "Kurumbapatty Zoological · Jul 2024",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/500474461/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/500474461/large.jpeg",
+      "author": "Rohit Girotra (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/278737385",
+      "alt": "One-spot Grass Yellow (Eurema andersoni) photographed by Rohit Girotra (Coimbatore · Nov 2019)",
+      "note": "Coimbatore · Nov 2019",
       "member": false
     }
   ],
@@ -3337,6 +3436,55 @@
       "member": false
     }
   ],
+  "Charaxes solon": [
+    {
+      "source": "commons",
+      "file": "Black Rajah Charaxes solon (3836614208).jpg",
+      "width": 960,
+      "author": "Haneesh K M.",
+      "license": "cc0/1.0",
+      "licenseName": "",
+      "alt": "Black Rajah photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/739442925/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/739442925/large.jpg",
+      "author": "Siya ul haque (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402777178",
+      "alt": "Black Rajah (Charaxes solon) photographed by Siya ul haque (QMPW+R3Q · Sep 2026)",
+      "note": "QMPW+R3Q · Sep 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/766220923/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/766220923/large.jpg",
+      "author": "sureshmarimuthu (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/416079282",
+      "alt": "Black Rajah (Charaxes solon) photographed by sureshmarimuthu (Nov 2026)",
+      "note": "Nov 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/761067684/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/761067684/large.jpg",
+      "author": "V.Arun (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/413504970",
+      "alt": "Black Rajah (Charaxes solon) photographed by V.Arun (63F3+G5Q Arunagiri · Nov 2026)",
+      "note": "63F3+G5Q Arunagiri · Nov 2026",
+      "member": false
+    }
+  ],
   "Discophora lepida": [
     {
       "source": "inaturalist",
@@ -4120,6 +4268,56 @@
       "member": false
     }
   ],
+  "Mycalesis junonia": [
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46401853/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46401853/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/29724273",
+      "alt": "Glad-eye Bushbrown (Mycalesis junonia) photographed in the field by Theivaprakasham Hari",
+      "note": "Primary field guide photo",
+      "member": true
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/718053756/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/718053756/large.jpg",
+      "author": "rajesh rocky (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/391854059",
+      "alt": "Glad-eye Bushbrown (Mycalesis junonia) photographed by rajesh rocky (Anamalai R F · Aug 2026)",
+      "note": "Anamalai R F · Aug 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738729926/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738729926/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402424978",
+      "alt": "Glad-eye Bushbrown (Mycalesis junonia) photographed by Sharan V (Valaikulam · Feb 2017)",
+      "note": "Valaikulam · Feb 2017",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/736295532/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/736295532/large.jpg",
+      "author": "Ahirbudhnyan M (iNaturalist)",
+      "license": "by-nc-sa/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/401177777",
+      "alt": "Glad-eye Bushbrown (Mycalesis junonia) photographed by Ahirbudhnyan M (Valparai · Sep 2026)",
+      "note": "Valparai · Sep 2026",
+      "member": false
+    }
+  ],
   "Telinga adolphei": [
     {
       "source": "inaturalist",
@@ -4644,6 +4842,55 @@
       "licenseName": "",
       "alt": "Common Four-ring (Ypthima huebneri) field variation photo",
       "note": "Field variation photo",
+      "member": false
+    }
+  ],
+  "Ypthima singala": [
+    {
+      "source": "commons",
+      "file": "Ypthima singala Sinhales Five-ring 20181215 Brijesh Pookkottur.jpg",
+      "width": 960,
+      "author": "BrijeshPookkottur",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "alt": "Small Jewel Four-ring photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/66477835/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/66477835/large.jpeg",
+      "author": "Simon Tonge (iNaturalist)",
+      "license": "cc0/1.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/41891898",
+      "alt": "Small Jewel Four-ring (Ypthima singala) photographed by Simon Tonge (Bokkapuram · Feb 2020)",
+      "note": "Bokkapuram · Feb 2020",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738799416/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738799416/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402447494",
+      "alt": "Small Jewel Four-ring (Ypthima singala) photographed by Sharan V (Coimbatore · Dec 2020)",
+      "note": "Coimbatore · Dec 2020",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/511852549/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/511852549/large.jpg",
+      "author": "Vinod Kumar (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/284788136",
+      "alt": "Small Jewel Four-ring (Ypthima singala) photographed by Vinod Kumar (MF42+343 · Dec 2019)",
+      "note": "MF42+343 · Dec 2019",
       "member": false
     }
   ],
@@ -5813,6 +6060,56 @@
       "licenseName": "",
       "alt": "Creamy Sailer (Neptis palnica) open-wing view",
       "note": "Open-wing view",
+      "member": false
+    }
+  ],
+  "Phaedyma columella": [
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/46138271/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/46138271/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/29559221",
+      "alt": "Short-banded Sailer (Phaedyma columella) photographed in the field by Theivaprakasham Hari",
+      "note": "Primary field guide photo",
+      "member": true
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/670099711/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/670099711/large.jpg",
+      "author": "Paulmathi Vinod (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/366956138",
+      "alt": "Short-banded Sailer (Phaedyma columella) photographed by Paulmathi Vinod (Khandige Wildlife · May 2026)",
+      "note": "Khandige Wildlife · May 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/127420234/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/127420234/large.jpeg",
+      "author": "Hopeland (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/77894139",
+      "alt": "Short-banded Sailer (Phaedyma columella) photographed by Hopeland (Tirunelveli · May 2016)",
+      "note": "Tirunelveli · May 2016",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738799344/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738799344/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402447482",
+      "alt": "Short-banded Sailer (Phaedyma columella) photographed by Sharan V (Valaikulam · May 2016)",
+      "note": "Valaikulam · May 2016",
       "member": false
     }
   ],
@@ -6996,6 +7293,55 @@
       "licenseName": "",
       "alt": "Danaid Eggfly (Hypolimnas misippus) closed-wing view",
       "note": "Closed-wing view",
+      "member": false
+    }
+  ],
+  "Kallima horsfieldi": [
+    {
+      "source": "commons",
+      "file": "Blue Oakleaf Kallima horsfieldi UP Thane by Dr. Raju Kasambe DSCN4613 (14).jpg",
+      "width": 960,
+      "author": "Dr. Raju Kasambe",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "alt": "Blue Oakleaf photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/418515207/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/418515207/large.jpg",
+      "author": "Theivaprakasham Hari (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/235347728",
+      "alt": "Blue Oakleaf (Kallima horsfieldi) photographed by Theivaprakasham Hari (Top Sengattupatti · Sep 2016)",
+      "note": "Top Sengattupatti · Sep 2016",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/140108482/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/140108482/large.jpeg",
+      "author": "Hopeland (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/85179147",
+      "alt": "Blue Oakleaf (Kallima horsfieldi) photographed by Hopeland (Jun 2021)",
+      "note": "Jun 2021",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738697551/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738697551/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402405878",
+      "alt": "Blue Oakleaf (Kallima horsfieldi) photographed by Sharan V (Valaikulam · Sep 2015)",
+      "note": "Valaikulam · Sep 2015",
       "member": false
     }
   ],
@@ -11538,6 +11884,55 @@
       "member": true
     }
   ],
+  "Virachola perse": [
+    {
+      "source": "commons",
+      "file": "Open wing position of Virachola perse (Hewitson, (1863)) – Large Guava Blue (Male).jpg",
+      "width": 960,
+      "author": "Gayatri dutta",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "alt": "Large Guava Blue photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/243614394/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/243614394/large.jpeg",
+      "author": "Hopeland (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/142123496",
+      "alt": "Large Guava Blue (Virachola perse) photographed by Hopeland (Apr 2022)",
+      "note": "Apr 2022",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738764359/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738764359/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402428074",
+      "alt": "Large Guava Blue (Virachola perse) photographed by Sharan V (Valaikulam · Jun 2016)",
+      "note": "Valaikulam · Jun 2016",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/691336466/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/691336466/large.jpg",
+      "author": "Birds World (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/378019974",
+      "alt": "Large Guava Blue (Virachola perse) photographed by Birds World (4GJ5+RCM · Mar 2024)",
+      "note": "4GJ5+RCM · Mar 2024",
+      "member": false
+    }
+  ],
   "Deudorix epijarbas": [
     {
       "source": "inaturalist",
@@ -11582,6 +11977,56 @@
       "licenseName": "",
       "alt": "Cornelian (Deudorix epijarbas) field variation photo",
       "note": "Field variation photo",
+      "member": false
+    }
+  ],
+  "Bindahara moorei": [
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/47452080/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/47452080/large.jpg",
+      "author": "Theivaprakasham Hari (TNBS)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/30374283",
+      "alt": "Blue-edged Plane (Bindahara moorei) photographed in the field by Theivaprakasham Hari",
+      "note": "Primary field guide photo",
+      "member": true
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/687126959/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/687126959/large.jpg",
+      "author": "Birds World (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/375838702",
+      "alt": "Blue-edged Plane (Bindahara moorei) photographed by Birds World (F824+8HF · Aug 2023)",
+      "note": "F824+8HF · Aug 2023",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/243894124/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/243894124/large.jpeg",
+      "author": "bomby_garu (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/142300553",
+      "alt": "Blue-edged Plane (Bindahara moorei) photographed by bomby_garu (Nov 2022)",
+      "note": "Nov 2022",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/659684778/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/659684778/large.jpg",
+      "author": "vishnu sankar (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/361468256",
+      "alt": "Blue-edged Plane (Bindahara moorei) photographed by vishnu sankar (GHW3+CJ3 · May 2026)",
+      "note": "GHW3+CJ3 · May 2026",
       "member": false
     }
   ],
@@ -12629,6 +13074,55 @@
       "member": false
     }
   ],
+  "Caprona ransonnetti": [
+    {
+      "source": "commons",
+      "file": "Golden Angle (Caprona ransonnetti) butterflies mating. Karnala Sanctuary, Maharashtra..jpg",
+      "width": 960,
+      "author": "Dr. Raju Kasambe",
+      "license": "by-sa/3.0",
+      "licenseName": "",
+      "alt": "Golden Angle photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/756173072/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/756173072/large.jpg",
+      "author": "Elavarasan M (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/411082426",
+      "alt": "Golden Angle (Caprona ransonnetti) photographed by Elavarasan M (JM32+3F9 Yelagiri Forest · Oct 2026)",
+      "note": "JM32+3F9 Yelagiri Forest · Oct 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/738729932/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/738729932/large.jpg",
+      "author": "Sharan V (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/402424983",
+      "alt": "Golden Angle (Caprona ransonnetti) photographed by Sharan V (Valaikulam · Oct 2015)",
+      "note": "Valaikulam · Oct 2015",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/716193708/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/716193708/large.jpg",
+      "author": "Vikas Madhav Nagarajan (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/390901688",
+      "alt": "Golden Angle (Caprona ransonnetti) photographed by Vikas Madhav Nagarajan (East Tambaram · Nov 2011)",
+      "note": "East Tambaram · Nov 2011",
+      "member": false
+    }
+  ],
   "Caprona agama": [
     {
       "source": "commons",
@@ -13204,6 +13698,55 @@
       "member": false
     }
   ],
+  "Baracus hampsoni": [
+    {
+      "source": "commons",
+      "file": "Baracus hampsoni Elwes & Edwards, 1897 – Malabar Hedge Hopper - Hampson's Hedge Hopper from Maloor, Peravoor (2).jpg",
+      "width": 960,
+      "author": "Vinayaraj",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "alt": "Hampson's Hedge Hopper photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/287078053/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/287078053/large.jpeg",
+      "author": "Elavarasan M (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/165819192",
+      "alt": "Hampson's Hedge Hopper (Baracus hampsoni) photographed by Elavarasan M (Kanyakumari District · May 2023)",
+      "note": "Kanyakumari District · May 2023",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/722424365/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/722424365/large.jpg",
+      "author": "Aruna Gamuz (iNaturalist)",
+      "license": "cc0/1.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/394089719",
+      "alt": "Hampson's Hedge Hopper (Baracus hampsoni) photographed by Aruna Gamuz (Yevakapadi · Aug 2026)",
+      "note": "Yevakapadi · Aug 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/622403439/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/622403439/large.jpg",
+      "author": "sneha_forestry (iNaturalist)",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/341848774",
+      "alt": "Hampson's Hedge Hopper (Baracus hampsoni) photographed by sneha_forestry (Kerala · Mar 2026)",
+      "note": "Kerala · Mar 2026",
+      "member": false
+    }
+  ],
   "Ampittia dioscorides": [
     {
       "source": "inaturalist",
@@ -13344,6 +13887,55 @@
       "licenseName": "",
       "alt": "Pygmy Scrub Hopper (Aeromachus pygmaeus) field variation photo",
       "note": "Field variation photo",
+      "member": false
+    }
+  ],
+  "Halpemorpha hyrtacus": [
+    {
+      "source": "commons",
+      "file": "Sovia hyrtacus by V K Chandrasekharan (cropped).jpg",
+      "width": 960,
+      "author": "Vkchandrasekharanlic",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "alt": "Bicolour Ace photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/313918878/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/313918878/large.jpg",
+      "author": "Paulmathi Vinod (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/180235029",
+      "alt": "Bicolour Ace (Halpemorpha hyrtacus) photographed by Paulmathi Vinod (Sep 2022)",
+      "note": "Sep 2022",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/306966833/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/306966833/large.jpeg",
+      "author": "Rajeesh (iNaturalist)",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/176556186",
+      "alt": "Bicolour Ace (Halpemorpha hyrtacus) photographed by Rajeesh (Kerala · Oct 2014)",
+      "note": "Kerala · Oct 2014",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/333103465/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/333103465/large.jpg",
+      "author": "K N Kausthubh (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/190063932",
+      "alt": "Bicolour Ace (Halpemorpha hyrtacus) photographed by K N Kausthubh (Kattadikkadavu Hills · Oct 2023)",
+      "note": "Kattadikkadavu Hills · Oct 2023",
       "member": false
     }
   ],
@@ -14139,6 +14731,55 @@
       "licenseName": "",
       "alt": "Tree Flitter (Hyarotis adrastus) closed-wing view",
       "note": "Closed-wing view",
+      "member": false
+    }
+  ],
+  "Hyarotis coorga": [
+    {
+      "source": "commons",
+      "file": "Small Brush Flitter-Karawani-DSC 6185.jpg",
+      "width": 960,
+      "author": "Ajith U",
+      "license": "by-sa/4.0",
+      "licenseName": "",
+      "alt": "Brush Flitter photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/618958162/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/618958162/large.jpg",
+      "author": "Thet Zaw Naing (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/340157477",
+      "alt": "Brush Flitter (Hyarotis coorga) photographed by Thet Zaw Naing (Kawthoung · Jan 2026)",
+      "note": "Kawthoung · Jan 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/607833957/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/607833957/large.jpg",
+      "author": "SL Liew (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/334682678",
+      "alt": "Brush Flitter (Hyarotis coorga) photographed by SL Liew (Sungai Sedim · Jan 2026)",
+      "note": "Sungai Sedim · Jan 2026",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/584300366/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/584300366/large.jpg",
+      "author": "zicky (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/322948683",
+      "alt": "Brush Flitter (Hyarotis coorga) photographed by zicky (Hòa Ninh · Oct 2025)",
+      "note": "Hòa Ninh · Oct 2025",
       "member": false
     }
   ],
@@ -15285,6 +15926,105 @@
       "licenseName": "",
       "alt": "Chinese Dart (Potanthus confucius) field variation photo",
       "note": "Field variation photo",
+      "member": false
+    }
+  ],
+  "Potanthus palnia": [
+    {
+      "source": "commons",
+      "file": "Potanthus palnia.jpg",
+      "width": 960,
+      "author": "Firos AK https://www.inaturalist.org/people/firos_ak",
+      "license": "by/4.0",
+      "licenseName": "",
+      "alt": "Palni Dart photographed in the field",
+      "note": "Primary field guide photo",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/57017046/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/57017046/large.jpeg",
+      "author": "Firos AK (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/36098086",
+      "alt": "Palni Dart (Potanthus palnia) photographed by Firos AK (Kallar R.F · Nov 2019)",
+      "note": "Kallar R.F · Nov 2019",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/710310961/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/710310961/large.jpg",
+      "author": "Vikas Madhav Nagarajan (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/387877822",
+      "alt": "Palni Dart (Potanthus palnia) photographed by Vikas Madhav Nagarajan (Adukkam · Jun 2018)",
+      "note": "Adukkam · Jun 2018",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/96204110/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/96204110/large.jpg",
+      "author": "Elavarasan M (iNaturalist)",
+      "license": "by-nc/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/60178208",
+      "alt": "Palni Dart (Potanthus palnia) photographed by Elavarasan M (Danishpet · Sep 2020)",
+      "note": "Danishpet · Sep 2020",
+      "member": false
+    }
+  ],
+  "Potanthus pallidus": [
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/146526114/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/146526114/large.jpg",
+      "author": "Paulmathi Vinod (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/88778900",
+      "alt": "Pallid Dart (Potanthus pallidus) photographed by Paulmathi Vinod (Coimbatore · Dec 2020)",
+      "note": "Coimbatore · Dec 2020",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/58636762/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/58636762/large.jpeg",
+      "author": "Amar Bharathy (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/37030871",
+      "alt": "Pallid Dart (Potanthus pallidus) photographed by Amar Bharathy (3/26 visalatchi amman · Jan 2017)",
+      "note": "3/26 visalatchi amman · Jan 2017",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/253435317/medium.jpeg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/253435317/large.jpeg",
+      "author": "renjus box (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/147297386",
+      "alt": "Pallid Dart (Potanthus pallidus) photographed by renjus box (Mankulam · Oct 2022)",
+      "note": "Mankulam · Oct 2022",
+      "member": false
+    },
+    {
+      "source": "inaturalist",
+      "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/87121338/medium.jpg",
+      "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/87121338/large.jpg",
+      "author": "Subhadra Devi (iNaturalist)",
+      "license": "by/4.0",
+      "licenseName": "",
+      "url": "https://www.inaturalist.org/observations/54740549",
+      "alt": "Pallid Dart (Potanthus pallidus) photographed by Subhadra Devi (Ferns Residency · Jun 2020)",
+      "note": "Ferns Residency · Jun 2020",
       "member": false
     }
   ],

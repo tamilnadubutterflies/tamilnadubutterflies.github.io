@@ -20,7 +20,8 @@
         "https://www.ifoundbutterflies.org/graphium-teredon"
       ]
     ],
-    "notes": "Southern Indian subspecies formerly grouped under Graphium sarpedon, now widely treated as a distinct peninsular and Sri Lankan species."
+    "notes": "Southern Indian subspecies formerly grouped under Graphium sarpedon, now widely treated as a distinct peninsular and Sri Lankan species.",
+    "tamilName": "நெட்டிலி அழகி"
   },
   "Graphium doson": {
     "headline": "Tailless pale-cyan jay often mud-puddling along streams",
@@ -44,7 +45,8 @@
         "https://www.ifoundbutterflies.org/graphium-doson"
       ]
     ],
-    "notes": "Often mud-puddles in dense clusters alongside Southern Bluebottles along sunlit wet hill-stream sandbanks."
+    "notes": "Often mud-puddles in dense clusters alongside Southern Bluebottles along sunlit wet hill-stream sandbanks.",
+    "tamilName": "நாட்டு நீல அழகி"
   },
   "Graphium agamemnon": {
     "headline": "Fast-darting emerald-spotted swallowtail of gardens and hills",
@@ -67,7 +69,8 @@
         "Butterflies of India, Graphium agamemnon",
         "https://www.ifoundbutterflies.org/graphium-agamemnon"
       ]
-    ]
+    ],
+    "tamilName": "மரகத அழகி"
   },
   "Graphium antiphates": {
     "headline": "Gliding cream-and-black swallowtail with slender long hindwing tails",
@@ -90,7 +93,8 @@
         "Butterflies of India, Graphium antiphates",
         "https://www.ifoundbutterflies.org/graphium-antiphates"
       ]
-    ]
+    ],
+    "tamilName": "ஐம்பட்டை கத்திவால் அழகி"
   },
   "Graphium nomius": {
     "headline": "Deciduous-woodland swallowtail striped in black and powdery white",
@@ -113,7 +117,8 @@
         "Butterflies of India, Graphium nomius",
         "https://www.ifoundbutterflies.org/graphium-nomius"
       ]
-    ]
+    ],
+    "tamilName": "கத்திவால் அழகி"
   },
   "Pachliopta aristolochiae": {
     "headline": "Red-bodied swallowtail with white-spotted hindwing centre",
@@ -136,7 +141,8 @@
         "Butterflies of India, Pachliopta aristolochiae",
         "https://www.ifoundbutterflies.org/pachliopta-aristolochiae"
       ]
-    ]
+    ],
+    "tamilName": "உரோசா அழகி"
   },
   "Pachliopta pandiyana": {
     "headline": "Black-and-white red-bodied swallowtail endemic to the Western Ghats",
@@ -157,7 +163,8 @@
         "Butterflies of India, Pachliopta pandiyana",
         "https://www.ifoundbutterflies.org/pachliopta-pandiyana"
       ]
-    ]
+    ],
+    "tamilName": "மலபார் அழகி"
   },
   "Pachliopta hector": {
     "headline": "A bold red-bodied swallowtail common across plains and hills",
@@ -180,7 +187,8 @@
         "Butterflies of India, Pachliopta hector",
         "https://www.ifoundbutterflies.org/pachliopta-hector"
       ]
-    ]
+    ],
+    "tamilName": "சிவப்புடல் அழகி"
   },
   "Troides minos": {
     "headline": "Largest butterfly of southern India and a Western Ghats endemic",
@@ -203,7 +211,8 @@
         "Butterflies of India, Troides minos",
         "https://www.ifoundbutterflies.org/troides-minos"
       ]
-    ]
+    ],
+    "tamilName": "தென் அழகி"
   },
   "Papilio clytia": {
     "headline": "Tailless swallowtail occurring in two distinct milkweed-mimicking forms",
@@ -227,7 +236,8 @@
         "Butterflies of India, Papilio clytia",
         "https://www.ifoundbutterflies.org/papilio-clytia"
       ]
-    ]
+    ],
+    "tamilName": "காக்கை அழகி"
   },
   "Papilio polytes": {
     "headline": "Classic garden swallowtail famous for female Batesian mimicry",
@@ -251,7 +261,8 @@
         "Butterflies of India, Papilio polytes",
         "https://www.ifoundbutterflies.org/papilio-polytes"
       ]
-    ]
+    ],
+    "tamilName": "கறிவேப்பிலை அழகி"
   },
   "Papilio dravidarum": {
     "headline": "Dark white-spotted forest swallowtail endemic to peninsular Western Ghats",
@@ -273,7 +284,8 @@
         "Butterflies of India, Papilio dravidarum",
         "https://www.ifoundbutterflies.org/papilio-dravidarum"
       ]
-    ]
+    ],
+    "tamilName": "தென் கறுப்பழகி"
   },
   "Papilio daksha": {
     "headline": "Large tailed black swallowtail carrying a broad creamy hindwing patch",
@@ -297,7 +309,8 @@
         "Butterflies of India, Papilio daksha",
         "https://www.ifoundbutterflies.org/papilio-daksha"
       ]
-    ]
+    ],
+    "tamilName": "கறுப்பு அழகி"
   },
   "Papilio polymnestor": {
     "headline": "Tailless giant swallowtail with powdery pale blue hindwings",
@@ -321,7 +334,8 @@
         "Butterflies of India, Papilio polymnestor",
         "https://www.ifoundbutterflies.org/papilio-polymnestor"
       ]
-    ]
+    ],
+    "tamilName": "நீல அழகி"
   },
   "Papilio liomedon": {
     "headline": "Rare black-and-yellow swallowtail endemic to the Western Ghats",
@@ -344,7 +358,8 @@
         "Butterflies of India, Papilio liomedon",
         "https://www.ifoundbutterflies.org/papilio-liomedon"
       ]
-    ]
+    ],
+    "tamilName": "மலபார் தகைவிலான்வாலி"
   },
   "Papilio demoleus": {
     "headline": "Tailless black-and-yellow swallowtail common in citrus gardens",
@@ -368,7 +383,8 @@
         "Butterflies of India, Papilio demoleus",
         "https://www.ifoundbutterflies.org/papilio-demoleus"
       ]
-    ]
+    ],
+    "tamilName": "எலுமிச்சை அழகி"
   },
   "Papilio paris": {
     "headline": "Black-and-green swallowtail carrying a glowing sapphire hindwing patch",
@@ -391,7 +407,8 @@
         "Butterflies of India, Papilio paris",
         "https://www.ifoundbutterflies.org/papilio-paris"
       ]
-    ]
+    ],
+    "tamilName": "பெரிய மயில் அழகி"
   },
   "Papilio crino": {
     "headline": "Emerald swallowtail & emblem of The Nature and Butterfly Society",
@@ -417,7 +434,8 @@
         "Pattampoochi Issue 27 (Pachamalai Survey record)",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "மயில் அழகி"
   },
   "Papilio buddha": {
     "headline": "Iridescent green-banded endemic swallowtail of the Western Ghats",
@@ -443,7 +461,8 @@
         "Pattampoochi Issue 27, Mudumalai Survey",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "மலபார் மயில் அழகி"
   },
   "Eurema andersoni": {
     "headline": "Forest grass yellow marked by a single spot inside the forewing cell",
@@ -488,7 +507,8 @@
         "Butterflies of India, Eurema blanda",
         "https://www.ifoundbutterflies.org/eurema-blanda"
       ]
-    ]
+    ],
+    "tamilName": "முப்புள்ளி புல் மஞ்சள்"
   },
   "Eurema brigitta": {
     "headline": "Open-grassland grass yellow with smoothly curved forewing black border",
@@ -511,7 +531,8 @@
         "Butterflies of India, Eurema brigitta",
         "https://www.ifoundbutterflies.org/eurema-brigitta"
       ]
-    ]
+    ],
+    "tamilName": "சின்ன மஞ்சள் புல்வெளியான்"
   },
   "Eurema hecabe": {
     "headline": "Abundant yellow pierid famous for mass movements in Mudumalai",
@@ -539,7 +560,8 @@
         "Pattampoochi Issue 27 (p. 14)",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "புல் மஞ்சள்"
   },
   "Eurema laeta": {
     "headline": "Pointed-winged grass yellow lacking any spots in the underside forewing cell",
@@ -583,7 +605,8 @@
         "Butterflies of India, Eurema nilgiriensis",
         "https://www.ifoundbutterflies.org/eurema-nilgiriensis"
       ]
-    ]
+    ],
+    "tamilName": "நீலமலை மஞ்சள் புல்வெளியான்"
   },
   "Catopsilia pomona": {
     "headline": "Strong-flying pale lemon-and-white emigrant with silver underside spots",
@@ -606,7 +629,8 @@
         "Butterflies of India, Catopsilia pomona",
         "https://www.ifoundbutterflies.org/catopsilia-pomona"
       ]
-    ]
+    ],
+    "tamilName": "கொன்னை வெள்ளையன்"
   },
   "Catopsilia pyranthe": {
     "headline": "Pale greenish-white migrant pierced by tiny black forewing cell dots",
@@ -630,7 +654,8 @@
         "Butterflies of India, Catopsilia pyranthe",
         "https://www.ifoundbutterflies.org/catopsilia-pyranthe"
       ]
-    ]
+    ],
+    "tamilName": "அவரை வெள்ளையன்"
   },
   "Colias nilagiriensis": {
     "headline": "High-altitude clouded yellow endemic to Nilgiri and Palani shola-grasslands",
@@ -675,7 +700,8 @@
         "Butterflies of India, Colotis amata",
         "https://www.ifoundbutterflies.org/colotis-amata"
       ]
-    ]
+    ],
+    "tamilName": "வெளிர்சிவப்பு வெள்ளையன்"
   },
   "Colotis danae": {
     "headline": "White dry-zone butterfly tipped in black-rimmed blood-crimson apex",
@@ -698,7 +724,8 @@
         "Butterflies of India, Colotis danae",
         "https://www.ifoundbutterflies.org/colotis-danae"
       ]
-    ]
+    ],
+    "tamilName": "கருஞ்சிவப்பு நுனிச்சிறகன்"
   },
   "Colotis etrida": {
     "headline": "Tiny dry-scrub white bearing a compact black-bordered orange tip",
@@ -720,7 +747,8 @@
         "Butterflies of India, Colotis etrida",
         "https://www.ifoundbutterflies.org/colotis-etrida"
       ]
-    ]
+    ],
+    "tamilName": "சின்ன ஆரஞ்சு நுனிச்சிறகன்"
   },
   "Colotis aurora": {
     "headline": "Scrubland orange-tip separated by warm peach apex and fine dark dots",
@@ -743,7 +771,8 @@
         "Butterflies of India, Colotis aurora",
         "https://www.ifoundbutterflies.org/colotis-aurora"
       ]
-    ]
+    ],
+    "tamilName": "ஆரஞ்சு நுனிச்சிறகன்"
   },
   "Colotis fausta": {
     "headline": "Unmistakable pale salmon-orange pierid cruising dry thorn forests",
@@ -765,7 +794,8 @@
         "Butterflies of India, Colotis fausta",
         "https://www.ifoundbutterflies.org/colotis-fausta"
       ]
-    ]
+    ],
+    "tamilName": "பெரிய வெளிர்சிவப்பு வெள்ளையன்"
   },
   "Ixias marianne": {
     "headline": "Dry-zone white pierid with bright orange forewing patches framed in black",
@@ -788,7 +818,8 @@
         "https://www.ifoundbutterflies.org/ixias-marianne"
       ]
     ],
-    "notes": "Shows dramatic dry-season polymorphism with rich reddish eyespot-like speckles beneath."
+    "notes": "Shows dramatic dry-season polymorphism with rich reddish eyespot-like speckles beneath.",
+    "tamilName": "வெண் சிறகன்"
   },
   "Ixias pyrene": {
     "headline": "Lemon-yellow pierid flashing a black-framed orange forewing band",
@@ -810,7 +841,8 @@
         "Butterflies of India, Ixias pyrene",
         "https://www.ifoundbutterflies.org/ixias-pyrene"
       ]
-    ]
+    ],
+    "tamilName": "மஞ்சள் சிறகன்"
   },
   "Hebomoia glaucippe": {
     "headline": "India’s largest pierid with blazing orange-tipped white forewings",
@@ -832,7 +864,8 @@
         "https://www.ifoundbutterflies.org/hebomoia-glaucippe"
       ]
     ],
-    "notes": "Largest pierid butterfly in India; its cryptic dry-leaf underside makes it vanish when perched with folded wings."
+    "notes": "Largest pierid butterfly in India; its cryptic dry-leaf underside makes it vanish when perched with folded wings.",
+    "tamilName": "செஞ்சிறகன்"
   },
   "Pareronia ceylanica": {
     "headline": "Deep powder-blue forest wanderer whose female mimics Dark Blue Tiger",
@@ -855,7 +888,8 @@
         "Butterflies of India, Pareronia ceylanica",
         "https://www.ifoundbutterflies.org/pareronia-ceylanica"
       ]
-    ]
+    ],
+    "tamilName": "கரும் நாடோடி"
   },
   "Pareronia hippia": {
     "headline": "Widespread pale-blue butterfly showcasing sex-limited tiger mimicry",
@@ -877,7 +911,8 @@
         "Butterflies of India, Pareronia hippia",
         "https://www.ifoundbutterflies.org/pareronia-hippia"
       ]
-    ]
+    ],
+    "tamilName": "நாடோடி"
   },
   "Appias libythea": {
     "headline": "Low-flying white pierid whose heavily marked females mimic gulls and tigers",
@@ -901,7 +936,8 @@
         "Butterflies of India, Appias libythea",
         "https://www.ifoundbutterflies.org/appias-libythea"
       ]
-    ]
+    ],
+    "tamilName": "பஞ்சு வெள்ளையன்"
   },
   "Appias lyncida": {
     "headline": "Forest albatross bordered underneath in rich chocolate-brown",
@@ -950,7 +986,8 @@
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
     ],
-    "notes": "Frequently joins large seasonal Albatross mud-puddling and foothills dispersal flights in western Tamil Nadu."
+    "notes": "Frequently joins large seasonal Albatross mud-puddling and foothills dispersal flights in western Tamil Nadu.",
+    "tamilName": "பருபலா வெள்ளையன்"
   },
   "Appias wardii": {
     "headline": "Endemic Western Ghats albatross bearing broad black dorsal wing tips",
@@ -1065,7 +1102,8 @@
         "Butterflies of India, Cepora nerissa",
         "https://www.ifoundbutterflies.org/cepora-nerissa"
       ]
-    ]
+    ],
+    "tamilName": "ஆதொண்டை வெள்ளையன்"
   },
   "Cepora nadina": {
     "headline": "Hill-forest gull with soft greenish-ochre unstreaked underside hindwings",
@@ -1133,7 +1171,8 @@
         "Butterflies of India, Delias eucharis",
         "https://www.ifoundbutterflies.org/delias-eucharis"
       ]
-    ]
+    ],
+    "tamilName": "மஞ்சள் எழிலி"
   },
   "Leptosia nina": {
     "headline": "Feather-light white butterfly drifting low over shaded weeds",
@@ -1156,7 +1195,8 @@
         "https://www.ifoundbutterflies.org/leptosia-nina"
       ]
     ],
-    "notes": "Weak, bobbing low flight keeps it weaving effortlessly beneath thorny Capparaceae bushes even in breezy gardens."
+    "notes": "Weak, bobbing low flight keeps it weaving effortlessly beneath thorny Capparaceae bushes even in breezy gardens.",
+    "tamilName": "சுற்றும் வெள்ளையன்"
   },
   "Belenois aurota": {
     "headline": "Black-veined white pierid common in open scrub and plains",
@@ -1179,7 +1219,8 @@
         "https://www.ifoundbutterflies.org/belenois-aurota"
       ]
     ],
-    "notes": "Strong vagrant capabilities bring periodic winter breeding eruptions across dry Coromandel and interior scrublands."
+    "notes": "Strong vagrant capabilities bring periodic winter breeding eruptions across dry Coromandel and interior scrublands.",
+    "tamilName": "கொக்கிக்குறி வெள்ளையன்"
   },
   "Libythea myrrha": {
     "headline": "Fast-darting snout butterfly marked by an unbroken club-shaped orange forewing streak",
@@ -1248,7 +1289,8 @@
         "Butterflies of India, Parantica aglea",
         "https://www.ifoundbutterflies.org/parantica-aglea"
       ]
-    ]
+    ],
+    "tamilName": "கண்ணாடி வரியன்"
   },
   "Parantica nilgiriensis": {
     "headline": "Dusky highland tiger endemic to southern Western Ghats hills",
@@ -1270,7 +1312,8 @@
         "https://www.ifoundbutterflies.org/parantica-nilgiriensis"
       ]
     ],
-    "notes": "Endemic to the southern Western Ghats and protected under Indian wildlife legislation."
+    "notes": "Endemic to the southern Western Ghats and protected under Indian wildlife legislation.",
+    "tamilName": "நீலமலை கண்ணாடி வரியன்"
   },
   "Tirumala limniace": {
     "headline": "Key long-distance migrant across Western and Eastern Ghats corridors",
@@ -1298,7 +1341,8 @@
         "Pattampoochi Issue 27 (Migration 2024 Update)",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "நீல வரியன்"
   },
   "Tirumala septentrionis": {
     "headline": "Deep-blue forest tiger forming the backbone of September migrations",
@@ -1325,7 +1369,8 @@
         "Pattampoochi Issue 27 (pp. 4–7)",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "கருநீல வரியன்"
   },
   "Danaus genutia": {
     "headline": "Black-veined orange tiger common across wetlands, plains, and hills",
@@ -1348,7 +1393,8 @@
         "https://www.ifoundbutterflies.org/danaus-genutia"
       ]
     ],
-    "notes": "Monitored alongside Blue Tigers and Crows in Tamil Nadu seasonal Danainae migration studies."
+    "notes": "Monitored alongside Blue Tigers and Crows in Tamil Nadu seasonal Danainae migration studies.",
+    "tamilName": "ஆரஞ்சு வரியன்"
   },
   "Danaus chrysippus": {
     "headline": "Iconic orange-and-black monarch butterfly of open plains and gardens",
@@ -1371,7 +1417,8 @@
         "Butterflies of India, Danaus chrysippus",
         "https://www.ifoundbutterflies.org/danaus-chrysippus"
       ]
-    ]
+    ],
+    "tamilName": "வெந்தய வரியன்"
   },
   "Euploea sylvester": {
     "headline": "Deep-brown migratory crow with iridescent blue forewing sheen",
@@ -1439,7 +1486,8 @@
         "Butterflies of India, Euploea core",
         "https://www.ifoundbutterflies.org/euploea-core"
       ]
-    ]
+    ],
+    "tamilName": "வெண்புள்ளிக் கருப்பன்"
   },
   "Idea malabarica": {
     "headline": "Giant translucent white-and-black glider endemic to Western Ghats wet forests",
@@ -1490,7 +1538,8 @@
         "Pattampoochi Issue 27 (Back cover)",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "இரட்டைவால் சிறகன்"
   },
   "Charaxes agrarius": {
     "headline": "Twin-tailed creamy-banded nawab diagnosed by two pale spots near the forewing tip",
@@ -1512,7 +1561,8 @@
         "Butterflies of India, Charaxes agrarius",
         "https://www.ifoundbutterflies.org/charaxes-agrarius"
       ]
-    ]
+    ],
+    "tamilName": "மாறுபட்ட இரட்டைவால் சிறகன்"
   },
   "Charaxes schreiber": {
     "headline": "Striking sky-blue-edged white-banded nawab of dense evergreen forest canopies",
@@ -1535,7 +1585,8 @@
         "Butterflies of India, Charaxes schreiber",
         "https://www.ifoundbutterflies.org/charaxes-schreiber"
       ]
-    ]
+    ],
+    "tamilName": "இரட்டைவால் நீலச்சிறகன்"
   },
   "Charaxes psaphon": {
     "headline": "Bold orange-and-black forest rajah showing striking sexual dimorphism",
@@ -1584,7 +1635,8 @@
         "Butterflies of India, Charaxes solon",
         "https://www.ifoundbutterflies.org/charaxes-solon"
       ]
-    ]
+    ],
+    "tamilName": "கறுப்புச் சிறகன்"
   },
   "Discophora lepida": {
     "headline": "Elusive crepuscular bamboo specialist with violet-spotted males and gold-banded females",
@@ -1660,7 +1712,8 @@
         "Butterflies of India, Elymnias hypermnestra",
         "https://www.ifoundbutterflies.org/elymnias-hypermnestra"
       ]
-    ]
+    ],
+    "tamilName": "பனைச் சிறகன்"
   },
   "Elymnias caudata": {
     "headline": "Tailed Western Ghats endemic palmfly mimicking milkweed tigers in flight",
@@ -1708,7 +1761,8 @@
         "https://www.ifoundbutterflies.org/melanitis-leda"
       ]
     ],
-    "notes": "Famous for extreme dry-season leaf polymorphism, where no two dry-season individuals look identically patterned underneath."
+    "notes": "Famous for extreme dry-season leaf polymorphism, where no two dry-season individuals look identically patterned underneath.",
+    "tamilName": "அந்திச் சிறகன்"
   },
   "Melanitis phedima": {
     "headline": "Velvety-dark crepuscular evening brown lacking bright orange halos on the forewing",
@@ -1895,7 +1949,8 @@
         "Butterflies of India, Mycalesis perseus",
         "https://www.ifoundbutterflies.org/mycalesis-perseus"
       ]
-    ]
+    ],
+    "tamilName": "புதர் சிறகன்"
   },
   "Mycalesis mineus": {
     "headline": "Common bushbrown carrying a short dark male brand and four straight-lined hindwing ocelli",
@@ -2009,7 +2064,8 @@
         "Butterflies of India, Mycalesis junonia",
         "https://www.ifoundbutterflies.org/mycalesis-junonia"
       ]
-    ]
+    ],
+    "tamilName": "மஞ்சள் கண் புதர்ச்சிறகன்"
   },
   "Telinga adolphei": {
     "headline": "Montane Western Ghats bushbrown with fiery orange-ringed eyespots on dark umber wings",
@@ -2122,7 +2178,8 @@
         "Butterflies of India, Orsotrioena medus",
         "https://www.ifoundbutterflies.org/orsotrioena-medus"
       ]
-    ]
+    ],
+    "tamilName": "மிருதுக் கண் புதர்ப் பழுப்பு"
   },
   "Ypthima asterope": {
     "headline": "Sun-loving dryland ringlet sporting three underside hindwing eyespots and a ringed forewing loop",
@@ -2167,7 +2224,8 @@
         "Butterflies of India, Ypthima baldus",
         "https://www.ifoundbutterflies.org/ypthima-baldus"
       ]
-    ]
+    ],
+    "tamilName": "ஐந்து வளையன்"
   },
   "Ypthima ceylonica": {
     "headline": "Ubiquitous lawn and scrub ringlet flashing a bright white hindwing patch in flight",
@@ -2194,7 +2252,8 @@
         "Journal of Threatened Taxa #6656 (Ypthima ceylonica life stages)",
         "https://threatenedtaxa.org/index.php/JoTT/article/view/6656"
       ]
-    ]
+    ],
+    "tamilName": "வெள்ளை நால்வளையன்"
   },
   "Ypthima ypthimoides": {
     "headline": "Dusky dark-undersided endemic ringlet of high southern Western Ghats grasslands",
@@ -2261,7 +2320,8 @@
         "Butterflies of India, Ypthima huebneri",
         "https://www.ifoundbutterflies.org/ypthima-huebneri"
       ]
-    ]
+    ],
+    "tamilName": "நான்கு வளையன்"
   },
   "Ypthima singala": {
     "headline": "Delicate foothill ringlet carrying finely striated white hindwings and neat yellow-ringed spots",
@@ -2349,7 +2409,8 @@
         "https://www.ifoundbutterflies.org/acraea-terpsicore"
       ]
     ],
-    "notes": "Oozes bitter yellow defensive fluid when disturbed; females carry a leathery mating plug (sphragis) after pairing."
+    "notes": "Oozes bitter yellow defensive fluid when disturbed; females carry a leathery mating plug (sphragis) after pairing.",
+    "tamilName": "செம்பழுப்பு வரியன்"
   },
   "Cethosia mahratta": {
     "headline": "Endemic serrated-wing beauty of Western Ghats wet forests",
@@ -2438,7 +2499,8 @@
         "Butterflies of India, Phalanta alcippe",
         "https://www.ifoundbutterflies.org/phalanta-alcippe"
       ]
-    ]
+    ],
+    "tamilName": "சிறு சிறுத்தைச்சிறகன்"
   },
   "Phalanta phalantha": {
     "headline": "Bright orange leopard-spotted butterfly common in gardens and foothills",
@@ -2461,7 +2523,8 @@
         "https://www.ifoundbutterflies.org/phalanta-phalantha"
       ]
     ],
-    "notes": "Thrives around both urban willow/Flacourtia hedges and forest paths, often joining mud-puddling assemblages."
+    "notes": "Thrives around both urban willow/Flacourtia hedges and forest paths, often joining mud-puddling assemblages.",
+    "tamilName": "சிறுத்தைச் சிறகன்"
   },
   "Vindula erota": {
     "headline": "Large tailed orange-and-olive brush-footed butterfly of hill streams",
@@ -2534,7 +2597,8 @@
         "Butterflies of India, Cupha erymanthis",
         "https://www.ifoundbutterflies.org/cupha-erymanthis"
       ]
-    ]
+    ],
+    "tamilName": "காட்டுக்களா சிறகன்"
   },
   "Moduza procris": {
     "headline": "Rusty-orange woodland butterfly with a bold white cross-band",
@@ -2672,7 +2736,8 @@
         "Butterflies of India, Pantoporia hordonia",
         "https://www.ifoundbutterflies.org/pantoporia-hordonia"
       ]
-    ]
+    ],
+    "tamilName": "மஞ்சள் கறுப்புச் சிறகன்"
   },
   "Pantoporia sandaka": {
     "headline": "Elusive wet-forest lascar separated by beaded grey submarginal spots",
@@ -2741,7 +2806,8 @@
         "https://www.ifoundbutterflies.org/neptis-hylas"
       ]
     ],
-    "notes": "Glides effortlessly on flat wings with intermittent shallow flicks, thriving across cities and hill forests alike."
+    "notes": "Glides effortlessly on flat wings with intermittent shallow flicks, thriving across cities and hill forests alike.",
+    "tamilName": "வெண் கறுப்புச் சிறகன்"
   },
   "Neptis jumbah": {
     "headline": "Large woodland sailer distinguished by chestnut streaks and spots beneath",
@@ -2895,7 +2961,8 @@
         "https://www.ifoundbutterflies.org/euthalia-aconthea"
       ]
     ],
-    "notes": "Cryptic spiny green caterpillars blend almost invisibly along the central vein of mango leaves."
+    "notes": "Cryptic spiny green caterpillars blend almost invisibly along the central vein of mango leaves.",
+    "tamilName": "கனிச்சிறகன்"
   },
   "Euthalia lubentina": {
     "headline": "Iridescent olive-green canopy baron spotted in vivid crimson and white",
@@ -3055,7 +3122,8 @@
         "Butterflies of India, Ariadne ariadne",
         "https://www.ifoundbutterflies.org/ariadne-ariadne"
       ]
-    ]
+    ],
+    "tamilName": "வரி ஆமணக்குச் சிறகன்"
   },
   "Ariadne merione": {
     "headline": "Ubiquitous reddish-ochre castor fluttering around wild and roadside castor bushes",
@@ -3078,7 +3146,8 @@
         "Butterflies of India, Ariadne merione",
         "https://www.ifoundbutterflies.org/ariadne-merione"
       ]
-    ]
+    ],
+    "tamilName": "ஆமணக்கு வரியன்"
   },
   "Rohana parisatis": {
     "headline": "Swift stream-side prince contrasting jet-black males with tawny-brown females",
@@ -3219,7 +3288,8 @@
         "https://www.ifoundbutterflies.org/junonia-orithya"
       ]
     ],
-    "notes": "Territorial males fan iridescent azure hindwings repeatedly toward passing insects from bare ground perches."
+    "notes": "Territorial males fan iridescent azure hindwings repeatedly toward passing insects from bare ground perches.",
+    "tamilName": "நீல வண்ணன்"
   },
   "Junonia hierta": {
     "headline": "Sun-loving lemon-yellow pansy stamped with an iridescent blue hindwing patch",
@@ -3244,7 +3314,8 @@
         "Butterflies of India, Junonia hierta",
         "https://www.ifoundbutterflies.org/junonia-hierta"
       ]
-    ]
+    ],
+    "tamilName": "மஞ்சள் வண்ணன்"
   },
   "Junonia iphita": {
     "headline": "Chocolate-brown pansy common along shaded trails and wet forests",
@@ -3267,7 +3338,8 @@
         "https://www.ifoundbutterflies.org/junonia-iphita"
       ]
     ],
-    "notes": "Shady forest roads and damp riverbanks often host multiple territorial males chasing each other in tight spirals."
+    "notes": "Shady forest roads and damp riverbanks often host multiple territorial males chasing each other in tight spirals.",
+    "tamilName": "செவலை வசீகரன்"
   },
   "Junonia atlites": {
     "headline": "Pale silvery-grey marsh pansy ringed with delicate orange-centered eyespots",
@@ -3291,7 +3363,8 @@
         "Butterflies of India, Junonia atlites",
         "https://www.ifoundbutterflies.org/junonia-atlites"
       ]
-    ]
+    ],
+    "tamilName": "சாம்பல் வசீகரன்"
   },
   "Junonia almana": {
     "headline": "Rich orange wetland pansy with large concentric eyespots",
@@ -3315,7 +3388,8 @@
         "https://www.ifoundbutterflies.org/junonia-almana"
       ]
     ],
-    "notes": "Wet-season individuals bear crisp marginal rings underneath, whereas dry-season adults mimic dead brown leaves."
+    "notes": "Wet-season individuals bear crisp marginal rings underneath, whereas dry-season adults mimic dead brown leaves.",
+    "tamilName": "மயில் வண்ணன்"
   },
   "Junonia lemonias": {
     "headline": "Olive-brown garden pansy spotted in pale lemon with bright eyespots",
@@ -3339,7 +3413,8 @@
         "https://www.ifoundbutterflies.org/junonia-lemonias"
       ]
     ],
-    "notes": "Uses its cryptic brownish underside to blend seamlessly onto gravelly soil while basking flat in morning sun."
+    "notes": "Uses its cryptic brownish underside to blend seamlessly onto gravelly soil while basking flat in morning sun.",
+    "tamilName": "எலுமிச்சை வண்ணன்"
   },
   "Hypolimnas bolina": {
     "headline": "Large eggfly of wooded gardens and forests with iridescent egg spots",
@@ -3363,7 +3438,8 @@
         "https://www.ifoundbutterflies.org/hypolimnas-bolina"
       ]
     ],
-    "notes": "Females exhibit remarkable regional polymorphism across India, unlike uniform white-patched iridescent males."
+    "notes": "Females exhibit remarkable regional polymorphism across India, unlike uniform white-patched iridescent males.",
+    "tamilName": "முட்டை வரியன்"
   },
   "Hypolimnas misippus": {
     "headline": "Sexual-dimorphic eggfly whose female closely mimics Plain Tiger",
@@ -3387,7 +3463,8 @@
         "https://www.ifoundbutterflies.org/hypolimnas-misippus"
       ]
     ],
-    "notes": "Classic textbook Batesian mimicry where orange-and-black females mimic the toxic Plain Tiger (Danaus chrysippus)."
+    "notes": "Classic textbook Batesian mimicry where orange-and-black females mimic the toxic Plain Tiger (Danaus chrysippus).",
+    "tamilName": "மாய வரியன்"
   },
   "Kallima horsfieldi": {
     "headline": "Famous Western Ghats leaf mimic flashing iridescent blue in flight",
@@ -3574,7 +3651,8 @@
         "Butterflies of India, Cigaritis vulcanus",
         "https://www.ifoundbutterflies.org/cigaritis-vulcanus"
       ]
-    ]
+    ],
+    "tamilName": "வெள்ளிக்கம்பிக்காரி"
   },
   "Cigaritis schistacea": {
     "headline": "Steel-blue glossed silverline with tightly packed ventral silver bars",
@@ -3688,7 +3766,8 @@
         "Pattampoochi Issue 27, Cloud Forest Silverline Note (p. 11)",
         "https://drive.google.com/file/d/1y6BONn__qHMgbtQVQd273Won1Kl3iqaK/view"
       ]
-    ]
+    ],
+    "tamilName": "மேகமலை வெள்ளிவரையன்"
   },
   "Anthene emolus": {
     "headline": "Tailless forest blue whose caterpillars live under weaver-ant protection",
@@ -4099,7 +4178,8 @@
         "Butterflies of India, Jamides celeno",
         "https://www.ifoundbutterflies.org/jamides-celeno"
       ]
-    ]
+    ],
+    "tamilName": "புங்க நீலன்"
   },
   "Jamides alecto": {
     "headline": "Large glistening sky-blue cerulean breeding inside wild gingers and cardamom",
@@ -4196,7 +4276,8 @@
         "https://www.ifoundbutterflies.org/lampides-boeticus"
       ]
     ],
-    "notes": "Cosmopolitan legume-pod feeder whose larvae develop inside rattlepod (Crotalaria) and cultivated bean pods."
+    "notes": "Cosmopolitan legume-pod feeder whose larvae develop inside rattlepod (Crotalaria) and cultivated bean pods.",
+    "tamilName": "பட்டாணி நீலன்"
   },
   "Leptotes plinius": {
     "headline": "Tiger-striped garden blue breeding on Plumbago shrubs statewide",
@@ -4243,7 +4324,8 @@
         "https://www.ifoundbutterflies.org/castalius-rosimon"
       ]
     ],
-    "notes": "Flutters just above Ziziphus jujube bushes; caterpillars graze characteristic translucent windows on young leaves."
+    "notes": "Flutters just above Ziziphus jujube bushes; caterpillars graze characteristic translucent windows on young leaves.",
+    "tamilName": "விகடன்"
   },
   "Tarucus balkanicus": {
     "headline": "Rare dark-spotted thorn-scrub pierrot recorded in Coimbatore wetlands",
@@ -4379,7 +4461,8 @@
         "https://www.ifoundbutterflies.org/zizeeria-karsandra"
       ]
     ],
-    "notes": "Among the smallest butterflies in Tamil Nadu wetlands and lawns, easily overlooked unless crouching close to clover and Amaranthus."
+    "notes": "Among the smallest butterflies in Tamil Nadu wetlands and lawns, easily overlooked unless crouching close to clover and Amaranthus.",
+    "tamilName": "கரும்புல் நீலன்"
   },
   "Zizina otis": {
     "headline": "Lawnside grass blue lacking forewing cell spots and shifting spot 6 outward",
@@ -4403,7 +4486,8 @@
         "Butterflies of India, Zizina otis",
         "https://www.ifoundbutterflies.org/zizina-otis"
       ]
-    ]
+    ],
+    "tamilName": "புல் நீலன்"
   },
   "Pseudozizeeria maha": {
     "headline": "Largest Tamil Nadu grass blue tied closely to creeping woodsorrel",
@@ -4426,7 +4510,8 @@
         "Butterflies of India, Pseudozizeeria maha",
         "https://www.ifoundbutterflies.org/pseudozizeeria-maha"
       ]
-    ]
+    ],
+    "tamilName": "பழுப்புப்புல் நீலன்"
   },
   "Zizula hylax": {
     "headline": "Minute grass blue marked by twin black spots along the forewing costa",
@@ -4496,7 +4581,8 @@
         "https://www.ifoundbutterflies.org/talicada-nyseus"
       ]
     ],
-    "notes": "Tiny caterpillars bore directly inside succulent Kalanchoe leaf tissue and pupate on the outer surface."
+    "notes": "Tiny caterpillars bore directly inside succulent Kalanchoe leaf tissue and pupate on the outer surface.",
+    "tamilName": "செம்முனை நீலன்"
   },
   "Azanus ubaldus": {
     "headline": "Tailless acacia blue carrying a dark velvety scent patch on the forewing",
@@ -4722,7 +4808,8 @@
         "Butterflies of India, Euchrysops cnejus",
         "https://www.ifoundbutterflies.org/euchrysops-cnejus"
       ]
-    ]
+    ],
+    "tamilName": "பயறு நீலன்"
   },
   "Freyeria putli": {
     "headline": "Minute brown grass jewel dotted below with metallic green-scaled black spots",
@@ -4791,7 +4878,8 @@
         "Butterflies of India, Chilades pandava",
         "https://www.ifoundbutterflies.org/chilades-pandava"
       ]
-    ]
+    ],
+    "tamilName": "மடுப்பனை நீலன்"
   },
   "Chilades parrhassius": {
     "headline": "Compact tailed acacia cupid with clean pale grey-white undersides",
@@ -4838,7 +4926,8 @@
         "Butterflies of India, Chilades lajus",
         "https://www.ifoundbutterflies.org/chilades-lajus"
       ]
-    ]
+    ],
+    "tamilName": "எலுமிச்சை நீலன்"
   },
   "Arhopala centaurus": {
     "headline": "Large woodland oakblue with silvery-green edged cell spots beneath",
@@ -5424,7 +5513,8 @@
         "https://www.ifoundbutterflies.org/rathinda-amor"
       ]
     ],
-    "notes": "Dances backwards slowly after landing to keep predators focused on its waving three-tailed false head."
+    "notes": "Dances backwards slowly after landing to keep predators focused on its waving three-tailed false head.",
+    "tamilName": "புதிர்நீலன்"
   },
   "Cheritra freja": {
     "headline": "Long-tailed forest hairstreak streaming two ribbon-like white tails",
@@ -5590,7 +5680,8 @@
         "Butterflies of India, Rapala iarbus",
         "https://www.ifoundbutterflies.org/rapala-iarbus"
       ]
-    ]
+    ],
+    "tamilName": "சிவப்பு மின்னல் பட்டாம்பூச்சி"
   },
   "Rapala manea": {
     "headline": "Slaty-purple flash of woodland edges and flowering garden shrubs",
@@ -5728,7 +5819,8 @@
         "https://www.ifoundbutterflies.org/badamia-exclamationis"
       ]
     ],
-    "notes": "Capable of long-distance migratory flights across peninsular India during monsoon shifts."
+    "notes": "Capable of long-distance migratory flights across peninsular India during monsoon shifts.",
+    "tamilName": "பழுப்புத் தாவி"
   },
   "Bibasis sena": {
     "headline": "Chocolate-brown awl crowned by a fiery orange abdomen tip and red hindwing fringe",
@@ -5821,7 +5913,8 @@
         "https://www.ifoundbutterflies.org/hasora-chromus"
       ]
     ],
-    "notes": "Life cycle documented by TNBS contributors on Pongamia pinnata street trees in urban Tamil Nadu."
+    "notes": "Life cycle documented by TNBS contributors on Pongamia pinnata street trees in urban Tamil Nadu.",
+    "tamilName": "நாமத்தாவி"
   },
   "Hasora taminatus": {
     "headline": "Glossy brown awl flashing a metallic blue-green underside base and white band",
@@ -5844,7 +5937,8 @@
         "Butterflies of India, Hasora taminatus",
         "https://www.ifoundbutterflies.org/hasora-taminatus"
       ]
-    ]
+    ],
+    "tamilName": "வெள்ளைப் பட்டைத் தாவி"
   },
   "Hasora badra": {
     "headline": "Large brown awl awaiting validated photographic record in Tamil Nadu",
@@ -5961,7 +6055,8 @@
         "Butterflies of India, Coladenia indrani",
         "https://www.ifoundbutterflies.org/coladenia-indrani"
       ]
-    ]
+    ],
+    "tamilName": "மூவர்ணத் தாவி"
   },
   "Gerosis bhagava": {
     "headline": "White-banded olive-brown flat glowing orange-yellow beneath the thorax",
@@ -6328,7 +6423,8 @@
         "Butterflies of India, Gomalia elma",
         "https://www.ifoundbutterflies.org/gomalia-elma"
       ]
-    ]
+    ],
+    "tamilName": "துத்தித்தாவி"
   },
   "Spialia galba": {
     "headline": "Tiny checkered black-and-white skipper basking flat on sunlit ground",
@@ -6351,7 +6447,8 @@
         "https://www.ifoundbutterflies.org/spialia-galba"
       ]
     ],
-    "notes": "Tucked neatly under dry grass heads at dusk, resembling a small checkered moth until sunlight hits its spread wings."
+    "notes": "Tucked neatly under dry grass heads at dusk, resembling a small checkered moth until sunlight hits its spread wings.",
+    "tamilName": "நரைச்சிறகுத் தாவி"
   },
   "Baracus subditus": {
     "headline": "Montane Western Ghats grass skipper bearing pale longitudinal streaks below",
@@ -6418,7 +6515,8 @@
         "Butterflies of India, Ampittia dioscorides",
         "https://www.ifoundbutterflies.org/ampittia-dioscorides"
       ]
-    ]
+    ],
+    "tamilName": "புதர் தாவி"
   },
   "Aeromachus dubius": {
     "headline": "Minute olive-brown grass skipper with ochreous-dusted undersides and hooked antennae",
@@ -6685,7 +6783,8 @@
         "Butterflies of India, Iambrix salsala",
         "https://www.ifoundbutterflies.org/iambrix-salsala"
       ]
-    ]
+    ],
+    "tamilName": "கருஞ்சிவப்புத் தாவி"
   },
   "Psolos fuligo": {
     "headline": "Plain dark shade-loving skipper that rests with diverged forewing tips",
@@ -6757,7 +6856,8 @@
         "Butterflies of India, Notocrypta curvifascia",
         "https://www.ifoundbutterflies.org/notocrypta-curvifascia"
       ]
-    ]
+    ],
+    "tamilName": "கறுப்புத்தாவி"
   },
   "Udaspes folus": {
     "headline": "Bold black-and-white skipper of ginger and turmeric patches",
@@ -6805,7 +6905,8 @@
         "https://www.ifoundbutterflies.org/suastus-gremius"
       ]
     ],
-    "notes": "Commonly encountered across urban coconut avenues as well as rural palmyra groves."
+    "notes": "Commonly encountered across urban coconut avenues as well as rural palmyra groves.",
+    "tamilName": "தென்னைத்தாவி"
   },
   "Suastus minutus": {
     "headline": "Rattan-dwelling palm bob with sparse black dots on a blue-grey hindwing below",
@@ -7204,7 +7305,8 @@
         "Butterflies of India, Pelopidas mathias",
         "https://www.ifoundbutterflies.org/pelopidas-mathias"
       ]
-    ]
+    ],
+    "tamilName": "வயல்துள்ளி"
   },
   "Pelopidas conjuncta": {
     "headline": "Large unbranded swift marked with creamy-yellow spots and a crisp hindwing arc",

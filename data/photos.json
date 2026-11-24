@@ -2931,6 +2931,16 @@
     "Palni Dart photographed in the field",
     960
   ],
+  "Potanthus pallidus": {
+    "source": "inaturalist",
+    "thumb": "https://inaturalist-open-data.s3.amazonaws.com/photos/146526114/medium.jpg",
+    "full": "https://inaturalist-open-data.s3.amazonaws.com/photos/146526114/large.jpg",
+    "author": "Paulmathi Vinod (iNaturalist)",
+    "license": "by/4.0",
+    "url": "https://www.inaturalist.org/observations/88778900",
+    "alt": "Pallid Dart (Potanthus pallidus) photographed by Paulmathi Vinod (Coimbatore · Dec 2020)",
+    "member": false
+  },
   "Potanthus pava": [
     "Potanthus pava - Luzon, Philippines.jpg",
     "john_amend_all2000",

@@ -1,6 +1,50 @@
 "use strict";
 
 document.documentElement.classList.add("has-js");
+const IS_TA = document.documentElement.lang === "ta";
+
+/* Two-state Dark Mode Toggle (dark-mode & dark-mode-toggle compliant) */
+(function initThemeToggle() {
+    const KEY = "color-scheme";
+    const meta = document.querySelector('meta[name="color-scheme"]');
+    if (!meta) return;
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function getStored() {
+        try {
+            const v = localStorage.getItem(KEY);
+            return v === "light" || v === "dark" ? v : "";
+        } catch {
+            return "";
+        }
+    }
+
+    function syncMeta() {
+        const stored = getStored();
+        meta.content = stored || "light dark";
+    }
+
+    syncMeta();
+    window.addEventListener("storage", (e) => {
+        if (e.key === KEY || e.key === null) syncMeta();
+    });
+
+    for (const btn of document.querySelectorAll("[data-theme-toggle]")) {
+        btn.addEventListener("click", () => {
+            const current = getStored() || (mq.matches ? "dark" : "light");
+            const target = current === "dark" ? "light" : "dark";
+            const osScheme = mq.matches ? "dark" : "light";
+            try {
+                if (target !== osScheme) localStorage.setItem(KEY, target);
+                else localStorage.removeItem(KEY);
+            } catch {
+                // Ignore storage block; still apply to current view
+            }
+            meta.content = target !== osScheme ? target : "light dark";
+        });
+    }
+})();
+
 const navButton = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#primary");
 if (navButton && nav) {
@@ -44,8 +88,9 @@ for (const image of document.querySelectorAll(".hide-on-error")) {
 }
 
 function normalize(value) {
-    return String(value || "").normalize("NFKD").toLowerCase().replace(/\p{Diacritic}/gu, "")
-        .replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+    return String(value || "").normalize("NFC").toLowerCase()
+        .replace(/[\u0300-\u036f]+/gu, "")
+        .replace(/[^\p{L}\p{N}\p{M}]+/gu, " ").trim();
 }
 
 function appendCreditLink(target, text, href) {
@@ -441,6 +486,7 @@ if (guide) {
         rawSci: element.querySelector("[data-spot-btn]")?.dataset.sci || "",
         hasPhoto: element.dataset.photo === "1",
         photoCount: Number(element.dataset.gallery || 0),
+        hasTamilName: Boolean(element.querySelector(".tamil-name, .en-subname")),
         hasMemberPhoto: element.dataset.member === "1",
         hasProfile: element.dataset.profile === "1",
         validated: element.dataset.validated === "1",
@@ -484,6 +530,7 @@ if (guide) {
         if (chosen === "spotted") return spottedSet.has(card.rawSci);
         if (chosen === "photo") return card.hasPhoto;
         if (chosen === "gallery") return card.photoCount >= 2;
+        if (chosen === "tamil") return card.hasTamilName;
         if (chosen === "member") return card.hasMemberPhoto;
         if (chosen === "profile") return card.hasProfile;
         if (chosen === "unvalidated") return !card.validated;
@@ -523,9 +570,9 @@ if (guide) {
         }
         if (spottedFilterBtn) spottedFilterBtn.setAttribute("aria-pressed", String(tag.value === "spotted"));
         syncFamilyPills();
-        status.textContent = total > limit
-            ? `Showing ${limit} of ${total} matching species`
-            : `${total} ${total === 1 ? "species match" : "species"}`;
+        status.textContent = IS_TA
+            ? (total > limit ? `மொத்தம் ${total} இனங்களில் ${limit} காட்டப்படுகிறது` : `${total} பட்டாம்பூச்சி இனங்கள்`)
+            : (total > limit ? `Showing ${limit} of ${total} matching species` : `${total} ${total === 1 ? "species match" : "species"}`);
         empty.hidden = total !== 0;
         more.hidden = limit >= total;
     }
@@ -914,9 +961,13 @@ if (bvWidget) {
                     const linkP = document.createElement("p");
                     linkP.className = "caption";
                     linkP.style.marginTop = ".4rem";
+                    const bvWidgetEl = document.querySelector("[data-bv-widget]");
+                    const bvPrefix = bvWidgetEl?.dataset.langPrefix || "../";
                     const a = document.createElement("a");
-                    a.href = "../" + matched[2] + "index.html";
-                    a.textContent = `Open TNBS Field Guide: ${matched[0]} (${matched[1]}) →`;
+                    a.href = bvPrefix + matched[2] + "index.html";
+                    a.textContent = IS_TA
+                        ? `TNBS கள வழிகாட்டி: ${matched[0]} (${matched[1]}) →`
+                        : `Open TNBS Field Guide: ${matched[0]} (${matched[1]}) →`;
                     linkP.append(a);
                     item.append(linkP);
                 }
@@ -973,6 +1024,16 @@ if (quiz) {
     const reviewList = find("review");
     const reviewFilterBtns = [...finishScreen.querySelectorAll("[data-review-filter]")];
 
+    const quizSrc = quiz.dataset.quizSrc || "../assets/quiz-data.json";
+    const guideBase = quiz.dataset.guideBase || "../butterflies/";
+    const TA_FAM_NAMES = {
+        Papilionidae: "பாப்பிலியோனிடே",
+        Pieridae: "பியரிடே",
+        Nymphalidae: "நிம்பாலிடே",
+        Lycaenidae: "லைசீனிடே",
+        Hesperiidae: "ஹெஸ்பெரிடே",
+        Riodinidae: "ரியோடினிடே"
+    };
     const STORAGE_KEY = "tnbs-quiz-stats-v1";
     let quizData = null;
     let selectedMode = "photo";
@@ -1027,7 +1088,9 @@ if (quiz) {
             return;
         }
         bestBox.hidden = false;
-        bestBox.textContent = `Personal best: ${stats.bestPct}% · Top score: ${stats.bestScore} pts · Best streak: ${stats.bestStreak} (${stats.played} ${stats.played === 1 ? "round" : "rounds"})`;
+        bestBox.textContent = IS_TA
+            ? `சிறந்த சாதனை: ${stats.bestPct}% · அதிக மதிப்பெண்: ${stats.bestScore} புள்ளிகள் · உயர் தொடர்: ${stats.bestStreak} (${stats.played} சுற்றுகள்)`
+            : `Personal best: ${stats.bestPct}% · Top score: ${stats.bestScore} pts · Best streak: ${stats.bestStreak} (${stats.played} ${stats.played === 1 ? "round" : "rounds"})`;
     }
     renderBestStats();
 
@@ -1040,8 +1103,10 @@ if (quiz) {
 
     async function ensureQuizData() {
         if (quizData) return quizData;
-        startStatus.textContent = "Loading verified Tamil Nadu butterfly quiz bank...";
-        const resp = await fetch("../assets/quiz-data.json", { signal: AbortSignal.timeout(6000) });
+        startStatus.textContent = IS_TA
+            ? "தமிழ்நாடு பட்டாம்பூச்சி வினாடி வினாத் தொகுப்பு ஏற்றப்படுகிறது..."
+            : "Loading verified Tamil Nadu butterfly quiz bank...";
+        const resp = await fetch(quizSrc, { signal: AbortSignal.timeout(6000) });
         if (!resp.ok) throw new Error("Failed to load quiz data");
         quizData = await resp.json();
         startStatus.textContent = "";
@@ -1069,13 +1134,16 @@ if (quiz) {
 
     function makePhotoQuestion(entry, pool, difficulty) {
         const distractors = pickDistractors(entry, pool, "name", difficulty);
+        const famLabel = IS_TA ? (TA_FAM_NAMES[entry.family] || entry.family) : entry.family;
         return {
             type: "photo",
-            text: `Identify this Tamil Nadu butterfly (${entry.family}):`,
+            text: IS_TA
+                ? `இந்தத் தமிழ்நாடு பட்டாம்பூச்சியை அடையாளம் காண்க (${famLabel}):`
+                : `Identify this Tamil Nadu butterfly (${entry.family}):`,
             choices: [entry.name, ...distractors],
             correct: entry.name,
             note: `${entry.name} (${entry.scientific}): ${entry.clue}`,
-            hint: `${entry.family} (${entry.subfamily}). ${entry.clue}`,
+            hint: `${famLabel} (${entry.subfamily}). ${entry.clue}`,
             slug: entry.slug,
             media: entry
         };
@@ -1083,13 +1151,20 @@ if (quiz) {
 
     function makeScientificQuestion(entry, pool, difficulty) {
         const distractors = pickDistractors(entry, pool, "scientific", difficulty);
+        const famLabel = IS_TA ? (TA_FAM_NAMES[entry.family] || entry.family) : entry.family;
         return {
             type: "scientific",
-            text: `What is the scientific name of the ${entry.name}?`,
+            text: IS_TA
+                ? `${entry.name} பட்டாம்பூச்சியின் அறிவியல் பெயர் என்ன?`
+                : `What is the scientific name of the ${entry.name}?`,
             choices: [entry.scientific, ...distractors],
             correct: entry.scientific,
-            note: `${entry.name} belongs to family ${entry.family} (${entry.subfamily}) and carries the scientific name ${entry.scientific}.`,
-            hint: `Family: ${entry.family} (${entry.subfamily}). Starts with "${entry.scientific.split(" ")[0]}".`,
+            note: IS_TA
+                ? `${entry.name}, ${famLabel} (${entry.subfamily}) குடும்பத்தைச் சேர்ந்தது; இதன் அறிவியல் பெயர் ${entry.scientific}.`
+                : `${entry.name} belongs to family ${entry.family} (${entry.subfamily}) and carries the scientific name ${entry.scientific}.`,
+            hint: IS_TA
+                ? `குடும்பம்: ${famLabel} (${entry.subfamily}). "${entry.scientific.split(" ")[0]}" எனத் தொடங்கும்.`
+                : `Family: ${entry.family} (${entry.subfamily}). Starts with "${entry.scientific.split(" ")[0]}".`,
             slug: entry.slug,
             media: quizData.photos.find((p) => p.slug === entry.slug) || null
         };
@@ -1097,13 +1172,14 @@ if (quiz) {
 
     function makeFactQuestion(factRow) {
         const [qText, choices, explanation, slug, family, hint] = factRow;
+        const famLabel = IS_TA ? (TA_FAM_NAMES[family] || family) : family;
         return {
             type: "fact",
             text: qText,
             choices,
             correct: choices[0],
             note: explanation,
-            hint: hint || `Related family: ${family}.`,
+            hint: hint || (IS_TA ? `தொடர்புடைய குடும்பம்: ${famLabel}.` : `Related family: ${family}.`),
             slug,
             media: null
         };
@@ -1160,15 +1236,21 @@ if (quiz) {
 
     function updateHud() {
         const idx = results.length;
-        stepBadge.textContent = `Question ${Math.min(idx + 1, questions.length)} of ${questions.length}`;
-        scoreBadge.textContent = `Score: ${points}`;
-        streakBadge.textContent = `Streak: ${streak}${streak >= 3 ? " 🔥" : ""}`;
+        stepBadge.textContent = IS_TA
+            ? `கேள்வி ${Math.min(idx + 1, questions.length)} / ${questions.length}`
+            : `Question ${Math.min(idx + 1, questions.length)} of ${questions.length}`;
+        scoreBadge.textContent = IS_TA ? `மதிப்பெண்: ${points}` : `Score: ${points}`;
+        streakBadge.textContent = IS_TA
+            ? `தொடர்ச்சி: ${streak}${streak >= 3 ? " 🔥" : ""}`
+            : `Streak: ${streak}${streak >= 3 ? " 🔥" : ""}`;
         const pct = Math.round((idx / questions.length) * 100);
         progressEl.value = pct;
         progressEl.style.setProperty("--quiz-hue", String(120 + Math.round((pct / 100) * 35)));
-        btn5050.textContent = `50:50 Eliminate two (${lifeline5050Left})`;
+        btn5050.textContent = IS_TA
+            ? `50:50 இரண்டை நீக்கு (${lifeline5050Left})`
+            : `50:50 Eliminate two (${lifeline5050Left})`;
         btn5050.disabled = answeredCurrent || lifeline5050Left <= 0;
-        btnHint.textContent = `Field hint (${hintsLeft})`;
+        btnHint.textContent = IS_TA ? `களக் குறிப்பு (${hintsLeft})` : `Field hint (${hintsLeft})`;
         btnHint.disabled = answeredCurrent || hintUsedThisQ || hintsLeft <= 0;
     }
 
@@ -1201,16 +1283,16 @@ if (quiz) {
         feedbackEl.replaceChildren();
         const badge = document.createElement("strong");
         badge.textContent = isCorrect
-            ? "✓ Correct! "
+            ? (IS_TA ? "✓ சரி! " : "✓ Correct! ")
             : timedOut
-                ? `⏱ Time's up! Answer: ${q.correct}. `
-                : `✗ Answer: ${q.correct}. `;
+                ? (IS_TA ? `⏱ நேரம் முடிந்தது! விடை: ${q.correct}. ` : `⏱ Time's up! Answer: ${q.correct}. `)
+                : (IS_TA ? `✗ சரியான விடை: ${q.correct}. ` : `✗ Answer: ${q.correct}. `);
         feedbackEl.append(badge, q.note);
         if (q.slug) {
             feedbackEl.append(" ");
             const spLink = document.createElement("a");
-            spLink.href = `../butterflies/${q.slug}/index.html`;
-            spLink.textContent = "Inspect species page →";
+            spLink.href = `${guideBase}${q.slug}/index.html`;
+            spLink.textContent = IS_TA ? "இனப் பக்கத்தைப் பார் →" : "Inspect species page →";
             feedbackEl.append(spLink);
         }
 
@@ -1222,14 +1304,18 @@ if (quiz) {
                 orig.href = q.media.url;
                 orig.target = "_blank";
                 orig.rel = "noopener noreferrer";
-                orig.textContent = "Original photo source";
+                orig.textContent = IS_TA ? "மூலப் புகைப்பட ஆதாரம்" : "Original photo source";
                 cap.append(" · ", orig);
             }
         }
-        scoreBadge.textContent = `Score: ${points}`;
-        streakBadge.textContent = `Streak: ${streak}${streak >= 3 ? " 🔥" : ""}`;
+        scoreBadge.textContent = IS_TA ? `மதிப்பெண்: ${points}` : `Score: ${points}`;
+        streakBadge.textContent = IS_TA
+            ? `தொடர்ச்சி: ${streak}${streak >= 3 ? " 🔥" : ""}`
+            : `Streak: ${streak}${streak >= 3 ? " 🔥" : ""}`;
         nextBtn.hidden = false;
-        nextBtn.textContent = results.length === questions.length ? "See final rank & review →" : "Next question →";
+        nextBtn.textContent = results.length === questions.length
+            ? (IS_TA ? "இறுதித் தகுதி & மீளாய்வைப் பார் →" : "See final rank & review →")
+            : (IS_TA ? "அடுத்த கேள்வி →" : "Next question →");
         nextBtn.focus();
     }
 
@@ -1253,21 +1339,21 @@ if (quiz) {
             zoomBtn.type = "button";
             zoomBtn.className = "photo-zoom";
             zoomBtn.dataset.lightboxSrc = q.media.fullSrc || q.media.src;
-            zoomBtn.dataset.lightboxTitle = "Quiz specimen preview";
-            zoomBtn.dataset.lightboxAlt = "Enlarged view for identification";
+            zoomBtn.dataset.lightboxTitle = IS_TA ? "வினாடி வினா புகைப்படம்" : "Quiz specimen preview";
+            zoomBtn.dataset.lightboxAlt = IS_TA ? "அடையாளத்திற்கான பெரிதாக்கப்பட்ட பார்வை" : "Enlarged view for identification";
             zoomBtn.dataset.lightboxAuthor = q.media.author;
             zoomBtn.dataset.lightboxUrl = q.media.url;
             zoomBtn.dataset.lightboxLicense = q.media.license;
             zoomBtn.dataset.lightboxLicensename = q.media.licenseName;
-            zoomBtn.setAttribute("aria-label", "Enlarge butterfly photograph for closer inspection");
+            zoomBtn.setAttribute("aria-label", IS_TA ? "புகைப்படத்தை பெரிதாக்கவும்" : "Enlarge butterfly photograph for closer inspection");
 
             const img = document.createElement("img");
             img.src = q.media.src;
-            img.alt = "Butterfly photograph for identification.";
+            img.alt = IS_TA ? "அடையாளம் காண வேண்டிய பட்டாம்பூச்சிப் படம்." : "Butterfly photograph for identification.";
             const hint = document.createElement("span");
             hint.className = "zoom-hint";
             hint.setAttribute("aria-hidden", "true");
-            hint.textContent = "Zoom";
+            hint.textContent = IS_TA ? "பெரிதாக்கு" : "Zoom";
             zoomBtn.append(img, hint);
 
             const cap = document.createElement("figcaption");
@@ -1331,7 +1417,9 @@ if (quiz) {
         const count = Number(countSelect.value) || 8;
         questions = customQuestions || buildQuestionSet(selectedMode, familySelect.value, diffSelect.value, count);
         if (!questions.length) {
-            startStatus.textContent = "Not enough questions matched that family filter. Try All families.";
+            startStatus.textContent = IS_TA
+                ? "அந்தக் குடும்ப வடிகட்டியில் போதுமான கேள்விகள் இல்லை. அனைத்து குடும்பங்களையும் தேர்வு செய்க."
+                : "Not enough questions matched that family filter. Try All families.";
             return;
         }
         results = [];
@@ -1352,7 +1440,9 @@ if (quiz) {
             await ensureQuizData();
             startRound();
         } catch {
-            startStatus.textContent = "Could not load quiz data. Serve the site over HTTP (e.g., GitHub Pages or python -m http.server) to play.";
+            startStatus.textContent = IS_TA
+                ? "வினாடி வினா தரவை ஏற்ற முடியவில்லை. HTTP வழியே தளத்தைத் திறக்கவும்."
+                : "Could not load quiz data. Serve the site over HTTP (e.g., GitHub Pages or python -m http.server) to play.";
         } finally {
             startBtn.disabled = false;
         }
@@ -1373,7 +1463,7 @@ if (quiz) {
     btnHint.addEventListener("click", () => {
         if (answeredCurrent || hintUsedThisQ || hintsLeft <= 0) return;
         const q = questions[results.length];
-        hintBox.textContent = `Field hint: ${q.hint}`;
+        hintBox.textContent = IS_TA ? `களக் குறிப்பு: ${q.hint}` : `Field hint: ${q.hint}`;
         hintBox.hidden = false;
         hintUsedThisQ = true;
         hintsLeft -= 1;
@@ -1387,17 +1477,32 @@ if (quiz) {
         finishScreen.hidden = false;
         const correctCount = results.filter((r) => r.correct).length;
         const pct = Math.round((correctCount / questions.length) * 100);
-        const rank = pct >= 90 ? "Master Lepidopterist"
-            : pct >= 75 ? "Senior Field Naturalist"
-            : pct >= 50 ? "Butterfly Explorer"
-            : "Budding Naturalist";
+        const rank = IS_TA
+            ? (pct >= 90 ? "மூத்த பட்டாம்பூச்சி ஆய்வாளர்"
+                : pct >= 75 ? "சிறப்பு இயற்கை ஆர்வலர்"
+                : pct >= 50 ? "பட்டாம்பூச்சி ஆய்வாளர்"
+                : "வளரும் இயற்கை ஆர்வலர்")
+            : (pct >= 90 ? "Master Lepidopterist"
+                : pct >= 75 ? "Senior Field Naturalist"
+                : pct >= 50 ? "Butterfly Explorer"
+                : "Budding Naturalist");
 
         saveStats(pct, points, bestStreak);
-        find("score").textContent = `${correctCount} out of ${questions.length} correct (${pct}%)`;
-        find("rank").textContent = `Rank earned: ${rank}`;
-        find("summary").textContent = "Review every sighting below, retry missed questions, or explore species profiles in the TNBS field guide.";
+        find("score").textContent = IS_TA
+            ? `${questions.length} இல் ${correctCount} சரி (${pct}%)`
+            : `${correctCount} out of ${questions.length} correct (${pct}%)`;
+        find("rank").textContent = IS_TA ? `பெற்ற தகுதி: ${rank}` : `Rank earned: ${rank}`;
+        find("summary").textContent = IS_TA
+            ? "கீழே உள்ள விடைகளை மீளாய்வு செய்யவும், தவறிய கேள்விகளை மீண்டும் முயலவும், அல்லது TNBS கள வழிகாட்டியில் இனங்களைப் பார்க்கவும்."
+            : "Review every sighting below, retry missed questions, or explore species profiles in the TNBS field guide.";
 
-        find("end-stats").innerHTML = `
+        find("end-stats").innerHTML = IS_TA
+            ? `
+            <div><dt>மதிப்பெண்</dt><dd>${points} புள்ளிகள்</dd></div>
+            <div><dt>துல்லியம்</dt><dd>${pct}%</dd></div>
+            <div><dt>உயர் தொடர்</dt><dd>${bestStreak}</dd></div>
+            <div><dt>வகை</dt><dd>${selectedMode.toUpperCase()}</dd></div>`
+            : `
             <div><dt>Score</dt><dd>${points} pts</dd></div>
             <div><dt>Accuracy</dt><dd>${pct}%</dd></div>
             <div><dt>Best streak</dt><dd>${bestStreak}</dd></div>
@@ -1418,8 +1523,8 @@ if (quiz) {
                 li.append(prefix + r.question.note + " ");
                 if (r.question.slug) {
                     const a = document.createElement("a");
-                    a.href = `../butterflies/${r.question.slug}/index.html`;
-                    a.textContent = "Field guide page →";
+                    a.href = `${guideBase}${r.question.slug}/index.html`;
+                    a.textContent = IS_TA ? "கள வழிகாட்டிப் பக்கம் →" : "Field guide page →";
                     li.append(a);
                 }
                 reviewList.append(li);
@@ -1445,10 +1550,14 @@ if (quiz) {
     shareBtn.addEventListener("click", async () => {
         const correctCount = results.filter((r) => r.correct).length;
         const pct = Math.round((correctCount / questions.length) * 100);
-        const summaryText = `TNBS Tamil Nadu Butterfly Quiz (${selectedMode}): ${correctCount}/${questions.length} (${pct}%) · ${points} pts · Best streak ${bestStreak}!`;
+        const summaryText = IS_TA
+            ? `TNBS தமிழ்நாடு பட்டாம்பூச்சி வினாடி வினா (${selectedMode}): ${correctCount}/${questions.length} (${pct}%) · ${points} புள்ளிகள் · உயர் தொடர் ${bestStreak}!`
+            : `TNBS Tamil Nadu Butterfly Quiz (${selectedMode}): ${correctCount}/${questions.length} (${pct}%) · ${points} pts · Best streak ${bestStreak}!`;
         try {
             await navigator.clipboard.writeText(summaryText);
-            shareStatus.textContent = `Copied to clipboard: "${summaryText}"`;
+            shareStatus.textContent = IS_TA
+                ? `நகலெடுக்கப்பட்டது: "${summaryText}"`
+                : `Copied to clipboard: "${summaryText}"`;
         } catch {
             shareStatus.textContent = summaryText;
         }
@@ -1476,6 +1585,285 @@ if (quiz) {
             nextBtn.click();
         }
     });
+}
+
+/* Live iNaturalist Project #47280 Feed Refresh (Sightings Hub) */
+const inatLive = document.querySelector("[data-inat-live]");
+if (inatLive) {
+    let speciesIndex = {};
+    try {
+        speciesIndex = JSON.parse(inatLive.dataset.speciesIndex || "{}");
+    } catch {
+        speciesIndex = {};
+    }
+    const obsEl = inatLive.querySelector("[data-inat-obs]");
+    const rgEl = inatLive.querySelector("[data-inat-rg]");
+    const sppEl = inatLive.querySelector("[data-inat-spp]");
+    const observersEl = inatLive.querySelector("[data-inat-observers]");
+    const statusEl = document.querySelector("[data-inat-status]");
+    const recentEl = document.querySelector("[data-inat-recent]");
+
+    const fetchInatJson = async (url) => {
+        const resp = await fetch(url, { signal: AbortSignal.timeout(7000) });
+        if (!resp.ok) throw new Error("iNaturalist API HTTP " + resp.status);
+        return resp.json();
+    };
+
+    (async () => {
+        const base = "https://api.inaturalist.org/v1";
+        const [obsRes, rgRes, sppRes, obsvRes, recRes] = await Promise.allSettled([
+            fetchInatJson(`${base}/observations?project_id=47280&per_page=0`),
+            fetchInatJson(`${base}/observations?project_id=47280&quality_grade=research&per_page=0`),
+            fetchInatJson(`${base}/observations/species_counts?project_id=47280&per_page=0`),
+            fetchInatJson(`${base}/observations/observers?project_id=47280&per_page=0`),
+            fetchInatJson(`${base}/observations?project_id=47280&photos=true&order_by=observed_on&order=desc&per_page=12`)
+        ]);
+
+        let updatedAny = false;
+        if (obsRes.status === "fulfilled" && typeof obsRes.value.total_results === "number" && obsEl) {
+            obsEl.textContent = obsRes.value.total_results.toLocaleString("en-US");
+            updatedAny = true;
+        }
+        if (rgRes.status === "fulfilled" && typeof rgRes.value.total_results === "number" && rgEl) {
+            rgEl.textContent = rgRes.value.total_results.toLocaleString("en-US");
+            updatedAny = true;
+        }
+        if (sppRes.status === "fulfilled" && typeof sppRes.value.total_results === "number" && sppEl) {
+            sppEl.textContent = sppRes.value.total_results.toLocaleString("en-US");
+            updatedAny = true;
+        }
+        if (obsvRes.status === "fulfilled" && typeof obsvRes.value.total_results === "number" && observersEl) {
+            observersEl.textContent = obsvRes.value.total_results.toLocaleString("en-US");
+            updatedAny = true;
+        }
+
+        if (recRes.status === "fulfilled" && Array.isArray(recRes.value.results) && recentEl) {
+            const frag = document.createDocumentFragment();
+            for (const obs of recRes.value.results) {
+                const sci = obs.taxon?.name || "";
+                const matched = sci ? speciesIndex[sci.toLowerCase()] : null;
+                const disp = matched?.name || obs.taxon?.preferred_common_name || sci || (IS_TA ? "பட்டாம்பூச்சி பதிவு" : "Butterfly sighting");
+                const obsUrl = `https://www.inaturalist.org/observations/${encodeURIComponent(obs.id)}`;
+                const photoUrl = obs.photos?.[0]?.url ? obs.photos[0].url.replace("/square.", "/medium.") : "";
+
+                const card = document.createElement("article");
+                card.className = "card sighting-card";
+                if (photoUrl) {
+                    const media = document.createElement("div");
+                    media.className = "media";
+                    const img = document.createElement("img");
+                    img.src = photoUrl;
+                    img.alt = disp;
+                    img.loading = "lazy";
+                    img.decoding = "async";
+                    media.append(img);
+                    if (obs.observed_on) {
+                        const badge = document.createElement("span");
+                        badge.className = "photo-count-badge";
+                        badge.textContent = obs.observed_on;
+                        media.append(badge);
+                    }
+                    card.append(media);
+                }
+
+                const body = document.createElement("div");
+                body.className = "card-body";
+                const meta = document.createElement("p");
+                meta.className = "card-meta";
+                meta.textContent = obs.place_guess || (IS_TA ? "தமிழ்நாடு" : "Tamil Nadu");
+
+                const h3 = document.createElement("h3");
+                const spLink = document.createElement("a");
+                spLink.textContent = disp;
+                if (matched?.href) {
+                    spLink.href = matched.href;
+                } else {
+                    spLink.href = obsUrl;
+                    spLink.target = "_blank";
+                    spLink.rel = "noopener noreferrer";
+                }
+                h3.append(spLink);
+
+                const sciP = document.createElement("p");
+                sciP.className = "scientific";
+                sciP.textContent = sci;
+
+                const capP = document.createElement("p");
+                capP.className = "caption";
+                const userLink = document.createElement("a");
+                userLink.href = obsUrl;
+                userLink.target = "_blank";
+                userLink.rel = "noopener noreferrer";
+                userLink.textContent = `${obs.user?.name || obs.user?.login || "iNaturalist observer"} · iNaturalist ↗`;
+                capP.append(userLink);
+
+                body.append(meta, h3, sciP, capP);
+                card.append(body);
+                frag.append(card);
+            }
+            if (frag.childNodes.length) {
+                recentEl.replaceChildren(frag);
+                updatedAny = true;
+            }
+        }
+
+        if (statusEl) {
+            statusEl.textContent = updatedAny
+                ? (IS_TA
+                    ? "நேரடி iNaturalist திட்டம் #47280 தரவு இப்போது ஒத்திசைக்கப்பட்டது."
+                    : "Live iNaturalist Project #47280 feed synced just now.")
+                : (IS_TA
+                    ? "கட்டமைப்பு நேரப் பதிவுக் காட்சி (நேரடி iNaturalist இணைப்பு இப்போது கிடைக்கவில்லை)."
+                    : "Showing build-time snapshot (live iNaturalist refresh unavailable offline).");
+        }
+    })();
+}
+
+/* Interactive Leaflet + iNaturalist Heatmap/Points Map */
+let leafletLoaderPromise = null;
+function loadLeaflet() {
+    if (window.L) return Promise.resolve(window.L);
+    if (leafletLoaderPromise) return leafletLoaderPromise;
+    leafletLoaderPromise = new Promise((resolve, reject) => {
+        if (!document.querySelector('link[data-leaflet-css]')) {
+            const css = document.createElement("link");
+            css.rel = "stylesheet";
+            css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+            css.crossOrigin = "";
+            css.dataset.leafletCss = "1";
+            document.head.append(css);
+        }
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+        script.crossOrigin = "";
+        script.onload = () => {
+            if (window.L) resolve(window.L);
+            else {
+                leafletLoaderPromise = null;
+                reject(new Error("Leaflet loaded without window.L"));
+            }
+        };
+        script.onerror = () => {
+            leafletLoaderPromise = null;
+            reject(new Error("Failed to load Leaflet"));
+        };
+        document.head.append(script);
+    });
+    return leafletLoaderPromise;
+}
+
+for (const mapBox of document.querySelectorAll("[data-inat-map]")) {
+    const projectId = mapBox.dataset.project || "47280";
+    const taxonId = mapBox.dataset.taxonId || "";
+    const isLazy = mapBox.dataset.lazyMap === "true";
+    const canvas = mapBox.querySelector("[data-map-canvas]");
+    const statusEl = mapBox.querySelector("[data-map-status]");
+    const loadBtn = mapBox.querySelector("[data-load-map]");
+    const layerBtns = [...mapBox.querySelectorAll("[data-map-layer]")];
+
+    let activeMode = mapBox.dataset.mapMode || "heatmap";
+    let map = null;
+    let heatmapLayer = null;
+    let pointsLayer = null;
+    let currentOverlay = null;
+    let initPromise = null;
+
+    const syncButtons = (mode) => {
+        mapBox.dataset.mapMode = mode;
+        for (const btn of layerBtns) {
+            btn.setAttribute("aria-pressed", String(btn.dataset.mapLayer === mode));
+        }
+    };
+
+    const applyLayer = (mode) => {
+        if (!map || !heatmapLayer || !pointsLayer) return;
+        const target = mode === "points" ? pointsLayer : heatmapLayer;
+        if (currentOverlay && currentOverlay !== target) {
+            map.removeLayer(currentOverlay);
+        }
+        if (currentOverlay !== target) {
+            target.addTo(map);
+            currentOverlay = target;
+        }
+        if (statusEl) {
+            statusEl.textContent = mode === "points"
+                ? (IS_TA
+                    ? "புள்ளிப் பதிவுகள்: தனிப்பட்ட தமிழ்நாடு அவதானிப்பு இடங்கள் (iNaturalist + OpenStreetMap)."
+                    : "Observation points from iNaturalist Project #47280 over OpenStreetMap.")
+                : (IS_TA
+                    ? "வெப்ப வரைபடம்: தமிழ்நாடு திட்டம் #47280 அவதானிப்பு அடர்த்தி (iNaturalist + OpenStreetMap)."
+                    : "Density heatmap from iNaturalist Project #47280 over OpenStreetMap.");
+        }
+    };
+
+    const initMap = () => {
+        if (initPromise) return initPromise;
+        initPromise = (async () => {
+            if (loadBtn) {
+                loadBtn.closest(".inat-map-placeholder")?.remove();
+            }
+            if (canvas) canvas.hidden = false;
+            if (statusEl) {
+                statusEl.textContent = IS_TA ? "வரைபடம் ஏற்றப்படுகிறது..." : "Loading interactive map...";
+            }
+            try {
+                const L = await loadLeaflet();
+                map = L.map(canvas, { scrollWheelZoom: false }).setView([11.12, 78.66], 7);
+                L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                    attribution: "&copy; OpenStreetMap contributors · &copy; iNaturalist",
+                    maxZoom: 19
+                }).addTo(map);
+
+                const params = `project_id=${encodeURIComponent(projectId)}${taxonId ? `&taxon_id=${encodeURIComponent(taxonId)}` : ""}`;
+                heatmapLayer = L.tileLayer(`https://api.inaturalist.org/v1/colored_heatmap/{z}/{x}/{y}.png?${params}`, {
+                    maxZoom: 19,
+                    opacity: 0.85
+                });
+                pointsLayer = L.tileLayer(`https://api.inaturalist.org/v1/points/{z}/{x}/{y}.png?${params}`, {
+                    maxZoom: 19,
+                    opacity: 0.92
+                });
+                applyLayer(activeMode);
+                setTimeout(() => map.invalidateSize(), 60);
+            } catch {
+                initPromise = null;
+                if (statusEl) {
+                    statusEl.textContent = IS_TA
+                        ? "வரைபடத்தை ஏற்ற முடியவில்லை; மேலே உள்ள iNaturalist இணைப்பைப் பயன்படுத்தவும்."
+                        : "Interactive map could not be loaded offline; use the iNaturalist link above.";
+                }
+            }
+        })();
+        return initPromise;
+    };
+
+    if (loadBtn) {
+        loadBtn.addEventListener("click", () => {
+            initMap();
+        });
+    }
+    for (const btn of layerBtns) {
+        btn.addEventListener("click", async () => {
+            activeMode = btn.dataset.mapLayer || "heatmap";
+            syncButtons(activeMode);
+            await initMap();
+            if (map) applyLayer(activeMode);
+        });
+    }
+
+    if (!isLazy) {
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries.some((entry) => entry.isIntersecting)) {
+                    observer.disconnect();
+                    initMap();
+                }
+            }, { rootMargin: "300px" });
+            observer.observe(mapBox);
+        } else {
+            initMap();
+        }
+    }
 }
 
 for (const enhancement of document.querySelectorAll("[data-enhancement]")) enhancement.hidden = false;

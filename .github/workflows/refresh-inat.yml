@@ -1,0 +1,39 @@
+name: Refresh iNaturalist Project Data
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-inat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync iNaturalist Project 47280 stats and phenology
+        run: python scripts/sync_inat_project.py --stats-only
+
+      - name: Rebuild static website
+        run: python scripts/build.py
+
+      - name: Commit and push updated snapshot
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/inat_project.json docs/
+            git commit -m "Refresh iNaturalist Butterflies of Tamil Nadu snapshot"
+            git push
+          else
+            echo "No changes to commit."
+          fi

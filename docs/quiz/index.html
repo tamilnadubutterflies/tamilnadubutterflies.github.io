@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var c=localStorage.getItem("color-scheme");if(c==="light"||c==="dark")document.querySelector('meta[name="color-scheme"]').content=c;}catch(e){}</script>
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Interactive Tamil Nadu Butterfly Quiz | TNBS</title><meta name="description" content="Test your butterfly identification skills across four interactive quiz modes using verified Tamil Nadu butterfly photos, family lookalikes, streaks, and field facts.">
+<title>Interactive Tamil Nadu Butterfly Quiz | TNBS</title><meta name="description" content="Test your butterfly identification skills across four interactive quiz modes.">
 <meta property="og:site_name" content="The Nature and Butterfly Society"><meta property="og:type" content="website">
-<meta property="og:title" content="Interactive Tamil Nadu Butterfly Quiz | TNBS"><meta property="og:description" content="Test your butterfly identification skills across four interactive quiz modes using verified Tamil Nadu butterfly photos, family lookalikes, streaks, and field facts.">
+<meta property="og:title" content="Interactive Tamil Nadu Butterfly Quiz | TNBS"><meta property="og:description" content="Test your butterfly identification skills across four interactive quiz modes."><link rel="alternate" hreflang="en" href="../quiz/index.html"><link rel="alternate" hreflang="ta" href="../ta/quiz/index.html">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../assets/tnbs-logo.png" type="image/png">
 <link rel="apple-touch-icon" href="../assets/tnbs-logo.png">
@@ -11,9 +13,8 @@
 </head><body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead"><div class="wrap"><a class="identity" href="../index.html"><img class="brand-logo" src="../assets/tnbs-logo.png" alt="" width="48" height="48"><span><strong>The Nature and Butterfly Society</strong><small>TNBS · TAMIL NADU, INDIA</small></span></a>
-<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary">Menu</button>
-<nav id="primary" class="nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../butterflies/index.html">Field guide</a><a href="../identify/index.html">AI Identify</a><a href="../activities/index.html">Activities</a><a href="../news/index.html">News &amp; press</a><a href="../magazine/index.html">Magazine</a><a href="../quiz/index.html" aria-current="page">Quiz</a><a href="../about/index.html">About us</a><a class="small-button" href="../about/index.html#get-involved">Get involved</a></nav></div></header>
-<main id="main"><header class="page-head"><div class="wrap"><h1>Interactive Butterfly Quiz</h1><p class="lede">Challenge yourself with four interactive modes: Photo ID across 328 species, Mixed Field Facts, Timed Rapid Fire, or Scientific Name Match, with streaks, lifelines, personal bests, and shareable score cards.</p></div></header><section class="wrap section"><div class="quiz" data-quiz>
+<nav id="primary" class="nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../butterflies/index.html">Field guide</a><a href="../sightings/index.html">Sightings</a><a href="../identify/index.html">AI Identify</a><a href="../activities/index.html">Activities</a><a href="../news/index.html">News &amp; press</a><a href="../magazine/index.html">Magazine</a><a href="../quiz/index.html" aria-current="page">Quiz</a><a href="../about/index.html">About us</a><a class="small-button" href="../about/index.html#get-involved">Get involved</a></nav><div class="header-tools"><a class="lang-switch" href="../ta/quiz/index.html" lang="ta" hreflang="ta">தமிழ்</a><button type="button" class="theme-toggle" data-theme-toggle><span class="if-light"><span aria-hidden="true">🌙</span><span class="visually-hidden">Switch to dark theme</span></span><span class="if-dark"><span aria-hidden="true">☀️</span><span class="visually-hidden">Switch to light theme</span></span></button><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary">Menu</button></div></div></header>
+<main id="main"><header class="page-head"><div class="wrap"><h1>Interactive Butterfly Quiz</h1><p class="lede">Challenge yourself with four interactive modes: Photo ID across 329 species, Mixed Field Facts, Timed Rapid Fire, or Scientific Name Match, with streaks, lifelines, personal bests, and shareable score cards.</p></div></header><section class="wrap section"><div class="quiz" data-quiz data-quiz-src="../assets/quiz-data.json" data-guide-base="../butterflies/">
 <div data-quiz-start>
 <div class="quiz-lobby-head"><div><p class="kicker">Choose your challenge</p><h2>Start a quiz session</h2></div>
 <div class="quiz-best" data-quiz-best hidden></div></div>
@@ -29,9 +30,9 @@
 <div class="field"><label for="quiz-family">Focus family</label><select id="quiz-family">
 <option value="">All 6 families</option>
 <option value="Papilionidae">Papilionidae (Swallowtails)</option>
-<option value="Pieridae">Pieridae (Whites &amp; yellows)</option>
-<option value="Nymphalidae">Nymphalidae (Brush-footed)</option>
-<option value="Lycaenidae">Lycaenidae (Blues &amp; hairstreaks)</option>
+<option value="Pieridae">Pieridae (Whites and yellows)</option>
+<option value="Nymphalidae">Nymphalidae (Brush-footed butterflies)</option>
+<option value="Lycaenidae">Lycaenidae (Blues and hairstreaks)</option>
 <option value="Hesperiidae">Hesperiidae (Skippers)</option>
 </select></div>
 <div class="field"><label for="quiz-difficulty">Difficulty</label><select id="quiz-difficulty">
@@ -39,14 +40,14 @@
 <option value="expert">Expert (Same-family lookalikes)</option>
 </select></div>
 <div class="field"><label for="quiz-count">Questions</label><select id="quiz-count">
-<option value="8" selected>8 questions</option>
-<option value="12">12 questions</option>
-<option value="15">15 questions</option>
+<option value="8" selected>8</option>
+<option value="12">12</option>
+<option value="15">15</option>
 </select></div></div>
 
 <div class="actions" data-enhancement hidden><button type="button" class="button" data-start-btn>Start quiz →</button></div>
 <p role="status" aria-live="polite" data-start-status class="caption"></p>
-<noscript><p>The interactive quiz requires JavaScript. You can still <a href="../butterflies/index.html">browse all 329 species in the field guide</a>.</p></noscript>
+<noscript><p>The interactive quiz requires JavaScript. <a href="../butterflies/index.html">Browse all 329 species in the field guide</a>.</p></noscript>
 </div>
 
 <div data-quiz-game hidden>
@@ -59,8 +60,8 @@
 <progress class="quiz-progress" max="100" value="0" aria-label="Quiz progress" style="--quiz-hue: 145;"></progress>
 
 <div class="quiz-lifelines">
-<button type="button" class="choice" data-lifeline-5050>50:50 Eliminate two</button>
-<button type="button" class="choice" data-lifeline-hint>Field hint (H)</button>
+<button type="button" class="choice" data-lifeline-5050>50:50</button>
+<button type="button" class="choice" data-lifeline-hint>Hint (H)</button>
 <span class="caption keyboard-tip">Keys: <kbd>1</kbd>-<kbd>4</kbd> answer · <kbd>H</kbd> hint · <kbd>Enter</kbd> next</span>
 </div>
 
@@ -98,21 +99,21 @@
 <a class="button outline" href="../identify/index.html">Try Butterfly Vision AI</a>
 </div></div></div></section></main>
 <footer class="footer"><div class="wrap"><div class="footer-cols"><div><a class="identity" href="../index.html"><img class="brand-logo" src="../assets/tnbs-logo.png" alt="" width="48" height="48" loading="lazy"><span><strong>The Nature and Butterfly Society</strong><small>TNBS · TAMIL NADU, INDIA</small></span></a><p>Documenting butterflies across Tamil Nadu since 2014.</p></div>
-<nav aria-label="Explore"><a href="../butterflies/index.html">Field guide</a><a href="../identify/index.html">Butterfly Vision AI</a><a href="../quiz/index.html">Interactive quiz</a><a href="../magazine/index.html">Pattampoochi magazine</a></nav>
-<nav aria-label="Society"><a href="../about/index.html">About us</a><a href="../activities/index.html">Activities &amp; fieldwork</a><a href="../news/index.html">News &amp; press</a><a href="../sources/index.html">Sources &amp; photo credits</a></nav>
-<nav aria-label="Connect"><a href="../about/index.html#get-involved">Get involved</a><a href="mailto:tamilnadubutterflies@gmail.com">tamilnadubutterflies@gmail.com</a><a href="https://www.facebook.com/groups/373700319460990/" target="_blank" rel="noopener noreferrer">Tamil Nadu Butterflies Facebook</a><a href="https://sites.google.com/view/tamilnadubutterflies" target="_blank" rel="noopener noreferrer">Original Google Site</a></nav></div>
-<div class="footer-bottom"><small>© <span data-year>2026</span> The Nature and Butterfly Society · Reg. No. 259/2018 · Coimbatore, Tamil Nadu</small></div></div></footer>
+<nav aria-label="Explore"><a href="../butterflies/index.html">Field guide</a><a href="../sightings/index.html">Sightings</a><a href="../identify/index.html">AI Identify</a><a href="../quiz/index.html">Quiz</a></nav>
+<nav aria-label="Society"><a href="../about/index.html">About us</a><a href="../activities/index.html">Activities</a><a href="../magazine/index.html">Magazine</a><a href="../sources/index.html">Sources &amp; photo credits</a></nav>
+<nav aria-label="Connect"><a href="../news/index.html">News &amp; press</a><a href="../about/index.html#get-involved">Get involved</a><a href="https://www.inaturalist.org/projects/butterflies-of-tamil-nadu" target="_blank" rel="noopener noreferrer">iNaturalist Project #47280</a><a href="mailto:tamilnadubutterflies@gmail.com">tamilnadubutterflies@gmail.com</a></nav></div>
+<div class="footer-bottom"><small>© <span data-year>2026</span> The Nature and Butterfly Society · Reg. No. 259/2018 · Coimbatore, Tamil Nadu · <a href="../ta/quiz/index.html">தமிழ்</a></small></div></div></footer>
 <a class="back-top" href="#top" data-back-top hidden aria-label="Back to top">↑ Top</a>
 <dialog id="lightbox" class="lightbox" closedby="any" aria-labelledby="lightbox-title">
 <div class="lightbox-frame"><div class="lightbox-head">
 <div><h1 id="lightbox-title" class="lightbox-heading">Butterfly photograph</h1>
 <p id="lightbox-sub" class="caption"></p></div>
-<form method="dialog"><button type="submit" class="button outline lightbox-close" aria-label="Close enlarged photograph">Close</button></form>
+<form method="dialog"><button type="submit" class="button outline lightbox-close" aria-label="Close">Close</button></form>
 </div><div class="lightbox-stage"><img id="lightbox-img" src="" alt=""></div>
 <div class="lightbox-nav" data-lightbox-nav hidden>
-<button type="button" class="button outline lightbox-step" data-lightbox-dir="-1" aria-label="Previous photograph">← Prev</button>
+<button type="button" class="button outline lightbox-step" data-lightbox-dir="-1" aria-label="← Prev">← Prev</button>
 <span class="lightbox-counter" data-lightbox-counter></span>
-<button type="button" class="button outline lightbox-step" data-lightbox-dir="1" aria-label="Next photograph">Next →</button>
+<button type="button" class="button outline lightbox-step" data-lightbox-dir="1" aria-label="Next →">Next →</button>
 </div>
 <p id="lightbox-credit" class="credit"></p></div></dialog>
 </body></html>
