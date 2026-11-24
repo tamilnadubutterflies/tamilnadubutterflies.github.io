@@ -45,13 +45,85 @@ const IS_TA = document.documentElement.lang === "ta";
     }
 })();
 
-const navButton = document.querySelector(".nav-toggle");
-const nav = document.querySelector("#primary");
-if (navButton && nav) {
-    navButton.addEventListener("click", () => {
-        navButton.setAttribute("aria-expanded", String(nav.classList.toggle("open")));
-    });
+/* Feature-detect native Popover API before loading polyfill only if missing */
+if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
+    import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js").catch(() => {});
 }
+
+/* Container-adaptive Popover Navbar (modern-web-guidance navbar compliant) */
+(function initAdaptiveNavbar() {
+    const masthead = document.querySelector(".masthead");
+    const headerInner = document.querySelector(".header-inner");
+    const menuList = document.getElementById("primary-menu");
+    if (!masthead || !headerInner || !menuList) return;
+
+    let lastCollapsedWidth = 0;
+
+    function isMenuOpen() {
+        try {
+            return menuList.matches(":popover-open, .\\:popover-open");
+        } catch {
+            return false;
+        }
+    }
+
+    function updateNavLayout(forceMeasure = false) {
+        const currentlyWide = masthead.classList.contains("is-wide");
+        const curWidth = headerInner.clientWidth;
+        if (!forceMeasure && !currentlyWide && curWidth <= lastCollapsedWidth) {
+            return;
+        }
+        const wasOpen = !currentlyWide && isMenuOpen();
+        masthead.classList.add("is-measuring");
+        masthead.classList.add("is-wide");
+        menuList.removeAttribute("popover");
+
+        const fitsInline = headerInner.scrollWidth <= headerInner.clientWidth;
+        if (fitsInline) {
+            masthead.classList.add("is-wide");
+            menuList.removeAttribute("popover");
+            lastCollapsedWidth = 0;
+        } else {
+            masthead.classList.remove("is-wide");
+            menuList.setAttribute("popover", "auto");
+            lastCollapsedWidth = curWidth;
+            if (wasOpen) {
+                try {
+                    menuList.showPopover();
+                } catch {
+                    // Popover polyfill still loading or already open
+                }
+            }
+        }
+        requestAnimationFrame(() => masthead.classList.remove("is-measuring"));
+    }
+
+    updateNavLayout(true);
+
+    if ("ResizeObserver" in window) {
+        const ro = new ResizeObserver((entries) => {
+            const menuChanged = entries.some((entry) => entry.target === menuList);
+            updateNavLayout(menuChanged);
+        });
+        ro.observe(headerInner);
+        ro.observe(menuList);
+    } else {
+        window.addEventListener("resize", () => updateNavLayout(true), { passive: true });
+    }
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => updateNavLayout(true));
+    }
+
+    menuList.addEventListener("click", (e) => {
+        const a = e.target.closest("a");
+        if (a && menuList.hasAttribute("popover") && isMenuOpen()) {
+            try {
+                menuList.hidePopover();
+            } catch {}
+        }
+    });
+})();
 const yearSpan = document.querySelector("[data-year]");
 if (yearSpan) yearSpan.textContent = String(new Date().getFullYear());
 
@@ -143,10 +215,10 @@ if (lightbox) {
         const items = activeController.items;
         activeIdx = ((idx % items.length) + items.length) % items.length;
         const slide = items[activeIdx];
-        lbTitle.textContent = slide.title || "TNBS photograph";
+        lbTitle.textContent = slide.title || (IS_TA ? "TNBS புகைப்படம்" : "TNBS photograph");
         lbSub.textContent = slide.note ? `${slide.note} · ${slide.alt}` : (slide.alt || "");
         lbImg.src = slide.src;
-        lbImg.alt = slide.alt || slide.title || "Butterfly photograph";
+        lbImg.alt = slide.alt || slide.title || (IS_TA ? "பட்டாம்பூச்சி புகைப்படம்" : "Butterfly photograph");
         renderCreditLine(lbCredit, slide);
         if (lbCounter) lbCounter.textContent = `${activeIdx + 1} / ${items.length}`;
         if (lbNav) lbNav.hidden = items.length < 2;
@@ -165,10 +237,10 @@ if (lightbox) {
         } else {
             activeController = null;
             if (lbNav) lbNav.hidden = true;
-            lbTitle.textContent = trigger.dataset.lightboxTitle || "TNBS photograph";
+            lbTitle.textContent = trigger.dataset.lightboxTitle || (IS_TA ? "TNBS புகைப்படம்" : "TNBS photograph");
             lbSub.textContent = trigger.dataset.lightboxAlt || "";
             lbImg.src = trigger.dataset.lightboxSrc;
-            lbImg.alt = trigger.dataset.lightboxAlt || trigger.dataset.lightboxTitle || "Butterfly photograph";
+            lbImg.alt = trigger.dataset.lightboxAlt || trigger.dataset.lightboxTitle || (IS_TA ? "பட்டாம்பூச்சி புகைப்படம்" : "Butterfly photograph");
             renderCreditLine(lbCredit, {
                 author: trigger.dataset.lightboxAuthor,
                 url: trigger.dataset.lightboxUrl,
@@ -275,7 +347,9 @@ for (const galleryEl of document.querySelectorAll("[data-species-gallery]")) {
             thumbsWrap.scrollTo({ left: Math.max(0, left), behavior: reduced ? "auto" : "smooth" });
         }
         if (announce && statusEl) {
-            statusEl.textContent = `Photo ${currentIdx + 1} of ${items.length}: ${slide.note ? slide.note + ", " : ""}photographed by ${slide.author}`;
+            statusEl.textContent = IS_TA
+                ? `படம் ${currentIdx + 1} / ${items.length}: ${slide.note ? slide.note + ", " : ""}${slide.author}`
+                : `Photo ${currentIdx + 1} of ${items.length}: ${slide.note ? slide.note + ", " : ""}photographed by ${slide.author}`;
         }
     }
 
@@ -434,8 +508,12 @@ function syncSpottedButtons() {
         const isDetail = btn.classList.contains("button");
         btn.setAttribute("aria-pressed", String(isSpotted));
         btn.textContent = isSpotted
-            ? (isDetail ? "✓ Spotted in Tamil Nadu" : "✓ Spotted")
-            : (isDetail ? "+ Mark as spotted in Tamil Nadu" : "+ Spotted");
+            ? (isDetail
+                ? (IS_TA ? "✓ தமிழ்நாட்டில் பார்த்தேன்" : "✓ Spotted in Tamil Nadu")
+                : (IS_TA ? "✓ பார்த்தேன்" : "✓ Spotted"))
+            : (isDetail
+                ? (IS_TA ? "+ தமிழ்நாட்டில் பார்த்ததாகக் குறி" : "+ Mark as spotted in Tamil Nadu")
+                : (IS_TA ? "+ பார்த்தேன்" : "+ Spotted"));
     }
     const bar = document.querySelector("[data-lifelist-bar]");
     if (bar) {
@@ -443,7 +521,11 @@ function syncSpottedButtons() {
         const progEl = bar.querySelector("progress");
         const count = spottedSet.size;
         const pct = Math.round((count / 329) * 100);
-        if (countEl) countEl.textContent = `${count} / 329 spotted (${pct}%)`;
+        if (countEl) {
+            countEl.textContent = IS_TA
+                ? `${count} / 329 பார்த்தவை (${pct}%)`
+                : `${count} / 329 spotted (${pct}%)`;
+        }
         if (progEl) progEl.value = count;
     }
 }
@@ -614,11 +696,19 @@ if (guide) {
         copyLifeBtn.addEventListener("click", async () => {
             const list = [...spottedSet].sort();
             const text = list.length
-                ? `My Tamil Nadu Butterfly Life List (${list.length}/329):\n` + list.join(", ")
-                : "No butterflies marked as spotted yet. Click '+ Spotted' on any species card to build your list.";
+                ? (IS_TA
+                    ? `எனது தமிழ்நாடு பட்டாம்பூச்சிப் பட்டியல் (${list.length}/329):\n` + list.join(", ")
+                    : `My Tamil Nadu Butterfly Life List (${list.length}/329):\n` + list.join(", "))
+                : (IS_TA
+                    ? "இன்னும் எந்தப் பட்டாம்பூச்சியும் குறிக்கப்படவில்லை. அட்டைகளில் '+ பார்த்தேன்' என்பதைச் சொடுக்கவும்."
+                    : "No butterflies marked as spotted yet. Click '+ Spotted' on any species card to build your list.");
             try {
                 await navigator.clipboard.writeText(text);
-                if (lifeStatus) lifeStatus.textContent = list.length ? `Copied ${list.length} spotted species to clipboard.` : text;
+                if (lifeStatus) {
+                    lifeStatus.textContent = list.length
+                        ? (IS_TA ? `${list.length} இனங்கள் நகலெடுக்கப்பட்டன.` : `Copied ${list.length} spotted species to clipboard.`)
+                        : text;
+                }
             } catch {
                 if (lifeStatus) lifeStatus.textContent = text;
             }
@@ -679,7 +769,9 @@ for (const archive of document.querySelectorAll("[data-records]")) {
             if (det && tokens.length && show) det.open = true;
             else if (det && !tokens.length) det.open = false;
         }
-        status.textContent = total ? `Showing ${total} ${total === 1 ? "entry" : "entries"}` : "No entries match these filters.";
+        status.textContent = IS_TA
+            ? (total ? `${total} பதிவுகள் காட்டப்படுகின்றன` : "இந்த வடிகட்டிக்குப் பொருந்தும் பதிவுகள் இல்லை.")
+            : (total ? `Showing ${total} ${total === 1 ? "entry" : "entries"}` : "No entries match these filters.");
     }
 
     for (const pill of catPills) {
@@ -744,14 +836,16 @@ if (lookup) {
         display.replaceChildren(figure);
         watchImage(image, () => {
             display.replaceChildren();
-            status.textContent = "The image could not load. The Commons search link is available.";
+            status.textContent = IS_TA
+                ? "படத்தை ஏற்ற முடியவில்லை. Commons தேடல் இணைப்பைப் பயன்படுத்தலாம்."
+                : "The image could not load. The Commons search link is available.";
             button.disabled = false;
         });
     }
 
     button.addEventListener("click", async () => {
         button.disabled = true;
-        status.textContent = "Checking Wikimedia Commons...";
+        status.textContent = IS_TA ? "Wikimedia Commons சரிபார்க்கப்படுகிறது..." : "Checking Wikimedia Commons...";
         try {
             const signal = AbortSignal.timeout(10000);
             const article = await wikiRequest("en.wikipedia.org", {
@@ -786,7 +880,9 @@ if (lookup) {
             status.textContent = "";
             showPhoto(file, credit, license);
         } catch {
-            status.textContent = "No exact-match photo with verified reuse details was returned. Try the Commons search link.";
+            status.textContent = IS_TA
+                ? "தகுதியான உரிமத்துடன் கூடிய சரியான படம் கிடைக்கவில்லை. Commons தேடல் இணைப்பை முயற்சிக்கவும்."
+                : "No exact-match photo with verified reuse details was returned. Try the Commons search link.";
             button.disabled = false;
         }
     });
@@ -816,8 +912,12 @@ if (bvWidget) {
             activeModel = btn.dataset.bvModel;
             for (const b of modelButtons) b.setAttribute("aria-pressed", String(b === btn));
             modelDesc.textContent = activeModel === "wg"
-                ? "Recommended for Tamil Nadu hills, forests, and Western Ghats surveys (300+ species)."
-                : "Broader national coverage across India (800+ species, 923+ taxa supported).";
+                ? (IS_TA
+                    ? "தமிழ்நாடு மலைப்பகுதிகள், காடுகள் மற்றும் மேற்குத் தொடர்ச்சி மலை ஆய்வுகளுக்குப் பரிந்துரைக்கப்படுவது (300+ இனங்கள்)."
+                    : "Recommended for Tamil Nadu hills, forests, and Western Ghats surveys (300+ species).")
+                : (IS_TA
+                    ? "இந்தியா முழுவதுமான பரந்த இனத் தொகுப்பு (800+ இனங்கள், 923+ உயிரினப் பிரிவுகள்)."
+                    : "Broader national coverage across India (800+ species, 923+ taxa supported).");
         });
     }
 
@@ -859,7 +959,9 @@ if (bvWidget) {
 
     function handleSelectedFile(file) {
         if (!file || !file.type.startsWith("image/") || file.type === "image/svg+xml") {
-            status.textContent = "Please choose a JPG, PNG, or WebP butterfly photograph.";
+            status.textContent = IS_TA
+                ? "தயவுசெய்து JPG, PNG, அல்லது WebP பட்டாம்பூச்சிப் படத்தைத் தேர்ந்தெடுக்கவும்."
+                : "Please choose a JPG, PNG, or WebP butterfly photograph.";
             return;
         }
         selectedFile = file;
@@ -871,11 +973,13 @@ if (bvWidget) {
             probe.onload = () => {
                 previewImg.src = selectedDataUrl;
                 const sizeNote = probe.width >= 600 && probe.height >= 600
-                    ? "Optimal resolution for Butterfly Vision."
-                    : "Tip: Images wider than 600x600px yield higher recognition accuracy.";
+                    ? (IS_TA ? "Butterfly Vision AI-க்கு உகந்த தெளிவுத்திறன்." : "Optimal resolution for Butterfly Vision.")
+                    : (IS_TA ? "குறிப்பு: 600x600px மேல் உள்ள படங்கள் துல்லியமான முடிவைத் தரும்." : "Tip: Images wider than 600x600px yield higher recognition accuracy.");
                 fileMeta.textContent = `${file.name} (${probe.width}x${probe.height}px) · ${sizeNote}`;
                 previewBox.hidden = false;
-                status.textContent = "Photo staged. Click 'Run AI identification' or open directly on butterflyvision.in.";
+                status.textContent = IS_TA
+                    ? "படம் தயாராக உள்ளது. 'AI அடையாளம் இயக்கு' அல்லது butterflyvision.in திறக்கவும்."
+                    : "Photo staged. Click 'Run AI identification' or open directly on butterflyvision.in.";
                 runBtn.disabled = false;
             };
             probe.src = selectedDataUrl;
@@ -910,7 +1014,12 @@ if (bvWidget) {
     runBtn.addEventListener("click", async () => {
         if (!selectedFile || !selectedDataUrl) return;
         runBtn.disabled = true;
-        status.textContent = `Sending resized photo to Butterfly Vision (${activeModel === "wg" ? "Western Ghats" : "All India"} model)...`;
+        const modelLabel = IS_TA
+            ? (activeModel === "wg" ? "மேற்குத் தொடர்ச்சி மலை" : "அகில இந்திய")
+            : (activeModel === "wg" ? "Western Ghats" : "All India");
+        status.textContent = IS_TA
+            ? `படம் Butterfly Vision (${modelLabel} மாதிரி) தளத்திற்கு அனுப்பப்படுகிறது...`
+            : `Sending resized photo to Butterfly Vision (${modelLabel} model)...`;
         resultsBox.replaceChildren();
 
         try {
@@ -928,11 +1037,13 @@ if (bvWidget) {
             const data = await response.json();
             const preds = Array.isArray(data?.predictions) ? data.predictions : [];
             if (!preds.length) {
-                status.textContent = "Butterfly Vision returned no confident species matches. Try cropping closer on butterflyvision.in.";
+                status.textContent = IS_TA
+                    ? "உறுதியான இனப் பொருத்தம் கிடைக்கவில்லை. butterflyvision.in தளத்தில் படத்தை அருகில் வெட்டி (crop) முயற்சிக்கவும்."
+                    : "Butterfly Vision returned no confident species matches. Try cropping closer on butterflyvision.in.";
                 runBtn.disabled = false;
                 return;
             }
-            status.textContent = "Top Butterfly Vision AI predictions:";
+            status.textContent = IS_TA ? "முதன்மை Butterfly Vision AI கணிப்புகள்:" : "Top Butterfly Vision AI predictions:";
             const list = document.createElement("div");
             list.className = "bv-pred-list";
             for (const pred of preds.slice(0, 5)) {
@@ -943,7 +1054,7 @@ if (bvWidget) {
                 const head = document.createElement("div");
                 head.className = "bv-pred-head";
                 const title = document.createElement("span");
-                title.textContent = pred.class_name || "Unknown species";
+                title.textContent = pred.class_name || (IS_TA ? "அறியப்படாத இனம்" : "Unknown species");
                 const pct = document.createElement("span");
                 pct.textContent = `${conf.toFixed(1)}%`;
                 head.append(title, pct);
@@ -976,12 +1087,16 @@ if (bvWidget) {
             resultsBox.replaceChildren(list);
             runBtn.disabled = false;
         } catch {
-            status.textContent = "Direct browser submission to butterflyvision.in is restricted by the remote server's CORS policy from external domains. Use 'Open on butterflyvision.in ↗' to upload and crop your staged photo directly on the Butterfly Vision app.";
+            status.textContent = IS_TA
+                ? "வெளிப்புறத் தளக் கொள்கை (CORS) காரணமாக நேரடி அனுப்புதல் தடுக்கப்பட்டுள்ளது. 'butterflyvision.in ↗' பொத்தானைச் சொடுக்கிப் படத்தைப் பதிவேற்றவும்."
+                : "Direct browser submission to butterflyvision.in is restricted by the remote server's CORS policy from external domains. Use 'Open on butterflyvision.in ↗' to upload and crop your staged photo directly on the Butterfly Vision app.";
             const fallback = document.createElement("div");
             fallback.className = "notice";
             const p = document.createElement("p");
-            p.textContent = "Your photo is ready! Open butterflyvision.in in a new tab, choose the "
-                + (activeModel === "wg" ? "Western Ghats" : "All India")
+            p.textContent = IS_TA
+                ? `உங்கள் படம் தயார்! புதிய தாவலில் butterflyvision.in தளத்தைத் திறந்து, ${modelLabel} மாதிரியைத் தேர்ந்தெடுத்துப் படத்தைச் செதுக்கி (crop) அடையாளம் காணவும்.`
+                : "Your photo is ready! Open butterflyvision.in in a new tab, choose the "
+                + modelLabel
                 + " model, and use Butterfly Vision's built-in crop tool for best accuracy.";
             fallback.append(p);
             resultsBox.replaceChildren(fallback);
