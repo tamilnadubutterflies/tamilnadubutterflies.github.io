@@ -424,7 +424,20 @@ if (spotlightBox) {
         sciEl.textContent = entry.scientific;
         headEl.textContent = entry.headline;
         wingEl.textContent = entry.wingspan;
-        hostEl.textContent = entry.hosts;
+        if (Array.isArray(entry.hostsParts) && entry.hostsParts.length) {
+            hostEl.replaceChildren();
+            for (const [text, isItalic] of entry.hostsParts) {
+                if (isItalic) {
+                    const iEl = document.createElement("i");
+                    iEl.textContent = text;
+                    hostEl.append(iEl);
+                } else {
+                    hostEl.append(text);
+                }
+            }
+        } else {
+            hostEl.textContent = entry.hosts;
+        }
         rangeEl.textContent = entry.range;
         linkEl.href = entry.url;
     }
@@ -540,7 +553,7 @@ document.addEventListener("click", (e) => {
     else spottedSet.add(sci);
     writeSpotted(spottedSet);
     syncSpottedButtons();
-    if (typeof window.__tnbsGuideRefresh === "function") window.__tnbsGuideRefresh();
+    if (typeof window.__tnbsGuideRefresh === "function") window.__tnbsGuideRefresh(true);
 });
 
 /* Enhanced Field Guide Search, Family Pills, Subfamily/Tag Filter, Life List, Sort & Pagination */
@@ -634,22 +647,29 @@ if (guide) {
             || a.name.localeCompare(b.name);
     }
 
+    let currentSort = "";
+    let orderedCards = cards;
+
     function render() {
         const tokens = normalize(search.value).split(" ").filter(Boolean);
         const mode = sort.value || "featured";
-        const ordered = [...cards].sort((a, b) => compareCards(a, b, mode));
+        const needsReorder = mode !== currentSort;
+        if (needsReorder) {
+            orderedCards = [...cards].sort((a, b) => compareCards(a, b, mode));
+            currentSort = mode;
+        }
         let total = 0;
-        const fragment = document.createDocumentFragment();
-        for (const card of ordered) {
+        const fragment = needsReorder ? document.createDocumentFragment() : null;
+        for (const card of orderedCards) {
             const matches = (!family.value || card.family === family.value)
                 && (!subfamily.value || card.subfamily === subfamily.value)
                 && matchesTag(card, tag.value)
                 && tokens.every((term) => card.terms.includes(term));
             if (matches) total += 1;
             card.element.hidden = !matches || total > limit;
-            fragment.append(card.element);
+            if (fragment) fragment.append(card.element);
         }
-        container.replaceChildren(fragment);
+        if (fragment) container.replaceChildren(fragment);
         container.classList.toggle("list", view === "list");
         for (const button of viewButtons) {
             button.setAttribute("aria-pressed", String(button.dataset.view === view));
@@ -663,7 +683,10 @@ if (guide) {
         more.hidden = limit >= total;
     }
 
-    window.__tnbsGuideRefresh = render;
+    window.__tnbsGuideRefresh = (fromSpotToggle = false) => {
+        if (fromSpotToggle && tag.value !== "spotted") return;
+        render();
+    };
 
     function filterChanged() {
         limit = pageSize;
@@ -750,7 +773,7 @@ if (guide) {
         limit += pageSize;
         render();
         const visible = [...container.children].filter((el) => !el.hidden);
-        visible[before]?.querySelector("h3 a")?.focus();
+        visible[before]?.querySelector("h3 a")?.focus({ preventScroll: true });
     });
     for (const button of viewButtons) {
         button.addEventListener("click", () => {

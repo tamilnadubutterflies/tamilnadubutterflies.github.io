@@ -462,6 +462,70 @@ def species_gallery(scientific, asset_prefix, lang="en"):
     )
 
 
+HOST_STANDALONE_GENERA = {
+    "Arundinella", "Themeda", "Oplismenus", "Ochlandra", "Panicum",
+    "Millettia", "Callerya", "Dendrophthoe", "Loranthus", "Planococcus",
+    "Ferrisia", "Chrysopogon", "Cymbopogon", "Bryophyllum", "Caprona",
+    "Microcos", "Helicteres", "Crematogaster",
+}
+HOST_NON_GENUS = {
+    "All", "Bamboo", "Bermuda", "Cane", "Carpet", "Chinese", "Coconut",
+    "Common", "Creeping", "Crown", "Custard", "Dry", "East", "Eastern",
+    "Eeta", "Elephant", "False", "Fishtail", "Flame", "Foothill", "Forest",
+    "Garden", "Ghat", "Golden", "Grass", "Guinea", "Hill", "Hyacinth",
+    "Indian", "Jackal", "Kamala", "Key", "King", "Lalang", "Life", "Mango",
+    "Mistletoe", "Montane", "Mung", "Myrmecophilous", "Native", "Orangeberry",
+    "Ornamental", "Paddy", "Palmyra", "Para", "Pigeon", "Pomegranate",
+    "Pongam", "Predatory", "Puncture", "Queen", "Rattan", "Red", "Rice",
+    "Satinwood", "Shaded", "Shamrock", "South", "Stinking", "Terrestrial",
+    "Thorny", "Tiger", "Toothbrush", "Various", "Wet", "White", "Wild",
+    "Woodsorrel",
+}
+HOST_NON_EPITHET = (
+    "species|spp\\.?|sp\\.?|and|or|grasses|reeds|herbs|clovers|shrubs|trees|"
+    "climbers|palms|mistletoes|legumes|bamboo|vines|plants|leaves|flowers|"
+    "fruits|ants|associations|feed|on|of|in|as|such|syn|rattans|yams|banana|"
+    "palm|tree|grass|pea|bean|apple|leaf|vine|orchid|reed|flower|creeper|"
+    "passionflower|knotweed|leadwort|beech|jujube|bead|nettle|sago|lime|host|"
+    "woody|dryland|meadow|undergrowth|forest|montane|shola"
+)
+HOST_TAXON_RE = re.compile(
+    r"\b([A-Z][a-z]+)(?=\s+(?:species|spp\.?|sp\.?)\b)"
+    r"|\b([A-Z][a-z]+)\s+(?!(?:" + HOST_NON_EPITHET + r")\b)([a-z][a-z-]+)\b"
+    r"|\b(" + "|".join(sorted(HOST_STANDALONE_GENERA, key=len, reverse=True)) + r")\b"
+)
+
+
+def tokenize_host_plant(text):
+    parts = []
+    pos = 0
+    for m in HOST_TAXON_RE.finditer(text):
+        start, end = m.span()
+        g_sp, g_bi, ep_bi, g_solo = m.groups()
+        italic_seg = None
+        if g_sp:
+            if g_sp not in HOST_NON_GENUS and not g_sp.endswith(("aceae", "oideae")):
+                italic_seg = g_sp
+        elif g_bi:
+            if g_bi not in HOST_NON_GENUS and not g_bi.endswith(("aceae", "oideae")):
+                italic_seg = f"{g_bi} {ep_bi}"
+        elif g_solo:
+            italic_seg = g_solo
+        if italic_seg is None:
+            continue
+        if start > pos:
+            parts.append([text[pos:start], False])
+        parts.append([italic_seg, True])
+        pos = end
+    if pos < len(text):
+        parts.append([text[pos:], False])
+    return parts
+
+
+def format_host_plant_html(text):
+    return "".join(f"<i>{h(seg)}</i>" if is_it else h(seg) for seg, is_it in tokenize_host_plant(text))
+
+
 def host_plant_gallery(scientific, lang="en"):
     entries = HOST_PLANTS.get("bySpecies", {}).get(scientific, [])
     plants = HOST_PLANTS.get("plants", {})
@@ -879,13 +943,15 @@ def home_spotlight_section(asset_prefix, lang_prefix, lang="en"):
         disp_name = f"{ta_sp} ({sp['name']})" if (is_ta and ta_sp) else sp["name"]
         btn_name = ta_sp if (is_ta and ta_sp) else sp["name"]
         hosts_en = ", ".join(prof.get("hostPlants", [])[:2]) or "Tamil Nadu checklist species"
+        hosts_raw = t_spot.get("hosts") or (hosts_en if not is_ta else (f"உணவூட்டும் தாவரம்: {hosts_en}" if prof.get("hostPlants") else "தமிழ்நாடு பட்டாம்பூச்சிப் பட்டியல் இனம்"))
         payload.append({
             "name": disp_name,
             "scientific": sci,
             "family": f'{fam_name(sp["family"], lang)} ({sub_desc(sp["subfamily"], lang)})' if is_ta else f'{sp["family"]} ({sp["subfamily"]})',
             "headline": t_spot.get("headline") or t_prof.get("headline") or prof.get("headline", ""),
             "wingspan": t_spot.get("wingspan") or t_prof.get("wingspan") or prof.get("wingspan", "தமிழ்நாடு பதிவு" if is_ta else "Field guide entry"),
-            "hosts": t_spot.get("hosts") or (hosts_en if not is_ta else (f"உணவூட்டும் தாவரம்: {hosts_en}" if prof.get("hostPlants") else "தமிழ்நாடு பட்டாம்பூச்சிப் பட்டியல் இனம்")),
+            "hosts": hosts_raw,
+            "hostsParts": tokenize_host_plant(hosts_raw),
             "range": t_spot.get("range") or t_prof.get("tnDistribution") or prof.get("tnDistribution", "தமிழ்நாடு முழுவதும் பதிவானது." if is_ta else "Recorded across Tamil Nadu habitats."),
             "url": local(lang_prefix, route(sp)),
             "src": meta["src"],
@@ -925,7 +991,7 @@ def home_spotlight_section(asset_prefix, lang_prefix, lang="en"):
 <p class="scientific" data-spot-sci>{h(first["scientific"])}</p>
 <p class="lede" data-spot-headline>{h(first["headline"])}</p>
 <dl class="mini-stats"><div><dt>{h(wing_dt)}</dt><dd data-spot-wingspan>{h(first["wingspan"])}</dd></div>
-<div><dt>{h(host_dt)}</dt><dd data-spot-hosts>{h(first["hosts"])}</dd></div></dl>
+<div><dt>{h(host_dt)}</dt><dd data-spot-hosts>{format_host_plant_html(first["hosts"])}</dd></div></dl>
 <p class="spot-range" data-spot-range>{h(first["range"])}</p>
 <div class="actions"><a class="button" data-spot-link href="{h(first["url"])}">{h(open_btn)}</a>
 {link(all_btn, local(lang_prefix, "butterflies/"), "button outline")}</div>
@@ -1574,7 +1640,7 @@ def detail(entry, lang="en"):
 
     profile_html = ""
     if isinstance(prof, dict):
-        hosts = "".join(f'<span class="host-pill">{h(hp)}</span>' for hp in prof.get("hostPlants", []))
+        hosts = "".join(f'<span class="host-pill">{format_host_plant_html(hp)}</span>' for hp in prof.get("hostPlants", []))
         refs = "".join(f'<li>{link(lbl, ref)}</li>' for lbl, ref in prof.get("sources", []))
         host_photos = host_plant_gallery(scientific, lang=lang)
         sec_aria = "இன அடையாளம் மற்றும் சூழலியல் குறிப்புகள்" if is_ta else "Species identification and ecology"
@@ -2514,7 +2580,7 @@ def build_quiz_data(lang="en"):
         ["How many butterfly species are documented in Tamil Nadu's state butterfly checklist?", ["329 species", "285 species", "312 species", "410 species"], "TNBS records 329 species across 6 families (325 validated in Tamil Nadu, with 4 awaiting confirmation).", "", "All", "The count increased from 323 in 2015 and 328 in 2022 to 329 in 2025."],
         ["Which two recent species additions expanded the Tamil Nadu checklist to 329 species?", ["Common Palmfly & Cloud Forest Silverline", "Blue Mormon & Painted Lady", "Crimson Rose & Yamfly", "Peacock Pansy & Rice Swift"], "Elymnias hypermnestra and Cigaritis meghamalaiensis (described from Meghamalai in 2023) brought the state list to 329.", "cigaritis-meghamalaiensis", "Lycaenidae", "One feeds on palms around Chennai and Sirumalai; the other is a newly described Theni hill silverline."],
         ["Which butterfly has a white underside with black markings and a bold orange hindwing border?", ["Red Pierrot", "Common Pierrot", "Banded Blue Pierrot", "Common Grass Yellow"], "The Red Pierrot (Talicada nyseus) breeds inside succulent Kalanchoe leaves.", "talicada-nyseus", "Lycaenidae", "Often seen fluttering gently near courtyard Kalanchoe plants."],
-        ["Which large swallowtail is Tamil Nadu's largest butterfly and a Western Ghats endemic?", ["Southern Birdwing", "Blue Mormon", "Clipper", "Malabar Banded Peacock"], "Troides minos reaches up to 190 mm wingspan with golden-yellow hindwings.", "troides-minos", "Papilionidae", "Also known as the Sahyadri Birdwing."],
+        ["Which large swallowtail is Tamil Nadu's largest butterfly, endemic to peninsular India?", ["Southern Birdwing", "Blue Mormon", "Clipper", "Malabar Banded Peacock"], "Troides minos reaches up to 190 mm wingspan with golden-yellow hindwings.", "troides-minos", "Papilionidae", "Also known as the Sahyadri Birdwing."],
         ["Which species was observed migrating in thousands during the June 2024 Mudumalai survey?", ["Common Grass Yellow", "Tamil Yeoman", "Blue Pansy", "Crimson Rose"], "TNBS and Forest Department teams documented thousands of Common Grass Yellows (Eurema hecabe) moving in Mudumalai.", "eurema-hecabe", "Pieridae", "A small yellow pierid with two dark spots inside its underside forewing cell."],
         ["Which two Danainae groups make up the vast directional butterfly migrations between Yercaud and Coimbatore?", ["Tigers and Crows", "Pansies and Sailers", "Swifts and Darts", "Oakblues and Royals"], "Blue Tigers, Dark Blue Tigers, Common Crows, and Double-branded Crows drive Tamil Nadu's biannual migrations.", "tirumala-limniace", "Nymphalidae", "Monitored by TNBS since 2013 across Salem, Tiruppur, and Coimbatore."],
         ["What AI identification platform created by a TNBS member identifies 923+ Indian butterfly species from photos?", ["Butterfly Vision", "WikiWings", "GhatsLens", "MothScan"], "Butterfly Vision (butterflyvision.in), built by Theivaprakasham Hari, runs Western Ghats and All India deep learning models.", "", "All", "Integrated right into our AI Identify page!"],
