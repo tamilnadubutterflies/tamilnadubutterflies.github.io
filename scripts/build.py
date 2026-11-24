@@ -18,7 +18,6 @@ MAGAZINE = ORIGINAL + "/pattampoochi-magazine"
 BUTTERFLY_VISION = "https://butterflyvision.in/"
 FACEBOOK_GROUP = "https://www.facebook.com/groups/373700319460990/"
 CONTACT = "tamilnadubutterflies@gmail.com"
-CHECKLIST_EDITION = "Pattampoochi Issue 27 (Jan-Mar 2025) Final Adopted Checklist"
 
 CONFIG_URL = ROOT / "data" / "site-url.txt"
 BASE = os.environ.get("SITE_URL", CONFIG_URL.read_text(encoding="utf-8").strip() if CONFIG_URL.exists() else "").strip()
@@ -84,7 +83,7 @@ TAG_LABELS = {
     "wg-endemic": ("Western Ghats endemic", "endemic"),
     "migratory": ("Migratory in TN", "migratory"),
     "wpa-protected": ("WPA protected", "protected"),
-    "issue-27-addition": ("Issue 27 addition", "new"),
+    "issue-27-addition": ("Recent addition", "new"),
 }
 PAGES = []
 
@@ -123,7 +122,30 @@ def license_info(license_id):
 
 
 def photo_meta(scientific, prefix, thumb=False):
-    filename, author, license_id, alt, width = PHOTOS[scientific]
+    rec = PHOTOS[scientific]
+    if isinstance(rec, dict):
+        lic_url, lic_name = license_info(rec["license"])
+        if rec.get("source") == "inaturalist":
+            return {
+                "src": rec["thumb"] if thumb else rec["full"],
+                "alt": rec["alt"],
+                "author": rec["author"],
+                "url": rec["url"],
+                "license": lic_url,
+                "licenseName": lic_name,
+                "sourceLabel": "iNaturalist observation",
+                "member": bool(rec.get("member")),
+            }
+        filename = rec["file"]
+        author = rec["author"]
+        alt = rec["alt"]
+        width = int(rec.get("width") or 0)
+        is_member = bool(rec.get("member"))
+    else:
+        filename, author, license_id, alt, width = rec
+        lic_url, lic_name = license_info(license_id)
+        is_member = False
+
     wiki_name = filename.replace(" ", "_")
     digest = hashlib.md5(wiki_name.encode(), usedforsecurity=False).hexdigest()
     media_path = f"{digest[0]}/{digest[:2]}/{quote(wiki_name)}"
@@ -134,7 +156,6 @@ def photo_meta(scientific, prefix, thumb=False):
     cached = Path("photos") / (slug(scientific) + ".jpg")
     if (ROOT / "assets" / cached).exists():
         src = prefix + "assets/" + cached.as_posix()
-    lic_url, lic_name = license_info(license_id)
     return {
         "src": src,
         "alt": alt,
@@ -142,6 +163,8 @@ def photo_meta(scientific, prefix, thumb=False):
         "url": "https://commons.wikimedia.org/wiki/File:" + quote(wiki_name),
         "license": lic_url,
         "licenseName": lic_name,
+        "sourceLabel": "Commons file",
+        "member": is_member,
     }
 
 
@@ -179,7 +202,7 @@ def photo(scientific, prefix, mode="card"):
     )
     return (
         f'<figure class="photo-large">{zoom_btn}'
-        f'<figcaption class="credit">{credit} · {link("Commons file", meta["url"])}</figcaption></figure>'
+        f'<figcaption class="credit">{credit} · {link(meta["sourceLabel"], meta["url"])}</figcaption></figure>'
     )
 
 
@@ -299,6 +322,11 @@ def species_badges_html(entry, compact=False):
     return '<div class="tag-row">' + "".join(pills) + "</div>" if pills else ""
 
 
+def is_member_photo(scientific):
+    rec = PHOTOS.get(scientific)
+    return isinstance(rec, dict) and bool(rec.get("member"))
+
+
 def species_card(entry, prefix, include_spot_btn=False):
     name, scientific, family, subfamily = (entry[key] for key in ("name", "scientific", "family", "subfamily"))
     prof = PROFILES.get(scientific, {})
@@ -306,7 +334,9 @@ def species_card(entry, prefix, include_spot_btn=False):
     tag_terms = " ".join(entry.get("tags", []))
     bv_terms = " ".join(entry.get("butterflyVision", []))
     val_term = "validated" if entry.get("validated", True) else "unvalidated pending"
-    terms = " ".join([name, scientific, family, FAMILIES[family], subfamily, *entry["aliases"], host_terms, tag_terms, bv_terms, val_term])
+    member_flag = int(is_member_photo(scientific))
+    author_term = PHOTOS[scientific].get("author", "") if isinstance(PHOTOS.get(scientific), dict) else (PHOTOS[scientific][1] if scientific in PHOTOS else "")
+    terms = " ".join([name, scientific, family, FAMILIES[family], subfamily, *entry["aliases"], host_terms, tag_terms, bv_terms, val_term, author_term])
     has_photo = int(scientific in PHOTOS)
     has_profile = int(scientific in PROFILES)
     spot_btn = ""
@@ -318,7 +348,7 @@ def species_card(entry, prefix, include_spot_btn=False):
     return (
         f'<article class="card reveal" data-species data-id="{entry["id"]}" data-name="{h(name.casefold())}" '
         f'data-sci="{h(scientific.casefold())}" data-family="{h(family)}" data-subfamily="{h(subfamily)}" '
-        f'data-terms="{h(terms)}" data-photo="{has_photo}" data-profile="{has_profile}" '
+        f'data-terms="{h(terms)}" data-photo="{has_photo}" data-member="{member_flag}" data-profile="{has_profile}" '
         f'data-validated="{int(entry.get("validated", True))}" data-tags="{h(tag_terms)}" data-bv="{h(bv_terms)}">'
         f'{photo(scientific, prefix)}<div class="card-body">'
         f'<p class="card-meta">{h(family)} · {h(subfamily)}</p>'
@@ -458,7 +488,7 @@ def home():
     validated_count = sum(1 for s in SPECIES if s.get("validated", True))
     hero = f"""<section class="hero"><div class="wrap hero-inner">{photo("Papilio crino", "", "hero")}
 <div class="hero-copy"><p class="kicker">The Nature and Butterfly Society · Tamil Nadu</p><h1>Butterflies of<br><em>Tamil Nadu</em></h1>
-<p>Explore Tamil Nadu's {len(SPECIES)}-species butterfly field guide from the Pattampoochi Issue 27 final checklist, identify sightings with Butterfly Vision AI, and follow conservation fieldwork across the state.</p>
+<p>Explore Tamil Nadu's {len(SPECIES)}-species butterfly field guide with detailed profiles and verified photos, identify sightings with Butterfly Vision AI, and follow conservation fieldwork across the state.</p>
 <search class="hero-search"><form action="butterflies/index.html" method="get" class="hero-search-form">
 <label for="hero-q" class="visually-hidden">Search 329 Tamil Nadu butterflies</label>
 <input id="hero-q" type="search" name="q" placeholder="Quick search: Peacock, Yeoman, Blue Tiger, Papilio...">
@@ -466,7 +496,7 @@ def home():
 </form></search>
 <div class="actions">{link("Explore field guide","butterflies/index.html","button outline")}{link("Identify with AI","identify/index.html","button outline")}{link("Take interactive quiz","quiz/index.html","button outline")}</div></div></div></section>
 <div class="band"><div class="wrap"><ul class="stats stats-4">
-<li><strong>{len(SPECIES)}</strong><span>Species in Issue 27 final checklist ({validated_count} validated)</span></li>
+<li><strong>{len(SPECIES)}</strong><span>Butterfly species recorded in Tamil Nadu ({validated_count} validated)</span></li>
 <li><strong>{len(FAMILIES)}</strong><span>Butterfly families across {len(TAXONOMY["subfamilies"])} subfamilies</span></li>
 <li><strong>{len(SITE["issues"])}</strong><span>Pattampoochi magazine issues</span></li>
 <li><strong>{h(SITE["butterflyVision"]["supportedTotal"])}</strong><span>Species covered on Butterfly Vision AI</span></li></ul></div></div>"""
@@ -475,8 +505,9 @@ def home():
         f'<a class="chip-link" href="butterflies/index.html?family={h(fam)}">{h(fam)} <span>({EXPECTED_FAMILY_COUNTS[fam]})</span></a>'
         for fam in FAMILIES
     )
-    guide_sec = f"""<section class="wrap section"><div class="section-head"><div><p class="kicker">Tamil Nadu field guide · Issue 27 Final Checklist</p>
-<h2>Which butterfly did you see?</h2><p class="lede">Search {len(SPECIES)} species by common name, scientific name, subfamily, host plant, or conservation status, illustrated with {len(PHOTOS)} verified Wikimedia Commons photos.</p></div>{link("Browse all 329 species","butterflies/index.html","button outline")}</div>
+    member_photo_count = sum(1 for s in SPECIES if is_member_photo(s["scientific"]))
+    guide_sec = f"""<section class="wrap section"><div class="section-head"><div><p class="kicker">Tamil Nadu field guide</p>
+<h2>Which butterfly did you see?</h2><p class="lede">Search {len(SPECIES)} species by common name, scientific name, subfamily, host plant, or photographer, complete with detailed species profiles and {len(PHOTOS)} verified photos (including {member_photo_count} by TNBS members).</p></div>{link("Browse all 329 species","butterflies/index.html","button outline")}</div>
 <div class="chip-row" aria-label="Browse by family">{family_chips}</div>
 <div class="grid">{"".join(species_card(BY_SCI[x], "") for x in FEATURED)}</div></section>"""
 
@@ -516,12 +547,13 @@ def home():
 <ul class="milestone-compact">{"".join(f'<li><strong>{h(yr)}</strong><span>{h(desc)}</span></li>' for yr, desc in SITE["about"]["milestones"][:4])}</ul></div>
 <div class="grid gallery-grid">{about_gallery}</div></div></section>"""
 
+    total_indexed = sum(len(MAGAZINE_INDEX[n]["articles"]) for n in MAGAZINE_INDEX)
     journal = f"""<section class="journal"><div class="wrap section split">{cover()}<div>
 <p class="kicker">The society's quarterly magazine</p><h2>Pattampoochi</h2>
-<p class="lede">Issue 27 (January-March 2025) delivers the 2024 Danainae migration report, Mudumalai and Pachamalai Forest Division surveys, school outreach updates, a searchable index of 127 back-issue articles, and the finalized 329-species Tamil Nadu checklist.</p>
-<div class="actions">{link("Browse all 27 issues & article index","magazine/index.html","button")}{link("Read issue 27 PDF",issue_url(27),"button outline")}</div></div></div></section>"""
+<p class="lede">Browse 27 quarterly issues and {total_indexed} indexed articles covering the 2024 Danainae migration report, Mudumalai and Pachamalai Forest Division surveys, life-cycle studies, school outreach, and state butterfly updates.</p>
+<div class="actions">{link("Browse all 27 issues & article index","magazine/index.html","button")}{link("Read latest issue (No. 27) PDF",issue_url(27),"button outline")}</div></div></div></section>"""
 
-    # Top 6 diverse recent press stories
+    # Top 6 diverse recent press & magazine reports
     press_preview = "".join(press_card(s, "") for s in SITE["press"][:6])
     elsewhere_cards = "".join(
         f'<article class="card community-card reveal"><div class="card-body"><p class="card-meta">{h(c["badge"])}</p>'
@@ -529,8 +561,8 @@ def home():
         f'<p>{link(c["cta"] + " ↗", c["url"], "small-button")}</p></div></article>'
         for c in SITE["community"][:3]
     )
-    updates = f"""<section class="wrap section"><div class="section-head"><div><p class="kicker">News &amp; press archive ({len(SITE["press"])} verified reports)</p><h2>Recently in the press</h2></div>
-{link(f"Explore all {len(SITE['press'])} press reports","news/index.html","button outline")}</div>
+    updates = f"""<section class="wrap section"><div class="section-head"><div><p class="kicker">News, magazine reports &amp; press ({len(SITE["press"])} entries)</p><h2>Recently in the press</h2></div>
+{link(f"Explore all {len(SITE['press'])} reports","news/index.html","button outline")}</div>
 <ul class="news-grid">{press_preview}</ul>
 <div class="elsewhere-block"><div class="section-head"><div><p class="kicker">Community &amp; External Portals</p><h3>Elsewhere on the web</h3></div>
 {link("See all community links","news/index.html#elsewhere","button outline")}</div>
@@ -543,7 +575,7 @@ def home():
     render(
         "",
         "Butterflies of Tamil Nadu | The Nature and Butterfly Society",
-        "Official website of The Nature and Butterfly Society (TNBS). Explore Tamil Nadu's 329-species butterfly field guide (Pattampoochi Issue 27 final checklist), Butterfly Vision AI identification, interactive quiz, hotspots, and 27 press reports.",
+        "Official website of The Nature and Butterfly Society (TNBS). Explore Tamil Nadu's 329-species butterfly field guide with full profiles, Butterfly Vision AI identification, interactive quiz, hotspots, and TNBS press & magazine reports.",
         hero + guide_sec + spotlight_sec + hotspots_sec + bv_sec + about_sec + journal + updates + cta,
         image_key="Papilio crino",
         schema={"@type": "Organization", "name": NAME, "alternateName": "TNBS", "email": CONTACT, "sameAs": [ORIGINAL, BUTTERFLY_VISION, FACEBOOK_GROUP]},
@@ -554,8 +586,9 @@ def guide():
     family_options = "".join(f'<option value="{f}">{f} · {h(common)} ({EXPECTED_FAMILY_COUNTS[f]})</option>' for f, common in FAMILIES.items())
     subfamilies = sorted({s["subfamily"] for s in SPECIES})
     subfamily_options = "".join(f'<option value="{sf}">{h(sf)}: {h(TAXONOMY["subfamilies"][sf]["group"])}</option>' for sf in subfamilies)
-    cards = sorted(SPECIES, key=lambda x: (x["scientific"] not in PHOTOS, x["scientific"] not in PROFILES, x["name"].casefold()))
+    cards = sorted(SPECIES, key=lambda x: (x["scientific"] not in PHOTOS, not is_member_photo(x["scientific"]), x["scientific"] not in PROFILES, x["name"].casefold()))
     photo_count = sum(1 for s in SPECIES if s["scientific"] in PHOTOS)
+    member_count = sum(1 for s in SPECIES if is_member_photo(s["scientific"]))
     profile_count = sum(1 for s in SPECIES if s["scientific"] in PROFILES)
 
     family_pills = ['<button type="button" class="choice" data-family-pill="" aria-pressed="true">All 329</button>']
@@ -566,7 +599,7 @@ def guide():
 
     body = heading(
         "Butterflies of Tamil Nadu",
-        f"Complete Pattampoochi Issue 27 Final Adopted Checklist: {len(SPECIES)} species across {len(FAMILIES)} families and {len(subfamilies)} subfamilies ({photo_count} with verified Wikimedia photos, {profile_count} with detailed field profiles).",
+        f"{len(SPECIES)} Tamil Nadu butterfly species across {len(FAMILIES)} families and {len(subfamilies)} subfamilies ({photo_count} with verified photographs, {member_count} by TNBS members, {profile_count} with detailed field profiles).",
         "Field guide",
     )
     body += f"""<div class="wrap section" data-guide>
@@ -588,23 +621,23 @@ def guide():
 <div data-enhancement hidden>
 <div class="choices family-pills" role="group" aria-label="Quick filter by butterfly family">{"".join(family_pills)}</div>
 <search><form class="filters">
-<div class="field grow"><label for="guide-q">Search butterflies</label><input id="guide-q" type="search" name="q" placeholder="Name, scientific name, subfamily, host plant..."></div>
+<div class="field grow"><label for="guide-q">Search butterflies</label><input id="guide-q" type="search" name="q" placeholder="Name, scientific name, subfamily, host plant, photographer..."></div>
 <div class="field"><label for="guide-family">Family</label><select id="guide-family" name="family"><option value="">All families (329)</option>{family_options}</select></div>
 <div class="field"><label for="guide-subfamily">Subfamily</label><select id="guide-subfamily" name="subfamily"><option value="">All subfamilies (21)</option>{subfamily_options}</select></div>
 <div class="field"><label for="guide-tag">Highlight / Filter</label><select id="guide-tag" name="tag">
 <option value="">All entries</option>
 <option value="spotted">My spotted butterflies</option>
+<option value="member">Photographed by TNBS members ({member_count})</option>
 <option value="photo">With verified photo ({photo_count})</option>
-<option value="profile">With rich field profile ({profile_count})</option>
 <option value="wg-endemic">Western Ghats endemic</option>
 <option value="migratory">Migratory in Tamil Nadu</option>
 <option value="wpa-protected">WPA protected species</option>
-<option value="issue-27-addition">Issue 27 new additions (2)</option>
+<option value="issue-27-addition">Recent state additions (2)</option>
 <option value="unvalidated">Awaiting TN validation (4)</option>
 <option value="bv">Butterfly Vision AI supported</option>
 </select></div>
 <div class="field"><label for="guide-sort">Sort by</label><select id="guide-sort" name="sort">
-<option value="featured">Photos &amp; profiles first</option>
+<option value="featured">Photos &amp; TNBS members first</option>
 <option value="name">Common name (A-Z)</option>
 <option value="sci">Scientific name (A-Z)</option>
 <option value="id">Checklist order (#1-329)</option>
@@ -613,15 +646,15 @@ def guide():
 <div class="guide-tools"><p role="status" aria-live="polite" data-results></p><div class="choices" aria-label="View options">
 <button class="choice" type="button" data-view="grid" aria-pressed="true">Cards</button>
 <button class="choice" type="button" data-view="list" aria-pressed="false">List</button></div></div></div>
-<noscript><p class="notice">The full 329-species Issue 27 final checklist is below. Use your browser's find command to search names.</p></noscript>
+<noscript><p class="notice">All {len(SPECIES)} butterflies of Tamil Nadu are listed below. Use your browser's find command to search names.</p></noscript>
 <p class="notice" data-empty hidden>No butterflies match those filters. Try clearing a filter or searching another name.</p>
 <div class="grid guide-grid" data-cards>{"".join(species_card(s, "../", include_spot_btn=True) for s in cards)}</div>
 <button type="button" class="button outline more" data-more hidden>Show more species</button>
-<p class="caption actions">Checklist provenance, family counts, and photo credits are listed on the {link("sources page","../sources/index.html")}.</p></div>"""
+<p class="caption actions">Checklist history, family counts, research papers, and photo credits are listed on the {link("sources page","../sources/index.html")}.</p></div>"""
     render(
         "butterflies/",
         "Butterflies of Tamil Nadu field guide",
-        f"Search all {len(SPECIES)} Tamil Nadu butterflies from the Pattampoochi Issue 27 final checklist, track your personal Life List, filter by family/subfamily/conservation status, and inspect Wikimedia photos.",
+        f"Search all {len(SPECIES)} Tamil Nadu butterflies, track your personal Life List, filter by family, subfamily, or TNBS member photographs, and read detailed field profiles.",
         body,
         image_key="Papilio crino",
     )
@@ -678,7 +711,7 @@ def detail(entry):
     sub_tax = TAXONOMY["subfamilies"][subfamily]
 
     fact_rows = [
-        f'<div><dt>Checklist ID</dt><dd>#{entry["id"]} of {len(SPECIES)} (Issue 27 Final)</dd></div>',
+        f'<div><dt>Checklist ID</dt><dd>#{entry["id"]} of {len(SPECIES)}</dd></div>',
         f'<div><dt>Common name</dt><dd>{h(name)}</dd></div>',
     ]
     if isinstance(prof, dict) and prof.get("tamilName"):
@@ -695,7 +728,6 @@ def detail(entry):
     fact_rows.append(f'<div><dt>TN validation status</dt><dd>{h(val_label)}</dd></div>')
     if isinstance(prof, dict) and prof.get("wpaStatus"):
         fact_rows.append(f'<div><dt>Legal protection</dt><dd>{h(prof["wpaStatus"])}</dd></div>')
-    fact_rows.append(f'<div><dt>Checklist source</dt><dd>{link(CHECKLIST_EDITION, issue_url(27))} · {link("ResearchGate DOI", CHECKLIST)}</dd></div>')
 
     profile_html = ""
     if isinstance(prof, dict):
@@ -770,7 +802,7 @@ def detail(entry):
     render(
         path,
         f"{name} ({scientific})",
-        f"{name} ({scientific}) in Tamil Nadu's Pattampoochi Issue 27 final butterfly checklist. Explore taxonomy, field identification notes, host plants, Butterfly Vision support, and open-licensed photos.",
+        f"{name} ({scientific}) in the Butterflies of Tamil Nadu field guide. Explore taxonomy, identification marks, host plants, Butterfly Vision support, and verified photographs.",
         body,
         active="butterflies/",
         image_key=scientific,
@@ -820,10 +852,10 @@ def identify():
 <p class="caption" data-bv-model-desc>Recommended for Tamil Nadu hills, forests, and Western Ghats surveys ({total_covered} of 329 TN checklist species covered).</p>
 
 <div class="bv-dropzone" data-bv-drop>
-<input id="bv-file" type="file" accept="image/jpeg,image/png,image/webp" class="visually-hidden">
-<p><strong>Select or drop a butterfly photo</strong> (JPG, PNG, or WebP)</p>
-<p class="caption">Clear, cropped photos above 600x600px give the best species predictions.</p>
-<div class="actions"><label for="bv-file" class="button">Choose butterfly photo</label>{link("Open butterflyvision.in directly", BUTTERFLY_VISION, "button outline")}</div>
+<label for="bv-file" class="bv-file-label">Choose butterfly photo (JPG, PNG, or WebP)</label>
+<input id="bv-file" name="butterfly_photo" type="file" accept="image/jpeg,image/png,image/webp" class="bv-file-input" aria-describedby="bv-file-help">
+<p id="bv-file-help" class="caption">Use Browse / Choose File above or drag and drop a photo here. Clear, cropped photos above 600x600px give the best species predictions.</p>
+<div class="actions">{link("Open butterflyvision.in directly", BUTTERFLY_VISION, "button outline")}</div>
 </div>
 
 <div class="bv-preview" data-bv-preview hidden>
@@ -900,7 +932,7 @@ def magazine():
         "Publications",
     )
     body += f"""<section class="journal"><div class="wrap compact split">{cover()}<div><p class="kicker">Issue 27 · January-March 2025</p><h2>Latest issue highlights</h2>
-<p>Issue 27 presents the 2024 Danainae migration update, Mudumalai Tiger Reserve (185+ spp.) and Pachamalai Hills (126 spp.) surveys, school Tamil poster outreach across 13+ districts, a full back-issues article index (2017-2024), and the finalized 329-species Tamil Nadu checklist update.</p>
+<p>Issue 27 presents the 2024 Danainae migration update, Mudumalai Tiger Reserve (185+ spp.) and Pachamalai Hills (126 spp.) surveys, school Tamil poster outreach across 13+ districts, a full back-issues article index (2017-2024), and the updated 329-species Tamil Nadu checklist.</p>
 {link("Open issue 27 PDF",issue_url(27),"button")}</div></div></section>
 <section class="wrap section" data-records><h2>All {len(SITE["issues"])} issues &amp; searchable article index</h2>
 <div data-enhancement hidden><search><form class="filters">
@@ -912,14 +944,14 @@ def magazine():
     render(
         "magazine/",
         "Pattampoochi magazine archive",
-        "Browse all 27 issues and search 127 indexed articles in Pattampoochi, The Nature and Butterfly Society's quarterly magazine on Tamil Nadu butterflies.",
+        f"Browse all 27 issues and search {total_indexed} indexed articles in Pattampoochi, The Nature and Butterfly Society's quarterly magazine on Tamil Nadu butterflies.",
         body,
     )
 
 
 def news():
     updates = [
-        ("2025", "Society Updates", "TNBS", "Pattampoochi Issue 27 adopted as final TNBS checklist", "The Jan-Mar 2025 issue confirms 329 species (325 validated in Tamil Nadu) with additions Common Palmfly and Cloud Forest Silverline.", local("../", "magazine/") + "#issue-27"),
+        ("2025", "Society Updates", "TNBS", "Tamil Nadu butterfly checklist reaches 329 species", "Confirmed 325 validated species and 4 priority targets across 6 families, adding Common Palmfly and Cloud Forest Silverline.", local("../", "butterflies/")),
         ("2025", "Society Updates", "TNBS", "Free Tamil butterfly posters reach 13+ districts", "TNBS government school outreach expanded across Chennai, Salem, Krishnagiri, Tiruppur, Dharmapuri, Cuddalore, and The Nilgiris.", local("../", "about/") + "#outreach"),
         ("2024", "Society Updates", "TNBS", "Tamilnadu Butterflies Facebook group marks 10 years", "Launched on 02 October 2014, TNBS's flagship citizen-science forum now connects 2,340+ contributors across all 38 districts of Tamil Nadu and Puducherry.", FACEBOOK_GROUP),
         ("2024", "Society Updates", "TNBS", "Butterfly Vision surpasses 923+ supported Indian species", "TNBS member Theivaprakasham Hari's AI identification tool covers 319 of Tamil Nadu's 329 checklist species.", local("../", "identify/")),
@@ -959,14 +991,14 @@ def news():
 
     body = heading(
         "News, press & community archive",
-        f"{len(SITE['press'])} verified newspaper reports (The Hindu, The New Indian Express, The Times of India) spanning 2019-2026 alongside TNBS updates and community links across the web.",
+        f"{len(SITE['press'])} verified newspaper articles, peer-reviewed research papers, and Pattampoochi magazine feature reports alongside TNBS updates and community links across the web.",
     )
     body += f"""<section class="wrap section" data-records>
 {lead_html}
 <div data-enhancement hidden>
 <div class="choices" role="group" aria-label="Filter coverage by topic">{"".join(cat_pills)}</div>
 <search><form class="filters">
-<div class="field grow"><label for="news-q">Search headlines, places &amp; species</label><input id="news-q" type="search" name="q" placeholder="Try Mudumalai, Pachamalai, Singanallur, Vellalore, Sirumalai, Kallar..."></div>
+<div class="field grow"><label for="news-q">Search headlines, places &amp; species</label><input id="news-q" type="search" name="q" placeholder="Try Mudumalai, Pachamalai, Pattampoochi, Ypthima, Singanallur, Vellalore..."></div>
 <div class="field"><label for="news-source">Publication</label><select id="news-source" name="source"><option value="">All publications</option>{sources_opts}</select></div>
 <div class="field"><label for="news-year">Year</label><select id="news-year" name="year"><option value="">All years</option>{year_opts}</select></div>
 <input type="hidden" name="category" value="">
@@ -985,7 +1017,7 @@ def news():
     render(
         "news/",
         "News, press & community archive",
-        "Explore 27 newspaper features on TNBS surveys, butterfly migrations, Vellalore Butterfly Park, Singanallur Lake, and Tamil Nadu community channels.",
+        f"Explore {len(SITE['press'])} verified press articles, Pattampoochi magazine reports, Journal of Threatened Taxa research, and Tamil Nadu butterfly community links.",
         body,
         image_key="Tirumala limniace",
     )
@@ -1027,6 +1059,20 @@ def about():
     )
     milestones = "".join(f'<li><strong>{h(yr)}</strong><p>{h(desc)}</p></li>' for yr, desc in ab["milestones"])
     team_items = "".join(f'<li>{h(member)}</li>' for member in ab["leadership"])
+    papers_cards = []
+    for paper in SITE.get("researchPapers", []):
+        sp_link = ""
+        if paper.get("species") and paper["species"] in BY_SCI:
+            sp = BY_SCI[paper["species"]]
+            sp_link = link(f'View {sp["name"]} profile →', local("../", route(sp)), "press-species")
+        doi_link = link("DOI", paper["doiUrl"]) if paper.get("doiUrl") and paper["doiUrl"] != paper["url"] else ""
+        links_row = " · ".join(x for x in [link("Read article / record ↗", paper["url"]), doi_link, sp_link] if x)
+        papers_cards.append(
+            f'<li class="news-card reveal"><p class="card-meta">{h(paper["authors"])} · {h(paper["venue"])}</p>'
+            f'<h3>{link(paper["title"], paper["url"])}</h3><p>{h(paper["summary"])}</p>'
+            f'<p class="news-card-foot">{links_row}</p></li>'
+        )
+    papers_html = "".join(papers_cards)
 
     body = heading(
         "About The Nature and Butterfly Society",
@@ -1048,7 +1094,7 @@ def about():
 
 <section class="journal"><div class="wrap section">
 <p class="kicker">In the field &amp; classroom</p><h2>TNBS in action</h2>
-<p class="lede">Highlights from Forest Division butterfly surveys, community biodiversity counts, and school education programmes documented in Pattampoochi Issue 27. Click any photograph to inspect it full-size.</p>
+<p class="lede">Highlights from Forest Division butterfly surveys, community biodiversity counts, and school education programmes across Tamil Nadu. Click any photograph to inspect it full-size.</p>
 <div class="grid gallery-grid">{gallery}</div></div></section>
 
 <section id="outreach" class="wrap section split">
@@ -1060,6 +1106,11 @@ def about():
 <div class="ai-card"><h3>TNBS Government School Poster Project</h3>
 <p>TNBS prints and distributes free Tamil butterfly awareness posters and beginner booklets to government school teachers across Tamil Nadu (and English posters at nominal cost for nature clubs).</p>
 <div class="actions">{link("Request free Tamil school posters", ab["posterFormUrl"], "button")}{link("Browse activities", "../activities/index.html", "button outline")}</div></div></div></section>
+
+<section id="research" class="journal"><div class="wrap section">
+<p class="kicker">Scientific Contributions</p><h2>Peer-reviewed research &amp; publications</h2>
+<p class="lede">Original life-cycle discoveries, state checklist datasets, and computer-vision research authored by TNBS members.</p>
+<ul class="news-grid">{papers_html}</ul></div></section>
 
 <section class="dark" id="get-involved"><div class="wrap section content"><p class="kicker">Join the effort</p><h2>Get involved with TNBS</h2>
 <h3>Report a sighting</h3><p>Send a clear photo, date, location, and habitat notes, especially for the four checklist entries awaiting validated Tamil Nadu confirmation (Palni Sailer, Tamil Oakblue, Common Awl, and Coorg Forest Hopper).</p>
@@ -1088,37 +1139,45 @@ def sources():
         f'<tr><th scope="row">{h(fam)} ({h(FAMILIES[fam])})</th><td>{v1}</td><td><strong>{EXPECTED_FAMILY_COUNTS[fam]}</strong></td></tr>'
         for fam, v1 in [("Papilionidae", 19), ("Pieridae", 32), ("Nymphalidae", 96), ("Riodinidae", 2), ("Lycaenidae", 91), ("Hesperiidae", 83)]
     )
-    body = heading("Sources and photo credits", "Checklist provenance, Pattampoochi Issue 27 adoption record, taxonomy corrections, and open-licensed photo attributions.")
+    member_counts = {}
+    for s in sorted(PHOTOS):
+        if is_member_photo(s):
+            author = PHOTOS[s]["author"]
+            member_counts[author] = member_counts.get(author, 0) + 1
+    member_summary = ", ".join(f"{h(k)}: {v} species" for k, v in sorted(member_counts.items()))
+    research_items = "".join(
+        f'<li>{link(p["title"], p["url"])} ({h(p["authors"])}, {h(p["venue"])})</li>'
+        for p in SITE.get("researchPapers", [])
+    )
+    body = heading("Sources and photo credits", "Tamil Nadu checklist provenance, peer-reviewed research publications, taxonomy notes, and Creative Commons photo attributions.")
     body += f"""<section class="wrap section content">
-<h2>Pattampoochi Issue 27 Adopted Final Checklist</h2>
-<p>This website adopts the <strong>Pattampoochi Issue 27 (January-March 2025)</strong> Tamil Nadu Butterfly Checklist update by A. Pavendhan as final: <strong>{len(SPECIES)} species across {len(FAMILIES)} families</strong>, with <strong>325 validated species</strong> and 4 target species awaiting validated photographic records in Tamil Nadu.</p>
-<p>Latest Issue 27 checklist additions highlighted in the field guide: {link("Common Palmfly", local("../", route(BY_SCI["Elymnias hypermnestra"])))} (<i>Elymnias hypermnestra</i>) and {link("Cloud Forest Silverline", local("../", route(BY_SCI["Cigaritis meghamalaiensis"])))} (<i>Cigaritis meghamalaiensis</i>, Naicker et al. 2023).</p>
+<h2>Tamil Nadu Butterfly Checklist</h2>
+<p>This website presents TNBS's <strong>{len(SPECIES)}-species Tamil Nadu Butterfly Checklist across {len(FAMILIES)} families</strong> (compiled and updated through <em>Pattampoochi</em>, with <strong>325 validated species</strong> and 4 priority species awaiting validated photographic records in Tamil Nadu).</p>
+<p>Recent state additions highlighted in the field guide include {link("Common Palmfly", local("../", route(BY_SCI["Elymnias hypermnestra"])))} (<i>Elymnias hypermnestra</i>) and {link("Cloud Forest Silverline", local("../", route(BY_SCI["Cigaritis meghamalaiensis"])))} (<i>Cigaritis meghamalaiensis</i>, Naicker et al. 2023).</p>
 
-<table class="data-table"><caption>Tamil Nadu Butterfly Checklist family counts: 2015 v1 vs. Issue 27 Final (329 species)</caption>
-<thead><tr><th scope="col">Family</th><th scope="col">2015 v1</th><th scope="col">Issue 27 Final</th></tr></thead>
+<table class="data-table"><caption>Tamil Nadu Butterfly Checklist family counts: 2015 v1 vs. 2025 (329 species)</caption>
+<thead><tr><th scope="col">Family</th><th scope="col">2015 v1</th><th scope="col">2025</th></tr></thead>
 <tbody>{table_rows}</tbody>
 <tfoot><tr><th scope="row">Total species</th><td>323</td><td><strong>329 (325 validated)</strong></td></tr></tfoot></table>
 
 <h3>Four checklist species awaiting validated Tamil Nadu confirmation</h3>
 <ul>{unvalidated_list}</ul>
 
-<h3>Checklist timeline &amp; reference links</h3>
-<ul>
-<li><strong>2015 (v1):</strong> 323 species (271 validated) → <strong>2018 (v2):</strong> 324 → <strong>2019 (v3):</strong> 325 → <strong>2022 (v4):</strong> 328 → <strong>2024-2025 (v6 / Issue 27 Final):</strong> 329 species (325 validated).</li>
-<li>{link("Pattampoochi Issue 27 PDF (Jan-Mar 2025)", issue_url(27))}</li>
-<li>{link("TNBS Checklist DOI (ResearchGate)", CHECKLIST)}</li>
+<h3>Peer-reviewed research &amp; checklist references</h3>
+<ul>{research_items}
+<li>{link("Latest Pattampoochi checklist issue PDF", issue_url(27))}</li>
 <li>{link("Original TNBS checklist archive page", ORIGINAL + "/butterfly-checklist-of-tamil-nadu")}</li>
 <li>{link("Butterfly Vision AI species registry", BUTTERFLY_VISION)}</li></ul>
 
 <h2>Photographs &amp; open licenses ({len(PHOTOS)} species illustrated)</h2>
-<p>Field guide photographs are either locally cached verified open-licensed files (<i>Papilio crino</i> hero) or verified open-licensed Wikimedia Commons images (CC BY, CC BY-SA, CC0, or Public Domain) paired with photographer credits and license links. Activities and About Us photographs come from Pattampoochi Issue 27 TNBS field reports.</p>
-<details class="taxonomy-disclosure"><summary>Show all {len(PHOTOS)} Wikimedia Commons species photo attributions</summary>
+<p>Field guide photographs combine Creative Commons licensed field observations contributed by TNBS members ({member_summary}) with verified open-licensed Wikimedia Commons images, paired with photographer credits and license links. Activities and About Us photographs come from TNBS fieldwork and outreach archives.</p>
+<details class="taxonomy-disclosure"><summary>Show all {len(PHOTOS)} species photo attributions</summary>
 <div class="disclosure-body"><ul class="credit-list">{photos_list}</ul></div></details>
 </section>"""
     render(
         "sources/",
         "Checklist sources and photo credits",
-        "Read the Pattampoochi Issue 27 final checklist provenance, family breakdown, and full Creative Commons photo attributions.",
+        "Read the Tamil Nadu Butterfly Checklist history, peer-reviewed publications including Journal of Threatened Taxa #6656, and complete photographer attributions.",
         body,
     )
 
@@ -1126,7 +1185,7 @@ def sources():
 def quiz():
     body = heading(
         "Interactive Butterfly Quiz",
-        "Challenge yourself with four interactive modes: Photo ID across 328 species, Mixed Field Facts, Timed Rapid Fire, or Scientific Name Match, with streaks, lifelines, personal bests, and shareable score cards.",
+        f"Challenge yourself with four interactive modes: Photo ID across {len(PHOTOS)} species, Mixed Field Facts, Timed Rapid Fire, or Scientific Name Match, with streaks, lifelines, personal bests, and shareable score cards.",
     )
     body += """<section class="wrap section"><div class="quiz" data-quiz>
 <div data-quiz-start>
@@ -1134,8 +1193,8 @@ def quiz():
 <div class="quiz-best" data-quiz-best hidden></div></div>
 
 <div class="quiz-mode-grid" role="group" aria-label="Quiz mode">
-<button type="button" class="mode-card" data-mode="photo" aria-pressed="true"><strong>Photo ID Challenge</strong><span>Identify real Wikimedia Commons butterfly photos from Tamil Nadu's checklist.</span></button>
-<button type="button" class="mode-card" data-mode="mixed" aria-pressed="false"><strong>Mixed Field Quiz</strong><span>Blend butterfly photos with TNBS migration, host-plant, and Issue 27 questions.</span></button>
+<button type="button" class="mode-card" data-mode="photo" aria-pressed="true"><strong>Photo ID Challenge</strong><span>Identify real field photographs of butterflies from Tamil Nadu.</span></button>
+<button type="button" class="mode-card" data-mode="mixed" aria-pressed="false"><strong>Mixed Field Quiz</strong><span>Blend butterfly photos with TNBS migration, host-plant, and ecology questions.</span></button>
 <button type="button" class="mode-card" data-mode="rapid" aria-pressed="false"><strong>Timed Rapid Fire</strong><span>20 seconds per question: build streaks and earn speed bonus points!</span></button>
 <button type="button" class="mode-card" data-mode="scientific" aria-pressed="false"><strong>Scientific Name Match</strong><span>Match Tamil Nadu common names to their binomial scientific names.</span></button>
 </div>
@@ -1255,21 +1314,22 @@ def build_quiz_data():
     facts = [
         ["Which butterfly is Tamil Nadu's official State Butterfly (தமிழ் மறவன்)?", ["Tamil Yeoman", "Common Banded Peacock", "Southern Birdwing", "Red Pierrot"], "Tamil Nadu adopted the Tamil Yeoman (Cirrochroa thais) in 2019.", "cirrochroa-thais", "Nymphalidae", "Look for orange wings crossed by dark markings and a silvery-pale underside band."],
         ["Which butterfly species appears at the heart of The Nature and Butterfly Society (TNBS) emblem?", ["Common Banded Peacock", "Blue Mormon", "Tamil Yeoman", "Lime Butterfly"], "Papilio crino, the Common Banded Peacock, features emerald-green wings with a turquoise median band and serves as TNBS's emblem.", "papilio-crino", "Papilionidae", "An emerald-green swallowtail whose caterpillars feed on East Indian Satinwood."],
-        ["How many butterfly species are recorded in TNBS's Pattampoochi Issue 27 final checklist?", ["329 species", "285 species", "312 species", "410 species"], "Issue 27 finalizes 329 species across 6 families (325 validated in Tamil Nadu, with 4 awaiting confirmation).", "", "All", "The count increased from 323 in 2015 and 328 in 2022."],
-        ["Which two newly added species are highlighted in Pattampoochi Issue 27?", ["Common Palmfly & Cloud Forest Silverline", "Blue Mormon & Painted Lady", "Crimson Rose & Yamfly", "Peacock Pansy & Rice Swift"], "Elymnias hypermnestra and Cigaritis meghamalaiensis (described from Meghamalai in 2023) brought the state list to 329.", "cigaritis-meghamalaiensis", "Lycaenidae", "One feeds on palms around Chennai and Sirumalai; the other is a newly described Theni hill silverline."],
+        ["How many butterfly species are documented in Tamil Nadu's state butterfly checklist?", ["329 species", "285 species", "312 species", "410 species"], "TNBS records 329 species across 6 families (325 validated in Tamil Nadu, with 4 awaiting confirmation).", "", "All", "The count increased from 323 in 2015 and 328 in 2022 to 329 in 2025."],
+        ["Which two recent species additions expanded the Tamil Nadu checklist to 329 species?", ["Common Palmfly & Cloud Forest Silverline", "Blue Mormon & Painted Lady", "Crimson Rose & Yamfly", "Peacock Pansy & Rice Swift"], "Elymnias hypermnestra and Cigaritis meghamalaiensis (described from Meghamalai in 2023) brought the state list to 329.", "cigaritis-meghamalaiensis", "Lycaenidae", "One feeds on palms around Chennai and Sirumalai; the other is a newly described Theni hill silverline."],
         ["Which butterfly has a white underside with black markings and a bold orange hindwing border?", ["Red Pierrot", "Common Pierrot", "Banded Blue Pierrot", "Common Grass Yellow"], "The Red Pierrot (Talicada nyseus) breeds inside succulent Kalanchoe leaves.", "talicada-nyseus", "Lycaenidae", "Often seen fluttering gently near courtyard Kalanchoe plants."],
         ["Which large swallowtail is Tamil Nadu's largest butterfly and a Western Ghats endemic?", ["Southern Birdwing", "Blue Mormon", "Clipper", "Malabar Banded Peacock"], "Troides minos reaches up to 190 mm wingspan with golden-yellow hindwings.", "troides-minos", "Papilionidae", "Also known as the Sahyadri Birdwing."],
         ["Which species was observed migrating in thousands during the June 2024 Mudumalai survey?", ["Common Grass Yellow", "Tamil Yeoman", "Blue Pansy", "Crimson Rose"], "TNBS and Forest Department teams documented thousands of Common Grass Yellows (Eurema hecabe) moving in Mudumalai.", "eurema-hecabe", "Pieridae", "A small yellow pierid with two dark spots inside its underside forewing cell."],
         ["Which two Danainae groups make up the vast directional butterfly migrations between Yercaud and Coimbatore?", ["Tigers and Crows", "Pansies and Sailers", "Swifts and Darts", "Oakblues and Royals"], "Blue Tigers, Dark Blue Tigers, Common Crows, and Double-branded Crows drive Tamil Nadu's biannual migrations.", "tirumala-limniace", "Nymphalidae", "Monitored by TNBS since 2013 across Salem, Tiruppur, and Coimbatore."],
         ["What AI identification platform created by a TNBS member identifies 923+ Indian butterfly species from photos?", ["Butterfly Vision", "WikiWings", "GhatsLens", "MothScan"], "Butterfly Vision (butterflyvision.in), built by Theivaprakasham Hari, runs Western Ghats and All India deep learning models.", "", "All", "Integrated right into our AI Identify page!"],
-        ["Which Schedule II mistletoe butterfly was a highlight of the Dec 2024 Pachamalai Hills survey?", ["Banded Royal", "Tiny Grass Blue", "Common Mormon", "Lemon Pansy"], "Rachana jalindra was recorded in healthy numbers in thick Pachamalai forest (Pattampoochi Issue 27).", "rachana-jalindra", "Lycaenidae", "Its underside is cleanly split between snow-white outer half and golden-brown inner half."],
-        ["Which skipper featured in Issue 27 Picture Stories has pale yellow-green caterpillars feeding on Urena lobata?", ["Golden Angle", "Grass Demon", "Rice Swift", "Brown Awl"], "Caprona ransonnetti rests with spread wings and contrasts a mottled brown upperside with a chalky-white underside.", "caprona-ransonnetti", "Hesperiidae", "Belongs to Pyrginae, spread-winged flats and angles."],
+        ["Which Schedule II mistletoe butterfly was a highlight of the Dec 2024 Pachamalai Hills survey?", ["Banded Royal", "Tiny Grass Blue", "Common Mormon", "Lemon Pansy"], "Rachana jalindra was recorded in healthy numbers in thick Pachamalai forest.", "rachana-jalindra", "Lycaenidae", "Its underside is cleanly split between snow-white outer half and golden-brown inner half."],
+        ["Which skipper featured in Pattampoochi has pale yellow-green caterpillars feeding on Urena lobata?", ["Golden Angle", "Grass Demon", "Rice Swift", "Brown Awl"], "Caprona ransonnetti rests with spread wings and contrasts a mottled brown upperside with a chalky-white underside.", "caprona-ransonnetti", "Hesperiidae", "Belongs to Pyrginae, spread-winged flats and angles."],
+        ["Which butterfly's early stages and Cynodon dactylon (Bermuda grass) host plant were first documented in India by TNBS authors in 2021?", ["White Four-ring", "Common Four-ring", "Common Five-ring", "Redeye"], "Hari Theivaprakasham, Hari Ramanasaran, and Appavu Pavendhan published Ypthima ceylonica's immature stages in Journal of Threatened Taxa.", "ypthima-ceylonica", "Nymphalidae", "A bright white-hindwinged ringlet common on short lawn grasses."],
         ["Which member of Lycaenidae in Tamil Nadu has carnivorous caterpillars that prey on mealybugs?", ["Apefly", "Monkey Puzzle", "Indian Sunbeam", "Pea Blue"], "Spalgis epius larvae eat mealybugs instead of plant leaves, and its pupa resembles a miniature monkey face.", "spalgis-epius", "Lycaenidae", "Its silvery-grey underside is scribbled with fine wavy brown lines."],
         ["How many walking legs does a brush-footed butterfly (Nymphalidae) use when perching?", ["Four", "Six", "Two", "Eight"], "Nymphalid forelegs are reduced to short brush-like structures, so they stand on their middle and hind pairs.", "", "Nymphalidae", "That anatomical quirk gives brush-footed butterflies their English family name."],
         ["Which mimicry pair involves a distasteful red-bodied swallowtail and a harmless female morph?", ["Crimson Rose & Common Mormon", "Blue Tiger & Plain Tiger", "Common Jezebel & Psyche", "Lime Butterfly & Common Jay"], "Female Common Mormons (romulus form) mimic the distasteful Crimson Rose (Pachliopta hector).", "papilio-polytes", "Papilionidae", "True Rose swallowtails have bright crimson-red bodies; mimics keep black bodies."],
         ["What host plant do caterpillars of the Grass Demon (Udaspes folus) feed on?", ["Turmeric and ginger", "Crown flower (Calotropis)", "Curry leaf", "Coconut palm"], "Grass Demon larvae roll leaves of turmeric (Curcuma) and ginger (Zingiber) plants.", "udaspes-folus", "Hesperiidae", "Look for a dark skipper with a big white central patch on the hindwing."],
         ["Which detail turns a butterfly photograph into a reliable scientific sighting record?", ["Date, exact locality & habitat notes", "Camera brand & megapixel count", "Image file format alone", "Zoom lens focal length"], "Date and locality allow citizen-science records to track seasonality, range shifts, and migrations.", "", "All", "TNBS's checklist relies on verified place-and-date observations."],
-        ["Which hill hotspot was documented in Issue 27's Jan-Mar 2025 issue with 185+ monsoon survey species?", ["Mudumalai Tiger Reserve", "Point Calimere", "Vandalur Park", "Yelagiri Lake"], "Sixteen teams covering 8 ranges recorded 185+ butterfly species in Mudumalai Tiger Reserve in June 2024.", "", "All", "A Nilgiri Biosphere Reserve tiger reserve at the Tamil Nadu-Kerala-Karnataka tri-junction."],
+        ["Which Nilgiri Biosphere tiger reserve recorded 185+ butterfly species across 8 ranges during the June 2024 monsoon survey?", ["Mudumalai Tiger Reserve", "Point Calimere", "Vandalur Park", "Yelagiri Lake"], "Sixteen teams covering 8 ranges recorded 185+ butterfly species in Mudumalai Tiger Reserve in June 2024.", "", "All", "Located at the Tamil Nadu-Kerala-Karnataka tri-junction."],
         ["Which family is Tamil Nadu's smallest butterfly family with just two Plum Judy species?", ["Riodinidae (Metalmarks)", "Papilionidae (Swallowtails)", "Pieridae (Whites & yellows)", "Hesperiidae (Skippers)"], "Riodinidae has 2 entries in Tamil Nadu: Straight Plum Judy (Abisara echerius) and Plum Judy (Abisara bifasciata).", "abisara-echerius", "Riodinidae", "Shade-loving maroon-brown butterflies that turn abruptly right after landing."],
         ["Which butterfly's female closely mimics the orange-and-black Plain Tiger while its male is jet-black with violet-white ovals?", ["Danaid Eggfly", "Common Baron", "Blue Admiral", "Painted Lady"], "Hypolimnas misippus displays dramatic sexual dimorphism and Batesian mimicry.", "hypolimnas-misippus", "Nymphalidae", "Females lack the cluster of tiny black dots at the hindwing centre found on true Plain Tigers."],
         ["Which migratory painted nymphalid was spotted near Sivaganga in June 2026 press reports?", ["Painted Lady", "Indian Red Admiral", "Blue Pansy", "Grey Count"], "Vanessa cardui is a celebrated long-distance migrant tracked in Tamil Nadu hills and plains.", "vanessa-cardui", "Nymphalidae", "Orange-pink wings with black, white-spotted forewing tips."]
@@ -1294,14 +1354,16 @@ def write_redirect(old_path, target_rel, title):
 
 def main():
     if len(SPECIES) != 329 or len({route(s) for s in SPECIES}) != len(SPECIES):
-        raise SystemExit("Expected 329 distinct species routes for the Issue 27 final checklist.")
+        raise SystemExit("Expected 329 distinct species routes.")
     for fam, expected in EXPECTED_FAMILY_COUNTS.items():
         actual = len(BY_FAMILY.get(fam, []))
         if actual != expected:
             raise SystemExit(f"Expected {expected} species in {fam}, found {actual}.")
     if any(not entry["name"] or entry["subfamily"] not in TAXONOMY["subfamilies"] for entry in SPECIES):
         raise SystemExit("Every species needs a common name and valid subfamily in data/taxonomy.json.")
-    if not set(PHOTOS).issubset(BY_SCI) or any(not item[1] for item in PHOTOS.values()):
+    if not set(PHOTOS).issubset(BY_SCI) or any(
+        not (item.get("author") if isinstance(item, dict) else item[1]) for item in PHOTOS.values()
+    ):
         raise SystemExit("Every photo needs a checklist match and author credit.")
 
     shutil.copytree(ROOT / "assets", OUT / "assets", dirs_exist_ok=True)

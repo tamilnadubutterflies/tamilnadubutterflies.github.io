@@ -28,10 +28,10 @@
 <p class="caption" data-bv-model-desc>Recommended for Tamil Nadu hills, forests, and Western Ghats surveys (319 of 329 TN checklist species covered).</p>
 
 <div class="bv-dropzone" data-bv-drop>
-<input id="bv-file" type="file" accept="image/jpeg,image/png,image/webp" class="visually-hidden">
-<p><strong>Select or drop a butterfly photo</strong> (JPG, PNG, or WebP)</p>
-<p class="caption">Clear, cropped photos above 600x600px give the best species predictions.</p>
-<div class="actions"><label for="bv-file" class="button">Choose butterfly photo</label><a class="button outline" href="https://butterflyvision.in/" target="_blank" rel="noopener noreferrer">Open butterflyvision.in directly</a></div>
+<label for="bv-file" class="bv-file-label">Choose butterfly photo (JPG, PNG, or WebP)</label>
+<input id="bv-file" name="butterfly_photo" type="file" accept="image/jpeg,image/png,image/webp" class="bv-file-input" aria-describedby="bv-file-help">
+<p id="bv-file-help" class="caption">Use Browse / Choose File above or drag and drop a photo here. Clear, cropped photos above 600x600px give the best species predictions.</p>
+<div class="actions"><a class="button outline" href="https://butterflyvision.in/" target="_blank" rel="noopener noreferrer">Open butterflyvision.in directly</a></div>
 </div>
 
 <div class="bv-preview" data-bv-preview hidden>

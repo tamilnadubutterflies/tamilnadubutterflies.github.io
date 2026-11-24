@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # The Nature and Butterfly Society
 
-A static website for The Nature and Butterfly Society (TNBS), built for GitHub Pages and custom domains. It features the 329-species Tamil Nadu butterfly field guide (**Pattampoochi Issue 27 final adopted checklist**), 328 verified Wikimedia Commons butterfly photographs, structured taxonomic & ecology profiles, a personal **Tamil Nadu Life List** tracker, **Butterfly Vision** AI identification (`https://butterflyvision.in/`), an interactive multi-mode quiz, 27 verified press reports & community portals, an About Us gallery, and all 27 issues of *Pattampoochi* with a searchable 127-article index.
+A static website for The Nature and Butterfly Society (TNBS), built for GitHub Pages and custom domains. It features the 329-species Tamil Nadu butterfly field guide (with complete structured profiles and 328 verified photographs including CC-licensed observations by TNBS members), a personal **Tamil Nadu Life List** tracker, **Butterfly Vision** AI identification (`https://butterflyvision.in/`), an interactive multi-mode quiz, peer-reviewed research publications (including *Journal of Threatened Taxa* #6656), 49 verified press & *Pattampoochi* reports, an About Us gallery, and all 27 issues of *Pattampoochi* with a searchable 147-article index.
 
 ## Preview
 
@@ -24,15 +24,15 @@ From the project directory, run `python -m http.server 8765 --directory docs` an
 
 | File | Contents |
 | --- | --- |
-| `data/species.json` | 329 entries from the **Pattampoochi Issue 27 (Jan-Mar 2025) Final Adopted Checklist** (325 validated in TN, 4 awaiting validation), subfamilies, conservation tags, and Butterfly Vision model coverage |
+| `data/species.json` | 329 Tamil Nadu checklist entries (325 validated in TN, 4 awaiting validation), subfamilies, conservation tags, and Butterfly Vision model coverage |
 | `data/taxonomy.json` | Structured field-guide notes and photography tips for all 6 families and 21 subfamilies |
-| `data/profiles.json` | Expanded structured identification marks, Tamil Nadu range, host plants, seasonality, and field references for flagship species |
-| `data/photos.json` | Verified Wikimedia Commons filenames, photographers, Creative Commons / Public Domain licenses, and alt text (synced via `scripts/sync_photos.py`) |
-| `data/site.json` | *Pattampoochi* issue IDs, 27 verified press articles, regional hotspots, community directory, fieldwork activities, About Us milestones & gallery, and Butterfly Vision metadata |
-| `data/magazine_index.json` | Searchable index of 127 articles across *Pattampoochi* back issues and Issue 27 |
+| `data/profiles.json` | Detailed identification marks, Tamil Nadu distribution, host plants, seasonality, behaviour, and field references for all 329 species |
+| `data/photos.json` | Verified Wikimedia Commons and CC-licensed TNBS member iNaturalist photos, photographer credits, Creative Commons / Public Domain licenses, and alt text (synced via `scripts/sync_photos.py` and `scripts/sync_member_photos.py`) |
+| `data/site.json` | *Pattampoochi* issue IDs, verified press & magazine reports, peer-reviewed research papers, regional hotspots, community directory, fieldwork activities, About Us milestones & gallery, and Butterfly Vision metadata |
+| `data/magazine_index.json` | Searchable index of 147 articles spanning all 27 issues of *Pattampoochi* |
 | `assets/tnbs-logo.png`, `assets/photos/`, `assets/about/` | Official TNBS society logo, locally cached *Papilio crino* hero photograph, and authentic TNBS fieldwork/outreach photos |
 | `assets/site.css`, `assets/site.js` | Responsive editorial styling, sticky header, native `<dialog>` photo lightbox, accessible hotspot tabs, Life List tracker, field guide filters/sorting, Butterfly Vision integration, and multi-mode interactive quiz |
-| `scripts/build.py`, `scripts/sync_photos.py` | Static site generator (`docs/`) and Wikimedia Commons license-verifying photo sync script |
+| `scripts/build.py`, `scripts/sync_photos.py`, `scripts/sync_member_photos.py` | Static site generator (`docs/`), Wikimedia Commons sync script, and TNBS member iNaturalist/Commons sync script |
 
 Run `python scripts/build.py` after any data or asset edits. To enable inline direct browser predictions inside `identify/index.html` from your custom domain in addition to the built-in `butterflyvision.in` handoff, allowlist your GitHub Pages / custom domain origin in `butterflyvision.in`'s FastAPI `CORSMiddleware`.
 =======

@@ -305,6 +305,7 @@ if (guide) {
         subfamily: element.dataset.subfamily || "",
         rawSci: element.querySelector("[data-spot-btn]")?.dataset.sci || "",
         hasPhoto: element.dataset.photo === "1",
+        hasMemberPhoto: element.dataset.member === "1",
         hasProfile: element.dataset.profile === "1",
         validated: element.dataset.validated === "1",
         tags: new Set((element.dataset.tags || "").split(" ").filter(Boolean)),
@@ -346,6 +347,7 @@ if (guide) {
         if (!chosen) return true;
         if (chosen === "spotted") return spottedSet.has(card.rawSci);
         if (chosen === "photo") return card.hasPhoto;
+        if (chosen === "member") return card.hasMemberPhoto;
         if (chosen === "profile") return card.hasProfile;
         if (chosen === "unvalidated") return !card.validated;
         if (chosen === "bv") return card.hasBv;
@@ -357,6 +359,7 @@ if (guide) {
         if (mode === "name") return a.name.localeCompare(b.name);
         if (mode === "sci") return a.sci.localeCompare(b.sci);
         return Number(b.hasPhoto) - Number(a.hasPhoto)
+            || Number(b.hasMemberPhoto) - Number(a.hasMemberPhoto)
             || Number(b.hasProfile) - Number(a.hasProfile)
             || a.name.localeCompare(b.name);
     }
@@ -712,10 +715,12 @@ if (bvWidget) {
         const file = e.dataTransfer?.files?.[0];
         if (file) handleSelectedFile(file);
     });
+    fileInput.addEventListener("click", () => {
+        fileInput.value = "";
+    });
     fileInput.addEventListener("change", (e) => {
         const file = e.target.files?.[0];
         if (file) handleSelectedFile(file);
-        e.target.value = "";
     });
 
     runBtn.addEventListener("click", async () => {
@@ -1080,7 +1085,7 @@ if (quiz) {
                 orig.href = q.media.url;
                 orig.target = "_blank";
                 orig.rel = "noopener noreferrer";
-                orig.textContent = "Original Wikimedia file";
+                orig.textContent = "Original photo source";
                 cap.append(" · ", orig);
             }
         }
