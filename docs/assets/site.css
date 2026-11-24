@@ -160,6 +160,19 @@ h4 { font-size: 1.02rem; margin: 1rem 0 .45rem; }
 .media img { width: 100%; height: 100%; object-fit: cover; transition: scale .35s ease; }
 .card:hover .media img { scale: 1.035; }
 .media.bare { background: var(--moss) url(butterfly-scene.svg) 68% 46%/cover; }
+.photo-count-badge {
+  position: absolute;
+  inset-block-start: .55rem;
+  inset-inline-end: .55rem;
+  background: rgba(15, 40, 31, .86);
+  color: #fff;
+  font-size: .74rem;
+  font-weight: 750;
+  padding: .18rem .52rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  pointer-events: none;
+}
 .credit { font-size: .78rem; padding: .45rem 1rem; margin: 0; color: var(--muted); }
 .credit a { white-space: normal; }
 .scientific { font: italic 1.05rem var(--serif); color: var(--muted); margin-bottom: .35rem; }
@@ -355,6 +368,98 @@ input[type=search], select { border: 1px solid #aeb9a8; border-radius: 4px; min-
 .species-media-col { display: grid; gap: 1.2rem; }
 .photo-large { margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
 .photo-large img { max-height: 540px; object-fit: contain; background: var(--moss); }
+.species-gallery { display: grid; gap: .6rem; }
+.gallery-stage { position: relative; }
+.gallery-main-btn { cursor: pointer; }
+.gallery-nav {
+  position: absolute;
+  inset: 0 0 auto 0;
+  block-size: calc(100% - 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: .55rem;
+  pointer-events: none;
+  z-index: 2;
+}
+.gallery-arrow {
+  pointer-events: auto;
+  inline-size: 40px;
+  block-size: 40px;
+  min-inline-size: 24px;
+  min-block-size: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .42);
+  background: rgba(16, 42, 34, .82);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background .15s ease, scale .15s ease, box-shadow .15s ease;
+}
+.gallery-arrow:hover { background: var(--green); box-shadow: 0 2px 10px rgba(0, 0, 0, .28); }
+.gallery-arrow:active { scale: .94; }
+.gallery-arrow:focus-visible, .gallery-thumb:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.gallery-counter {
+  position: absolute;
+  inset-block-start: .65rem;
+  inset-inline-start: .65rem;
+  background: rgba(16, 42, 34, .84);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 750;
+  padding: .22rem .55rem;
+  border-radius: 100px;
+}
+.gallery-caption { display: grid; gap: .2rem; padding: .5rem .95rem .65rem; background: var(--white); }
+.gallery-caption .credit { padding: 0; }
+.gallery-note { font-size: .84rem; font-weight: 700; color: var(--green); }
+.gallery-thumbs {
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  padding-block: .35rem .45rem;
+  padding-inline: 2px;
+  touch-action: manipulation;
+}
+.gallery-thumb {
+  flex: 0 0 84px;
+  scroll-snap-align: start;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 2px solid var(--line);
+  border-radius: 5px;
+  overflow: clip;
+  position: relative;
+  background: var(--moss);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: border-color .15s ease, scale .15s ease;
+}
+.gallery-thumb:hover { border-color: var(--green); }
+.gallery-thumb:active { scale: .96; }
+.gallery-thumb[aria-current="true"] {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--green);
+}
+.gallery-thumb img { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.thumb-idx {
+  position: absolute;
+  inset-block-end: .2rem;
+  inset-inline-end: .2rem;
+  background: rgba(16, 42, 34, .82);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 750;
+  padding: .05rem .32rem;
+  border-radius: 3px;
+}
+.gallery-thumb[aria-current="true"] .thumb-idx { background: var(--green); }
 .bv-species-card { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 1.2rem; }
 .bv-species-card h3 { font-size: 1.35rem; }
 
@@ -501,17 +606,30 @@ dialog::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
 }
-.lightbox-frame { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: 92vh; }
+.lightbox-frame { display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; max-height: 92vh; }
 .lightbox-head { display: flex; justify-content: space-between; align-items: start; gap: 1rem; padding: 1rem 1.2rem; border-bottom: 1px solid var(--line); }
 .lightbox-heading { font-size: clamp(1.25rem, 2.5vw, 1.75rem); margin-bottom: .2rem; }
 .lightbox-head p { margin-bottom: 0; }
 .lightbox-close { min-height: 40px; padding: .42rem .9rem; }
 .lightbox-stage { background: #13251d; display: grid; place-items: center; overflow: auto; }
 .lightbox-stage img { width: auto; max-width: 100%; max-height: 70vh; object-fit: contain; }
+.lightbox-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: .55rem 1.2rem;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.lightbox-nav[hidden] { display: none; }
+.lightbox-step { min-height: 36px; padding: .3rem .75rem; font-size: .88rem; }
+.lightbox-counter { font-size: .88rem; font-weight: 700; color: var(--muted); }
 
 /* Progressive enhancement compositor-only animations (opt-in inside prefers-reduced-motion: no-preference) */
 @media (prefers-reduced-motion: no-preference) {
   .hero-media img { animation: arrive 850ms ease-out both; }
+  .gallery-thumbs { scroll-behavior: smooth; }
   @supports ((animation-timeline: view()) and (animation-range: entry)) {
     @keyframes card-arrive {
       from { opacity: .25; translate: 0 16px; }
@@ -574,6 +692,8 @@ dialog::backdrop {
   .issue-cover { min-height: 245px; }
   .keyboard-tip { display: none; }
   .host-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+  .gallery-thumb { flex: 0 0 72px; }
+  .gallery-arrow { inline-size: 36px; block-size: 36px; font-size: 1.35rem; }
 }
 
 @media (pointer: coarse) {

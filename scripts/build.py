@@ -40,6 +40,11 @@ HOST_PLANTS = (
     if (ROOT / "data" / "host_plants.json").exists()
     else {"plants": {}, "bySpecies": {}}
 )
+GALLERIES = (
+    load("galleries")
+    if (ROOT / "data" / "galleries.json").exists()
+    else {}
+)
 TAXONOMY = load("taxonomy")
 SITE = load("site")
 MAGAZINE_INDEX = {item["issue"]: item for item in load("magazine_index")}
@@ -132,6 +137,21 @@ def resolve_license(license_id, default_name="TNBS Member Archive"):
     return ("", default_name)
 
 
+def commons_src(filename, width, prefix, thumb=False, allow_cached_sci=None):
+    wiki_name = filename.replace(" ", "_")
+    digest = hashlib.md5(wiki_name.encode(), usedforsecurity=False).hexdigest()
+    media_path = f"{digest[0]}/{digest[:2]}/{quote(wiki_name)}"
+    chosen_width = min(width, 500) if thumb and width else (width if width else 0)
+    src = f"https://upload.wikimedia.org/wikipedia/commons/{media_path}"
+    if chosen_width:
+        src = f"https://upload.wikimedia.org/wikipedia/commons/thumb/{media_path}/{chosen_width}px-{quote(wiki_name)}"
+    if allow_cached_sci:
+        cached = Path("photos") / (slug(allow_cached_sci) + ".jpg")
+        if (ROOT / "assets" / cached).exists():
+            src = prefix + "assets/" + cached.as_posix()
+    return src
+
+
 def photo_meta(scientific, prefix, thumb=False):
     rec = PHOTOS[scientific]
     if isinstance(rec, dict):
@@ -169,17 +189,8 @@ def photo_meta(scientific, prefix, thumb=False):
         is_member = False
 
     wiki_name = filename.replace(" ", "_")
-    digest = hashlib.md5(wiki_name.encode(), usedforsecurity=False).hexdigest()
-    media_path = f"{digest[0]}/{digest[:2]}/{quote(wiki_name)}"
-    chosen_width = min(width, 500) if thumb and width else (width if width else 0)
-    src = f"https://upload.wikimedia.org/wikipedia/commons/{media_path}"
-    if chosen_width:
-        src = f"https://upload.wikimedia.org/wikipedia/commons/thumb/{media_path}/{chosen_width}px-{quote(wiki_name)}"
-    cached = Path("photos") / (slug(scientific) + ".jpg")
-    if (ROOT / "assets" / cached).exists():
-        src = prefix + "assets/" + cached.as_posix()
     return {
-        "src": src,
+        "src": commons_src(filename, width, prefix, thumb=thumb, allow_cached_sci=scientific),
         "alt": alt,
         "author": author,
         "url": "https://commons.wikimedia.org/wiki/File:" + quote(wiki_name),
@@ -187,6 +198,48 @@ def photo_meta(scientific, prefix, thumb=False):
         "licenseName": lic_name,
         "sourceLabel": "Commons file",
         "member": is_member,
+    }
+
+
+def gallery_item_meta(scientific, item, prefix, thumb=False, is_primary=False):
+    src_type = item.get("source")
+    if src_type == "local":
+        return {
+            "src": prefix + item["file"],
+            "alt": item["alt"],
+            "author": item["author"],
+            "url": item.get("url", ""),
+            "license": "",
+            "licenseName": item.get("licenseName", "TNBS Member Archive"),
+            "sourceLabel": "",
+            "note": item.get("note", ""),
+            "member": bool(item.get("member", True)),
+        }
+    lic_url, lic_name = resolve_license(item.get("license") or "", item.get("licenseName") or "TNBS Member Archive")
+    if src_type == "inaturalist":
+        return {
+            "src": item["thumb"] if thumb else item["full"],
+            "alt": item["alt"],
+            "author": item["author"],
+            "url": item["url"],
+            "license": lic_url,
+            "licenseName": lic_name,
+            "sourceLabel": "iNaturalist observation",
+            "note": item.get("note", ""),
+            "member": bool(item.get("member", True)),
+        }
+    filename = item["file"]
+    wiki_name = filename.replace(" ", "_")
+    return {
+        "src": commons_src(filename, int(item.get("width") or 0), prefix, thumb=thumb, allow_cached_sci=scientific if is_primary else None),
+        "alt": item["alt"],
+        "author": item["author"],
+        "url": "https://commons.wikimedia.org/wiki/File:" + quote(wiki_name),
+        "license": lic_url,
+        "licenseName": lic_name,
+        "sourceLabel": "Commons file",
+        "note": item.get("note", ""),
+        "member": bool(item.get("member")),
     }
 
 
@@ -213,9 +266,15 @@ def photo(scientific, prefix, mode="card"):
         )
     credit = credit_html(meta)
     if mode == "card":
+        g_count = len(GALLERIES.get(scientific, []))
+        badge = (
+            f'<span class="photo-count-badge" aria-label="{g_count} photographs available">{g_count} photos</span>'
+            if g_count >= 2
+            else ""
+        )
         return (
             f'<div class="media bare"><img class="hide-on-error" src="{h(meta["src"])}" '
-            f'alt="{h(meta["alt"])}" loading="lazy" decoding="async"></div>'
+            f'alt="{h(meta["alt"])}" loading="lazy" decoding="async">{badge}</div>'
             f'<p class="credit">{credit}</p>'
         )
     full_meta = photo_meta(scientific, prefix, thumb=False)
@@ -228,12 +287,77 @@ def photo(scientific, prefix, mode="card"):
         f'data-lightbox-license="{h(full_meta["license"])}" '
         f'data-lightbox-licensename="{h(full_meta["licenseName"])}" '
         f'aria-label="Inspect full-size photograph of {h(species_name)}">'
-        f'<img class="hide-on-error" src="{h(meta["src"])}" alt="{h(meta["alt"])}" decoding="async">'
+        f'<img class="hide-on-error" src="{h(meta["src"])}" alt="{h(meta["alt"])}" fetchpriority="high" decoding="async">'
         f'<span class="zoom-hint" aria-hidden="true">Click to enlarge</span></button>'
     )
     return (
         f'<figure class="photo-large">{zoom_btn}'
         f'<figcaption class="credit">{credit_html(meta, include_source=True)}</figcaption></figure>'
+    )
+
+
+def species_gallery(scientific, prefix):
+    raw_items = GALLERIES.get(scientific, [])
+    if len(raw_items) < 2:
+        return photo(scientific, prefix, "detail")
+    species_name = BY_SCI[scientific]["name"]
+    slides = []
+    thumb_btns = []
+    total = len(raw_items)
+    for idx, raw in enumerate(raw_items):
+        full_meta = gallery_item_meta(scientific, raw, prefix, thumb=False, is_primary=(idx == 0))
+        thumb_meta = gallery_item_meta(scientific, raw, prefix, thumb=True, is_primary=(idx == 0))
+        slide = {
+            "src": full_meta["src"],
+            "thumbSrc": thumb_meta["src"],
+            "title": f"{species_name} ({scientific})",
+            "alt": full_meta["alt"],
+            "author": full_meta["author"],
+            "url": full_meta["url"],
+            "license": full_meta["license"],
+            "licenseName": full_meta["licenseName"],
+            "sourceLabel": full_meta["sourceLabel"],
+            "note": full_meta["note"],
+        }
+        slides.append(slide)
+        cur = "true" if idx == 0 else "false"
+        t_label = f"View photo {idx + 1} of {total}" + (f": {slide['note']}" if slide["note"] else f" by {slide['author']}")
+        thumb_btns.append(
+            f'<button type="button" class="gallery-thumb" data-gallery-idx="{idx}" '
+            f'aria-current="{cur}" aria-label="{h(t_label)}">'
+            f'<img src="{h(slide["thumbSrc"])}" alt="" loading="lazy" decoding="async">'
+            f'<span class="thumb-idx" aria-hidden="true">{idx + 1}</span></button>'
+        )
+    first = slides[0]
+    note_attr = "" if first["note"] else " hidden"
+    payload = json.dumps(slides, ensure_ascii=False, separators=(",", ":"))
+    return (
+        f'<section class="species-gallery" aria-roledescription="carousel" '
+        f'aria-label="Field photographs of {h(species_name)}" data-species-gallery="{h(payload)}">'
+        f'<figure class="photo-large gallery-stage">'
+        f'<div class="gallery-nav">'
+        f'<button type="button" class="gallery-arrow gallery-prev" data-gallery-dir="-1" aria-label="Previous photograph">‹</button>'
+        f'<button type="button" class="gallery-arrow gallery-next" data-gallery-dir="1" aria-label="Next photograph">›</button>'
+        f'</div>'
+        f'<button type="button" class="photo-zoom gallery-main-btn" data-gallery-zoom data-gallery-current="0" '
+        f'data-lightbox-src="{h(first["src"])}" '
+        f'data-lightbox-title="{h(first["title"])}" '
+        f'data-lightbox-alt="{h(first["alt"])}" '
+        f'data-lightbox-author="{h(first["author"])}" '
+        f'data-lightbox-url="{h(first["url"])}" '
+        f'data-lightbox-license="{h(first["license"])}" '
+        f'data-lightbox-licensename="{h(first["licenseName"])}" '
+        f'aria-label="Inspect full-size photograph of {h(species_name)}">'
+        f'<img data-gallery-img class="hide-on-error" src="{h(first["src"])}" alt="{h(first["alt"])}" fetchpriority="high" decoding="async">'
+        f'<span class="gallery-counter" data-gallery-counter aria-hidden="true">1 / {total}</span>'
+        f'<span class="zoom-hint" aria-hidden="true">Click to enlarge</span></button>'
+        f'<figcaption class="gallery-caption">'
+        f'<span class="gallery-note" data-gallery-note{note_attr}>{h(first["note"])}</span>'
+        f'<span class="credit" data-gallery-credit>{credit_html(first, include_source=True)}</span>'
+        f'</figcaption></figure>'
+        f'<p class="visually-hidden" role="status" aria-live="polite" data-gallery-status></p>'
+        f'<div class="gallery-thumbs" role="group" aria-label="Choose a photograph of {h(species_name)}">{"".join(thumb_btns)}</div>'
+        f'</section>'
     )
 
 
@@ -335,6 +459,11 @@ def lightbox_dialog():
 <p id="lightbox-sub" class="caption"></p></div>
 <form method="dialog"><button type="submit" class="button outline lightbox-close" aria-label="Close enlarged photograph">Close</button></form>
 </div><div class="lightbox-stage"><img id="lightbox-img" src="" alt=""></div>
+<div class="lightbox-nav" data-lightbox-nav hidden>
+<button type="button" class="button outline lightbox-step" data-lightbox-dir="-1" aria-label="Previous photograph">← Prev</button>
+<span class="lightbox-counter" data-lightbox-counter></span>
+<button type="button" class="button outline lightbox-step" data-lightbox-dir="1" aria-label="Next photograph">Next →</button>
+</div>
 <p id="lightbox-credit" class="credit"></p></div></dialog>"""
 
 
@@ -437,6 +566,7 @@ def species_card(entry, prefix, include_spot_btn=False):
     author_term = PHOTOS[scientific].get("author", "") if isinstance(PHOTOS.get(scientific), dict) else (PHOTOS[scientific][1] if scientific in PHOTOS else "")
     terms = " ".join([name, scientific, family, FAMILIES[family], subfamily, *entry["aliases"], host_terms, tag_terms, bv_terms, val_term, author_term])
     has_photo = int(scientific in PHOTOS)
+    gallery_count = len(GALLERIES.get(scientific, []))
     has_profile = int(scientific in PROFILES)
     spot_btn = ""
     if include_spot_btn:
@@ -447,7 +577,7 @@ def species_card(entry, prefix, include_spot_btn=False):
     return (
         f'<article class="card reveal" data-species data-id="{entry["id"]}" data-name="{h(name.casefold())}" '
         f'data-sci="{h(scientific.casefold())}" data-family="{h(family)}" data-subfamily="{h(subfamily)}" '
-        f'data-terms="{h(terms)}" data-photo="{has_photo}" data-member="{member_flag}" data-profile="{has_profile}" '
+        f'data-terms="{h(terms)}" data-photo="{has_photo}" data-gallery="{gallery_count}" data-member="{member_flag}" data-profile="{has_profile}" '
         f'data-validated="{int(entry.get("validated", True))}" data-tags="{h(tag_terms)}" data-bv="{h(bv_terms)}">'
         f'{photo(scientific, prefix)}<div class="card-body">'
         f'<p class="card-meta">{h(family)} · {h(subfamily)}</p>'
@@ -693,6 +823,7 @@ def guide():
     subfamily_options = "".join(f'<option value="{sf}">{h(sf)}: {h(TAXONOMY["subfamilies"][sf]["group"])}</option>' for sf in subfamilies)
     cards = sorted(SPECIES, key=lambda x: (x["scientific"] not in PHOTOS, not is_member_photo(x["scientific"]), x["scientific"] not in PROFILES, x["name"].casefold()))
     photo_count = sum(1 for s in SPECIES if s["scientific"] in PHOTOS)
+    gallery_count = sum(1 for s in SPECIES if len(GALLERIES.get(s["scientific"], [])) >= 2)
     member_count = sum(1 for s in SPECIES if is_member_photo(s["scientific"]))
     profile_count = sum(1 for s in SPECIES if s["scientific"] in PROFILES)
 
@@ -704,7 +835,7 @@ def guide():
 
     body = heading(
         "Butterflies of Tamil Nadu",
-        f"{len(SPECIES)} Tamil Nadu butterfly species across {len(FAMILIES)} families and {len(subfamilies)} subfamilies ({photo_count} with verified photographs, {member_count} by TNBS members, {profile_count} with detailed field profiles).",
+        f"{len(SPECIES)} Tamil Nadu butterfly species across {len(FAMILIES)} families and {len(subfamilies)} subfamilies ({photo_count} with verified photographs, {gallery_count} with multi-photo variation galleries, {member_count} by TNBS members, {profile_count} with detailed field profiles).",
         "Field guide",
     )
     body += f"""<div class="wrap section" data-guide>
@@ -733,6 +864,7 @@ def guide():
 <option value="">All entries</option>
 <option value="spotted">My spotted butterflies</option>
 <option value="member">Photographed by TNBS members ({member_count})</option>
+<option value="gallery">Multi-photo gallery ({gallery_count})</option>
 <option value="photo">With verified photo ({photo_count})</option>
 <option value="wg-endemic">Western Ghats endemic</option>
 <option value="migratory">Migratory in Tamil Nadu</option>
@@ -787,7 +919,7 @@ def detail(entry):
     family_url = local(prefix, "butterflies/") + "?family=" + quote(family)
     subfamily_url = local(prefix, "butterflies/") + "?subfamily=" + quote(subfamily)
 
-    figure = photo(scientific, prefix, "detail")
+    figure = species_gallery(scientific, prefix)
     if not figure:
         taxon_names = [scientific] + [alias for alias in aliases if re.fullmatch(r"[A-Z][a-z]+ [a-z]+(?: [a-z]+)?", alias)]
         figure = f"""<div class="notice" data-photo-lookup="{h(json.dumps(taxon_names))}">
@@ -1272,6 +1404,16 @@ def sources():
 <details class="taxonomy-disclosure"><summary>Show all {len(plants_dict)} host plant photo attributions</summary>
 <div class="disclosure-body"><ul class="credit-list">{"".join(host_photos_list_parts)}</ul></div></details>"""
 
+    gallery_species = len(GALLERIES)
+    gallery_photos_total = sum(len(v) for v in GALLERIES.values())
+    gallery_member_slides = sum(1 for v in GALLERIES.values() for s in v if s.get("member"))
+    gallery_commons_slides = gallery_photos_total - gallery_member_slides
+    gallery_note_line = (
+        f" Multi-photo variation galleries cover <strong>{gallery_species}</strong> species pages with <strong>{gallery_photos_total}</strong> field photographs ({gallery_member_slides} by TNBS members and {gallery_commons_slides} verified open-licensed Wikimedia Commons variation photos)."
+        if gallery_species
+        else ""
+    )
+
     research_items = "".join(
         f'<li>{link(p["title"], p["url"])} ({h(p["authors"])}, {h(p["venue"])})</li>'
         for p in SITE.get("researchPapers", [])
@@ -1297,7 +1439,7 @@ def sources():
 <li>{link("Butterfly Vision AI species registry", BUTTERFLY_VISION)}</li></ul>
 
 <h2>Photographs &amp; open licenses ({len(PHOTOS)} species illustrated)</h2>
-<p>Field guide photographs combine Creative Commons and TNBS Member Archive field observations contributed by TNBS members ({member_summary}) with verified open-licensed Wikimedia Commons images, paired with photographer credits and license or observation links. Activities and About Us photographs come from TNBS fieldwork and outreach archives.</p>
+<p>Field guide photographs combine Creative Commons and TNBS Member Archive field observations contributed by TNBS members ({member_summary}) with verified open-licensed Wikimedia Commons images, paired with photographer credits and license or observation links.{gallery_note_line} Activities and About Us photographs come from TNBS fieldwork and outreach archives.</p>
 <details class="taxonomy-disclosure"><summary>Show all {len(PHOTOS)} species photo attributions</summary>
 <div class="disclosure-body"><ul class="credit-list">{photos_list}</ul></div></details>
 {host_photos_section}

@@ -48,6 +48,39 @@ function normalize(value) {
         .replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
 
+function appendCreditLink(target, text, href) {
+    if (href) {
+        const a = document.createElement("a");
+        a.href = href;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = text;
+        target.append(a);
+    } else {
+        target.append(text);
+    }
+}
+
+function renderCreditLine(target, { author, url, license, licenseName, sourceLabel, caption }) {
+    target.replaceChildren();
+    if (caption) {
+        target.textContent = caption;
+        return;
+    }
+    if (!author) return;
+    appendCreditLink(target, author, url);
+    if (licenseName) {
+        target.append(" · ");
+        appendCreditLink(target, licenseName, license);
+    }
+    if (sourceLabel && url) {
+        target.append(" · ");
+        appendCreditLink(target, sourceLabel, url);
+    }
+}
+
+const galleryControllers = new WeakMap();
+
 /* Native <dialog> Photo Lightbox (compliant with dialog + light-dismiss-a-dialog) */
 const lightbox = document.getElementById("lightbox");
 if (lightbox) {
@@ -55,59 +88,78 @@ if (lightbox) {
     const lbSub = document.getElementById("lightbox-sub");
     const lbImg = document.getElementById("lightbox-img");
     const lbCredit = document.getElementById("lightbox-credit");
+    const lbNav = lightbox.querySelector("[data-lightbox-nav]");
+    const lbCounter = lightbox.querySelector("[data-lightbox-counter]");
+    let activeController = null;
+    let activeIdx = 0;
 
-    function buildCreditNode(author, url, license, licenseName, caption) {
-        lbCredit.replaceChildren();
-        if (caption) {
-            lbCredit.textContent = caption;
-            return;
-        }
-        if (author) {
-            if (url) {
-                const a = document.createElement("a");
-                a.href = url;
-                a.target = "_blank";
-                a.rel = "noopener noreferrer";
-                a.textContent = author;
-                lbCredit.append(a);
-            } else {
-                lbCredit.append(author);
-            }
-            if (licenseName) {
-                lbCredit.append(" · ");
-                if (license) {
-                    const l = document.createElement("a");
-                    l.href = license;
-                    l.target = "_blank";
-                    l.rel = "noopener noreferrer";
-                    l.textContent = licenseName;
-                    lbCredit.append(l);
-                } else {
-                    lbCredit.append(licenseName);
-                }
-            }
-        }
+    function showLightboxSlide(idx) {
+        if (!activeController || !activeController.items.length) return;
+        const items = activeController.items;
+        activeIdx = ((idx % items.length) + items.length) % items.length;
+        const slide = items[activeIdx];
+        lbTitle.textContent = slide.title || "TNBS photograph";
+        lbSub.textContent = slide.note ? `${slide.note} · ${slide.alt}` : (slide.alt || "");
+        lbImg.src = slide.src;
+        lbImg.alt = slide.alt || slide.title || "Butterfly photograph";
+        renderCreditLine(lbCredit, slide);
+        if (lbCounter) lbCounter.textContent = `${activeIdx + 1} / ${items.length}`;
+        if (lbNav) lbNav.hidden = items.length < 2;
     }
 
     document.addEventListener("click", (event) => {
         const trigger = event.target.closest("[data-lightbox-src]");
         if (!trigger) return;
-        lbTitle.textContent = trigger.dataset.lightboxTitle || "TNBS photograph";
-        lbSub.textContent = trigger.dataset.lightboxAlt || "";
-        lbImg.src = trigger.dataset.lightboxSrc;
-        lbImg.alt = trigger.dataset.lightboxAlt || trigger.dataset.lightboxTitle || "Butterfly photograph";
-        buildCreditNode(
-            trigger.dataset.lightboxAuthor,
-            trigger.dataset.lightboxUrl,
-            trigger.dataset.lightboxLicense,
-            trigger.dataset.lightboxLicensename,
-            trigger.dataset.lightboxCaption
-        );
+        const galleryRoot = trigger.closest("[data-species-gallery]");
+        const controller = galleryRoot && trigger.hasAttribute("data-gallery-zoom")
+            ? galleryControllers.get(galleryRoot)
+            : null;
+        if (controller && controller.items.length >= 2) {
+            activeController = controller;
+            showLightboxSlide(controller.getIdx());
+        } else {
+            activeController = null;
+            if (lbNav) lbNav.hidden = true;
+            lbTitle.textContent = trigger.dataset.lightboxTitle || "TNBS photograph";
+            lbSub.textContent = trigger.dataset.lightboxAlt || "";
+            lbImg.src = trigger.dataset.lightboxSrc;
+            lbImg.alt = trigger.dataset.lightboxAlt || trigger.dataset.lightboxTitle || "Butterfly photograph";
+            renderCreditLine(lbCredit, {
+                author: trigger.dataset.lightboxAuthor,
+                url: trigger.dataset.lightboxUrl,
+                license: trigger.dataset.lightboxLicense,
+                licenseName: trigger.dataset.lightboxLicensename,
+                caption: trigger.dataset.lightboxCaption,
+            });
+        }
         lightbox.showModal();
+    });
+
+    for (const stepBtn of lightbox.querySelectorAll("[data-lightbox-dir]")) {
+        stepBtn.addEventListener("click", () => {
+            if (!activeController) return;
+            const next = activeIdx + Number(stepBtn.dataset.lightboxDir);
+            showLightboxSlide(next);
+            activeController.go(activeIdx, false);
+        });
+    }
+
+    lightbox.addEventListener("keydown", (event) => {
+        if (!lightbox.open || !activeController) return;
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName)) return;
+        if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+            event.preventDefault();
+            const dir = event.key === "ArrowRight" ? 1 : -1;
+            showLightboxSlide(activeIdx + dir);
+            activeController.go(activeIdx, false);
+        }
     });
 
     lightbox.addEventListener("close", () => {
         lightbox.returnValue = "";
+        activeController = null;
+        if (lbNav) lbNav.hidden = true;
     });
 
     if (!("closedBy" in HTMLDialogElement.prototype)) {
@@ -122,6 +174,73 @@ if (lightbox) {
         lightbox.addEventListener("pointerup", (e) => {
             if (pressedOutside && outside(e, lightbox)) lightbox.close();
         });
+    }
+}
+
+/* Species Page Multi-Photo Variation Gallery Controller */
+for (const galleryEl of document.querySelectorAll("[data-species-gallery]")) {
+    const items = JSON.parse(galleryEl.dataset.speciesGallery || "[]");
+    if (items.length < 2) continue;
+    const mainImg = galleryEl.querySelector("[data-gallery-img]");
+    const zoomBtn = galleryEl.querySelector("[data-gallery-zoom]");
+    const counterEl = galleryEl.querySelector("[data-gallery-counter]");
+    const noteEl = galleryEl.querySelector("[data-gallery-note]");
+    const creditEl = galleryEl.querySelector("[data-gallery-credit]");
+    const statusEl = galleryEl.querySelector("[data-gallery-status]");
+    const thumbsWrap = galleryEl.querySelector(".gallery-thumbs");
+    const thumbBtns = [...galleryEl.querySelectorAll("[data-gallery-idx]")];
+    const dirBtns = [...galleryEl.querySelectorAll("[data-gallery-dir]")];
+    let currentIdx = 0;
+
+    function go(nextIdx, announce = true) {
+        currentIdx = ((nextIdx % items.length) + items.length) % items.length;
+        const slide = items[currentIdx];
+        if (mainImg) {
+            mainImg.hidden = false;
+            mainImg.src = slide.src;
+            mainImg.alt = slide.alt;
+        }
+        if (zoomBtn) {
+            zoomBtn.dataset.galleryCurrent = String(currentIdx);
+            zoomBtn.dataset.lightboxSrc = slide.src;
+            zoomBtn.dataset.lightboxTitle = slide.title;
+            zoomBtn.dataset.lightboxAlt = slide.alt;
+            zoomBtn.dataset.lightboxAuthor = slide.author;
+            zoomBtn.dataset.lightboxUrl = slide.url;
+            zoomBtn.dataset.lightboxLicense = slide.license;
+            zoomBtn.dataset.lightboxLicensename = slide.licenseName;
+        }
+        if (counterEl) counterEl.textContent = `${currentIdx + 1} / ${items.length}`;
+        if (noteEl) {
+            noteEl.textContent = slide.note || "";
+            noteEl.hidden = !slide.note;
+        }
+        if (creditEl) {
+            creditEl.hidden = false;
+            renderCreditLine(creditEl, slide);
+        }
+        for (const btn of thumbBtns) {
+            const active = Number(btn.dataset.galleryIdx) === currentIdx;
+            btn.setAttribute("aria-current", String(active));
+        }
+        const activeThumb = thumbBtns[currentIdx];
+        if (thumbsWrap && activeThumb) {
+            const left = activeThumb.offsetLeft - thumbsWrap.clientWidth / 2 + activeThumb.offsetWidth / 2;
+            const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            thumbsWrap.scrollTo({ left: Math.max(0, left), behavior: reduced ? "auto" : "smooth" });
+        }
+        if (announce && statusEl) {
+            statusEl.textContent = `Photo ${currentIdx + 1} of ${items.length}: ${slide.note ? slide.note + ", " : ""}photographed by ${slide.author}`;
+        }
+    }
+
+    galleryControllers.set(galleryEl, { items, getIdx: () => currentIdx, go });
+
+    for (const btn of thumbBtns) {
+        btn.addEventListener("click", () => go(Number(btn.dataset.galleryIdx), true));
+    }
+    for (const btn of dirBtns) {
+        btn.addEventListener("click", () => go(currentIdx + Number(btn.dataset.galleryDir), true));
     }
 }
 
@@ -321,6 +440,7 @@ if (guide) {
         subfamily: element.dataset.subfamily || "",
         rawSci: element.querySelector("[data-spot-btn]")?.dataset.sci || "",
         hasPhoto: element.dataset.photo === "1",
+        photoCount: Number(element.dataset.gallery || 0),
         hasMemberPhoto: element.dataset.member === "1",
         hasProfile: element.dataset.profile === "1",
         validated: element.dataset.validated === "1",
@@ -363,6 +483,7 @@ if (guide) {
         if (!chosen) return true;
         if (chosen === "spotted") return spottedSet.has(card.rawSci);
         if (chosen === "photo") return card.hasPhoto;
+        if (chosen === "gallery") return card.photoCount >= 2;
         if (chosen === "member") return card.hasMemberPhoto;
         if (chosen === "profile") return card.hasProfile;
         if (chosen === "unvalidated") return !card.validated;
